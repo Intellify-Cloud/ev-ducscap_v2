@@ -24,6 +24,16 @@ $hero-focus: rgb(15, 90, 231);
   z-index: 0;
   background: $hero-bg;
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.26) 34%, rgba(0, 0, 0, 0) 66%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.12) 42%, rgba(0, 0, 0, 0) 72%);
+    pointer-events: none;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -56,7 +66,11 @@ $hero-focus: rgb(15, 90, 231);
   font-weight: 900;
   line-height: 1.15;
   letter-spacing: 0;
-  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.42);
+  text-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.62),
+    0 18px 48px rgba(0, 0, 0, 0.44);
+  text-wrap: balance;
 }
 
 .hero-subtitle {
@@ -68,7 +82,9 @@ $hero-focus: rgb(15, 90, 231);
   font-weight: 700;
   line-height: 1.55;
   letter-spacing: 0;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.48);
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.72),
+    0 10px 28px rgba(0, 0, 0, 0.44);
 }
 
 .hero-divider {
