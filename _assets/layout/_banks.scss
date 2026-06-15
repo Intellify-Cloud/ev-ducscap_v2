@@ -1,0 +1,222 @@
+// Banks and lending partners section.
+
+.banks-section {
+  background: #eeeff2;
+  padding: 72px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.banks-section__inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 64px;
+  width: min(80vw, 1440px);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.banks-section__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banks-section__title {
+  margin: 0;
+  color: rgb(40, 51, 56);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(2.125rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.banks-section__text {
+  max-width: 48ch;
+  margin: 28px 0 0;
+  color: rgb(40, 51, 56);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.banks-section__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  margin-top: 36px;
+  padding: 0 28px;
+  border: 1.5px solid $button-color;
+  border-radius: 999px;
+  background: $button-color;
+  color: $white;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
+
+  &:hover,
+  &:focus {
+    background: $button-color-hover;
+    border-color: $button-color-hover;
+    color: $white;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $button-color;
+    outline-offset: 3px;
+  }
+}
+
+.banks-section__btn--mobile {
+  display: none;
+}
+
+.banks-section__logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  align-self: center;
+  gap: 42px 56px;
+}
+
+.banks-section__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  text-decoration: none;
+  transition: opacity $motion-fast, transform $motion-fast;
+
+  &:hover,
+  &:focus {
+    opacity: 0.76;
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $button-color;
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
+}
+
+.banks-section__logo {
+  display: block;
+  width: auto;
+  max-width: min(180px, 100%);
+  max-height: 42px;
+  object-fit: contain;
+}
+
+@media (max-width: 1199px) {
+  .banks-section {
+    padding: 64px 0;
+  }
+
+  .banks-section__inner {
+    width: 86vw;
+    gap: 48px;
+  }
+
+  .banks-section__title {
+    font-size: 2.75rem;
+  }
+
+  .banks-section__logos {
+    gap: 34px 42px;
+  }
+
+  .banks-section__logo {
+    max-height: 38px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .banks-section {
+    padding: 56px 0;
+  }
+
+  .banks-section__inner {
+    width: calc(100% - 64px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .banks-section__title {
+    font-size: 2rem;
+  }
+
+  .banks-section__logos {
+    gap: 28px;
+  }
+
+  .banks-section__logo {
+    max-height: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banks-section {
+    padding: 48px 0;
+  }
+
+  .banks-section__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    width: calc(100% - 48px);
+  }
+
+  .banks-section__copy {
+    width: 100%;
+  }
+
+  .banks-section__title {
+    font-size: 2.25rem;
+  }
+
+  .banks-section__text {
+    max-width: none;
+    margin-top: 24px;
+  }
+
+  .banks-section__btn--desktop {
+    display: none;
+  }
+
+  .banks-section__btn--mobile {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .banks-section__logos {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 34px 24px;
+  }
+
+  .banks-section__logo-link {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .banks-section__logo {
+    max-width: min(180px, 100%);
+    max-height: 36px;
+  }
+}

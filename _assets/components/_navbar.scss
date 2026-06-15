@@ -1,5 +1,10 @@
 // Transparent brand-only navbar.
 #mainNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  width: 100%;
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -114,5 +119,55 @@
       padding: 0 18px;
       font-size: 0.85rem;
     }
+  }
+}
+
+.back-to-top-pill {
+  @include font-body;
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 1030;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: $button-color;
+  color: $white;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity $motion-fast, transform $motion-fast, background-color $motion-fast;
+
+  &:hover,
+  &:focus {
+    background: $button-color-hover;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgb(15, 90, 231);
+    outline-offset: 4px;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+  }
+
+  @media (max-width: 767px) {
+    bottom: 18px;
+    min-height: 42px;
+    padding: 0 22px;
+    font-size: 0.875rem;
   }
 }

@@ -1,7 +1,7 @@
 // Duces process timeline section.
 
 .three-step-section {
-  background: linear-gradient(0deg, rgba(152, 150, 240, 0.18), rgba(152, 150, 240, 0.18)), $white;
+  background: #8fa499;
   padding: 80px 72px;
   overflow: hidden;
 }
@@ -19,6 +19,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .three-step-section__intro {
+    margin-left: max(0px, calc(20vw - max(72px, ((100vw - 1440px) / 2))));
+  }
 }
 
 .three-step-section__eyebrow {
@@ -131,7 +137,7 @@
 
 .three-step-timeline__item {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-columns: 48px minmax(0, 1fr);
   grid-template-rows: auto 1fr;
   column-gap: 28px;
   padding-bottom: 48px;
@@ -153,11 +159,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgb(228, 120, 177);
-  color: $white;
+  background: #edecfc;
+  color: rgb(40, 51, 56);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
@@ -169,8 +175,8 @@
   grid-row: 2;
   width: 1.5px;
   min-height: 32px;
-  margin-left: 22px;
-  border-left: 1.5px dashed rgb(228, 120, 177);
+  margin-left: 24px;
+  border-left: 1.5px dashed #edecfc;
 }
 
 .three-step-timeline__content {
@@ -294,19 +300,19 @@
   }
 
   .three-step-timeline__item {
-    grid-template-columns: 58px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
     column-gap: 14px;
     padding-bottom: 42px;
   }
 
   .three-step-timeline__badge {
-    width: 58px;
-    height: 58px;
-    font-size: 1.5rem;
+    width: 64px;
+    height: 64px;
+    font-size: 1.65rem;
   }
 
   .three-step-timeline__connector {
-    margin-left: 29px;
+    margin-left: 32px;
   }
 
   .three-step-timeline__content {

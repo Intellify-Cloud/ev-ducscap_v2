@@ -16,7 +16,7 @@ header:
       label: "Client Satisfaction"
 
 next_steps:
-  section_title: "Every step moves you closer."
+  section_title: ""
   title: "Ready to take the next step?"
   text: "Ready to take the next step towards your dream home?"
   primary_label: "Get Started by Getting Prequalified"
@@ -46,6 +46,12 @@ lets_get_going:
   text: "We will guide you through each stage of the bond process, helping you move ahead with clarity and confidence."
   primary_label: "Reach out for expert advice"
   primary_url: "https://wa.me/27827704275"
+
+banks:
+  title: "More Lenders, More Options, Better Rates."
+  text: "We compare home loan offers from South Africa's leading banks and lenders, giving you access to more choice so you can move forward with a stronger offer."
+  primary_label: "Get Started"
+  primary_url: "#contact"
 
 expert:
   title: "Apply once, at no cost to you. Let South Africa's leading banks compete for your business."
@@ -165,22 +171,25 @@ clients:
   list:
     - title: "ABSA"
       url: https://www.absa.co.za
-      logo: assets/img/clients/absa-bw.png
+      logo: assets/img/banks/absa-bw.png
     - title: "FNB"
       url: https://www.fnb.co.za/
-      logo: assets/img/clients/fnb-n.png
+      logo: assets/img/banks/fnb-n.png
     - title: "Investec"
       url: https://www.investec.co.za/
-      logo: assets/img/clients/investec.png
+      logo: assets/img/banks/investec.png
     - title: "Rand Merchant Bank"
       url: https://www.rmb.co.za
-      logo: assets/img/clients/rmb-img-n.png
+      logo: assets/img/banks/rmb-img-n.png
     - title: "Nedbank"
       url: https://www.nedbank.co.za
-      logo: assets/img/clients/nedbank-bw.png
+      logo: assets/img/banks/nedbank-bw.png
     - title: "Standard Bank"
       url: https://www.standardbank.co.za/
-      logo: assets/img/clients/SBSA-bw.png
+      logo: assets/img/banks/SBSA-bw.png
+    - title: "Sentinal Homes"
+      url: "#"
+      logo: assets/img/banks/sentinal-homes.png
 
 team:
   title: "THE TEAM"

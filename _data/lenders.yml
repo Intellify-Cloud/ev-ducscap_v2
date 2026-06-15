@@ -1,0 +1,21 @@
+- name: ABSA
+  logo: /assets/img/banks/absa-bw.png
+  url: "#"
+- name: FNB
+  logo: /assets/img/banks/fnb-n.png
+  url: "#"
+- name: Investec
+  logo: /assets/img/banks/investec.png
+  url: "#"
+- name: Nedbank
+  logo: /assets/img/banks/nedbank-bw.png
+  url: "#"
+- name: RMB
+  logo: /assets/img/banks/rmb-img-n.png
+  url: "#"
+- name: Standard Bank
+  logo: /assets/img/banks/SBSA-bw.png
+  url: "#"
+- name: Sentinal Homes
+  logo: /assets/img/banks/sentinal-homes.png
+  url: "#"

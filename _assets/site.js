@@ -18,7 +18,9 @@ $(function () {
     });
 
     $(window).on("scroll", function () {
-        return 100 < $("#mainNav").offset().top ? $("#mainNav").addClass("navbar-shrink") : $("#mainNav").removeClass("navbar-shrink");
+        var scrollTop = $(window).scrollTop();
+        100 < scrollTop ? $("#mainNav").addClass("navbar-shrink") : $("#mainNav").removeClass("navbar-shrink");
+        500 < scrollTop ? $(".back-to-top-pill").addClass("is-visible") : $(".back-to-top-pill").removeClass("is-visible");
     });
 });
 

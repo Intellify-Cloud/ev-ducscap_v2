@@ -1,0 +1,35 @@
+<section class="banks-section" id="banks" aria-labelledby="banks-heading">
+  <div class="banks-section__inner">
+    <div class="banks-section__copy">
+      <h2 class="banks-section__title" id="banks-heading">{{ site.data.sitetext.banks.title }}</h2>
+      <p class="banks-section__text">{{ site.data.sitetext.banks.text }}</p>
+
+      <a class="banks-section__btn banks-section__btn--desktop" href="{{ site.data.sitetext.banks.primary_url }}">
+        {{ site.data.sitetext.banks.primary_label }}
+      </a>
+    </div>
+
+    <div class="banks-section__logos" aria-label="Partner lenders">
+      {% for lender in site.data.sitetext.clients.list %}
+        <a
+          class="banks-section__logo-link"
+          href="{{ lender.url }}"
+          aria-label="{{ lender.name }}"
+        >
+          <img
+            class="banks-section__logo"
+            src="{{ lender.logo | relative_url }}"
+            alt="{{ lender.name }} logo"
+            loading="lazy"
+            width="140"
+            height="48"
+          />
+        </a>
+      {% endfor %}
+    </div>
+
+    <a class="banks-section__btn banks-section__btn--mobile" href="{{ site.data.sitetext.banks.primary_url }}">
+      {{ site.data.sitetext.banks.primary_label }}
+    </a>
+  </div>
+</section>
