@@ -1,19 +1,9 @@
 // Testimonials section
 .testimonials-section {
-  background: $soft-white;
+  background: #ffffff;
   color: $charcoal;
   position: relative;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 86% 18%, rgba($gold, 0.08), transparent 28%),
-      linear-gradient(180deg, rgba($white, 0.9), rgba($navy, 0.035));
-    pointer-events: none;
-  }
 
   > .container {
     position: relative;
