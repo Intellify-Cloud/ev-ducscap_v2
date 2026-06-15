@@ -1,0 +1,65 @@
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="site-footer__main">
+      <div class="site-footer__brand">
+        <a class="site-footer__logo-link" href="{{ site.baseurl }}/" aria-label="{{ site.company }}">
+          {% if site.logo %}
+          <img class="site-footer__logo" src="{{ site.logo.path | relative_url }}" alt="{{ site.company }}">
+          {% endif %}
+          <span class="site-footer__brand-name">{{ site.company }}</span>
+        </a>
+
+        {% if site.data.sitetext.footer.description %}
+        <p class="site-footer__description">
+          {{ site.data.sitetext.footer.description }}
+        </p>
+        {% endif %}
+
+        {% if site.data.sitetext.footer.social %}
+        <ul class="site-footer__social" aria-label="{{ site.data.sitetext.footer.social_label }}">
+          {% for link in site.data.sitetext.footer.social %}
+          <li class="site-footer__social-item">
+            <a class="site-footer__social-link" href="{{ link.url }}" aria-label="{{ link.title }}">
+              {% if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+      {% if site.data.sitetext.footer.sections %}
+      <div class="site-footer__sections">
+        {% for section in site.data.sitetext.footer.sections %}
+        <nav class="site-footer__section" aria-label="{{ section.title }}">
+          <h2 class="site-footer__section-title">{{ section.title }}</h2>
+          <ul class="site-footer__links">
+            {% for link in section.links %}
+            <li class="site-footer__link-item">
+              <a class="site-footer__link" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">
+        {{ site.data.sitetext.footer.copyright_prefix }} &copy; {{ site.company }} {{ 'now' | date: "%Y" }}
+      </p>
+
+      {% if site.data.sitetext.footer.legal_links %}
+      <ul class="site-footer__legal">
+        {% for link in site.data.sitetext.footer.legal_links %}
+        <li class="site-footer__legal-item">
+          <a class="site-footer__legal-link" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</footer>

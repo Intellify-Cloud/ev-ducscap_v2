@@ -1,0 +1,111 @@
+// Styling for the calculators section — Duces Capital Professional Theme
+.calculators-heading {
+  margin: $space-3 0 $space-2;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: $line-height-heading;
+  font-family: $font-display;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $navy;
+}
+
+.calculators-section {
+  background-color: $soft-white;
+  border-top: 1px solid rgba($navy, 0.1);
+  border-bottom: 1px solid rgba($navy, 0.1);
+  position: relative;
+
+  &::before {
+    background: radial-gradient(
+      ellipse at center,
+      rgba($navy, 0.03) 0%,
+      transparent 60%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .section-heading {
+    color: $navy;
+    margin-bottom: $space-2;
+  }
+
+  .section-subheading {
+    color: $medium-grey;
+  }
+
+  .card-deck {
+    gap: $space-4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: $space-5;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    @extend .card-art-deco;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    padding: $space-4;
+    flex: 1;
+  }
+
+  .card-title {
+    @extend .card-title-art-deco;
+    margin-bottom: $space-2;
+  }
+
+  .card-footer {
+    border-top: 1px solid rgba($navy, 0.08);
+    background: transparent;
+    padding: $space-3 $space-4 $space-4;
+  }
+
+  .fa-stack {
+    @include rotated-diamond(72px, $gold);
+    margin: 0 auto $space-3;
+    background-color: rgba($gold, 0.04);
+    color: $gold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .fa-stack-2x { display: none; }
+    .fa-stack-1x { font-size: 1.5rem !important; }
+  }
+
+  .text-muted {
+    color: $medium-grey;
+    font-size: 0.9rem;
+    margin-top: $space-2;
+  }
+
+  .btn {
+    margin-top: $space-2;
+    margin-bottom: 0;
+    white-space: normal;
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 767px) {
+  .calculators-section {
+    .card {
+      margin-bottom: $space-3;
+    }
+  }
+}

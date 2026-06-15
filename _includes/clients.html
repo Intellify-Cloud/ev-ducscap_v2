@@ -1,0 +1,25 @@
+<section class="trusted-logos" id="{{ site.data.sitetext.clients.section }}">
+  <div class="container">
+    <h2 class="trusted-logos__title">
+      {{ site.data.sitetext.clients.title }}
+    </h2>
+
+    <div class="trusted-logos__track">
+      {% for client in site.data.sitetext.clients.list %}
+      <div class="trusted-logos__item">
+        {% if client.url %}
+        <a class="trusted-logos__link" href="{{ client.url }}" aria-label="{{ client.title }}">
+        {% endif %}
+          {% if client.logo %}
+          <img class="trusted-logos__logo" src="{{ client.logo | relative_url }}" alt="{{ client.title }}" loading="lazy">
+          {% else %}
+          <span class="trusted-logos__name">{{ client.title }}</span>
+          {% endif %}
+        {% if client.url %}
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

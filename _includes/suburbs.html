@@ -1,0 +1,24 @@
+<!-- Suburbs -->
+<section class="suburbs-section bg-white py-5" id="{{ site.data.sitetext.suburbs.section | default: "suburbs" }}">
+  <div class="col-lg-12 text-center">
+    <h2 class="section-heading text-uppercase">{{ site.data.sitetext.suburbs.title }}</h2>
+  </div>
+
+  <div class="container">
+    <div class="row d-flex justify-content-around" {% if site.data.sitetext.suburbs.horizontal-scrolling == "yes" %}
+      id="scrolling-suburbs" {% endif %}>
+      {% if site.data.sitetext.suburbs.text %}
+      <div class="col-12 text-center">
+        <h3 class="textblock-subheading text-muted">{{ site.data.sitetext.suburbs.text }}</h3>
+      </div>
+      {% endif %}
+
+      {% for suburbs in site.data.sitetext.suburbs.list %}
+      <div class="suburb-logo col-md-3 col-sm-6">
+        <img class="img-fluid d-block mx-auto align-self-center" src="{{ suburbs.image | relative_url }}" alt="{{ suburbs.title }}" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- End Suburbs -->

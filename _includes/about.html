@@ -1,0 +1,18 @@
+<section class="about-section page-section" id="{{ site.data.sitetext.about.section }}">
+  <div class="container">
+    <div class="about-section__intro">
+      <h2 class="about-section__heading">{{ site.data.sitetext.about.title }}</h2>
+    </div>
+
+    <div class="about-section__body">
+      <div class="about-section__copy">
+        {{ site.data.sitetext.about.text2 | markdownify }}
+      </div>
+      {% if site.data.sitetext.about.text3 %}
+      <p class="about-section__tagline">
+        {{ site.data.sitetext.about.text3 }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</section>

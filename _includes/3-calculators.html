@@ -1,0 +1,493 @@
+<section class="three-calculators-section page-section" id="three-calculators">
+  <div class="three-calculators-page">
+    <header class="three-calculators-header">
+      <div class="three-calculators-header__eyebrow">Calculators</div>
+      <h2 class="three-calculators-header__title">Property Finance Calculators</h2>
+      <p class="three-calculators-header__sub">
+        Estimate repayments, affordability, and transfer costs before you apply.
+      </p>
+    </header>
+
+    <div class="mb-calc-tabs" role="tablist" aria-label="Property finance calculator options">
+      <button class="mb-calc-tabs__btn mb-calc-tabs__btn--active" type="button" role="tab" aria-selected="true" aria-controls="mb-tab-repayment" data-mb-tab="repayment">Bond Repayment</button>
+      <button class="mb-calc-tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="mb-tab-affordability" data-mb-tab="affordability">Affordability</button>
+      <button class="mb-calc-tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="mb-tab-transfer" data-mb-tab="transfer">Transfer Costs</button>
+    </div>
+
+    <section class="mb-calc-panel mb-calc-panel--active" id="mb-tab-repayment" role="tabpanel">
+      <div class="mb-calc">
+        <div class="mb-calc__fields">
+          <div class="mb-calc-field mb-calc-field--full">
+            <label class="mb-calc-field__label" for="mb-r-price">Purchase price <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-r-price" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-r-deposit">Deposit</label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-r-deposit" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-r-rate">Interest rate <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-r-rate" value="10.5" min="0" max="30" step="0.25">
+              <span class="mb-calc-field__suffix">%</span>
+            </div>
+          </div>
+
+          <div class="mb-calc-field mb-calc-field--full">
+            <label class="mb-calc-field__label" for="mb-r-years">Loan term <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__slider-wrap">
+              <input class="mb-calc-field__slider" type="range" id="mb-r-years" min="5" max="30" step="5" value="20">
+              <div class="mb-calc-field__slider-ticks" data-mb-repayment-ticks>
+                <span>5 yrs</span>
+                <span>10 yrs</span>
+                <span>15 yrs</span>
+                <span>20 yrs</span>
+                <span>25 yrs</span>
+                <span>30 yrs</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="mb-calc-btn" type="button" id="mb-r-calc-btn">Calculate repayment</button>
+        </div>
+
+        <aside class="mb-calc-result" aria-live="polite">
+          <div class="mb-calc-result__inner">
+            <div class="mb-calc-result__tag">Results</div>
+            <div class="mb-calc-result-item mb-calc-result-item--hero">
+              <span class="mb-calc-result-item__label">Monthly repayment</span>
+              <span class="mb-calc-result-item__value" id="mb-r-monthly">R 0</span>
+            </div>
+            <div class="mb-calc-result-divider"></div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Loan amount</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-r-principal">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Total repayable</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-r-total">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Total interest</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm mb-calc-result-item__value--accent" id="mb-r-interest">R 0</span>
+            </div>
+            <p class="mb-calc-result__terms">This is an estimate only. Final affordability and bond approval are subject to bank assessment.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="mb-calc-panel" id="mb-tab-affordability" role="tabpanel">
+      <div class="mb-calc">
+        <div class="mb-calc__fields">
+          <div class="mb-calc-field mb-calc-field--full">
+            <label class="mb-calc-field__label" for="mb-a-gross">Gross monthly income <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-gross" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-net">Net monthly income <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-net" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-expenses">Total monthly expenses <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-expenses" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-calc-field mb-calc-field--full mb-calc-field--readonly">
+            <label class="mb-calc-field__label" for="mb-a-surplus">Net surplus income</label>
+            <div class="mb-calc-field__input-wrap">
+              <span class="mb-calc-field__prefix">R</span>
+              <input class="mb-calc-field__input" type="text" id="mb-a-surplus" placeholder="Auto-calculated" readonly tabindex="-1">
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-years">Years to repay <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <select class="mb-calc-field__select" id="mb-a-years">
+                <option value="5">5 years</option>
+                <option value="10">10 years</option>
+                <option value="15">15 years</option>
+                <option value="20" selected>20 years</option>
+                <option value="25">25 years</option>
+                <option value="30">30 years</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-calc-field">
+            <label class="mb-calc-field__label" for="mb-a-rate">Interest Rate <span class="mb-calc-field__req">*</span></label>
+            <div class="mb-calc-field__input-wrap">
+              <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-a-rate" value="10.5" min="0" max="30" step="0.25">
+              <span class="mb-calc-field__suffix">%</span>
+            </div>
+          </div>
+
+          <button class="mb-calc-btn" type="button" id="mb-a-calc-btn">Check affordability</button>
+        </div>
+
+        <aside class="mb-calc-result" aria-live="polite">
+          <div class="mb-calc-result__inner">
+            <div class="mb-calc-result__tag">Estimate</div>
+            <div class="mb-calc-result-item mb-calc-result-item--hero">
+              <span class="mb-calc-result-item__label">You may qualify for</span>
+              <span class="mb-calc-result-item__value" id="mb-a-qualify">R 0</span>
+            </div>
+            <div class="mb-calc-result-divider"></div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">30% gross cap</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-gross-cap">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Net surplus income</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-surplus-result">R 0</span>
+            </div>
+            <div class="mb-calc-result-item">
+              <span class="mb-calc-result-item__label">Max monthly instalment</span>
+              <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-monthly">R 0</span>
+            </div>
+            <p class="mb-calc-result__terms">This excludes transfer fees, bond registration costs, rates, levies, insurance, and bank stress testing.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="mb-calc-panel" id="mb-tab-transfer" role="tabpanel">
+      <div class="mb-transfer-calc">
+        <div class="mb-transfer-fields">
+          <div class="mb-transfer-field mb-transfer-field--full">
+            <label class="mb-transfer-field__label" for="mb-t-purchase-price">Purchase price including VAT <span class="mb-transfer-field__req">*</span></label>
+            <div class="mb-transfer-field__input-wrap">
+              <span class="mb-transfer-field__prefix">R</span>
+              <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-purchase-price" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-transfer-field mb-transfer-field--full">
+            <label class="mb-transfer-field__label" for="mb-t-loan-amount">Loan amount <span class="mb-transfer-field__req">*</span></label>
+            <div class="mb-transfer-field__input-wrap">
+              <span class="mb-transfer-field__prefix">R</span>
+              <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-loan-amount" placeholder="0" data-currency-input>
+            </div>
+          </div>
+
+          <div class="mb-transfer-field">
+            <label class="mb-transfer-field__label" for="mb-t-seller-vat">Seller registered for VAT <span class="mb-transfer-field__req">*</span></label>
+            <div class="mb-transfer-field__input-wrap">
+              <select class="mb-transfer-field__select" id="mb-t-seller-vat">
+                <option value="">Please select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-transfer-field mb-transfer-field--full">
+            <label class="mb-transfer-field__label" for="mb-t-purchaser-status">Status of purchaser <span class="mb-transfer-field__req">*</span></label>
+            <div class="mb-transfer-field__input-wrap">
+              <select class="mb-transfer-field__select" id="mb-t-purchaser-status">
+                <option value="">Please select</option>
+                <option value="natural">Natural Person</option>
+                <option value="company">Company</option>
+                <option value="cc">Closed Corporation</option>
+                <option value="trust">Trust</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="mb-transfer-btn" type="button" id="mb-t-calc-btn">Calculate costs</button>
+
+          <div class="mb-transfer-notes">
+            <p><strong>*</strong> Bank initiation fee is estimated at R6,037.50 including VAT.</p>
+            <p><strong>**</strong> If the seller is a VAT vendor, VAT is payable on the purchase price instead of transfer duty.</p>
+            <p><strong>***</strong> Post, petties, FICA and other fees are approximations and may vary by attorney firm.</p>
+          </div>
+        </div>
+
+        <aside class="mb-transfer-result" id="mb-t-results-card" aria-live="polite">
+          <div class="mb-transfer-result__inner">
+            <div class="mb-transfer-result__tag">Results</div>
+
+            <div class="mb-transfer-result__total">
+              <span class="mb-transfer-result__label">Total costs including VAT</span>
+              <span class="mb-transfer-result__value" id="mb-t-total">R 0</span>
+            </div>
+
+            <div class="mb-transfer-result-group">
+              <div class="mb-transfer-result-group__header">
+                <span class="mb-transfer-result-group__title">Bond registration costs</span>
+                <span class="mb-transfer-result-group__subtotal" id="mb-t-bond-total">R 0</span>
+              </div>
+              <div class="mb-transfer-result-row"><span>Bond registration cost</span><span id="mb-t-bond-atty">R 0</span></div>
+              <div class="mb-transfer-result-row"><span>Bank initiation fee *</span><span id="mb-t-bank-init">R 0</span></div>
+              <div class="mb-transfer-result-row"><span>Deeds office fees for bond</span><span id="mb-t-deeds-bond">R 0</span></div>
+              <div class="mb-transfer-result-row"><span>Post, petties, FICA and other fees ***</span><span id="mb-t-petties-bond">R 0</span></div>
+            </div>
+
+            <div class="mb-transfer-result-divider"></div>
+
+            <div class="mb-transfer-result-group">
+              <div class="mb-transfer-result-group__header">
+                <span class="mb-transfer-result-group__title">Transfer costs</span>
+                <span class="mb-transfer-result-group__subtotal" id="mb-t-transfer-total">R 0</span>
+              </div>
+              <div class="mb-transfer-result-row"><span>Property transfer costs</span><span id="mb-t-transfer-atty">R 0</span></div>
+              <div class="mb-transfer-result-row"><span id="mb-t-duty-label">Transfer duty **</span><span id="mb-t-transfer-duty">R 0</span></div>
+              <div class="mb-transfer-result-row"><span>Deeds office fees for transfer</span><span id="mb-t-deeds-transfer">R 0</span></div>
+              <div class="mb-transfer-result-row"><span>Post, petties, FICA and other fees ***</span><span id="mb-t-petties-transfer">R 0</span></div>
+            </div>
+
+            <p class="mb-transfer-result__terms">Terms and conditions apply. This calculator provides an estimate only.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const root = document.getElementById('three-calculators');
+    if (!root) return;
+
+    function byId(id) {
+      return document.getElementById(id);
+    }
+
+    function value(id) {
+      const field = byId(id);
+      return field ? parseFloat(String(field.value).replace(/\s/g, '')) || 0 : 0;
+    }
+
+    function fmt(amount) {
+      return 'R ' + Math.round(Math.max(amount, 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+
+    function fmtNumber(amount) {
+      return Math.round(Math.max(amount, 0)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
+
+    function formatCurrencyField(field) {
+      const numericValue = field.value.replace(/[^\d]/g, '');
+      field.value = numericValue ? numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : '';
+    }
+
+    function pmt(rate, periods, principal) {
+      if (periods <= 0) return 0;
+      if (rate === 0) return principal / periods;
+      return principal * (rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
+    }
+
+    function pvFromPmt(rate, periods, monthly) {
+      if (periods <= 0) return 0;
+      if (rate === 0) return monthly * periods;
+      return (monthly / rate) * (1 - 1 / Math.pow(1 + rate, periods));
+    }
+
+    root.querySelectorAll('[data-mb-tab]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        root.querySelectorAll('[data-mb-tab]').forEach(function (tabButton) {
+          const isActive = tabButton === button;
+          tabButton.classList.toggle('mb-calc-tabs__btn--active', isActive);
+          tabButton.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        root.querySelectorAll('.mb-calc-panel').forEach(function (panel) {
+          panel.classList.toggle('mb-calc-panel--active', panel.id === 'mb-tab-' + button.dataset.mbTab);
+        });
+      });
+    });
+
+    function syncRepaymentTicks() {
+      const years = parseInt(byId('mb-r-years').value, 10);
+      const activeIndex = (years - 5) / 5;
+      root.querySelectorAll('[data-mb-repayment-ticks] span').forEach(function (tick, index) {
+        tick.classList.toggle('active', index === activeIndex);
+      });
+    }
+
+    function calculateRepayment() {
+      const price = value('mb-r-price');
+      const deposit = value('mb-r-deposit');
+      const annualRate = value('mb-r-rate');
+      const years = parseInt(byId('mb-r-years').value, 10) || 20;
+      const principal = Math.max(price - deposit, 0);
+      const periods = years * 12;
+      const monthlyRate = annualRate / 100 / 12;
+      const monthly = principal > 0 ? pmt(monthlyRate, periods, principal) : 0;
+      const total = monthly * periods;
+      const interest = Math.max(total - principal, 0);
+
+      byId('mb-r-monthly').textContent = fmt(monthly);
+      byId('mb-r-principal').textContent = fmt(principal);
+      byId('mb-r-total').textContent = fmt(total);
+      byId('mb-r-interest').textContent = fmt(interest);
+    }
+
+    function calculateNetSurplus() {
+      return Math.max(value('mb-a-net') - value('mb-a-expenses'), 0);
+    }
+
+    function syncSurplus() {
+      const surplus = calculateNetSurplus();
+      byId('mb-a-surplus').value = surplus > 0 ? fmtNumber(surplus) : '';
+      return surplus;
+    }
+
+    function calculateAffordability() {
+      const gross = value('mb-a-gross');
+      const annualRate = value('mb-a-rate');
+      const years = parseInt(byId('mb-a-years').value, 10) || 20;
+      const grossCap = gross * 0.3;
+      const surplus = syncSurplus();
+      const maxMonthly = Math.min(grossCap, surplus);
+      const periods = years * 12;
+      const monthlyRate = annualRate / 100 / 12;
+      const qualify = maxMonthly > 0 ? pvFromPmt(monthlyRate, periods, maxMonthly) : 0;
+
+      byId('mb-a-qualify').textContent = fmt(qualify);
+      byId('mb-a-gross-cap').textContent = fmt(grossCap);
+      byId('mb-a-surplus-result').textContent = fmt(surplus);
+      byId('mb-a-monthly').textContent = fmt(maxMonthly);
+    }
+
+    const VAT = 0.15;
+    const parseCurrency = input => parseFloat(String(input || '').replace(/[^\d]/g, '')) || 0;
+    const setValue = (id, amount) => {
+      const node = byId(id);
+      if (node) node.textContent = fmt(amount);
+    };
+
+    function calcTransferDuty(price) {
+      if (price <= 1100000) return 0;
+      if (price <= 1512500) return (price - 1100000) * 0.03;
+      if (price <= 2117500) return 12375 + (price - 1512500) * 0.06;
+      if (price <= 2722500) return 48675 + (price - 2117500) * 0.08;
+      if (price <= 12100000) return 97075 + (price - 2722500) * 0.11;
+      return 1128600 + (price - 12100000) * 0.13;
+    }
+
+    function calcTransferAttorneyFee(price) {
+      if (price <= 0) return 0;
+      if (price <= 100000) return 6640;
+      if (price <= 500000) return 6640 + Math.ceil((price - 100000) / 50000) * 1060;
+      if (price <= 1000000) return 15120 + Math.ceil((price - 500000) / 100000) * 2050;
+      if (price <= 5000000) return 25370 + Math.ceil((price - 1000000) / 200000) * 2050;
+      return 66370 + Math.ceil((price - 5000000) / 1000000) * 5160;
+    }
+
+    function calcBondAttorneyFee(loan) {
+      if (loan <= 0) return 0;
+      if (loan <= 100000) return 6640;
+      if (loan <= 500000) return 6640 + Math.ceil((loan - 100000) / 50000) * 1060;
+      if (loan <= 1000000) return 15120 + Math.ceil((loan - 500000) / 100000) * 2050;
+      if (loan <= 5000000) return 25370 + Math.ceil((loan - 1000000) / 200000) * 2050;
+      return 66370 + Math.ceil((loan - 5000000) / 1000000) * 5160;
+    }
+
+    function calcDeedsTransfer(price) {
+      if (price <= 0) return 0;
+      if (price <= 100000) return 50;
+      if (price <= 200000) return 114;
+      if (price <= 300000) return 727;
+      if (price <= 600000) return 956;
+      if (price <= 800000) return 1346;
+      if (price <= 1000000) return 1546;
+      if (price <= 2000000) return 1738;
+      if (price <= 4000000) return 2408;
+      if (price <= 6000000) return 2922;
+      if (price <= 8000000) return 3480;
+      if (price <= 10000000) return 4068;
+      if (price <= 15000000) return 4844;
+      if (price <= 20000000) return 5818;
+      return 7751;
+    }
+
+    function calcDeedsBond(loan) {
+      if (loan <= 0) return 0;
+      if (loan <= 150000) return 561;
+      if (loan <= 300000) return 727;
+      if (loan <= 600000) return 956;
+      if (loan <= 800000) return 1346;
+      if (loan <= 1000000) return 1546;
+      if (loan <= 2000000) return 1738;
+      if (loan <= 4000000) return 2408;
+      if (loan <= 6000000) return 2922;
+      if (loan <= 8000000) return 3480;
+      if (loan <= 10000000) return 4068;
+      if (loan <= 15000000) return 4844;
+      if (loan <= 20000000) return 5818;
+      if (loan <= 30000000) return 6781;
+      return 9690;
+    }
+
+    function calculateTransferCosts() {
+      const price = parseCurrency(byId('mb-t-purchase-price').value);
+      const loan = parseCurrency(byId('mb-t-loan-amount').value);
+      const sellerVat = byId('mb-t-seller-vat').value;
+
+      const bondAttyInclVat = calcBondAttorneyFee(loan) * (1 + VAT);
+      const bankInitFee = loan > 0 ? 6037.50 : 0;
+      const deedsBond = calcDeedsBond(loan);
+      const pettiesBond = loan > 0 ? 2200 : 0;
+      const bondTotal = bondAttyInclVat + bankInitFee + deedsBond + pettiesBond;
+      const transferAttyInclVat = calcTransferAttorneyFee(price) * (1 + VAT);
+      const transferDuty = sellerVat === 'yes' ? 0 : calcTransferDuty(price);
+      const deedsTransfer = calcDeedsTransfer(price);
+      const pettiesTransfer = price > 0 ? 2200 : 0;
+      const transferTotal = transferAttyInclVat + transferDuty + deedsTransfer + pettiesTransfer;
+      const grandTotal = (loan > 0 ? bondTotal : 0) + transferTotal;
+
+      setValue('mb-t-total', grandTotal);
+      setValue('mb-t-bond-total', loan > 0 ? bondTotal : 0);
+      setValue('mb-t-bond-atty', loan > 0 ? bondAttyInclVat : 0);
+      setValue('mb-t-bank-init', bankInitFee);
+      setValue('mb-t-deeds-bond', loan > 0 ? deedsBond : 0);
+      setValue('mb-t-petties-bond', loan > 0 ? pettiesBond : 0);
+      setValue('mb-t-transfer-total', transferTotal);
+      setValue('mb-t-transfer-atty', transferAttyInclVat);
+      setValue('mb-t-transfer-duty', transferDuty);
+      setValue('mb-t-deeds-transfer', deedsTransfer);
+      setValue('mb-t-petties-transfer', pettiesTransfer);
+      byId('mb-t-duty-label').textContent = sellerVat === 'yes' ? 'Transfer duty not applicable for VAT vendor **' : 'Transfer duty **';
+    }
+
+    byId('mb-r-years').addEventListener('input', syncRepaymentTicks);
+    byId('mb-r-calc-btn').addEventListener('click', calculateRepayment);
+    byId('mb-a-calc-btn').addEventListener('click', calculateAffordability);
+    byId('mb-t-calc-btn').addEventListener('click', calculateTransferCosts);
+    root.querySelectorAll('[data-currency-input]').forEach(function (field) {
+      field.addEventListener('input', function () {
+        formatCurrencyField(field);
+      });
+      field.addEventListener('blur', function () {
+        formatCurrencyField(field);
+      });
+    });
+    ['mb-a-net', 'mb-a-expenses'].forEach(function (id) {
+      byId(id).addEventListener('input', syncSurplus);
+    });
+
+    syncRepaymentTicks();
+    syncSurplus();
+  })();
+</script>

@@ -1,0 +1,96 @@
+<!-- Team -->
+<section class="bg-white page-section" id="{{ site.data.sitetext.team.section | default: "team" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.team.title }}</h2>
+        {% if site.data.sitetext.team.text %}
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.team.text }}</h3>
+        {% endif %}
+      </div>
+    </div>
+
+    {% assign featured = site.data.sitetext.team.people | first %}
+    <div class="team-inner">
+      <div class="team-left">
+        <div class="team-hours-card">
+          <div class="team-hours-header">
+            <i class="far fa-clock team-hours-icon" aria-hidden="true"></i>
+            <h3 class="team-hours-title">{{ site.data.sitetext.team.hours.title | default: "Office Hours" }}</h3>
+          </div>
+
+          <div class="team-hours-list">
+            {% for item in site.data.sitetext.team.hours.list %}
+            <p>{{ item }}</p>
+            {% endfor %}
+          </div>
+
+          {% if site.data.sitetext.team.hours.note %}
+          <div class="team-hours-note">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+            <span>{{ site.data.sitetext.team.hours.note }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if featured %}
+      <div class="team-right">
+        <article class="team-featured-card">
+          <div class="team-featured-image">
+            <img src="{{ featured.image | relative_url }}" alt="{{ featured.name }}" loading="lazy">
+          </div>
+          <div class="team-featured-info">
+            <h3 class="team-featured-name">{{ featured.name }}</h3>
+            <p class="team-featured-role">{{ featured.role }}</p>
+            {% if featured.bio %}
+            <p class="team-featured-bio">{{ featured.bio }}</p>
+            {% endif %}
+
+            <ul class="team-featured-links list-inline">
+              {% for network in featured.social %}
+              <li class="list-inline-item">
+                <a href="{{ network.url }}" {% if network.url contains 'http' %}target="_blank" rel="noopener"{% endif %} aria-label="Contact {{ featured.name }} by {{ network.title | default: 'social media' }}">
+                  <i class="{{ network.icon }}" aria-hidden="true"></i>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      </div>
+      {% endif %}
+    </div>
+
+    {% assign other_people = site.data.sitetext.team.people | slice: 1, site.data.sitetext.team.people.size %}
+    {% if other_people.size > 0 %}
+    <div class="team-grid row">
+      {% for person in other_people %}
+      <div class="col-md-6 col-lg-4">
+        <article class="team-card-v">
+          <div class="team-card-image">
+            <img src="{{ person.image | relative_url }}" alt="{{ person.name }}" loading="lazy">
+          </div>
+          <div class="team-card-info">
+            <h3 class="team-card-name">{{ person.name }}</h3>
+            <p class="team-card-role">{{ person.role }}</p>
+            {% if person.bio %}
+            <p class="team-card-bio">{{ person.bio }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if site.data.sitetext.team.subtext %}
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <div class="large text-muted">{{ site.data.sitetext.team.subtext | markdownify }}</div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+<!-- End Team -->

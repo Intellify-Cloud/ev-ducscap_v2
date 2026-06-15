@@ -1,0 +1,40 @@
+baseurl: ""
+
+title      : Duces Capital - Bond & Property Finance Done Right
+email      : kunle@ducescapital.co.za
+description: "Duces Capital helps homebuyers, investors, and property owners secure competitive property finance solutions through expert guidance and access to multiple lenders. Based in South Africa, we provide independent, professional bond origination and property finance services — at no cost to you."
+author     : Duces Capital
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  portfolio:
+
+markdown: kramdown
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+logo:
+  path: /assets/img/logo/logo.png
+
+exclude:
+  - node_modules
+  - webpack.config.js
+  - package.json
+  - package-lock.json
+  - README.md
+  - PHASE_3_COMPLETION.md
+  - PHASE_4_COMPLETION.md
+
+group: evo Home Loans
+
+company: Duces Capital
+
+url: https://ducescapital.co.za
+
+address: South Africa

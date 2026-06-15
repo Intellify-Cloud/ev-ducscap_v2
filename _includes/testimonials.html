@@ -1,0 +1,48 @@
+<section class="testimonials-section page-section" id="{{ site.data.sitetext.testimonials.section | default: "testimonials" }}">
+  <div class="container">
+    <div class="testimonials-intro">
+      <h2 class="testimonials-heading">{{ site.data.sitetext.testimonials.title }}</h2>
+
+      {% if site.data.sitetext.testimonials.text %}
+      <p class="testimonials-subheading">
+        {{ site.data.sitetext.testimonials.text }}
+      </p>
+      {% endif %}
+    </div>
+
+    {% assign featured = site.data.sitetext.testimonials.people | first %}
+    {% if featured %}
+    <blockquote class="testimonial-featured">
+      <p class="testimonial-featured__quote">{{ featured.testimony }}</p>
+
+      <footer class="testimonial-featured__footer">
+        {% if featured.image %}
+        <img class="testimonial-featured__avatar" src="{{ featured.image }}" alt="{{ featured.name }}">
+        {% endif %}
+        <cite class="testimonial-featured__name">{{ featured.name }}</cite>
+        {% if featured.role %}
+        <span class="testimonial-featured__dot" aria-hidden="true"></span>
+        <span class="testimonial-featured__role">{{ featured.role }}</span>
+        {% endif %}
+      </footer>
+    </blockquote>
+    {% endif %}
+
+    <div class="testimonials-list">
+      {% for person in site.data.sitetext.testimonials.people %}
+      {% unless forloop.first %}
+      <article class="testimonial-mini">
+        <p class="testimonial-mini__quote">{{ person.testimony }}</p>
+        <footer class="testimonial-mini__footer">
+          <cite class="testimonial-mini__name">{{ person.name }}</cite>
+          {% if person.role %}
+          <span class="testimonial-mini__dot" aria-hidden="true"></span>
+          <span class="testimonial-mini__role">{{ person.role }}</span>
+          {% endif %}
+        </footer>
+      </article>
+      {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

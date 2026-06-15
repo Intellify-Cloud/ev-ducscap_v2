@@ -1,0 +1,614 @@
+// ============================================
+// ANIMATIONS & INTERACTIVE EFFECTS
+// Art Deco Motion System — Phase 4 Interactive Polish
+// ============================================
+
+// ============================================
+// KEYFRAME ANIMATIONS
+// ============================================
+
+// Fade in from transparent
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Slide up entrance
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Slide down entrance
+@keyframes slideDownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Slide left entrance
+@keyframes slideLeftIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Slide right entrance
+@keyframes slideRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Scale up entrance
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Glow pulse effect
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($gold, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba($gold, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($gold, 0);
+  }
+}
+
+// Gold shimmer effect (loading state)
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+// Rotate 360
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Gentle float up/down
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// Bounce entrance
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Underline draw (for links/buttons)
+@keyframes underlineDraw {
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+// Gold border glow
+@keyframes borderGlow {
+  0% {
+    border-color: rgba($gold, 0.2);
+    box-shadow: 0 0 5px rgba($gold, 0);
+  }
+  50% {
+    border-color: rgba($gold, 0.6);
+    box-shadow: 0 0 15px rgba($gold, 0.3);
+  }
+  100% {
+    border-color: rgba($gold, 0.2);
+    box-shadow: 0 0 5px rgba($gold, 0);
+  }
+}
+
+// ============================================
+// ANIMATION UTILITY CLASSES
+// ============================================
+
+// Fade in
+.animate-fade-in {
+  animation: fadeIn $motion-standard ease-out;
+}
+
+// Slide animations
+.animate-slide-up {
+  animation: slideUpIn $motion-theatrical ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDownIn $motion-theatrical ease-out;
+}
+
+.animate-slide-left {
+  animation: slideLeftIn $motion-theatrical ease-out;
+}
+
+.animate-slide-right {
+  animation: slideRightIn $motion-theatrical ease-out;
+}
+
+// Scale up
+.animate-scale-up {
+  animation: scaleUp $motion-standard ease-out;
+}
+
+// Glow pulse
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-out infinite;
+}
+
+// Shimmer (loading)
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba($gold, 0.1),
+    rgba($gold, 0.3),
+    rgba($gold, 0.1)
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+// Spin
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+// Float
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+// Bounce
+.animate-bounce-in {
+  animation: bounceIn $motion-theatrical ease-out;
+}
+
+// Border glow
+.animate-border-glow {
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+// ============================================
+// SCROLL-TRIGGERED ANIMATIONS (AOS-ready)
+// ============================================
+
+// These classes work with AOS library or custom intersection observers
+
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: $motion-theatrical;
+  transition-timing-function: ease-out;
+
+  &[data-aos="fade-up"] {
+    transform: translateY(30px);
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &[data-aos="fade-down"] {
+    transform: translateY(-30px);
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &[data-aos="fade-left"] {
+    transform: translateX(30px);
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &[data-aos="fade-right"] {
+    transform: translateX(-30px);
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &[data-aos="zoom-in"] {
+    transform: scale(0.9);
+
+    &.aos-animate {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &[data-aos="flip-left"] {
+    transform: perspective(800px) rotateY(90deg);
+    transform-origin: left center;
+
+    &.aos-animate {
+      opacity: 1;
+      transform: perspective(800px) rotateY(0deg);
+    }
+  }
+
+  &[data-aos="flip-right"] {
+    transform: perspective(800px) rotateY(-90deg);
+    transform-origin: right center;
+
+    &.aos-animate {
+      opacity: 1;
+      transform: perspective(800px) rotateY(0deg);
+    }
+  }
+}
+
+// ============================================
+// FORM VALIDATION ANIMATIONS
+// ============================================
+
+// Form group with validation state
+.form-group {
+  position: relative;
+
+  // Success state animation
+  &.is-valid {
+    .form-control {
+      border-color: $success;
+      box-shadow: 0 0 0 3px $success-bg;
+      animation: borderGlow 0.3s ease-out;
+    }
+
+    .form-feedback {
+      color: $success;
+      font-size: 0.875rem;
+      margin-top: $space-1;
+      animation: slideUpIn $motion-standard ease-out;
+      display: block;
+    }
+
+    .valid-checkmark {
+      position: absolute;
+      right: $space-2;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $success;
+      font-size: 1.2rem;
+      animation: slideRightIn $motion-standard ease-out;
+    }
+  }
+
+  // Error state animation
+  &.is-invalid {
+    .form-control {
+      border-color: $error;
+      box-shadow: 0 0 0 3px $error-bg;
+      animation: borderGlow 0.3s ease-out;
+    }
+
+    .form-feedback {
+      color: $error;
+      font-size: 0.875rem;
+      margin-top: $space-1;
+      animation: slideUpIn $motion-standard ease-out;
+      display: block;
+    }
+
+    .error-icon {
+      position: absolute;
+      right: $space-2;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $error;
+      font-size: 1.2rem;
+      animation: slideRightIn $motion-standard ease-out;
+    }
+  }
+}
+
+// ============================================
+// BUTTON INTERACTION ANIMATIONS
+// ============================================
+
+// Button press/click animation
+.btn-interactive {
+  position: relative;
+  overflow: hidden;
+  transition: all $motion-standard ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba($white, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width $motion-fast ease-out, height $motion-fast ease-out;
+  }
+
+  &:active::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $elevation-2, 0 0 20px rgba($gold, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $elevation-1;
+  }
+}
+
+// ============================================
+// LOADING STATES & SKELETON SCREENS
+// ============================================
+
+// Skeleton loader animation
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba($gold, 0.05) 0%,
+    rgba($gold, 0.1) 50%,
+    rgba($gold, 0.05) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+
+  // Skeleton variants
+  &.skeleton-text {
+    height: 1rem;
+    border-radius: 0;
+    margin-bottom: $space-2;
+
+    &:last-child {
+      margin-bottom: 0;
+      width: 90%;
+    }
+  }
+
+  &.skeleton-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &.skeleton-button {
+    height: 40px;
+    width: 150px;
+    border-radius: 0;
+  }
+
+  &.skeleton-card {
+    height: 200px;
+    border-radius: 0;
+  }
+}
+
+// Loading spinner
+.loader {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba($gold, 0.2);
+  border-top-color: $gold;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+  &.loader-sm {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+
+  &.loader-lg {
+    width: 70px;
+    height: 70px;
+    border-width: 4px;
+  }
+
+  &.loader-gold {
+    border-color: rgba($gold, 0.1);
+    border-top-color: $gold;
+  }
+
+  &.loader-double {
+    border-right-color: rgba($gold, 0.4);
+  }
+}
+
+// ============================================
+// TRANSITION HELPER CLASSES
+// ============================================
+
+// Smooth transitions for common properties
+.transition-smooth {
+  transition: all $motion-standard ease-out;
+}
+
+.transition-fast {
+  transition: all $motion-fast ease-out;
+}
+
+.transition-theatrical {
+  transition: all $motion-theatrical ease-in-out;
+}
+
+// Transition only specific properties
+.transition-color {
+  transition: color $motion-standard ease-out;
+}
+
+.transition-transform {
+  transition: transform $motion-standard ease-out;
+}
+
+.transition-opacity {
+  transition: opacity $motion-standard ease-out;
+}
+
+.transition-shadow {
+  transition: box-shadow $motion-standard ease-out;
+}
+
+// ============================================
+// STAGGER ANIMATIONS (for lists/grids)
+// ============================================
+
+// Stagger effect for multiple elements
+@for $i from 1 through 10 {
+  .stagger-#{$i} {
+    animation-delay: #{50ms * $i};
+  }
+}
+
+// Grid stagger animation
+.grid-animate {
+  > * {
+    animation: slideUpIn $motion-theatrical ease-out;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{50ms * $i};
+      }
+    }
+  }
+}
+
+// ============================================
+// PARALLAX SCROLL EFFECT
+// ============================================
+
+// Element moves slower than scroll
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
+}
+
+// Parallax depth layers
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+
+  &[data-parallax="slow"] {
+    transform: translateY(calc(var(--scroll-y, 0px) * 0.3));
+  }
+
+  &[data-parallax="medium"] {
+    transform: translateY(calc(var(--scroll-y, 0px) * 0.5));
+  }
+
+  &[data-parallax="fast"] {
+    transform: translateY(calc(var(--scroll-y, 0px) * 0.8));
+  }
+}
+
+// ============================================
+// SMOOTH SCROLL BEHAVIOR
+// ============================================
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; // Account for sticky header
+}
+
+// ============================================
+// ACCESSIBILITY: RESPECT PREFERS-REDUCED-MOTION
+// ============================================
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

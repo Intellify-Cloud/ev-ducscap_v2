@@ -1,0 +1,149 @@
+// ============================================
+// DESIGN TOKENS — Single Source of Truth
+// ============================================
+
+// ============================================
+// TYPOGRAPHY MIXINS
+// ============================================
+
+@mixin font-display {
+  font-family: $font-display;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@mixin font-body {
+  font-family: $font-body;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@mixin font-display-sm {
+  font-family: $font-display;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin font-body-italic {
+  font-family: $font-body;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-style: italic;
+}
+
+// ============================================
+// EXISTING MIXINS (font-only replaced with token refs)
+// ============================================
+
+@mixin serif-font {
+  @include font-display;
+}
+
+@mixin script-font {
+  @include font-display;
+}
+
+@mixin body-font {
+  @include font-body;
+}
+
+@mixin heading-font {
+  @include font-display;
+}
+
+// Stepped corners using clip-path (ziggurat style)
+@mixin stepped-corners($size: 12px) {
+  clip-path: polygon(
+    0% $size,
+    0% 0%,
+    calc(100% - $size) 0%,
+    100% 0%,
+    100% calc(100% - $size),
+    100% 100%,
+    $size 100%,
+    0% 100%,
+    0% $size
+  );
+}
+
+// Corner bracket decorations (L-shaped lines at opposite corners)
+@mixin corner-brackets($color: $gold, $size: 8px, $thickness: 2px) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $size;
+    left: $size;
+    width: $size;
+    height: $size;
+    border-top: $thickness solid $color;
+    border-left: $thickness solid $color;
+    opacity: 0.6;
+    transition: opacity $motion-standard;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: $size;
+    right: $size;
+    width: $size;
+    height: $size;
+    border-bottom: $thickness solid $color;
+    border-right: $thickness solid $color;
+    opacity: 0.6;
+    transition: opacity $motion-standard;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// Section divider with horizontal lines
+@mixin section-divider-horizontal($color: $gold) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin: $space-4 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 0 0 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color, transparent);
+  }
+}
+
+// Rotated diamond container
+@mixin rotated-diamond($size: 80px, $color: $gold) {
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $color;
+  transform: rotate(45deg);
+  position: relative;
+
+  & > * {
+    transform: rotate(-45deg);
+  }
+}
+
+// Glow effect
+@mixin glow-effect($color: $gold, $intensity: 0.2) {
+  box-shadow: 0 0 15px rgba($color, $intensity), 0 0 30px rgba($color, $intensity * 0.5);
+}
+
+@mixin glow-hover($color: $gold) {
+  &:hover {
+    @include glow-effect($color, 0.4);
+  }
+}

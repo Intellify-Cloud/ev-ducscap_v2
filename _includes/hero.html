@@ -1,0 +1,25 @@
+<section class="hero-section" id="hero">
+  <div class="hero-photo">
+    <img
+      src="{{ '/assets/img/duces-hero.jpg' | relative_url }}"
+      alt="Happy family at home with Duces Capital property finance support"
+    />
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-body">
+      <h1 class="hero-title">
+        {{ site.data.sitetext.header.title }}
+      </h1>
+      <p class="hero-subtitle">
+        {{ site.data.sitetext.header.text }}
+      </p>
+      <hr class="hero-divider" aria-hidden="true" />
+      <div class="hero-actions">
+        <a href="{{ site.data.sitetext.header.button1_url | default: '#contact' }}" class="hero-cta">
+          {{ site.data.sitetext.header.button1 }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

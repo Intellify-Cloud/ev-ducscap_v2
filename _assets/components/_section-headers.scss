@@ -1,0 +1,163 @@
+// Section Headers & Dividers — Duces Capital Professional Theme
+
+.section-heading {
+  font-family: $font-display;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $navy;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+.section-subheading {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: $medium-grey;
+  margin: $space-3 0 0;
+  max-width: 80ch;
+  line-height: $line-height-body;
+}
+
+// Centered Section Header with Gold Line
+.section-header-centered {
+  text-align: center;
+  position: relative;
+  margin: $space-6 0 $space-5;
+
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    padding: 0 $space-4;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+    transform: translateY(-50%);
+  }
+
+  &::before { left: 0; }
+  &::after { right: 0; }
+
+  .section-subheading {
+    margin: $space-3 auto 0;
+  }
+}
+
+// Left-Aligned Section Header
+.section-header-left {
+  position: relative;
+  margin: $space-5 0 $space-4;
+  padding-left: $space-5;
+
+  .section-heading { position: relative; }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, $gold, rgba($gold, 0.1), transparent);
+  }
+
+  .section-subheading {
+    margin: $space-2 0 0;
+    max-width: 60ch;
+  }
+}
+
+// Right-Aligned Section Header
+.section-header-right {
+  position: relative;
+  margin: $space-5 0 $space-4;
+  padding-right: $space-5;
+  text-align: right;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, $gold, rgba($gold, 0.1), transparent);
+  }
+
+  .section-subheading {
+    margin: $space-2 0 0;
+    max-width: 60ch;
+    margin-left: auto;
+  }
+}
+
+// Hero Section Title
+.hero-title {
+  font-family: $font-display;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $white;
+  line-height: $line-height-tight;
+  margin: 0;
+
+  &.hero-title-gold {
+    color: $gold;
+  }
+
+  &.hero-title-large {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+  }
+}
+
+// Hero Subtitle
+.hero-subtitle {
+  font-family: $font-body;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: rgba($white, 0.85);
+  line-height: $line-height-body;
+  max-width: 65ch;
+  margin: $space-4 0 0;
+
+  &.hero-subtitle-muted {
+    color: rgba($white, 0.6);
+  }
+}
+
+// Page Title
+.page-title {
+  font-family: $font-display;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $navy;
+  line-height: $line-height-tight;
+  margin: $space-4 0 $space-2;
+  position: relative;
+  display: inline-block;
+  padding-bottom: $space-3;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, $gold, transparent);
+  }
+}

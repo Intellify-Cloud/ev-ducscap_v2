@@ -1,0 +1,609 @@
+<style>
+.mb-transfer-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 76px 24px 88px;
+  background: #ffffff;
+}
+
+.mb-transfer-page {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.mb-transfer-header {
+  max-width: 780px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.mb-transfer-header__eyebrow {
+  margin-bottom: 10px;
+  color: #e8522a;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mb-transfer-header__title {
+  margin: 0 0 14px;
+  color: #0c5045;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.mb-transfer-header__title em {
+  color: #5e1f3e;
+  font-style: normal;
+}
+
+.mb-transfer-header__sub {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #2c2c2c;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.mb-transfer-calc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.mb-transfer-fields,
+.mb-transfer-result__inner {
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(12, 80, 69, 0.12);
+}
+
+.mb-transfer-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 34px;
+  background: #cbe4d7;
+}
+
+.mb-transfer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mb-transfer-field--full {
+  grid-column: 1 / -1;
+}
+
+.mb-transfer-field__label {
+  margin: 0;
+  color: #0c5045;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mb-transfer-field__req {
+  color: #e8522a;
+}
+
+.mb-transfer-field__input-wrap {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  overflow: hidden;
+  border: 2px solid #d6e8e0;
+  border-radius: 8px;
+  background: #fdf9eb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mb-transfer-field__input-wrap:focus-within {
+  border-color: #ff4500;
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.14);
+}
+
+.mb-transfer-section input:focus,
+.mb-transfer-section select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mb-transfer-section button:focus {
+  outline: none !important;
+}
+
+.mb-transfer-section button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.28);
+}
+
+.mb-transfer-field__prefix {
+  flex-shrink: 0;
+  padding: 0 9px 0 16px;
+  color: #e8522a;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.mb-transfer-field__input,
+.mb-transfer-field__select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #2c2c2c;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mb-transfer-field__input {
+  padding: 13px 16px 13px 0;
+}
+
+.mb-transfer-field__input::placeholder {
+  color: #7f9f92;
+}
+
+.mb-transfer-field__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mb-transfer-field__input[type=number]::-webkit-outer-spin-button,
+.mb-transfer-field__input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mb-transfer-field__select {
+  appearance: none;
+  cursor: pointer;
+  padding: 13px 42px 13px 16px;
+  background-image: linear-gradient(45deg, transparent 50%, #e8522a 50%), linear-gradient(135deg, #e8522a 50%, transparent 50%);
+  background-position: calc(100% - 22px) 21px, calc(100% - 15px) 21px;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+}
+
+.mb-transfer-btn {
+  grid-column: 1 / -1;
+  min-height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: #0c5045;
+  color: #ffffff;
+  padding: 0 30px;
+  font-family: Outfit, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33px;
+  cursor: pointer;
+  box-shadow: 0 12px 20px rgba(12, 80, 69, 0.22);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.mb-transfer-btn:hover {
+  background: #063d34;
+  transform: translateY(-1px);
+}
+
+.mb-transfer-notes {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.mb-transfer-notes p {
+  margin: 0;
+  color: #36574f;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.mb-transfer-notes strong {
+  color: #0c5045;
+}
+
+.mb-transfer-result {
+  position: sticky;
+  top: 24px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mb-transfer-result__inner {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 32px;
+  background: #e8522a;
+  color: #ffffff;
+}
+
+.mb-transfer-result__tag {
+  display: inline-flex;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mb-transfer-result__total {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.mb-transfer-result__label {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mb-transfer-result__value {
+  display: block;
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.mb-transfer-result-group {
+  margin-bottom: 18px;
+}
+
+.mb-transfer-result-group__header,
+.mb-transfer-result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.mb-transfer-result-group__header {
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.mb-transfer-result-group__title,
+.mb-transfer-result-group__subtotal {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.mb-transfer-result-group__subtotal {
+  white-space: nowrap;
+}
+
+.mb-transfer-result-row {
+  align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.mb-transfer-result-row:last-child {
+  border-bottom: 0;
+}
+
+.mb-transfer-result-row span:first-child {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mb-transfer-result-row span:last-child {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mb-transfer-result-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.mb-transfer-result__terms {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mb-transfer-section {
+    padding: 48px 16px 56px;
+  }
+
+  .mb-transfer-header__title {
+    font-size: 36px;
+  }
+
+  .mb-transfer-header__sub {
+    font-size: 17px;
+  }
+
+  .mb-transfer-calc {
+    grid-template-columns: 1fr;
+  }
+
+  .mb-transfer-fields {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .mb-transfer-result {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .mb-transfer-result__inner {
+    padding: 24px;
+  }
+
+  .mb-transfer-result__value {
+    font-size: 36px;
+  }
+}
+</style>
+
+<section class="mb-transfer-section" id="mzansi-transfer-cost-calculator">
+  <div class="mb-transfer-page">
+    <header class="mb-transfer-header">
+      <div class="mb-transfer-header__eyebrow">Calculators</div>
+      <h2 class="mb-transfer-header__title">Transfer Cost Calculator</h2>
+      <p class="mb-transfer-header__sub">
+        Calculate your estimated bond registration and property transfer costs before you buy.
+      </p>
+    </header>
+
+    <div class="mb-transfer-calc">
+      <div class="mb-transfer-fields">
+        <div class="mb-transfer-field mb-transfer-field--full">
+          <label class="mb-transfer-field__label" for="mb-t-purchase-price">Purchase price including VAT <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <span class="mb-transfer-field__prefix">R</span>
+            <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-purchase-price" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-transfer-field mb-transfer-field--full">
+          <label class="mb-transfer-field__label" for="mb-t-loan-amount">Loan amount <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <span class="mb-transfer-field__prefix">R</span>
+            <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-loan-amount" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-transfer-field">
+          <label class="mb-transfer-field__label" for="mb-t-seller-vat">Seller registered for VAT <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <select class="mb-transfer-field__select" id="mb-t-seller-vat">
+              <option value="">Please select</option>
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-transfer-field mb-transfer-field--full">
+          <label class="mb-transfer-field__label" for="mb-t-purchaser-status">Status of purchaser <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <select class="mb-transfer-field__select" id="mb-t-purchaser-status">
+              <option value="">Please select</option>
+              <option value="natural">Natural Person</option>
+              <option value="company">Company</option>
+              <option value="cc">Closed Corporation</option>
+              <option value="trust">Trust</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="mb-transfer-btn" type="button" id="mb-t-calc-btn">Calculate costs</button>
+
+        <div class="mb-transfer-notes">
+          <p><strong>*</strong> Bank initiation fee is estimated at R6,037.50 including VAT.</p>
+          <p><strong>**</strong> If the seller is a VAT vendor, VAT is payable on the purchase price instead of transfer duty.</p>
+          <p><strong>***</strong> Post, petties, FICA and other fees are approximations and may vary by attorney firm.</p>
+        </div>
+      </div>
+
+      <aside class="mb-transfer-result" id="mb-t-results-card" aria-live="polite">
+        <div class="mb-transfer-result__inner">
+          <div class="mb-transfer-result__tag">Results</div>
+
+          <div class="mb-transfer-result__total">
+            <span class="mb-transfer-result__label">Total costs including VAT</span>
+            <span class="mb-transfer-result__value" id="mb-t-total">R 0</span>
+          </div>
+
+          <div class="mb-transfer-result-group">
+            <div class="mb-transfer-result-group__header">
+              <span class="mb-transfer-result-group__title">Bond registration costs</span>
+              <span class="mb-transfer-result-group__subtotal" id="mb-t-bond-total">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Bond registration cost</span>
+              <span id="mb-t-bond-atty">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Bank initiation fee *</span>
+              <span id="mb-t-bank-init">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Deeds office fees for bond</span>
+              <span id="mb-t-deeds-bond">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Post, petties, FICA and other fees ***</span>
+              <span id="mb-t-petties-bond">R 0</span>
+            </div>
+          </div>
+
+          <div class="mb-transfer-result-divider"></div>
+
+          <div class="mb-transfer-result-group">
+            <div class="mb-transfer-result-group__header">
+              <span class="mb-transfer-result-group__title">Transfer costs</span>
+              <span class="mb-transfer-result-group__subtotal" id="mb-t-transfer-total">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Property transfer costs</span>
+              <span id="mb-t-transfer-atty">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span id="mb-t-duty-label">Transfer duty **</span>
+              <span id="mb-t-transfer-duty">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Deeds office fees for transfer</span>
+              <span id="mb-t-deeds-transfer">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row">
+              <span>Post, petties, FICA and other fees ***</span>
+              <span id="mb-t-petties-transfer">R 0</span>
+            </div>
+          </div>
+
+          <p class="mb-transfer-result__terms">Terms and conditions apply. This calculator provides an estimate only.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const VAT = 0.15;
+  const formatRand = value => "R " + Math.round(value).toLocaleString("en-ZA");
+  const parseCurrency = value => parseFloat(String(value || "").replace(/[^\d]/g, "")) || 0;
+  const formatCurrencyField = field => {
+    const numericValue = field.value.replace(/[^\d]/g, "");
+    field.value = numericValue ? numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, " ") : "";
+  };
+  const setValue = (id, value) => {
+    const node = document.getElementById(id);
+    if (node) node.textContent = formatRand(value);
+  };
+
+  function calcTransferDuty(price) {
+    if (price <= 1100000) return 0;
+    if (price <= 1512500) return (price - 1100000) * 0.03;
+    if (price <= 2117500) return 12375 + (price - 1512500) * 0.06;
+    if (price <= 2722500) return 48675 + (price - 2117500) * 0.08;
+    if (price <= 12100000) return 97075 + (price - 2722500) * 0.11;
+    return 1128600 + (price - 12100000) * 0.13;
+  }
+
+  function calcTransferAttorneyFee(price) {
+    if (price <= 0) return 0;
+    if (price <= 100000) return 6640;
+    if (price <= 500000) return 6640 + Math.ceil((price - 100000) / 50000) * 1060;
+    if (price <= 1000000) return 15120 + Math.ceil((price - 500000) / 100000) * 2050;
+    if (price <= 5000000) return 25370 + Math.ceil((price - 1000000) / 200000) * 2050;
+    return 66370 + Math.ceil((price - 5000000) / 1000000) * 5160;
+  }
+
+  function calcBondAttorneyFee(loan) {
+    if (loan <= 0) return 0;
+    if (loan <= 100000) return 6640;
+    if (loan <= 500000) return 6640 + Math.ceil((loan - 100000) / 50000) * 1060;
+    if (loan <= 1000000) return 15120 + Math.ceil((loan - 500000) / 100000) * 2050;
+    if (loan <= 5000000) return 25370 + Math.ceil((loan - 1000000) / 200000) * 2050;
+    return 66370 + Math.ceil((loan - 5000000) / 1000000) * 5160;
+  }
+
+  function calcDeedsTransfer(price) {
+    if (price <= 0) return 0;
+    if (price <= 100000) return 50;
+    if (price <= 200000) return 114;
+    if (price <= 300000) return 727;
+    if (price <= 600000) return 956;
+    if (price <= 800000) return 1346;
+    if (price <= 1000000) return 1546;
+    if (price <= 2000000) return 1738;
+    if (price <= 4000000) return 2408;
+    if (price <= 6000000) return 2922;
+    if (price <= 8000000) return 3480;
+    if (price <= 10000000) return 4068;
+    if (price <= 15000000) return 4844;
+    if (price <= 20000000) return 5818;
+    return 7751;
+  }
+
+  function calcDeedsBond(loan) {
+    if (loan <= 0) return 0;
+    if (loan <= 150000) return 561;
+    if (loan <= 300000) return 727;
+    if (loan <= 600000) return 956;
+    if (loan <= 800000) return 1346;
+    if (loan <= 1000000) return 1546;
+    if (loan <= 2000000) return 1738;
+    if (loan <= 4000000) return 2408;
+    if (loan <= 6000000) return 2922;
+    if (loan <= 8000000) return 3480;
+    if (loan <= 10000000) return 4068;
+    if (loan <= 15000000) return 4844;
+    if (loan <= 20000000) return 5818;
+    if (loan <= 30000000) return 6781;
+    return 9690;
+  }
+
+  function calculateTransferCosts() {
+    const price = parseCurrency(document.getElementById("mb-t-purchase-price").value);
+    const loan = parseCurrency(document.getElementById("mb-t-loan-amount").value);
+    const sellerVat = document.getElementById("mb-t-seller-vat").value;
+
+    const bondAttyInclVat = calcBondAttorneyFee(loan) * (1 + VAT);
+    const bankInitFee = loan > 0 ? 6037.50 : 0;
+    const deedsBond = calcDeedsBond(loan);
+    const pettiesBond = loan > 0 ? 2200 : 0;
+    const bondTotal = bondAttyInclVat + bankInitFee + deedsBond + pettiesBond;
+
+    const transferAttyInclVat = calcTransferAttorneyFee(price) * (1 + VAT);
+    const transferDuty = sellerVat === "yes" ? 0 : calcTransferDuty(price);
+    const deedsTransfer = calcDeedsTransfer(price);
+    const pettiesTransfer = price > 0 ? 2200 : 0;
+    const transferTotal = transferAttyInclVat + transferDuty + deedsTransfer + pettiesTransfer;
+    const grandTotal = (loan > 0 ? bondTotal : 0) + transferTotal;
+
+    setValue("mb-t-total", grandTotal);
+    setValue("mb-t-bond-total", loan > 0 ? bondTotal : 0);
+    setValue("mb-t-bond-atty", loan > 0 ? bondAttyInclVat : 0);
+    setValue("mb-t-bank-init", bankInitFee);
+    setValue("mb-t-deeds-bond", loan > 0 ? deedsBond : 0);
+    setValue("mb-t-petties-bond", loan > 0 ? pettiesBond : 0);
+    setValue("mb-t-transfer-total", transferTotal);
+    setValue("mb-t-transfer-atty", transferAttyInclVat);
+    setValue("mb-t-transfer-duty", transferDuty);
+    setValue("mb-t-deeds-transfer", deedsTransfer);
+    setValue("mb-t-petties-transfer", pettiesTransfer);
+
+    document.getElementById("mb-t-duty-label").textContent =
+      sellerVat === "yes" ? "Transfer duty not applicable for VAT vendor **" : "Transfer duty **";
+    document.getElementById("mb-t-results-card").classList.add("mb-transfer-result--visible");
+  }
+
+  document.querySelectorAll("#mzansi-transfer-cost-calculator [data-currency-input]").forEach(field => {
+    field.addEventListener("input", () => formatCurrencyField(field));
+    field.addEventListener("blur", () => formatCurrencyField(field));
+  });
+
+  document.getElementById("mb-t-calc-btn").addEventListener("click", calculateTransferCosts);
+})();
+</script>

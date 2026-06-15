@@ -1,0 +1,29 @@
+<section class="page-section textblock-section" id="{{ site.data.sitetext.textblock.section }}">
+  <div class="container">
+    <div class="textblock-intro">
+      <h2 class="textblock-heading">{{ site.data.sitetext.textblock.title }}</h2>
+      {% if site.data.sitetext.textblock.text %}
+      <p class="textblock-subheading">{{ site.data.sitetext.textblock.text }}</p>
+      {% endif %}
+    </div>
+
+    <div class="textblock-grid">
+      {% for textblock in site.data.sitetext.textblock.list %}
+      <article class="textblock-card">
+        <div>
+          {% if textblock.icon %}
+          <div class="textblock-card-icon" aria-hidden="true">
+            <i class="{{ textblock.icon }}"></i>
+          </div>
+          {% endif %}
+          <h3 class="textblock-card-title">{{ textblock.title }}</h3>
+          {% if textblock.desc %}
+          <p class="textblock-card-copy">{{ textblock.desc }}</p>
+          {% endif %}
+        </div>
+        <span class="textblock-card-line" aria-hidden="true"></span>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

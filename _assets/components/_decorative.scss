@@ -1,0 +1,116 @@
+// Decorative Components — Duces Capital Professional Theme
+// Clean geometric accents with gold details
+
+// Rotated Diamond Icon Container
+.diamond-icon {
+  @include rotated-diamond(64px, $gold);
+  margin: 0 auto $space-3;
+  background-color: rgba($gold, 0.05);
+  transition: all $motion-standard;
+
+  &:hover {
+    background-color: rgba($gold, 0.12);
+    @include glow-effect($gold, 0.25);
+  }
+
+  i,
+  svg {
+    font-size: 1.5rem;
+    color: $gold;
+  }
+}
+
+// Corner Brackets for Cards
+.card-corner-brackets {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid rgba($gold, 0.4);
+    border-left: 2px solid rgba($gold, 0.4);
+    transition: all $motion-standard;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid rgba($gold, 0.4);
+    border-right: 2px solid rgba($gold, 0.4);
+    transition: all $motion-standard;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    border-color: rgba($gold, 0.8);
+  }
+}
+
+// Horizontal Divider Line
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba($navy, 0.3), transparent);
+  margin: $space-3 0;
+
+  &.divider-thick {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba($navy, 0.5), transparent);
+  }
+
+  &.divider-lg {
+    margin: $space-5 0;
+  }
+}
+
+// Section Header with Decorative Lines
+.section-header-decorated {
+  @include section-divider-horizontal;
+  text-align: center;
+  justify-content: center;
+
+  .section-heading {
+    flex: 0 1 auto;
+    white-space: nowrap;
+  }
+}
+
+// Vertical Divider Line
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba($navy, 0.3), transparent);
+
+  &.divider-accent {
+    width: 2px;
+    background: linear-gradient(180deg, transparent, rgba($gold, 0.5), transparent);
+  }
+}
+
+// Display Caps
+.display-caps {
+  font-family: $font-display;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  font-weight: 600;
+
+  &.display-xl {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  &.display-lg {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  &.display-md {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+  }
+}

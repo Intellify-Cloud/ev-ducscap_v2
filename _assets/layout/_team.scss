@@ -1,0 +1,257 @@
+// Styling for the team section — Duces Capital Professional Theme
+.team-inner {
+  align-items: stretch;
+  display: flex;
+  gap: $space-4;
+  margin: $space-4 auto 0;
+  max-width: 1040px;
+}
+
+.team-left {
+  flex: 0 0 360px;
+  max-width: 360px;
+}
+
+.team-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-hours-card,
+.team-featured-card,
+.team-card-v {
+  @extend .card-art-deco;
+  transition: box-shadow $motion-standard, transform $motion-standard;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: $elevation-2;
+    transform: translateY(-2px);
+  }
+}
+
+.team-hours-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 324px;
+  padding: $space-4;
+}
+
+.team-hours-header {
+  align-items: center;
+  display: flex;
+  gap: $space-2;
+  margin-bottom: $space-4;
+}
+
+.team-hours-icon {
+  color: $gold;
+  font-size: 1.75rem;
+}
+
+.team-hours-title,
+.team-featured-name,
+.team-card-name {
+  @extend .card-title-art-deco;
+  margin: 0;
+}
+
+.team-hours-title {
+  font-size: 1.25rem;
+  line-height: $line-height-heading;
+}
+
+.team-hours-list {
+  p {
+    color: $medium-grey;
+    font-size: 0.95rem;
+    line-height: $line-height-body;
+    margin: 0 0 $space-1;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team-hours-note {
+  align-items: flex-start;
+  border-top: 1px solid rgba($navy, 0.1);
+  display: flex;
+  gap: $space-1;
+  margin-top: $space-4;
+  padding-top: $space-3;
+
+  i {
+    color: $gold;
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+  }
+
+  span {
+    color: $medium-grey;
+    font-size: 0.875rem;
+    font-style: italic;
+    line-height: $line-height-body;
+  }
+}
+
+.team-featured-card {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.team-featured-image {
+  flex: 0 0 48%;
+  min-height: 320px;
+  position: relative;
+
+  img {
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.team-featured-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-4;
+}
+
+.team-featured-name {
+  font-size: 1.75rem;
+  line-height: $line-height-heading;
+}
+
+.team-featured-role,
+.team-card-role {
+  color: $blue;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: $line-height-heading;
+  margin: $space-1 0 $space-3;
+  text-transform: uppercase;
+}
+
+.team-featured-bio,
+.team-card-bio {
+  color: $medium-grey;
+  line-height: $line-height-body;
+}
+
+.team-featured-bio {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0 0 $space-4;
+}
+
+.team-featured-links,
+.team-card-links {
+  display: flex;
+  gap: $space-1;
+  margin: 0;
+
+  a {
+    align-items: center;
+    background: rgba($navy, 0.06);
+    border-radius: $radius-sm;
+    color: $navy;
+    display: inline-flex;
+    font-size: 1.1rem;
+    height: 46px;
+    justify-content: center;
+    transition: background-color $motion-fast, box-shadow $motion-fast, color $motion-fast, transform $motion-fast;
+    width: 46px;
+
+    &:hover,
+    &:focus-visible {
+      background: $navy;
+      box-shadow: $elevation-1;
+      color: $white;
+      outline: 0;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.team-grid {
+  margin-top: $space-4;
+}
+
+.team-card-v {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-4px);
+  }
+}
+
+.team-card-image {
+  aspect-ratio: 1;
+  background: $light-grey;
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.team-card-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: $space-3;
+  text-align: center;
+}
+
+.team-card-name {
+  font-size: 1.4rem;
+  line-height: $line-height-heading;
+}
+
+.team-card-bio {
+  font-size: 0.9rem;
+  margin: 0 0 $space-3;
+}
+
+@media (max-width: 780px) {
+  .team-inner {
+    flex-direction: column;
+    gap: $space-3;
+  }
+
+  .team-left {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .team-featured-card {
+    flex-direction: column;
+  }
+
+  .team-featured-image {
+    flex: none;
+    min-height: 260px;
+  }
+
+  .team-featured-name {
+    font-size: 1.4rem;
+  }
+}

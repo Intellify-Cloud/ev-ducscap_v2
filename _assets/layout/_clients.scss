@@ -1,0 +1,82 @@
+// Trusted lender logos
+.trusted-logos {
+  padding: $space-6 0;
+  background: $white;
+
+  > .container {
+    max-width: 1200px;
+  }
+}
+
+.trusted-logos__title {
+  @include font-display;
+  max-width: 40rem;
+  margin: 0 0 $space-5;
+  color: $navy;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: $line-height-tight;
+}
+
+.trusted-logos__track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-3;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.trusted-logos__item {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $soft-white;
+  border: 1px solid rgba($navy, 0.1);
+  border-radius: $radius-lg;
+  transition: border-color $motion-standard, box-shadow $motion-standard, transform $motion-standard;
+
+  &:hover,
+  &:focus-within {
+    border-color: rgba($navy, 0.28);
+    box-shadow: $elevation-2;
+    transform: translateY(-2px);
+  }
+}
+
+.trusted-logos__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-3;
+}
+
+.trusted-logos__logo {
+  max-width: 100%;
+  max-height: 82px;
+  object-fit: contain;
+  filter: grayscale(30%);
+  opacity: 0.82;
+  transition: filter $motion-standard, opacity $motion-standard;
+
+  .trusted-logos__item:hover &,
+  .trusted-logos__item:focus-within & {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+
+.trusted-logos__name {
+  @include font-display-sm;
+  color: $navy;
+  font-size: 0.95rem;
+  line-height: $line-height-heading;
+  text-align: center;
+}

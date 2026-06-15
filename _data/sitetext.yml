@@ -1,0 +1,282 @@
+header:
+  title: "Hassle-free home loans start with Duces."
+  text: ""
+  button1: "Apply Now"
+  button1_url: "#contact"
+  button2: "Talk To An Advisor"
+  button2_url: "#contact"
+  stats:
+    - value: "1000+"
+      label: "Successful Approvals"
+    - value: "7"
+      label: "Leading Banks"
+    - value: "15+"
+      label: "Years Experience"
+    - value: "100%"
+      label: "Client Satisfaction"
+
+next_steps:
+  title: "Ready to take the next step?"
+  text: "Ready to take the next step towards your dream home?"
+  primary_label: "Get Started"
+  primary_url: "#contact"
+  secondary_label: "Book Appointment"
+  secondary_url: "#contact"
+
+expert:
+  title: "Apply once, at no cost to you. Let South Africa's leading banks compete for your business."
+  text: "Whether you're a first-time buyer, property investor, or looking to refinance, Duces Capital connects you with competitive finance solutions tailored to your needs."
+  button 1 text: "Apply Now"
+  button 2 text: "Talk To An Advisor"
+
+services:
+  title: "Services We Offer"
+  text: "Access competitive finance solutions through expert guidance and South Africa's leading lenders."
+  section: services
+  list:
+    - title: "Home Loans & Bond Origination"
+      desc: "We apply to up to seven banks and negotiate the best rate and terms for your new home purchase."
+      icon: fas fa-home
+      link:
+        url: "#contact"
+        text: "Enquire Now"
+    - title: "Refinancing"
+      desc: "Better rates on your existing home loan — we handle the negotiation and paperwork."
+      icon: fas fa-exchange-alt
+      link:
+        url: "#contact"
+        text: "Enquire Now"
+    - title: "Property Investment & Commercial Finance"
+      desc: "Competitive lending solutions for investors and businesses acquiring, developing, or growing their property portfolio."
+      icon: fas fa-chart-line
+      link:
+        url: "#contact"
+        text: "Enquire Now"
+
+articles:
+  title: "Property Finance Insights"
+  text: "Stay informed with expert guidance on property financing, lending trends, and the South African property market."
+  section: articles
+  read_more: "Read more"
+
+calculators:
+  title: "Property Finance Calculators"
+  text: "Estimate your bond eligibility and monthly repayments with our easy-to-use calculators."
+  section: calculators
+  list:
+    - title: "Affordability Calculator"
+      desc: "Calculate how much you can qualify for based on your income and expenses."
+      icon: fas fa-calculator
+      link:
+        url: /affordability-calculator
+        text: "Calculate"
+    - title: "Bond Repayment Calculator"
+      desc: "Estimate your monthly bond repayments based on loan amount and interest rate."
+      icon: fas fa-calculator
+      link:
+        url: /bond-calculator
+        text: "Calculate"
+    - title: "Transfer Cost Calculator"
+      desc: "Estimate transfer duties and registration costs when purchasing property."
+      icon: fas fa-calculator
+      link:
+        url: /transfer-cost-calculator
+        text: "Calculate"
+
+more-calculators:
+  title: "More Tools"
+  section: more-calculators
+  list:
+    - title: "Deposit Savings Calculator"
+      desc: "Plan your savings strategy towards your property deposit goal."
+      icon: fas fa-piggy-bank
+      link:
+        url: /deposit-savings-calculator
+        text: "Calculate"
+    - title: "Amortisation Calculator"
+      desc: "Understand how your repayments are structured over the life of your loan."
+      icon: fas fa-table
+      link:
+        url: /amortisation-calculator
+        text: "Calculate"
+
+textblock:
+  title: "Why Duces Capital"
+  text: "We specialise in connecting clients with the right property finance solution. Every recommendation is made with your best interests at heart."
+  section: textblock
+  list:
+    - title: "Independent Advice"
+      desc: "Unbiased guidance tailored strictly to your financial objectives and long-term security."
+      icon: "fas fa-balance-scale"
+    - title: "Multiple Lender Access"
+      desc: "Access to a broad lender network to help secure competitive property finance options."
+      icon: "fas fa-network-wired"
+    - title: "Expert Guidance"
+      desc: "Clear, experienced guidance through each stage of the finance process."
+      icon: "fas fa-brain"
+    - title: "Dedicated Support"
+      desc: "Personal support from enquiry through to completion."
+      icon: "fas fa-headset"
+
+portfolio:
+  title: "Why Choose Duces Capital"
+  text: "The Duces Capital difference"
+  section: portfolio
+  closebutton: "Close"
+
+about:
+  title: "About Duces Capital"
+  text2: "
+    <p>Duces Capital was founded on a simple principle: <strong>property finance doesn't have to be complicated.</strong></p>
+    <p>We are a team of dedicated property finance specialists committed to guiding homebuyers, investors, and property owners through every step of the finance journey. With access to a broad panel of South Africa's leading banks and lenders, we work on your behalf to secure the most competitive and suitable finance solution — at <strong>no cost to you</strong>.</p>
+    <p>Our approach is built on trust, transparency, and expertise. We take the time to understand your goals, then match you with the right financial partner to make them a reality.</p>
+  "
+  text3: "Property Finance Done Right."
+
+clients:
+  title: "Lender Partners"
+  section: clients
+  max-height: 120px
+  horizontal-scrolling: ""
+  list:
+    - title: "ABSA"
+      url: https://www.absa.co.za
+      logo: assets/img/clients/absa-bw.png
+    - title: "FNB"
+      url: https://www.fnb.co.za/
+      logo: assets/img/clients/fnb-n.png
+    - title: "Investec"
+      url: https://www.investec.co.za/
+      logo: assets/img/clients/investec.png
+    - title: "Rand Merchant Bank"
+      url: https://www.rmb.co.za
+      logo: assets/img/clients/rmb-img-n.png
+    - title: "Nedbank"
+      url: https://www.nedbank.co.za
+      logo: assets/img/clients/nedbank-bw.png
+    - title: "Standard Bank"
+      url: https://www.standardbank.co.za/
+      logo: assets/img/clients/SBSA-bw.png
+
+team:
+  title: "THE TEAM"
+  section: team
+  contact:
+  hours:
+    title: "Office Hours"
+    list:
+      - "Monday – Friday: 08:00 – 17:00"
+      - "Saturday: By appointment"
+      - "Sunday: Closed"
+    note: "Appointments outside office hours can be arranged when needed."
+  people:
+    - name: "John Doe"
+      role: "Director & Senior Property Finance Specialist"
+      bio: "Providing expert guidance from pre-qualification through to bank submission, negotiation, and final approval. John leads Duces Capital with a client-first philosophy and deep knowledge of the South African lending landscape."
+      image: assets/img/team/400x400_f1.jpg
+      social:
+        - url: tel:+27123456789
+          icon: fas fa-phone
+          title: Phone
+        - url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
+          icon: fas fa-envelope
+          title: Email
+        - url: https://api.whatsapp.com/send?phone=27123456789
+          icon: fab fa-whatsapp
+          title: WhatsApp
+        - url: "#contact"
+          icon: fas fa-address-card
+          title: Contact Form
+
+testimonials:
+  title: "CLIENT SUCCESS STORIES"
+  text: "What Our Clients Say"
+  section: testimonials
+  people:
+    - name: "Sarah K. ⭐⭐⭐⭐⭐"
+      role: "First-time buyer"
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop"
+      testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duces Capital made the entire process seamless and stress-free. Their expertise and dedication helped us secure our dream home faster than we ever expected."
+    - name: "Michael T. ⭐⭐⭐⭐⭐"
+      role: "Property investor"
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
+      testimony: "From first consultation to final approval, the team at Duces Capital went above and beyond. Their knowledge of the lending landscape is unmatched. I highly recommend their services to any property buyer or investor."
+    - name: "Priya R. ⭐⭐⭐⭐⭐"
+      role: "Home loan client"
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop"
+      testimony: "Professional, knowledgeable, and genuinely caring. Duces Capital didn't just find us a loan — they found us the right loan. The difference in rates was significant and well worth the journey."
+
+contact:
+  title: "Contact Us"
+  page_title: "Contact Duces Capital"
+  text: "Let's find the right finance solution for you."
+  details_title: "Speak to Us"
+  details_label: "Contact details"
+  hours_label: "Office hours"
+  note: "Reach out by phone, email, or WhatsApp and one of our property finance specialists will guide you toward the right solution. All enquiries are treated with strict confidentiality."
+  section: contact
+  methods:
+    - title: "Phone"
+      text: "012 345 6789"
+      url: tel:+27123456789
+      icon: fas fa-phone
+    - title: "Email"
+      text: "kunle@ducescapital.co.za"
+      url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
+      icon: fas fa-envelope
+    - title: "WhatsApp"
+      text: "Chat on WhatsApp"
+      url: https://api.whatsapp.com/send?phone=27123456789
+      icon: fab fa-whatsapp
+  faq:
+    - question: "How do I contact Duces Capital?"
+      answer: "You can reach us by phone at 012 345 6789, email at kunle@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
+    - question: "Do I pay for bond origination services?"
+      answer: "No, our services are completely free to you as the client. We are paid by the banks once your finance is approved."
+
+footer:
+  copyright_prefix: "Copyright"
+  description: "Duces Capital helps homebuyers, investors, and property owners secure competitive property finance solutions through expert guidance and access to multiple lenders."
+  sections:
+    - title: "Services"
+      links:
+        - title: "Home Loans"
+          url: "#services"
+        - title: "Bond Origination"
+          url: "#services"
+        - title: "Refinancing"
+          url: "#services"
+        - title: "Property Investment"
+          url: "#services"
+    - title: "Company"
+      links:
+        - title: "About"
+          url: "#about"
+        - title: "Why Duces Capital"
+          url: "#textblock"
+        - title: "Lender Partners"
+          url: "#clients"
+        - title: "Contact"
+          url: "#contact"
+    - title: "Resources"
+      links:
+        - title: "Calculators"
+          url: "#calculators"
+        - title: "Privacy Statement"
+          url: "/privacy-statement"
+        - title: "Data Sharing"
+          url: "/data-sharing-agreement"
+        - title: "Legal"
+          url: "/legal"
+  legal_links:
+    - title: "Privacy Statement"
+      url: "/privacy-statement"
+    - title: "Data Sharing"
+      url: "/data-sharing-agreement"
+  privacy: "Privacy Statement"
+  data_sharing: "Data Sharing"
+  social_label: "Social link"
+  social:
+    - url: https://www.instagram.com/ducescapital/
+      icon: "fab fa-instagram"
+      title: "Instagram"

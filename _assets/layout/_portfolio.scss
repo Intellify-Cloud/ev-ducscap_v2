@@ -1,0 +1,201 @@
+// Styling for the portfolio section — Duces Capital Professional Theme
+#portfolio {
+  background-color: $white;
+
+  .section-heading {
+    color: $navy;
+    margin-bottom: $space-2;
+  }
+
+  .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+
+    .portfolio-link {
+      position: relative;
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+      cursor: pointer;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%);
+        transition: filter $motion-theatrical, transform $motion-theatrical;
+      }
+
+      .portfolio-hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($gold, 0.15);
+        transition: all $motion-theatrical;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .portfolio-hover-content {
+          font-size: 20px;
+          text-align: center;
+          color: $gold;
+          opacity: 0;
+          transform: scale(0.8);
+          transition: all $motion-theatrical;
+
+          i {
+            display: block;
+            font-size: 3rem;
+            margin-bottom: $space-2;
+            color: $gold;
+          }
+
+          h3, h4 {
+            margin: 0;
+            color: $white;
+            font-family: $font-display;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+          }
+
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: $space-1;
+          }
+
+          h4 {
+            font-size: 0.9rem;
+            color: rgba($white, 0.7);
+          }
+        }
+      }
+
+      &:hover {
+        img {
+          filter: grayscale(0%);
+          transform: scale(1.05);
+        }
+
+        .portfolio-hover {
+          opacity: 1;
+
+          .portfolio-hover-content {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    .portfolio-caption {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: $space-4;
+      text-align: center;
+      background-color: $white;
+      border: 1px solid rgba($navy, 0.12);
+      border-top: none;
+      transition: all $motion-standard;
+
+      h4 {
+        margin: 0 0 $space-1;
+        text-transform: none;
+        color: $navy;
+        font-family: $font-display;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.95rem;
+        font-style: italic;
+        margin: 0;
+        color: $medium-grey;
+        font-family: $font-body;
+      }
+
+      &:hover {
+        background-color: rgba($navy, 0.02);
+        border-color: rgba($navy, 0.25);
+      }
+    }
+  }
+
+  * {
+    z-index: 2;
+  }
+}
+
+@media(min-width: 767px) {
+  #portfolio {
+    .portfolio-item {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+.portfolio-modal {
+  .modal-dialog {
+    margin: 1rem;
+    max-width: 100vw;
+  }
+
+  .modal-content {
+    background-color: $white;
+    border: 1px solid rgba($navy, 0.12);
+    padding: $space-5 $space-4;
+    text-align: center;
+
+    h2 {
+      color: $navy;
+      font-family: $font-display;
+      margin-bottom: $space-3;
+    }
+
+    p {
+      margin-bottom: $space-3;
+      color: $medium-grey;
+    }
+
+    p.item-intro {
+      font-size: 1rem;
+      font-style: italic;
+      margin: $space-3 0;
+      font-family: $font-body;
+      color: $gold;
+    }
+
+    ul.list-inline {
+      margin-top: 0;
+      margin-bottom: $space-3;
+
+      li {
+        display: inline-block;
+        margin-right: $space-2;
+
+        &::before {
+          content: "•";
+          color: $gold;
+          margin-right: $space-1;
+        }
+
+        &:first-child::before {
+          content: "";
+          margin-right: 0;
+        }
+      }
+    }
+
+    img {
+      margin-bottom: $space-4;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid rgba($navy, 0.12);
+    }
+  }
+}

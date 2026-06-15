@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "base/variables.scss";
+
+$primary: $navy;
+$secondary: $blue;
+$accent: $gold;
+$white: rgb(255, 255, 255);
+$black: #000;
+$input-height:calc(#{$input-height-inner} + #{$input-height-border});
+
+$spacer:1rem;
+$border-width:1px;
+$border-radius:4px;
+$btn-border-radius:999px;
+$btn-border-radius-lg:999px;
+$btn-border-radius-sm:999px;
+$enable-rounded: true;
+$enable-shadows:true;
+$enable-gradients:false;
+
+$header-image: "./img/hero.jpg";
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap";
+@import "base/mixins.scss";
+@import "base/page.scss";
+@import "base/typography.scss";
+@import "base/utilities.scss";
+
+@import "components/buttons.scss";
+@import "components/navbar.scss";
+@import "components/client-scroll.scss";
+@import "components/decorative.scss";
+@import "components/forms.scss";
+@import "components/cards.scss";
+@import "components/section-headers.scss";
+@import "components/animations.scss";
+
+@import "layout/masthead.scss";
+@import "layout/hero.scss";
+@import "layout/next-steps.scss";
+@import "layout/services.scss";
+@import "layout/portfolio.scss";
+@import "layout/team.scss";
+@import "layout/testimonials.scss";
+@import "layout/about.scss";
+@import "layout/contact.scss";
+@import "layout/footer.scss";
+@import "layout/clients.scss";
+@import "layout/textblock.scss";
+@import "layout/calculators.scss";
+@import "layout/3calculators.scss";
+@import "layout/dist/_expert.scss";

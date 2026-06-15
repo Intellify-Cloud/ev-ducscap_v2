@@ -1,0 +1,38 @@
+<!-- BEGIN: LetsMakeItHappenSection -->
+<section
+  id="{{ site.data.sitetext.lets_make_it_happen.section | default: 'lets-make-it-happen' }}"
+  class="lets-make-it-happen"
+  data-purpose="lets-make-it-happen"
+  {% if site.data.sitetext.lets_make_it_happen.background_image %}
+  style="background-image: url('{{ site.baseurl }}{{ site.data.sitetext.lets_make_it_happen.background_image }}');"
+  {% endif %}>
+  <div class="lets-make-it-happen__container">
+    <div class="lets-make-it-happen__content">
+      <h2 class="lets-make-it-happen__title">
+        {{ site.data.sitetext.lets_make_it_happen.title }}
+      </h2>
+
+      <p class="lets-make-it-happen__description">
+        {{ site.data.sitetext.lets_make_it_happen.description }}
+      </p>
+
+      <a
+        href="{{ site.data.sitetext.lets_make_it_happen.button_link }}"
+        class="lets-make-it-happen__button"
+        target="_blank"
+        rel="noopener noreferrer">
+        {{ site.data.sitetext.lets_make_it_happen.button_text }}
+      </a>
+    </div>
+
+    {% if site.data.sitetext.lets_make_it_happen.image %}
+    <div class="lets-make-it-happen__image">
+      <img
+        src="{{ site.baseurl }}{{ site.data.sitetext.lets_make_it_happen.image }}"
+        alt="{{ site.data.sitetext.lets_make_it_happen.image_alt | default: 'Home loan guidance' }}"
+        class="lets-make-it-happen__img">
+    </div>
+    {% endif %}
+  </div>
+</section>
+<!-- END: LetsMakeItHappenSection -->

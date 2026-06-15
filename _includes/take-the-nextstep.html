@@ -1,0 +1,30 @@
+<!-- BEGIN: TakeTheNextStepSection -->
+<section
+  id="{{ site.data.sitetext.take_the_nextstep.section | default: 'take-the-nextstep' }}"
+  class="take-the-nextstep"
+  data-purpose="take-the-nextstep"
+  style="background-image: url('{{ site.baseurl }}/assets/img/sections/dg.jpeg');">
+  <div class="take-the-nextstep__container">
+    <div class="take-the-nextstep__content">
+      <h2 class="take-the-nextstep__heading">
+        <span class="take-the-nextstep__heading-main">
+          {{ site.data.sitetext.take_the_nextstep.heading_main }}
+        </span>
+        <span class="take-the-nextstep__heading-accent">
+          {{ site.data.sitetext.take_the_nextstep.heading_accent }}
+        </span>
+      </h2>
+
+      <p class="take-the-nextstep__description">
+        {{ site.data.sitetext.take_the_nextstep.description }}
+      </p>
+
+      <a
+        href="{{ site.baseurl }}{{ site.data.sitetext.take_the_nextstep.button_link }}"
+        class="take-the-nextstep__button">
+        {{ site.data.sitetext.take_the_nextstep.button_text }}
+      </a>
+    </div>
+  </div>
+</section>
+<!-- END: TakeTheNextStepSection -->

@@ -1,0 +1,132 @@
+// ======================================================
+// layout/_take-the-nextstep.scss
+// ======================================================
+
+.take-the-nextstep {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.take-the-nextstep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 41, 68, 0.75);
+  z-index: 0;
+}
+
+.take-the-nextstep__container {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.take-the-nextstep__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.take-the-nextstep__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 1080px;
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.take-the-nextstep__heading-main {
+  color: #ffffff;
+}
+
+.take-the-nextstep__heading-accent {
+  color: #ff6b35;
+}
+
+.take-the-nextstep__description {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+  max-width: 100%;
+}
+
+.take-the-nextstep__button {
+  display: inline-block;
+  padding: 16px 53px;
+  background-color: #bde3d3;
+  color: #1b5e4e;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #bde3d3;
+    color: #1b5e4e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .take-the-nextstep {
+    padding: 60px 16px;
+  }
+
+  .take-the-nextstep__heading {
+    font-size: 36px;
+    gap: 10px;
+  }
+
+  .take-the-nextstep__description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .take-the-nextstep__button {
+    padding: 14px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .take-the-nextstep {
+    padding: 40px 12px;
+  }
+
+  .take-the-nextstep__heading {
+    font-size: 28px;
+    gap: 8px;
+  }
+
+  .take-the-nextstep__description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .take-the-nextstep__button {
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+}

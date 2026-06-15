@@ -1,0 +1,37 @@
+<section class="services-section page-section" id="{{ site.data.sitetext.services.section }}">
+  <div class="container">
+    <div class="services-intro">
+      <h2 class="services-heading">{{ site.data.sitetext.services.title }}</h2>
+      {% if site.data.sitetext.services.text %}
+      <p class="services-subheading">{{ site.data.sitetext.services.text }}</p>
+      {% endif %}
+    </div>
+
+    <div class="services-grid">
+      {% for service in site.data.sitetext.services.list %}
+      <article class="service-card">
+        <div class="service-card-content">
+          {% if service.icon %}
+          <div class="service-card-icon" aria-hidden="true">
+            <i class="{{ service.icon }}"></i>
+          </div>
+          {% endif %}
+          <h3 class="service-card-title">{{ service.title }}</h3>
+          {% if service.desc %}
+          <p class="service-card-copy">{{ service.desc }}</p>
+          {% endif %}
+        </div>
+        {% if service.link %}
+        <div class="service-card-footer">
+          <span class="service-card-line" aria-hidden="true"></span>
+          <a href="{{ service.link.url }}" class="service-card-cta">
+            {{ service.link.text }}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

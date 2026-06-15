@@ -1,0 +1,118 @@
+// Transparent brand-only navbar.
+#mainNav {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 18px 0;
+  pointer-events: none;
+  transition: padding $motion-standard;
+
+  > .container {
+    max-width: min(1180px, calc(100vw - 32px));
+    min-height: 72px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    background: transparent;
+  }
+
+  .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    pointer-events: auto;
+
+    > img {
+      display: block;
+      width: auto;
+      height: 106px;
+      max-width: min(242px, 46vw);
+      object-fit: contain;
+      filter: drop-shadow(0 2px 10px rgba(255, 255, 255, 0.36));
+      transition: height $motion-standard, filter $motion-fast;
+    }
+
+    &:hover,
+    &:focus {
+      > img {
+        filter: drop-shadow(0 2px 12px rgba(255, 255, 255, 0.48));
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgb(15, 90, 231);
+      outline-offset: 6px;
+    }
+  }
+
+  .navbar-apply {
+    @include font-body;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 8px;
+    padding: 0 24px;
+    border-radius: 999px;
+    background: $white;
+    color: rgb(40, 51, 56);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.14);
+    pointer-events: auto;
+    transition: transform $motion-fast, box-shadow $motion-fast, opacity $motion-fast;
+
+    &:hover,
+    &:focus {
+      color: rgb(40, 51, 56);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgb(15, 90, 231);
+      outline-offset: 4px;
+    }
+  }
+
+  &.navbar-shrink {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 12px 0;
+
+    .navbar-brand > img {
+      height: 86px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 14px 0;
+
+    > .container {
+      max-width: calc(100vw - 28px);
+      min-height: 58px;
+    }
+
+    .navbar-brand > img {
+      height: 75px;
+      max-width: 48vw;
+    }
+
+    &.navbar-shrink .navbar-brand > img {
+      height: 64px;
+    }
+
+    .navbar-apply {
+      min-height: 40px;
+      margin-top: 6px;
+      padding: 0 18px;
+      font-size: 0.85rem;
+    }
+  }
+}

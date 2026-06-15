@@ -1,0 +1,155 @@
+// Services section
+.services-section {
+  background-color: $soft-white;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 12% 18%, rgba($gold, 0.08), transparent 28%),
+      linear-gradient(180deg, rgba($white, 0.75), rgba($navy, 0.035));
+    pointer-events: none;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+  }
+}
+
+.services-intro {
+  max-width: 760px;
+  margin-bottom: $space-6;
+}
+
+.services-heading {
+  @include font-display;
+  margin: 0 0 $space-3;
+  color: $navy;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: $line-height-tight;
+}
+
+.services-subheading {
+  @include font-body;
+  max-width: 680px;
+  margin: 0;
+  padding: $space-1 0 $space-1 $space-3;
+  border-left: 2px solid $gold;
+  color: $medium-grey;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: $line-height-body;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-3;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.service-card {
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $space-4;
+  background: $white;
+  border: 1px solid rgba($navy, 0.12);
+  border-radius: $radius-lg;
+  box-shadow: $elevation-1;
+  transition: border-color $motion-standard, box-shadow $motion-standard, transform $motion-standard;
+
+  &:hover,
+  &:focus-within {
+    border-color: rgba($navy, 0.26);
+    box-shadow: $elevation-2;
+    transform: translateY(-4px);
+
+    .service-card-icon {
+      background: $navy;
+      color: $gold-light;
+    }
+
+    .service-card-line {
+      width: 100%;
+    }
+
+    .service-card-cta {
+      color: $blue;
+    }
+  }
+}
+
+.service-card-icon {
+  width: 68px;
+  height: 68px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $space-3;
+  border-radius: $radius-lg;
+  background: rgba($navy, 0.08);
+  color: $gold;
+  font-size: 1.55rem;
+  transition: background-color $motion-theatrical, color $motion-theatrical;
+}
+
+.service-card-title {
+  @include font-display;
+  margin: 0 0 $space-2;
+  color: $charcoal;
+  font-size: 1.2rem;
+  line-height: $line-height-heading;
+}
+
+.service-card-copy {
+  @include font-body;
+  margin: 0;
+  color: $medium-grey;
+  font-size: 0.95rem;
+  line-height: $line-height-body;
+}
+
+.service-card-footer {
+  margin-top: $space-4;
+}
+
+.service-card-line {
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-bottom: $space-3;
+  background: $gold;
+  transition: width $motion-theatrical;
+}
+
+.service-card-cta {
+  @include font-display-sm;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  color: $navy;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color $motion-fast, gap $motion-fast;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+}

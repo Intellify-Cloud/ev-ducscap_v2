@@ -1,0 +1,57 @@
+// About section
+.about-section {
+  background: $white;
+
+  > .container {
+    max-width: 1200px;
+  }
+}
+
+.about-section__intro {
+  max-width: 760px;
+  margin-bottom: $space-5;
+}
+
+.about-section__heading {
+  @include font-display;
+  margin: 0;
+  color: $navy;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: $line-height-tight;
+}
+
+.about-section__body {
+  max-width: 860px;
+  padding-left: $space-3;
+  border-left: 2px solid $gold;
+}
+
+.about-section__copy {
+  @include font-body;
+  color: $medium-grey;
+  font-size: 17px;
+  line-height: 29px;
+
+  p {
+    margin: 0 0 $space-3;
+    color: inherit;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: $charcoal;
+    font-weight: 600;
+  }
+}
+
+.about-section__tagline {
+  @include font-display-sm;
+  display: inline-block;
+  margin: $space-4 0 0;
+  color: $gold;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: $line-height-heading;
+}

@@ -1,0 +1,208 @@
+// Form & Input Styling — Duces Capital Professional Theme
+// Clean underline-style inputs with gold accents
+
+.form-group-elegant {
+  margin-bottom: $space-4;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $navy;
+  margin-bottom: $space-2;
+  transition: color $motion-fast;
+  font-family: $font-display;
+
+  &.required::after {
+    content: " *";
+    color: $gold;
+  }
+}
+
+.form-group-elegant.focused .form-label,
+.form-group-elegant.has-value .form-label {
+  color: $gold;
+}
+
+.form-control,
+textarea.form-control,
+select.form-control {
+  background-color: $white;
+  border: 1px solid rgba($navy, 0.2);
+  border-bottom: 2px solid $navy;
+  border-radius: $radius-md;
+  color: $text-strong;
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: $space-2;
+  height: auto;
+  min-height: 48px;
+  transition: all $motion-fast;
+  box-shadow: none;
+
+  &::placeholder {
+    color: rgba($medium-grey, 0.6);
+    opacity: 1;
+  }
+
+  &:hover {
+    border-color: rgba($navy, 0.35);
+    background-color: $soft-white;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-color: $blue;
+    border-bottom: 2px solid $blue;
+    background-color: $white;
+    box-shadow: 0 0 0 3px rgba($blue, 0.1);
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    border-color: rgba($navy, 0.1);
+    color: $medium-grey;
+    cursor: not-allowed;
+  }
+}
+
+.form-control.is-invalid {
+  border-color: $error;
+
+  &:focus {
+    box-shadow: 0 0 0 3px $error-bg;
+  }
+}
+
+.form-control.is-valid {
+  border-color: $success;
+
+  &:focus {
+    box-shadow: 0 0 0 3px $success-bg;
+  }
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%231D2944' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right $space-2 center;
+  padding-right: $space-5;
+  cursor: pointer;
+}
+
+.form-text,
+.invalid-feedback,
+.valid-feedback {
+  font-size: 0.8rem;
+  font-family: $font-body;
+  margin-top: $space-1;
+  display: block;
+}
+
+.form-text {
+  color: $medium-grey;
+  font-style: italic;
+}
+
+.invalid-feedback {
+  color: $error;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.valid-feedback {
+  color: $success;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.form-check {
+  padding-left: 0;
+  margin-bottom: $space-3;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $navy;
+  border-radius: $radius-sm;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-right: $space-2;
+  transition: all $motion-fast;
+  vertical-align: top;
+
+  &:hover {
+    background-color: rgba($navy, 0.05);
+    border-color: $blue;
+  }
+
+  &:checked {
+    background-color: $navy;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M4 8l2 2 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-color: $navy;
+  }
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($blue, 0.3);
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $medium-grey;
+    cursor: not-allowed;
+  }
+}
+
+.form-check-label {
+  color: $text-strong;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+// Form Group with Icon
+.form-group-icon {
+  position: relative;
+
+  .form-icon {
+    position: absolute;
+    left: $space-2;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $navy;
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
+
+  .form-control {
+    padding-left: $space-5;
+  }
+}

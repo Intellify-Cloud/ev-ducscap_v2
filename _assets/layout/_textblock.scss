@@ -1,0 +1,118 @@
+// Why Duces Capital section
+.textblock-section {
+  background-color: #131a2a;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='352' height='352' viewBox='0 0 200 200'%3E%3Crect fill='%23131A2A' width='200' height='200'/%3E%3Cg fill='none' stroke='%23374B7A' stroke-width='0.8' stroke-opacity='0.51'%3E%3Crect x='-40' y='40' width='75' height='75'/%3E%3Crect x='-35' y='45' width='65' height='65'/%3E%3Crect x='-30' y='50' width='55' height='55'/%3E%3Crect x='-25' y='55' width='45' height='45'/%3E%3Crect x='-20' y='60' width='35' height='35'/%3E%3Crect x='-15' y='65' width='25' height='25'/%3E%3Crect x='-10' y='70' width='15' height='15'/%3E%3Crect x='-5' y='75' width='5' height='5'/%3E%3Crect width='35' height='35'/%3E%3Crect x='5' y='5' width='25' height='25'/%3E%3Crect x='10' y='10' width='15' height='15'/%3E%3Crect x='15' y='15' width='5' height='5'/%3E%3Crect x='40' width='75' height='75'/%3E%3Crect x='45' y='5' width='65' height='65'/%3E%3Crect x='50' y='10' width='55' height='55'/%3E%3Crect x='55' y='15' width='45' height='45'/%3E%3Crect x='60' y='20' width='35' height='35'/%3E%3Crect x='65' y='25' width='25' height='25'/%3E%3Crect x='70' y='30' width='15' height='15'/%3E%3Crect x='75' y='35' width='5' height='5'/%3E%3Crect x='40' y='80' width='35' height='35'/%3E%3Crect x='45' y='85' width='25' height='25'/%3E%3Crect x='50' y='90' width='15' height='15'/%3E%3Crect x='55' y='95' width='5' height='5'/%3E%3Crect x='120' y='-40' width='75' height='75'/%3E%3Crect x='125' y='-35' width='65' height='65'/%3E%3Crect x='130' y='-30' width='55' height='55'/%3E%3Crect x='135' y='-25' width='45' height='45'/%3E%3Crect x='140' y='-20' width='35' height='35'/%3E%3Crect x='145' y='-15' width='25' height='25'/%3E%3Crect x='150' y='-10' width='15' height='15'/%3E%3Crect x='155' y='-5' width='5' height='5'/%3E%3Crect x='120' y='40' width='35' height='35'/%3E%3Crect x='125' y='45' width='25' height='25'/%3E%3Crect x='130' y='50' width='15' height='15'/%3E%3Crect x='135' y='55' width='5' height='5'/%3E%3Crect y='120' width='75' height='75'/%3E%3Crect x='5' y='125' width='65' height='65'/%3E%3Crect x='10' y='130' width='55' height='55'/%3E%3Crect x='15' y='135' width='45' height='45'/%3E%3Crect x='20' y='140' width='35' height='35'/%3E%3Crect x='25' y='145' width='25' height='25'/%3E%3Crect x='30' y='150' width='15' height='15'/%3E%3Crect x='35' y='155' width='5' height='5'/%3E%3Crect x='200' y='120' width='75' height='75'/%3E%3Crect x='40' y='200' width='75' height='75'/%3E%3Crect x='80' y='80' width='75' height='75'/%3E%3Crect x='85' y='85' width='65' height='65'/%3E%3Crect x='90' y='90' width='55' height='55'/%3E%3Crect x='95' y='95' width='45' height='45'/%3E%3Crect x='100' y='100' width='35' height='35'/%3E%3Crect x='105' y='105' width='25' height='25'/%3E%3Crect x='110' y='110' width='15' height='15'/%3E%3Crect x='115' y='115' width='5' height='5'/%3E%3Crect x='80' y='160' width='35' height='35'/%3E%3Crect x='85' y='165' width='25' height='25'/%3E%3Crect x='90' y='170' width='15' height='15'/%3E%3Crect x='95' y='175' width='5' height='5'/%3E%3Crect x='120' y='160' width='75' height='75'/%3E%3Crect x='125' y='165' width='65' height='65'/%3E%3Crect x='130' y='170' width='55' height='55'/%3E%3Crect x='135' y='175' width='45' height='45'/%3E%3Crect x='140' y='180' width='35' height='35'/%3E%3Crect x='145' y='185' width='25' height='25'/%3E%3Crect x='150' y='190' width='15' height='15'/%3E%3Crect x='155' y='195' width='5' height='5'/%3E%3Crect x='160' y='40' width='75' height='75'/%3E%3Crect x='165' y='45' width='65' height='65'/%3E%3Crect x='170' y='50' width='55' height='55'/%3E%3Crect x='175' y='55' width='45' height='45'/%3E%3Crect x='180' y='60' width='35' height='35'/%3E%3Crect x='185' y='65' width='25' height='25'/%3E%3Crect x='190' y='70' width='15' height='15'/%3E%3Crect x='195' y='75' width='5' height='5'/%3E%3Crect x='160' y='120' width='35' height='35'/%3E%3Crect x='165' y='125' width='25' height='25'/%3E%3Crect x='170' y='130' width='15' height='15'/%3E%3Crect x='175' y='135' width='5' height='5'/%3E%3Crect x='200' y='200' width='35' height='35'/%3E%3Crect x='200' width='35' height='35'/%3E%3Crect y='200' width='35' height='35'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 352px 352px;
+  overflow: hidden;
+
+  > .container {
+    max-width: 1200px;
+  }
+}
+
+.textblock-intro {
+  max-width: 760px;
+  margin-bottom: $space-6;
+}
+
+.textblock-heading {
+  @include font-display;
+  color: $white;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: $line-height-tight;
+  margin: 0 0 $space-3;
+}
+
+.textblock-subheading {
+  @include font-body;
+  max-width: 680px;
+  margin: 0;
+  padding: $space-1 0 $space-1 $space-3;
+  border-left: 2px solid $gold;
+  color: rgba($white, 0.78);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: $line-height-body;
+}
+
+.textblock-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-3;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.textblock-card {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $space-4;
+  background: $white;
+  border: 1px solid rgba($navy, 0.12);
+  border-radius: $radius-lg;
+  box-shadow: $elevation-1;
+  transition: border-color $motion-standard, box-shadow $motion-standard, transform $motion-standard;
+
+  &:hover,
+  &:focus-within {
+    border-color: rgba($navy, 0.24);
+    box-shadow: $elevation-2;
+    transform: translateY(-4px);
+
+    .textblock-card-icon {
+      background: $navy;
+      color: $gold-light;
+    }
+
+    .textblock-card-line {
+      width: 100%;
+    }
+  }
+}
+
+.textblock-card-icon {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $space-3;
+  border-radius: 50%;
+  background: rgba($navy, 0.08);
+  color: $gold;
+  font-size: 1.5rem;
+  transition: background-color $motion-theatrical, color $motion-theatrical;
+}
+
+.textblock-card-title {
+  @include font-display;
+  margin: 0 0 $space-2;
+  color: $charcoal;
+  font-size: 1.2rem;
+  line-height: $line-height-heading;
+}
+
+.textblock-card-copy {
+  @include font-body;
+  margin: 0;
+  color: $medium-grey;
+  font-size: 0.95rem;
+  line-height: $line-height-body;
+}
+
+.textblock-card-line {
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-top: $space-4;
+  background: $gold;
+  transition: width $motion-theatrical;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+
+  {% include head.html %}
+
+  <body id="page-top" class="{% if page.background == 'white' %}bg-white{% elsif page.background == 'muted' %}bg-surface-muted{% endif %}">
+
+      {{ content }}
+
+	  {% include footer.html %}
+
+  </body>
+</html>

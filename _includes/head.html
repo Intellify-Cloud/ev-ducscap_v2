@@ -1,0 +1,135 @@
+<head>
+{% assign google_analytics_id = site.analytics.google | default: "" | strip %}
+{% if google_analytics_id == "" %}
+{% elsif google_analytics_id == "G-XXX" %}
+{% else %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+		gtag('config', '{{ google_analytics_id }}');
+  </script>
+<!-- End Google Analytics -->
+
+{% endif %}
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="title" content="{{ site.title }}">
+  {% assign page_desc = page.description | default: site.description %}
+  <meta name="description" content="{{ page_desc }}">
+  <!-- Primary Meta Tags -->
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:image" content="{{ "/social_916x509.jpg" | absolute_url }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="twitter:description" content="{{ page_desc }}">
+  <meta property="twitter:image" content="{{ "/social_916x509.jpg" | absolute_url }}">
+
+
+  <meta name="author" content="{{ site.author }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Duces Capital",
+    "alternateName": "",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ "/assets/ducescapital-logo.png" | absolute_url }}",
+    "image": "{{ "/social_916x509.jpg" | absolute_url }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ZA",
+      "addressRegion": "South Africa"
+    },
+    "telephone": "+27123456789",
+    "email": "kunle@ducescapital.co.za",
+    "areaServed": "ZA",
+    "serviceType": ["Bond Origination", "Property Finance", "Home Loan Finance", "Investment Property Finance"],
+    "provider": {
+      "@type": "Organization",
+      "name": "Duces Capital",
+      "jobTitle": "Property Finance Specialists"
+    }
+  }
+</script>
+  {% if page.url == "/" or page.url == "/index.html" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much can I borrow for a home loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our affordability calculator to determine how much you can qualify for based on your income and expenses. We submit applications to up to seven banks to get you the best rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is bond origination?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bond origination is the process of preparing and submitting your home loan application to banks. As your mortgage originator, we negotiate the best interest rates on your behalf at no cost to you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my monthly bond repayments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our bond repayment calculator. Enter the property price, deposit amount, and interest rate to estimate your monthly home loan payments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are transfer costs in South Africa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Transfer costs include transfer duties, conveyancing fees, and bond registration costs. Use our transfer cost calculator to estimate these costs when buying property in South Africa."
+        }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
+
+  <link rel="icon" href="{{ site.baseurl }}/favicon.png" type="image/png">
+  <link rel="stylesheet" href="{{ site.baseurl | append: "/assets/bundle.css" | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400&family=Merriweather:wght@900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+  <script src="{{ site.baseurl | append: "/assets/bundle.js" | relative_url }}"></script>
+  <script>var baseurl = "{{ "" | relative_url }}";</script>
+
+  <!-- Page container change top padding when nav shrinks -->
+  {% if page.layout == "page" %}
+  <style>
+    #pagecontainer {padding-top: 150px;}
+	@media only screen and (max-width: 991px) {
+	  #pagecontainer {padding-top: 100px;}
+	}
+  </style>
+  {% endif %}
+  
+</head>
