@@ -65,8 +65,8 @@
 .take-the-nextstep__button {
   display: inline-block;
   padding: 16px 53px;
-  background-color: #bde3d3;
-  color: #1b5e4e;
+  background-color: $button-color;
+  color: #ffffff;
   text-decoration: none;
   font-size: 20px;
   font-weight: 700;
@@ -76,8 +76,8 @@
   border: none;
 
   &:hover {
-    background-color: #bde3d3;
-    color: #1b5e4e;
+    background-color: $button-color-hover;
+    color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     text-decoration: none;

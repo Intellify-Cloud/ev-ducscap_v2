@@ -5,14 +5,24 @@
   padding: 80px 72px;
 }
 
+.next-steps-section-title {
+  max-width: 1440px;
+  margin: 0 auto 32px;
+  color: rgb(40, 51, 56);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
 .next-steps-card {
   display: grid;
   grid-template-columns: minmax(0, 45%) minmax(0, 55%);
   align-items: stretch;
   max-width: 1440px;
-  height: min(500px, calc(100vw * 0.34));
-  min-height: 420px;
-  max-height: 500px;
+  height: 430px;
+  max-height: 430px;
   margin: 0 auto;
   overflow: hidden;
   background: $white;
@@ -47,8 +57,8 @@
 }
 
 .next-steps-title {
+  width: 100%;
   margin: 0;
-  max-width: 12ch;
   color: rgb(40, 51, 56);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 2.5rem;
@@ -58,7 +68,7 @@
 }
 
 .next-steps-text {
-  max-width: 38ch;
+  width: 100%;
   margin: 24px 0 0;
   color: rgb(40, 51, 56);
   font-family: "Inter", system-ui, sans-serif;
@@ -96,32 +106,32 @@
   }
 
   &:focus-visible {
-    outline: 2px solid rgb(152, 150, 240);
+    outline: 2px solid $button-color;
     outline-offset: 3px;
   }
 }
 
 .next-steps-btn--primary {
-  border: 1.5px solid rgb(152, 150, 240);
-  background: rgb(152, 150, 240);
+  border: 1.5px solid $button-color;
+  background: $button-color;
   color: $white;
 
   &:hover,
   &:focus {
-    background: rgba(152, 150, 240, 0.85);
-    border-color: rgba(152, 150, 240, 0.85);
+    background: $button-color-hover;
+    border-color: $button-color-hover;
     color: $white;
   }
 }
 
 .next-steps-btn--secondary {
-  border: 1.5px solid rgb(152, 150, 240);
+  border: 1.5px solid $button-color;
   background: transparent;
-  color: rgb(152, 150, 240);
+  color: $button-color;
 
   &:hover,
   &:focus {
-    background: rgb(152, 150, 240);
+    background: $button-color;
     color: $white;
   }
 }
@@ -129,6 +139,10 @@
 @media (max-width: 1199px) {
   .next-steps-section {
     padding: 64px 40px;
+  }
+
+  .next-steps-section-title {
+    margin-bottom: 28px;
   }
 
   .next-steps-content {
@@ -161,6 +175,11 @@
     padding: 40px 16px;
   }
 
+  .next-steps-section-title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
   .next-steps-card {
     display: flex;
     flex-direction: column;
@@ -188,7 +207,6 @@
   }
 
   .next-steps-title {
-    max-width: 11ch;
     font-size: 2rem;
   }
 

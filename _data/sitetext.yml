@@ -16,12 +16,11 @@ header:
       label: "Client Satisfaction"
 
 next_steps:
+  section_title: "Every step moves you closer."
   title: "Ready to take the next step?"
   text: "Ready to take the next step towards your dream home?"
-  primary_label: "Get Started"
+  primary_label: "Get Started by Getting Prequalified"
   primary_url: "#contact"
-  secondary_label: "Book Appointment"
-  secondary_url: "#contact"
 
 expert:
   title: "Apply once, at no cost to you. Let South Africa's leading banks compete for your business."

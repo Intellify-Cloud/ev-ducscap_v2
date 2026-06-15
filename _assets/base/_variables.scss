@@ -20,6 +20,10 @@ $gold: #D4AF37;
 $gold-light: lighten($gold, 15%);
 $gold-dark: darken($gold, 10%);
 
+// Button CTA colour
+$button-color: #f70c47;
+$button-color-hover: darken($button-color, 8%);
+
 // Neutral / Background Colours
 $white: #FFFFFF;
 $soft-white: #F8FAFC;

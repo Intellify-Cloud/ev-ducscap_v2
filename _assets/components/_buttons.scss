@@ -33,17 +33,17 @@
   letter-spacing: 0.08em;
 }
 
-// Primary — Navy background, white text → hover to blue
+// Primary CTA
 .btn-primary {
-  background-color: $navy;
+  background-color: $button-color;
   color: $white;
-  border: 2px solid $navy;
+  border: 2px solid $button-color;
   box-shadow: $elevation-1;
 
   &:hover,
   &:focus {
-    background-color: $blue;
-    border-color: $blue;
+    background-color: $button-color-hover;
+    border-color: $button-color-hover;
     color: $white;
     box-shadow: $elevation-2;
     transform: translateY(-1px);
@@ -51,21 +51,21 @@
 
   &:active {
     transform: translateY(0) scale(0.98);
-    background-color: $navy-dark;
+    background-color: $button-color-hover;
     color: $white;
   }
 }
 
-// Secondary — Navy border, navy text → hover filled navy
+// Secondary CTA
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid $navy;
-  color: $navy;
+  border: 2px solid $button-color;
+  color: $button-color;
   box-shadow: none;
 
   &:hover {
-    background-color: $navy;
-    border-color: $navy;
+    background-color: $button-color;
+    border-color: $button-color;
     color: $white;
     box-shadow: $elevation-1;
     transform: translateY(-1px);
@@ -78,37 +78,37 @@
 
 // Premium CTA — Gold background, navy text (used selectively)
 .btn-premium {
-  background-color: $gold;
-  color: $navy;
-  border: 2px solid $gold;
+  background-color: $button-color;
+  color: $white;
+  border: 2px solid $button-color;
   box-shadow: $elevation-1;
 
   &:hover,
   &:focus {
-    background-color: $gold-light;
-    border-color: $gold-light;
-    color: $navy;
+    background-color: $button-color-hover;
+    border-color: $button-color-hover;
+    color: $white;
     box-shadow: $elevation-2;
     transform: translateY(-1px);
   }
 
   &:active {
     transform: translateY(0) scale(0.98);
-    background-color: $gold-dark;
-    color: $navy;
+    background-color: $button-color-hover;
+    color: $white;
   }
 }
 
 // Ghost — minimal, for secondary actions
 .btn-ghost {
   background-color: transparent;
-  border: 1px solid rgba($navy, 0.3);
-  color: $navy;
+  border: 1px solid rgba($button-color, 0.45);
+  color: $button-color;
 
   &:hover {
-    background-color: rgba($navy, 0.05);
-    border-color: $navy;
-    color: $navy;
+    background-color: rgba($button-color, 0.08);
+    border-color: $button-color;
+    color: $button-color;
     box-shadow: $elevation-1;
   }
 

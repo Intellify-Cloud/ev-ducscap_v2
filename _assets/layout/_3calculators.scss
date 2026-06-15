@@ -74,7 +74,7 @@
   }
 
   &--active {
-    background: $navy;
+    background: $button-color;
     color: $white;
   }
 }
@@ -270,7 +270,7 @@
   min-height: 54px;
   border: 0;
   border-radius: 999px;
-  background: $navy;
+  background: $button-color;
   color: $white;
   padding: 0 $space-4;
   font-family: $font-display;
@@ -282,7 +282,7 @@
 
   &:hover,
   &:focus {
-    background: $blue;
+    background: $button-color-hover;
     transform: translateY(-1px);
   }
 }
