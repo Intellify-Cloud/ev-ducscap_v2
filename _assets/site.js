@@ -22,5 +22,44 @@ $(function () {
         100 < scrollTop ? $("#mainNav").addClass("navbar-shrink") : $("#mainNav").removeClass("navbar-shrink");
         500 < scrollTop ? $(".back-to-top-pill").addClass("is-visible") : $(".back-to-top-pill").removeClass("is-visible");
     });
+
+    var testimonialsTrack = document.getElementById("testimonialsHelloTrack");
+    var testimonialsPrev = document.getElementById("testimonialsHelloPrev");
+    var testimonialsNext = document.getElementById("testimonialsHelloNext");
+
+    if (testimonialsTrack && testimonialsPrev && testimonialsNext) {
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        var getTestimonialScrollAmount = function () {
+            var firstCard = testimonialsTrack.querySelector(".testimonials-hello-card");
+            if (!firstCard) return 0;
+            var trackStyles = window.getComputedStyle(testimonialsTrack);
+            var gap = parseInt(trackStyles.gap, 10) || 0;
+            return firstCard.offsetWidth + gap;
+        };
+
+        var updateTestimonialButtons = function () {
+            testimonialsPrev.disabled = testimonialsTrack.scrollLeft <= 0;
+            testimonialsNext.disabled = testimonialsTrack.scrollLeft + testimonialsTrack.offsetWidth >= testimonialsTrack.scrollWidth - 1;
+        };
+
+        testimonialsNext.addEventListener("click", function () {
+            testimonialsTrack.scrollBy({
+                left: getTestimonialScrollAmount(),
+                behavior: prefersReducedMotion.matches ? "auto" : "smooth"
+            });
+        });
+
+        testimonialsPrev.addEventListener("click", function () {
+            testimonialsTrack.scrollBy({
+                left: -getTestimonialScrollAmount(),
+                behavior: prefersReducedMotion.matches ? "auto" : "smooth"
+            });
+        });
+
+        testimonialsTrack.addEventListener("scroll", updateTestimonialButtons, { passive: true });
+        window.addEventListener("resize", updateTestimonialButtons);
+        updateTestimonialButtons();
+    }
 });
 

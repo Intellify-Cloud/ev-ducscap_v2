@@ -30,22 +30,20 @@ three_step_section:
   secondary_label: "Book Appointment"
   secondary_url: "#contact"
   steps:
-    - title: "Let's Get to Know You"
-      text: "Share your property goals and financial situation so we can understand what you need."
-    - title: "Finding the Right Match"
-      text: "We compare options from leading lenders and help identify finance that fits your profile."
-    - title: "Less Paperwork"
-      text: "Send us what we need and we will help keep the process clear, organised, and moving."
-    - title: "Approval Made Easier"
-      text: "We guide your application and help improve your chances of moving forward with confidence."
-    - title: "Smooth Sailing"
-      text: "Our team keeps you updated through the process so you always know what comes next."
+    - title: "Tell Us What You Need"
+      text: "Share your property goals, income, and finance position so we can understand the right path forward."
+    - title: "Compare Your Options"
+      text: "We look across leading lenders and identify finance options that suit your profile and plans."
+    - title: "Prepare Your Application"
+      text: "We help gather the right documents, structure the submission, and keep the process clear."
+    - title: "Move Toward Approval"
+      text: "We guide the application, negotiate where possible, and keep you updated until the next step is clear."
 
 lets_get_going:
   title: "Let's make it happen."
   text: "We will guide you through each stage of the bond process, helping you move ahead with clarity and confidence."
   primary_label: "Reach out for expert advice"
-  primary_url: "https://wa.me/27827704275"
+  primary_url: "https://wa.me/+27745559374"
 
 banks:
   title: "More Lenders, More Options, Better Rates."

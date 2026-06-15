@@ -8,7 +8,10 @@
   > .container {
     position: relative;
     z-index: 1;
-    max-width: 1040px;
+    width: min(80vw, 1440px);
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -110,6 +113,30 @@
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .testimonials-section {
+    > .container {
+      width: 86vw;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .testimonials-section {
+    > .container {
+      width: calc(100% - 64px);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials-section {
+    > .container {
+      width: calc(100% - 48px);
+    }
   }
 }
 

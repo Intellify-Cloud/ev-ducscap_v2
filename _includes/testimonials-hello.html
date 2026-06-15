@@ -1,0 +1,39 @@
+<section class="testimonials-hello-section" aria-labelledby="testimonials-hello-heading">
+  <h2 class="testimonials-hello-heading" id="testimonials-hello-heading">Happy Customers</h2>
+
+  <div class="testimonials-hello-container">
+    <div class="testimonials-hello-track" id="testimonialsHelloTrack" role="region" aria-label="Customer testimonials">
+      {% for item in site.data.testimonials %}
+        <article class="testimonials-hello-card" aria-label="Testimonial from {{ item.name }}">
+          <div class="testimonials-hello-badge testimonials-hello-badge--{{ item.badge_color }}" aria-hidden="true">
+            <span>"</span>
+          </div>
+          <p class="testimonials-hello-quote">{{ item.quote }}</p>
+          <p class="testimonials-hello-name testimonials-hello-name--{{ item.badge_color }}">{{ item.name }}</p>
+          <p class="testimonials-hello-meta">{{ item.location }}, {{ item.date }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="testimonials-hello-nav" role="group" aria-label="Carousel navigation">
+    <button
+      class="testimonials-hello-btn"
+      id="testimonialsHelloPrev"
+      type="button"
+      aria-label="Previous testimonial"
+      aria-controls="testimonialsHelloTrack"
+    >
+      &larr;
+    </button>
+    <button
+      class="testimonials-hello-btn"
+      id="testimonialsHelloNext"
+      type="button"
+      aria-label="Next testimonial"
+      aria-controls="testimonialsHelloTrack"
+    >
+      &rarr;
+    </button>
+  </div>
+</section>
