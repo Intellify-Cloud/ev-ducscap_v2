@@ -51,6 +51,30 @@ banks:
   primary_label: "Get Started"
   primary_url: "#contact"
 
+multi_cards:
+  heading: "Helpful tools and updates for your home loan journey."
+  background_image: "/assets/img/sections/polka-dots.png"
+  newsletter:
+    title: "Stay in the loop."
+    image: "/assets/img/sections/next-step.jpg"
+    image_alt: "Home finance consultation"
+    input_label: "Email address"
+    input_placeholder: "Email address"
+    button_text: "Subscribe"
+    mobile_button_text: "Join"
+    sending_text: "Sending..."
+    success_message: "Thank you. You are on the list."
+    error_message: "Something went wrong. Please try again."
+  brand:
+    title: "Guidance that keeps things simple."
+    icon: "/assets/img/logo/duces-logo-mono.png"
+  calculator:
+    title: "Run the numbers before you apply."
+    image: "/assets/img/sections/4-steps.png"
+    image_alt: "Property finance planning"
+    button_text: "Calculate"
+    button_link: "/bond-calculator"
+
 expert:
   title: "Apply once, at no cost to you. Let South Africa's leading banks compete for your business."
   text: "Whether you're a first-time buyer, property investor, or looking to refinance, Duces Capital connects you with competitive finance solutions tailored to your needs."

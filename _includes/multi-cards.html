@@ -1,0 +1,125 @@
+{% assign section = site.data.sitetext.multi_cards %}
+
+<!-- BEGIN: MultiCardsSection -->
+<section
+  class="multi-cards"
+  style="background-image: url('{{ site.baseurl }}{{ section.background_image }}');">
+  <div class="multi-cards__container">
+    <h2 class="multi-cards__heading">{{ section.heading }}</h2>
+
+    <div class="multi-cards__grid">
+      <article class="multi-cards__card multi-cards__card--newsletter">
+        <img
+          class="multi-cards__image"
+          src="{{ site.baseurl }}{{ section.newsletter.image }}"
+          alt="{{ section.newsletter.image_alt }}"
+          loading="lazy">
+        <div class="multi-cards__newsletter-content">
+          <h3 class="multi-cards__newsletter-title">{{ section.newsletter.title }}</h3>
+          <form class="multi-cards__newsletter-form" id="newsletterForm">
+            <label class="sr-only" for="newsletter-email">{{ section.newsletter.input_label }}</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              class="multi-cards__newsletter-input"
+              type="email"
+              placeholder="{{ section.newsletter.input_placeholder }}"
+              required>
+            <p class="multi-cards__newsletter-status multi-cards__newsletter-status--success" id="newsletterSuccess" aria-live="polite">
+              {{ section.newsletter.success_message }}
+            </p>
+            <p class="multi-cards__newsletter-status multi-cards__newsletter-status--error" id="newsletterError" aria-live="polite">
+              {{ section.newsletter.error_message }}
+            </p>
+            <button class="multi-cards__newsletter-button" type="submit">
+              <span class="multi-cards__button-text multi-cards__button-text--desktop">{{ section.newsletter.button_text }}</span>
+              <span class="multi-cards__button-text multi-cards__button-text--mobile">{{ section.newsletter.mobile_button_text | default: section.newsletter.button_text }}</span>
+            </button>
+          </form>
+        </div>
+      </article>
+
+      <article class="multi-cards__card multi-cards__card--brand">
+        <img
+          class="multi-cards__mark"
+          src="{{ site.baseurl }}{{ section.brand.icon }}"
+          alt=""
+          aria-hidden="true">
+        <h3 class="multi-cards__brand-title">{{ section.brand.title }}</h3>
+      </article>
+
+      <article class="multi-cards__card multi-cards__card--calculator">
+        <img
+          class="multi-cards__image"
+          src="{{ site.baseurl }}{{ section.calculator.image }}"
+          alt="{{ section.calculator.image_alt }}"
+          loading="lazy">
+        <div class="multi-cards__calculator-panel">
+          <h3 class="multi-cards__calculator-title">{{ section.calculator.title }}</h3>
+          <a class="multi-cards__calculator-button" href="{{ site.baseurl }}{{ section.calculator.button_link }}">
+            {{ section.calculator.button_text }}
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- END: MultiCardsSection -->
+
+<script>
+  (function () {
+    'use strict';
+
+    const form = document.getElementById('newsletterForm');
+    if (!form) return;
+
+    const email = document.getElementById('newsletter-email');
+    const button = form.querySelector('button[type="submit"]');
+    const desktopText = button.querySelector('.multi-cards__button-text--desktop');
+    const mobileText = button.querySelector('.multi-cards__button-text--mobile');
+    const success = document.getElementById('newsletterSuccess');
+    const error = document.getElementById('newsletterError');
+    const defaultDesktopText = desktopText.textContent;
+    const defaultMobileText = mobileText.textContent;
+
+    function setButtonText(text) {
+      desktopText.textContent = text;
+      mobileText.textContent = text;
+    }
+
+    function resetButtonText() {
+      desktopText.textContent = defaultDesktopText;
+      mobileText.textContent = defaultMobileText;
+    }
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      success.style.display = 'none';
+      error.style.display = 'none';
+
+      button.disabled = true;
+      setButtonText('{{ section.newsletter.sending_text }}');
+
+      try {
+        const response = await fetch('{{ site.baseurl }}/secret-contact-send.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'newsletter',
+            email: email.value.trim()
+          })
+        });
+
+        if (!response.ok) throw new Error('Newsletter signup failed');
+
+        form.reset();
+        success.style.display = 'block';
+      } catch (newsletterError) {
+        error.style.display = 'block';
+      } finally {
+        button.disabled = false;
+        resetButtonText();
+      }
+    });
+  })();
+</script>
