@@ -6,30 +6,30 @@
 // ============================================
 
 // Primary — Duces Navy
-$navy: #1D2944;
+$navy: #2D1A1F;
 $navy-dark: darken($navy, 8%);
 $navy-light: lighten($navy, 10%);
 
 // Secondary — Capital Blue
-$blue: #3A65AB;
+$blue: #D04D29;
 $blue-light: lighten($blue, 10%);
 $blue-dark: darken($blue, 10%);
 
 // Accent — Prestige Gold
-$gold: #D4AF37;
+$gold: #0FCB9C;
 $gold-light: lighten($gold, 15%);
 $gold-dark: darken($gold, 10%);
 
 // Button CTA colour
-$button-color: #f70c47;
+$button-color: #D3073A;
 $button-color-hover: darken($button-color, 8%);
 
 // Neutral / Background Colours
 $white: #FFFFFF;
-$soft-white: #F8FAFC;
-$light-grey: #E5E7EB;
-$medium-grey: #64748B;
-$charcoal: #1E293B;
+$soft-white: #F8F8F8;
+$light-grey: #EEE7E9;
+$medium-grey: #6B585D;
+$charcoal: #2D1A1F;
 
 // ============================================
 // SEMANTIC / THEME ALIASES
@@ -129,6 +129,22 @@ $motion-theatrical: 500ms ease-in-out;
   --brand-primary-dark: #{$navy-dark};
   --brand-secondary: #{$blue};
   --brand-accent: #{$gold};
+  --color-primary: #D3073A;
+  --color-secondary: #D04D29;
+  --color-accent: #0FCB9C;
+  --color-background: #F8F8F8;
+  --color-surface: #EEE7E9;
+  --color-text: #2D1A1F;
+  --color-primary-50: #FBF3F5;
+  --color-primary-100: #F1C7D1;
+  --color-primary-200: #EB95AB;
+  --color-primary-300: #EA5F82;
+  --color-primary-400: #ED2456;
+  --color-primary-500: #D3073A;
+  --color-primary-600: #AB062F;
+  --color-primary-700: #820424;
+  --color-primary-800: #5A0319;
+  --color-primary-900: #31020E;
   --surface: #{$charcoal};
   --surface-muted: #{$surface-muted};
   --text-strong: #{$text-strong};

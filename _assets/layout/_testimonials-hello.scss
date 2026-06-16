@@ -1,12 +1,12 @@
 // Hello-style testimonials carousel.
 
 .testimonials-hello-section {
-  --testimonials-bg: #eeeff2;
+  --testimonials-bg: #{$light-grey};
   --testimonials-card-bg: #ffffff;
   --testimonials-card-shadow: rgba(0, 0, 0, 0.05);
-  --testimonials-heading: rgb(40, 51, 56);
-  --testimonials-text: rgb(40, 51, 56);
-  --testimonials-meta: rgb(40, 51, 56);
+  --testimonials-heading: #{$charcoal};
+  --testimonials-text: #{$charcoal};
+  --testimonials-meta: #{$charcoal};
   --testimonials-pink: rgb(228, 120, 177);
   --testimonials-teal: rgb(0, 208, 130);
   --testimonials-purple: rgb(152, 150, 240);

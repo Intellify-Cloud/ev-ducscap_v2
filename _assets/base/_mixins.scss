@@ -20,7 +20,7 @@
 }
 
 @mixin desktop-paragraph-typography {
-  color: rgb(40, 51, 56);
+  color: $charcoal;
   font-family: "Inter", system-ui, sans-serif;
   font-style: normal;
   font-size: 16px;

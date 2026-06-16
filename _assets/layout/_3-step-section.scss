@@ -1,7 +1,7 @@
 // Duces process timeline section.
 
 .three-step-section {
-  background: #a6b8a8;
+  background: #F1C7D1;
   padding: 80px 0;
   overflow: hidden;
 }
@@ -27,9 +27,9 @@
   min-height: 38px;
   margin: 0 0 24px;
   padding: 6px 16px;
-  border: 1.5px solid rgb(40, 51, 56);
+  border: 1.5px solid $charcoal;
   border-radius: 999px;
-  color: rgb(40, 51, 56);
+  color: $charcoal;
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -90,14 +90,14 @@
 
 .three-step-section__btn--secondary {
   display: none;
-  border: 1.5px solid rgb(40, 51, 56);
+  border: 1.5px solid $charcoal;
   background: transparent;
-  color: rgb(40, 51, 56);
+  color: $charcoal;
 
   &:hover,
   &:focus {
-    border-color: rgb(40, 51, 56);
-    background: rgb(40, 51, 56);
+    border-color: $charcoal;
+    background: $charcoal;
     color: $white;
   }
 }
@@ -175,7 +175,7 @@
 
 .three-step-timeline__title {
   margin: 0 0 12px;
-  color: rgb(40, 51, 56);
+  color: $charcoal;
   font-family: "Inter", system-ui, sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 800;
