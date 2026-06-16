@@ -131,10 +131,7 @@ h6,
 }
 
 p {
-  @include font-body;
-  font-size: 1rem;
-  color: $text-strong;
-  line-height: $line-height-body;
+  @include desktop-paragraph-typography;
   margin-bottom: $space-3;
 
   &:last-child {

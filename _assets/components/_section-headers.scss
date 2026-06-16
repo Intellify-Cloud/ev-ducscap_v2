@@ -1,25 +1,25 @@
 // Section Headers & Dividers — Duces Capital Professional Theme
 
-.section-heading {
-  font-family: $font-display;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+@mixin section-title-typography {
   color: $navy;
-  line-height: $line-height-tight;
+  font-family: $font-display;
+  font-style: normal;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0;
+}
+
+.section-heading {
+  @include section-title-typography;
+  text-transform: uppercase;
   margin: 0;
 }
 
 .section-subheading {
-  font-family: $font-body;
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: $medium-grey;
+  @include desktop-paragraph-typography;
   margin: $space-3 0 0;
   max-width: 80ch;
-  line-height: $line-height-body;
 }
 
 // Centered Section Header with Gold Line

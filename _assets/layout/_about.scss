@@ -13,11 +13,8 @@
 }
 
 .about-section__heading {
-  @include font-display;
+  @include section-title-typography;
   margin: 0;
-  color: $navy;
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: $line-height-tight;
 }
 
 .about-section__body {

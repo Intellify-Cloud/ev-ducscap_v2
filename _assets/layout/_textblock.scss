@@ -17,22 +17,16 @@
 }
 
 .textblock-heading {
-  @include font-display;
-  color: $white;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: $line-height-tight;
+  @include section-title-typography;
   margin: 0 0 $space-3;
 }
 
 .textblock-subheading {
-  @include font-body;
+  @include desktop-paragraph-typography;
   max-width: 680px;
   margin: 0;
   padding: $space-1 0 $space-1 $space-3;
   border-left: 2px solid $gold;
-  color: rgba($white, 0.78);
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  line-height: $line-height-body;
 }
 
 .textblock-grid {
@@ -101,11 +95,8 @@
 }
 
 .textblock-card-copy {
-  @include font-body;
+  @include desktop-paragraph-typography;
   margin: 0;
-  color: $medium-grey;
-  font-size: 0.95rem;
-  line-height: $line-height-body;
 }
 
 .textblock-card-line {

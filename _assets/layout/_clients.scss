@@ -9,12 +9,9 @@
 }
 
 .trusted-logos__title {
-  @include font-display;
+  @include section-title-typography;
   max-width: 40rem;
   margin: 0 0 $space-5;
-  color: $navy;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: $line-height-tight;
 }
 
 .trusted-logos__track {

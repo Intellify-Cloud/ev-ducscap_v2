@@ -2,15 +2,15 @@
 body {
   overflow-x: hidden;
   @include body-font;
+  font-size: 16px;
   background-color: $body-bg;
   color: $text-strong;
   line-height: $line-height-body;
 }
 
 p {
-  line-height: $line-height-body;
+  @include desktop-paragraph-typography;
   margin-bottom: $space-3;
-  color: $text-strong;
 }
 
 a {

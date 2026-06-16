@@ -25,27 +25,19 @@
 }
 
 .banks-section__title {
+  @include section-title-typography;
   margin: 0;
-  color: rgb(40, 51, 56);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: clamp(2.125rem, 4vw, 4rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: 0;
   text-transform: none;
 }
 
 .banks-section__text {
+  @include desktop-paragraph-typography;
   max-width: 48ch;
   margin: 28px 0 0;
-  color: rgb(40, 51, 56);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.65;
 }
 
 .banks-section__btn {
+  @include button-typography;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -58,8 +50,6 @@
   background: $button-color;
   color: $white;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 700;
   line-height: 1;
   text-decoration: none;
   transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
@@ -99,8 +89,14 @@
   text-decoration: none;
   transition: opacity $motion-fast, transform $motion-fast;
 
+  &::after {
+    content: none;
+    display: none;
+  }
+
   &:hover,
   &:focus {
+    text-decoration: none;
     opacity: 0.76;
     transform: translateY(-1px);
   }
@@ -130,10 +126,6 @@
     gap: 48px;
   }
 
-  .banks-section__title {
-    font-size: 2.75rem;
-  }
-
   .banks-section__logos {
     gap: 34px 42px;
   }
@@ -152,10 +144,6 @@
     width: calc(100% - 64px);
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 40px;
-  }
-
-  .banks-section__title {
-    font-size: 2rem;
   }
 
   .banks-section__logos {
@@ -182,10 +170,6 @@
 
   .banks-section__copy {
     width: 100%;
-  }
-
-  .banks-section__title {
-    font-size: 2.25rem;
   }
 
   .banks-section__text {

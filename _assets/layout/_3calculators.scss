@@ -27,11 +27,8 @@
 }
 
 .three-calculators-header__title {
-  @include font-display;
+  @include section-title-typography;
   margin: 0 0 $space-3;
-  color: $navy;
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: $line-height-tight;
 }
 
 .three-calculators-header__sub {
@@ -56,6 +53,7 @@
 }
 
 .mb-calc-tabs__btn {
+  @include button-typography;
   min-height: 44px;
   border: 0;
   border-radius: 999px;
@@ -63,8 +61,6 @@
   color: $navy;
   padding: 0 $space-3;
   font-family: $font-display;
-  font-size: 0.9rem;
-  font-weight: 600;
   letter-spacing: 0.02em;
   cursor: pointer;
   transition: background-color $motion-fast, color $motion-fast;
@@ -266,6 +262,7 @@
 
 .mb-calc-btn,
 .mb-transfer-btn {
+  @include button-typography;
   grid-column: 1 / -1;
   min-height: 54px;
   border: 0;
@@ -274,8 +271,6 @@
   color: $white;
   padding: 0 $space-4;
   font-family: $font-display;
-  font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
   box-shadow: 0 12px 20px rgba($navy, 0.18);
   transition: background-color $motion-fast, transform $motion-fast;
@@ -442,7 +437,6 @@
   .mb-calc-tabs__btn {
     flex: 1 0 auto;
     padding: 0 $space-2;
-    font-size: 0.82rem;
   }
 
   .mb-calc,

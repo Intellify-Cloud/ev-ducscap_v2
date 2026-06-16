@@ -59,11 +59,11 @@ $hero-focus: rgb(15, 90, 231);
 }
 
 .hero-title {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: $font-display;
   margin: 0;
   color: $white;
   font-size: 2.25rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0;
   text-shadow:
@@ -99,6 +99,7 @@ $hero-focus: rgb(15, 90, 231);
 
 .hero-cta {
   @include font-body;
+  @include button-typography;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,8 +110,6 @@ $hero-focus: rgb(15, 90, 231);
   border-radius: 999px;
   background: $button-color;
   color: $white;
-  font-size: 0.9375rem;
-  font-weight: 600;
   line-height: 1;
   text-align: center;
   text-decoration: none;

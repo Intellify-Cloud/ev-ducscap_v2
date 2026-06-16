@@ -23,18 +23,15 @@
   overflow: hidden;
 }
 
-.testimonials-hello-heading {
+.testimonials-hello-heading,
+.testimonials-hello-heading.section-heading,
+.testimonials-hello-section .section-heading {
+  @include section-title-typography;
   width: min(80vw, 1440px);
   max-width: 100%;
   margin: 0 0 40px;
   margin-right: auto;
   margin-left: auto;
-  color: var(--testimonials-heading);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: 0;
 }
 
 .testimonials-hello-container {
@@ -115,13 +112,9 @@
 }
 
 .testimonials-hello-quote {
+  @include desktop-paragraph-typography;
   flex: 1;
   margin: 0 0 28px;
-  color: var(--testimonials-text);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 1.0625rem;
-  font-weight: 400;
-  line-height: 1.65;
 }
 
 .testimonials-hello-name {
@@ -161,6 +154,7 @@
 }
 
 .testimonials-hello-btn {
+  @include button-typography;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,8 +165,6 @@
   background: var(--testimonials-nav);
   color: $white;
   cursor: pointer;
-  font-size: 1.25rem;
-  font-weight: 700;
   line-height: 1;
   transition: background-color $motion-fast, opacity $motion-fast, transform $motion-fast;
 
@@ -212,7 +204,6 @@
 
   .testimonials-hello-heading {
     width: calc(100vw - 64px);
-    font-size: 1.75rem;
   }
 
   .testimonials-hello-container {
@@ -233,7 +224,6 @@
     width: calc(100vw - 48px);
     margin-bottom: 24px;
     padding: 0;
-    font-size: 1.75rem;
   }
 
   .testimonials-hello-container {

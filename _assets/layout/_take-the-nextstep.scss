@@ -63,13 +63,12 @@
 }
 
 .take-the-nextstep__button {
+  @include button-typography;
   display: inline-block;
   padding: 16px 53px;
   background-color: $button-color;
   color: #ffffff;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
   border-radius: 999px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -127,6 +126,5 @@
 
   .take-the-nextstep__button {
     padding: 12px 32px;
-    font-size: 14px;
   }
 }

@@ -6,14 +6,9 @@
 }
 
 .next-steps-section-title {
+  @include section-title-typography;
   max-width: 1440px;
   margin: 0 auto 32px;
-  color: rgb(40, 51, 56);
-  font-family: "Merriweather", Georgia, serif;
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 900;
-  line-height: 1.08;
-  letter-spacing: 0;
 }
 
 .next-steps-card {
@@ -57,24 +52,15 @@
 }
 
 .next-steps-title {
+  @include section-title-typography;
   width: 100%;
   margin: 0;
-  color: rgb(40, 51, 56);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: 0;
 }
 
 .next-steps-text {
+  @include desktop-paragraph-typography;
   width: 100%;
   margin: 24px 0 0;
-  color: rgb(40, 51, 56);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.55;
 }
 
 .next-steps-actions {
@@ -85,6 +71,7 @@
 }
 
 .next-steps-btn {
+  @include button-typography;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -93,8 +80,6 @@
   padding: 0 28px;
   border-radius: 999px;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   transition: background-color $motion-fast, color $motion-fast, border-color $motion-fast, transform $motion-fast;
@@ -149,9 +134,6 @@
     padding: 40px;
   }
 
-  .next-steps-title {
-    font-size: 2.125rem;
-  }
 }
 
 @media (max-width: 1023px) {
@@ -165,9 +147,6 @@
     min-height: 360px;
   }
 
-  .next-steps-title {
-    font-size: 1.75rem;
-  }
 }
 
 @media (max-width: 767px) {
@@ -204,10 +183,6 @@
     align-items: center;
     padding: 32px 24px;
     text-align: center;
-  }
-
-  .next-steps-title {
-    font-size: 2rem;
   }
 
   .next-steps-text {

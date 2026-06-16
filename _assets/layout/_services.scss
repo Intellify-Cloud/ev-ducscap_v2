@@ -27,22 +27,16 @@
 }
 
 .services-heading {
-  @include font-display;
+  @include section-title-typography;
   margin: 0 0 $space-3;
-  color: $navy;
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: $line-height-tight;
 }
 
 .services-subheading {
-  @include font-body;
+  @include desktop-paragraph-typography;
   max-width: 680px;
   margin: 0;
   padding: $space-1 0 $space-1 $space-3;
   border-left: 2px solid $gold;
-  color: $medium-grey;
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  line-height: $line-height-body;
 }
 
 .services-grid {
@@ -115,11 +109,8 @@
 }
 
 .service-card-copy {
-  @include font-body;
+  @include desktop-paragraph-typography;
   margin: 0;
-  color: $medium-grey;
-  font-size: 0.95rem;
-  line-height: $line-height-body;
 }
 
 .service-card-footer {
@@ -137,11 +128,11 @@
 
 .service-card-cta {
   @include font-display-sm;
+  @include button-typography;
   display: inline-flex;
   align-items: center;
   gap: $space-1;
   color: $navy;
-  font-size: 0.82rem;
   line-height: 1.2;
   text-decoration: none;
   transition: color $motion-fast, gap $motion-fast;

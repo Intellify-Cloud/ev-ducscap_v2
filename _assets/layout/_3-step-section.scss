@@ -1,7 +1,7 @@
 // Duces process timeline section.
 
 .three-step-section {
-  background: #d4a5a5;
+  background: #a6b8a8;
   padding: 80px 0;
   overflow: hidden;
 }
@@ -37,13 +37,8 @@
 }
 
 .three-step-section__title {
+  @include section-title-typography;
   margin: 0;
-  color: rgb(40, 51, 56);
-  font-family: "Merriweather", Georgia, serif;
-  font-size: clamp(2.25rem, 4vw, 4rem);
-  font-weight: 900;
-  line-height: 1.08;
-  letter-spacing: 0;
   text-transform: none;
 }
 
@@ -55,6 +50,7 @@
 }
 
 .three-step-section__btn {
+  @include button-typography;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -63,8 +59,6 @@
   padding: 0 28px;
   border-radius: 999px;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 700;
   line-height: 1;
   text-decoration: none;
   transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
@@ -167,10 +161,10 @@
 .three-step-timeline__connector {
   grid-column: 1;
   grid-row: 2;
-  width: 1.5px;
+  width: 2.5px;
   min-height: 32px;
   margin-left: 24px;
-  border-left: 1.5px dashed $button-color;
+  border-left: 2.5px dashed $button-color;
 }
 
 .three-step-timeline__content {
@@ -191,13 +185,9 @@
 }
 
 .three-step-timeline__text {
+  @include desktop-paragraph-typography;
   max-width: 52ch;
   margin: 0;
-  color: rgb(105, 118, 126);
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
 }
 
 @media (max-width: 1199px) {
@@ -208,10 +198,6 @@
   .three-step-section__inner {
     width: 86vw;
     gap: 56px;
-  }
-
-  .three-step-section__title {
-    font-size: 2.75rem;
   }
 
   .three-step-timeline__item {
@@ -232,10 +218,6 @@
     width: calc(100% - 64px);
     grid-template-columns: minmax(0, 36%) minmax(0, 1fr);
     gap: 40px;
-  }
-
-  .three-step-section__title {
-    font-size: 2.25rem;
   }
 
   .three-step-timeline__item {
@@ -266,10 +248,6 @@
 
   .three-step-section__eyebrow {
     margin-bottom: 22px;
-  }
-
-  .three-step-section__title {
-    font-size: 2rem;
   }
 
   .three-step-section__actions {

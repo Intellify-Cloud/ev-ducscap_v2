@@ -19,6 +19,21 @@
   letter-spacing: 0.01em;
 }
 
+@mixin desktop-paragraph-typography {
+  color: rgb(40, 51, 56);
+  font-family: "Inter", system-ui, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+@mixin button-typography {
+  font-size: 16px;
+  font-weight: 800;
+}
+
 @mixin font-display-sm {
   font-family: $font-display;
   font-weight: 600;

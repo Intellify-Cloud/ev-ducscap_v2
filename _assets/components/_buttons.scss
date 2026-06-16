@@ -3,8 +3,7 @@
 
 .btn {
   @include heading-font;
-  font-weight: 600;
-  font-size: 0.85rem;
+  @include button-typography;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
@@ -28,7 +27,6 @@
 }
 
 .btn-xl {
-  font-size: 0.9rem;
   padding: 16px 40px;
   letter-spacing: 0.08em;
 }

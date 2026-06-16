@@ -21,20 +21,14 @@
 }
 
 .testimonials-heading {
-  @include font-display;
+  @include section-title-typography;
   margin: 0 0 $space-3;
-  color: $navy;
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: $line-height-tight;
 }
 
 .testimonials-subheading {
-  @include font-body;
+  @include desktop-paragraph-typography;
   max-width: 680px;
   margin: 0;
-  color: $medium-grey;
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  line-height: $line-height-body;
 }
 
 .testimonial-featured {
@@ -149,9 +143,6 @@
 }
 
 .testimonial-mini__quote {
-  @include font-body;
+  @include desktop-paragraph-typography;
   margin: 0;
-  color: $medium-grey;
-  font-size: 0.95rem;
-  line-height: $line-height-body;
 }

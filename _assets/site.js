@@ -20,7 +20,10 @@ $(function () {
     $(window).on("scroll", function () {
         var scrollTop = $(window).scrollTop();
         100 < scrollTop ? $("#mainNav").addClass("navbar-shrink") : $("#mainNav").removeClass("navbar-shrink");
-        500 < scrollTop ? $(".back-to-top-pill").addClass("is-visible") : $(".back-to-top-pill").removeClass("is-visible");
+
+        var scrollableHeight = $(document).height() - $(window).height();
+        var hasScrolledSixtyPercent = scrollableHeight > 0 && scrollTop / scrollableHeight > 0.6;
+        hasScrolledSixtyPercent ? $(".back-to-top-pill").addClass("is-visible") : $(".back-to-top-pill").removeClass("is-visible");
     });
 
     var testimonialsTrack = document.getElementById("testimonialsHelloTrack");
