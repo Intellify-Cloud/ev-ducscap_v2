@@ -1,5 +1,5 @@
 header:
-  title: "Hassle-free home loans start with Duces Capital."
+  title: "HOW MUCH DO YOU QUALIFY FOR?"
   text: ""
   button1: "Apply Now"
   button1_url: "#contact"
@@ -17,10 +17,25 @@ header:
 
 next_steps:
   section_title: ""
-  title: "Ready to take the next step?"
-  text: "Ready to take the next step towards your dream home?"
+  title: "Home is where memories are made."
+  text: "Every home journey starts with a desire. We work with leading banks to help you secure the right home loan, making homeownership simpler, faster, and less stressful."
   primary_label: "Get Started by Getting Prequalified"
   primary_url: "#contact"
+
+five_steps_block:
+  title: "The Duces Capital Advantage+"
+  intro: "A strong prequalification usually increases the likelihood of obtaining preapproval."
+  steps:
+    - title: "Know your buying power before you search"
+      text: "Receive a prequalification certificate showing your estimated home loan eligibility and budget, helping you shop confidently and prove you're a serious buyer."
+    - title: "One application, multiple lenders"
+      text: "Complete a single application and your dedicated bond consultant will submit it to several leading banks, including your current bank, saving you time and effort."
+    - title: "Review and compare home loan options"
+      text: "We gather home loan offers from South Africa's major lenders, making it easy for you to compare rates, terms, and benefits side by side."
+    - title: "We secure the most competitive rate for you"
+      text: "Your bond specialist works directly with the banks to negotiate on your behalf, helping you obtain the most favourable home loan deal available."
+    - title: "No cost to you"
+      text: "Our service comes at no charge to homebuyers. We are compensated by the banks, allowing you to receive expert assistance without paying any fees."
 
 three_step_section:
   eyebrow: "As simple as hello."
@@ -40,8 +55,8 @@ three_step_section:
       text: "We guide the application, negotiate where possible, and keep you updated until the next step is clear."
 
 lets_get_going:
-  title: "Let's make it happen."
-  text: "We will guide you through each stage of the bond process, helping you move ahead with clarity and confidence."
+  title: "Let’s get your bond approved."
+  text: "From application to approval, we help you navigate the home loan process with confidence and peace of mind."
   primary_label: "Reach out for expert advice"
   primary_url: "https://wa.me/+27745559374"
 
@@ -50,6 +65,12 @@ banks:
   text: "We compare home loan offers from South Africa's leading banks and lenders, giving you access to more choice so you can move forward with a stronger offer."
   primary_label: "Get Started"
   primary_url: "#contact"
+
+bank_partners:
+  title: "Multiple Banks. One Simple Application."
+  intro: "We work with the leading banks and lenders to secure you a home loan."
+  status: "Approved"
+  background_image: "/assets/img/sections/banks-hero.jpg"
 
 multi_cards:
   heading: "Helpful tools and updates for your home loan journey."

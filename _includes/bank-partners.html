@@ -1,0 +1,45 @@
+<section
+  class="bank-partners-section"
+  id="bank-partners"
+  aria-labelledby="bank-partners-title"
+  style="--bank-partners-background: url('{{ site.data.sitetext.bank_partners.background_image | relative_url }}');"
+>
+  <div class="bank-partners">
+    <header class="bank-partners__header">
+      <h2 class="bank-partners__title" id="bank-partners-title">
+        {{ site.data.sitetext.bank_partners.title }}
+      </h2>
+      <p class="bank-partners__intro">
+        {{ site.data.sitetext.bank_partners.intro }}
+      </p>
+    </header>
+
+    <div class="bank-partners__grid" aria-label="Duces Capital lender partners">
+      {% for lender in site.data.sitetext.clients.list %}
+        <a
+          class="bank-partners__card"
+          href="{{ lender.url }}"
+          aria-label="{{ lender.title }}"
+          {% unless lender.url == "#" %}target="_blank" rel="noopener noreferrer"{% endunless %}
+        >
+          <span class="bank-partners__card-icon">
+            <img
+              src="{{ lender.logo | relative_url }}"
+              alt="{{ lender.title }} logo"
+              loading="lazy"
+              width="72"
+              height="56"
+            />
+          </span>
+
+          <span class="bank-partners__card-title">{{ lender.title }}</span>
+
+          <span class="bank-partners__card-eyebrow">
+            <span class="bank-partners__card-dot" aria-hidden="true"></span>
+            {{ site.data.sitetext.bank_partners.status }}
+          </span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
