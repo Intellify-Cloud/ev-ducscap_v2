@@ -38,5 +38,3 @@ hero_paragraph: "Estimate your monthly home-loan repayment, total repayable amou
 }
 </script>
 
-{% include team.html %}
-

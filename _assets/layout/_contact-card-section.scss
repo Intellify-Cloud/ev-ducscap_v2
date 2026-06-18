@@ -1,0 +1,198 @@
+// ======================================================
+// layout/_contact-card-section.scss
+// ======================================================
+
+$contact-card-purple: rgb(94, 31, 62);
+$contact-card-orange: #e8522a;
+$contact-card-white: #ffffff;
+
+.contact-card-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: #CBE4D7;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.contact-card-section__card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  overflow: hidden;
+  border-radius: 16px;
+  background: $contact-card-purple;
+  color: $contact-card-white;
+}
+
+.contact-card-section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card-section__title {
+  margin: 0 0 18px;
+  color: $contact-card-white;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.contact-card-section__text {
+  max-width: 500px;
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.contact-card-section__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 48px;
+  background: $contact-card-white;
+  color: #2d1a1f;
+}
+
+.contact-card-section__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+
+  label {
+    margin: 0;
+    color: #2d1a1f;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  label span {
+    color: $contact-card-orange;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid rgba(45, 26, 31, 0.22);
+    border-radius: 8px;
+    background: #ffffff;
+    color: #2d1a1f;
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  input {
+    min-height: 50px;
+    padding: 0 15px;
+  }
+
+  textarea {
+    min-height: 132px;
+    padding: 14px 15px;
+    resize: vertical;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: $contact-card-orange;
+    box-shadow: 0 0 0 3px rgba(232, 82, 42, 0.16);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #796b6f;
+  }
+}
+
+.contact-card-section__field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-card-section__submit {
+  min-width: 150px;
+  min-height: 48px;
+  align-self: flex-start;
+  border: 0;
+  border-radius: 24px;
+  background: $contact-card-orange;
+  color: $contact-card-white;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.contact-card-section__submit:hover,
+.contact-card-section__submit:focus-visible {
+  background: darken($contact-card-orange, 8%);
+  transform: translateY(-1px);
+}
+
+.contact-card-section__submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+.contact-card-section__status {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact-card-section__status--success {
+  color: #17653c;
+}
+
+.contact-card-section__status--error {
+  color: #a72424;
+}
+
+.contact-card-section__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .contact-card-section {
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+
+  .contact-card-section__card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card-section__content {
+    padding: 32px 24px;
+  }
+
+  .contact-card-section__title {
+    font-size: 32px;
+  }
+
+  .contact-card-section__form {
+    grid-template-columns: 1fr;
+    padding: 28px 24px 32px;
+  }
+
+  .contact-card-section__field--full {
+    grid-column: auto;
+  }
+}

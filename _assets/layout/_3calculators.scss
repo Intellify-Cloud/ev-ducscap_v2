@@ -46,7 +46,7 @@
   max-width: 100%;
   margin: 0 0 $space-4;
   padding: 5px;
-  border: 1px solid rgba($navy, 0.1);
+  border: 1px solid var(--brand-primary-10);
   border-radius: 999px;
   background: $white;
   box-shadow: $elevation-2;
@@ -66,7 +66,7 @@
   transition: background-color $motion-fast, color $motion-fast;
 
   &:hover:not(.mb-calc-tabs__btn--active) {
-    background: rgba($gold, 0.12);
+    background: var(--brand-accent-12);
   }
 
   &--active {
@@ -96,7 +96,7 @@
 .mb-calc-result__inner,
 .mb-transfer-result__inner {
   border-radius: 16px;
-  box-shadow: 0 18px 40px rgba($brand-primary, 0.12);
+  box-shadow: 0 18px 40px var(--brand-primary-12);
 }
 
 .mb-calc__fields,
@@ -105,7 +105,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   padding: 34px;
-  background: rgba($button-color, 0.05);
+  background: var(--color-primary-05);
 }
 
 .mb-calc-field,
@@ -148,7 +148,7 @@
   align-items: center;
   min-height: 52px;
   overflow: hidden;
-  border: 2px solid rgba($button-color, 0.2);
+  border: 2px solid var(--color-primary-20);
   border-radius: 8px;
   background: $white;
   transition: border-color $motion-fast, box-shadow $motion-fast;
@@ -278,7 +278,7 @@
   font-weight: 600;
   line-height: 33px;
   cursor: pointer;
-  box-shadow: 0 12px 20px rgba($button-color, 0.22);
+  box-shadow: 0 12px 20px var(--color-primary-22);
   transition: background-color $motion-fast, transform $motion-fast;
 
   &:hover,
@@ -307,7 +307,7 @@
   display: inline-flex;
   margin-bottom: $space-3;
   border-radius: 999px;
-  background: rgba($text-inverse, 0.14);
+  background: var(--white-14);
   color: $text-inverse;
   padding: 0.38rem 0.85rem;
   font-family: $font-display;
@@ -320,7 +320,7 @@
 .mb-calc-result__terms,
 .mb-transfer-result__terms {
   margin: $space-3 0 0;
-  color: rgba($white, 0.68);
+  color: var(--white-68);
   font-size: 0.85rem;
   line-height: $line-height-body;
 }
@@ -345,7 +345,7 @@
 .mb-calc-result-item__label,
 .mb-transfer-result__label,
 .mb-transfer-result-row span:first-child {
-  color: rgba($white, 0.78);
+  color: var(--white-78);
   font-size: 16px;
   font-weight: 700;
 }
@@ -378,7 +378,7 @@
 .mb-transfer-result-divider {
   height: 1px;
   margin: $space-3 0;
-  background: rgba($white, 0.16);
+  background: var(--white-16);
 }
 
 .mb-transfer-notes {
@@ -422,7 +422,7 @@
 .mb-transfer-result-row {
   align-items: baseline;
   padding: 0.35rem 0;
-  border-bottom: 1px solid rgba($white, 0.14);
+  border-bottom: 1px solid var(--white-14);
 
   &:last-child {
     border-bottom: 0;

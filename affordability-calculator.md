@@ -37,5 +37,3 @@ hero_paragraph: "Estimate the home-loan amount you may qualify for based on your
   ]
 }
 </script>
-
-{% include team.html %}

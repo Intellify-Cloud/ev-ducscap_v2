@@ -35,5 +35,3 @@ background: white
   ]
 }
 </script>
-
-{% include team.html %}

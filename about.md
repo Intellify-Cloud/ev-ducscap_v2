@@ -8,4 +8,4 @@ permalink: /about/
 
 {% include about.html %}
 
-{% include team.html %}
+

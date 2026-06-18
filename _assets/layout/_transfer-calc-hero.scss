@@ -25,8 +25,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba($brand-primary, 0.76) 0%, rgba($brand-primary, 0.42) 48%, rgba($brand-primary, 0.08) 78%),
-    linear-gradient(0deg, rgba($brand-primary, 0.72) 0%, rgba($brand-primary, 0.08) 64%);
+    linear-gradient(90deg, var(--brand-primary-76) 0%, var(--brand-primary-42) 48%, var(--brand-primary-08) 78%),
+    linear-gradient(0deg, var(--brand-primary-72) 0%, var(--brand-primary-08) 64%);
 }
 
 .transfer-calc-hero__content {
@@ -52,7 +52,7 @@
 .transfer-calc-hero__paragraph {
   max-width: 650px;
   margin: 24px 0 0;
-  color: rgba($text-inverse, 0.9);
+  color: var(--white-90);
   font-family: $font-body;
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   line-height: 1.65;
@@ -80,7 +80,7 @@
 
   .transfer-calc-hero__overlay {
     background:
-      linear-gradient(0deg, rgba($brand-primary, 0.84) 0%, rgba($brand-primary, 0.4) 70%, rgba($brand-primary, 0.16) 100%);
+      linear-gradient(0deg, var(--brand-primary-84) 0%, var(--brand-primary-40) 70%, var(--brand-primary-16) 100%);
   }
 
   .transfer-calc-hero__content {

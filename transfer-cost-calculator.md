@@ -12,6 +12,7 @@ hero_paragraph: "Calculate your estimated bond registration and property transfe
 
 {% include transfer-calc-hero.html %}
 {% include transfer-cost-calculator.html %}
+{% include transfer-cost-guide.html %}
 
 <script type="application/ld+json">
 {
@@ -23,19 +24,41 @@ hero_paragraph: "Calculate your estimated bond registration and property transfe
       "name": "What are transfer costs when buying property in South Africa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Transfer costs include transfer duty (payable to SARS), conveyancing fees, and bond registration costs. These typically range from 5-10% of property value depending on purchase price."
+        "text": "Transfer costs are the once-off tax, legal and registration expenses needed to move a property into the buyer's name. They can include transfer duty, transfer attorney fees, deeds-office charges and bond registration costs."
       }
     },
     {
       "@type": "Question",
-      "name": "How much is transfer duty on a property?",
+      "name": "Are transfer costs part of my deposit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Transfer duty is calculated on a sliding scale. For properties under R900,000 there is no duty. Above R900,000 rates start at 3% and go up to 13% for properties over R2.25 million. Use our calculator to get exact figures."
+        "text": "No. A deposit reduces the amount borrowed for the property. Transfer costs are separate once-off expenses unless a bank specifically agrees to finance some of them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I pay transfer duty on every home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Under the rates effective from 1 April 2026, no transfer duty is charged on a property valued at R1.21 million or less. Other legal and registration costs may still apply."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who pays transfer duty to SARS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The buyer is responsible for the transfer duty, but the conveyancer normally submits the declaration and pays SARS electronically on the buyer's behalf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can VAT and transfer duty apply to the same property sale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A property sale is generally subject to either VAT or transfer duty, not both. A conveyancer should confirm which treatment applies to the transaction."
       }
     }
   ]
 }
 </script>
-
-{% include team.html %}

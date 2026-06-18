@@ -2,7 +2,7 @@
 .site-footer {
   padding: $space-6 0 $space-4;
   background: $navy;
-  color: rgba($white, 0.72);
+  color: var(--white-72);
 
   > .container {
     max-width: 1200px;
@@ -42,7 +42,7 @@
 .site-footer__logo {
   max-height: 42px;
   width: auto;
-  filter: drop-shadow(0 2px 8px rgba($obsidian-deep, 0.24));
+  filter: drop-shadow(0 2px 8px var(--deep-shadow-24));
 }
 
 .site-footer__brand-name {
@@ -55,7 +55,7 @@
   @include font-body;
   max-width: 34rem;
   margin: 0;
-  color: rgba($white, 0.68);
+  color: var(--white-68);
   font-size: 0.95rem;
   line-height: $line-height-body;
 }
@@ -80,7 +80,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba($gold, 0.4);
+  border: 1px solid var(--brand-accent-40);
   border-radius: $radius-md;
   color: $gold;
   font-size: 1.05rem;
@@ -89,7 +89,7 @@
 
   &:hover,
   &:focus {
-    background-color: rgba($gold, 0.12);
+    background-color: var(--brand-accent-12);
     border-color: $gold;
     color: $gold-light;
     text-decoration: none;
@@ -119,10 +119,14 @@
   gap: $space-1;
 }
 
+.site-footer__section[aria-label="Resources"] .site-footer__link {
+  white-space: nowrap;
+}
+
 .site-footer__link,
 .site-footer__legal-link {
   @include font-body;
-  color: rgba($white, 0.66);
+  color: var(--white-66);
   font-size: 0.9rem;
   line-height: $line-height-body;
   text-decoration: none;
@@ -141,7 +145,7 @@
   gap: $space-3;
   margin-top: $space-5;
   padding-top: $space-4;
-  border-top: 1px solid rgba($white, 0.14);
+  border-top: 1px solid var(--white-14);
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -153,7 +157,7 @@
 .site-footer__copyright {
   @include font-body;
   margin: 0;
-  color: rgba($white, 0.56);
+  color: var(--white-56);
   font-size: 0.78rem;
   line-height: $line-height-body;
 }

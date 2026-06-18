@@ -21,7 +21,7 @@
 .mb-transfer-fields,
 .mb-transfer-result__inner {
   border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(45, 26, 31, 0.12);
+  box-shadow: 0 18px 40px var(--brand-primary-12);
 }
 
 .mb-transfer-fields {
@@ -68,7 +68,7 @@
 
 .mb-transfer-field__input-wrap:focus-within {
   border-color: var(--color-secondary);
-  box-shadow: 0 0 0 3px rgba(208, 77, 41, 0.14);
+  box-shadow: 0 0 0 3px var(--brand-secondary-14);
 }
 
 .mb-transfer-section input:focus,
@@ -82,7 +82,7 @@
 }
 
 .mb-transfer-section button:focus-visible {
-  box-shadow: 0 0 0 3px rgba(208, 77, 41, 0.28);
+  box-shadow: 0 0 0 3px var(--brand-secondary-28);
 }
 
 .mb-transfer-field__prefix {
@@ -147,7 +147,7 @@
   font-weight: 600;
   line-height: 33px;
   cursor: pointer;
-  box-shadow: 0 12px 20px rgba(211, 7, 58, 0.22);
+  box-shadow: 0 12px 20px var(--color-primary-22);
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
@@ -193,7 +193,7 @@
   display: inline-flex;
   margin-bottom: 20px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--white-14);
   padding: 6px 14px;
   font-size: 14px;
   font-weight: 800;
@@ -208,7 +208,7 @@
 
 .mb-transfer-result__label {
   display: block;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--white-78);
   font-size: 16px;
   font-weight: 700;
 }
@@ -251,7 +251,7 @@
 .mb-transfer-result-row {
   align-items: baseline;
   padding: 5px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid var(--white-14);
 }
 
 .mb-transfer-result-row:last-child {
@@ -259,7 +259,7 @@
 }
 
 .mb-transfer-result-row span:first-child {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--white-78);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.35;
@@ -276,12 +276,12 @@
 .mb-transfer-result-divider {
   height: 1px;
   margin: 18px 0;
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--white-18);
 }
 
 .mb-transfer-result__terms {
   margin: 20px 0 0;
-  color: rgba(255, 255, 255, 0.68);
+  color: var(--white-68);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -449,12 +449,12 @@
   };
 
   function calcTransferDuty(price) {
-    if (price <= 1100000) return 0;
-    if (price <= 1512500) return (price - 1100000) * 0.03;
-    if (price <= 2117500) return 12375 + (price - 1512500) * 0.06;
-    if (price <= 2722500) return 48675 + (price - 2117500) * 0.08;
-    if (price <= 12100000) return 97075 + (price - 2722500) * 0.11;
-    return 1128600 + (price - 12100000) * 0.13;
+    if (price <= 1210000) return 0;
+    if (price <= 1663800) return (price - 1210000) * 0.03;
+    if (price <= 2329300) return 13614 + (price - 1663800) * 0.06;
+    if (price <= 2994800) return 53544 + (price - 2329300) * 0.08;
+    if (price <= 13310000) return 106784 + (price - 2994800) * 0.11;
+    return 1241456 + (price - 13310000) * 0.13;
   }
 
   function calcTransferAttorneyFee(price) {

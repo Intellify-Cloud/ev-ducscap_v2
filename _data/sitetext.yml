@@ -20,7 +20,7 @@ next_steps:
   title: "Home is where memories are made."
   text: "Every home journey starts with a desire. We work with leading banks to help you secure the right home loan, making homeownership simpler, faster, and less stressful."
   primary_label: "Get Started by Getting Prequalified"
-  primary_url: "#contact"
+  primary_url: "/contact/"
 
 five_steps_block:
   title: "The Duces Capital Advantage+"
@@ -41,7 +41,7 @@ three_step_section:
   eyebrow: "As simple as hello."
   title: "The Duces Capital Process"
   primary_label: "Get Started"
-  primary_url: "#contact"
+  primary_url: "/contact/"
   secondary_label: "Book Appointment"
   secondary_url: "#contact"
   steps:
@@ -64,7 +64,7 @@ banks:
   title: "More Lenders, More Options, Better Rates."
   text: "We compare home loan offers from South Africa's leading banks and lenders, giving you access to more choice so you can move forward with a stronger offer."
   primary_label: "Get Started"
-  primary_url: "#contact"
+  primary_url: "/contact/"
 
 bank_partners:
   title: "Multiple Banks. One Simple Application."
@@ -250,13 +250,13 @@ team:
       bio: "Providing expert guidance from pre-qualification through to bank submission, negotiation, and final approval. John leads Duces Capital with a client-first philosophy and deep knowledge of the South African lending landscape."
       image: assets/img/team/400x400_f1.jpg
       social:
-        - url: tel:+27123456789
+        - url: tel:+27745559374
           icon: fas fa-phone
           title: Phone
         - url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
           icon: fas fa-envelope
           title: Email
-        - url: https://api.whatsapp.com/send?phone=27123456789
+        - url: https://api.whatsapp.com/send?phone=27745559374
           icon: fab fa-whatsapp
           title: WhatsApp
         - url: "#contact"
@@ -292,8 +292,8 @@ contact:
   section: contact
   methods:
     - title: "Phone"
-      text: "012 345 6789"
-      url: tel:+27123456789
+      text: "+27 74 555 9374"
+      url: tel:+27745559374
       icon: fas fa-phone
     - title: "Email"
       text: "kunle@ducescapital.co.za"
@@ -301,13 +301,17 @@ contact:
       icon: fas fa-envelope
     - title: "WhatsApp"
       text: "Chat on WhatsApp"
-      url: https://api.whatsapp.com/send?phone=27123456789
+      url: https://api.whatsapp.com/send?phone=27745559374
       icon: fab fa-whatsapp
   faq:
     - question: "How do I contact Duces Capital?"
-      answer: "You can reach us by phone at 012 345 6789, email at kunle@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
+      answer: "You can reach us by phone at +27 74 555 9374, email at kunle@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
     - question: "Do I pay for bond origination services?"
       answer: "No, our services are completely free to you as the client. We are paid by the banks once your finance is approved."
+
+contact_card_section:
+  title: "Let's get you started"
+  text: "Fill out the form below and we'll get in touch to assist you in securing the best deal from the banks."
 
 footer:
   copyright_prefix: "Copyright"
@@ -332,11 +336,9 @@ footer:
         - title: "Lender Partners"
           url: "#clients"
         - title: "Contact"
-          url: "#contact"
+          url: "/contact/"
     - title: "Resources"
       links:
-        - title: "Calculators"
-          url: "#calculators"
         - title: "Bond Repayment Calculator"
           url: "/bond-calculator"
         - title: "Bond Affordability Calculator"
