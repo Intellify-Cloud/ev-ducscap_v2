@@ -1,16 +1,16 @@
 // Three calculators section
 .three-calculators-section {
-  background:
-    radial-gradient(circle at 88% 14%, rgba($gold, 0.1), transparent 26%),
-    linear-gradient(180deg, rgba($white, 0.96), $soft-white);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 76px 24px 88px;
+  background: $white;
   position: relative;
   overflow: hidden;
 }
 
 .three-calculators-page {
-  max-width: 1120px;
+  max-width: 1060px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .three-calculators-header {
@@ -87,7 +87,7 @@
 .mb-transfer-calc {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 380px;
-  gap: $space-4;
+  gap: 24px;
   align-items: start;
 }
 
@@ -95,18 +95,17 @@
 .mb-transfer-fields,
 .mb-calc-result__inner,
 .mb-transfer-result__inner {
-  border-radius: $radius-lg;
-  box-shadow: $elevation-2;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba($brand-primary, 0.12);
 }
 
 .mb-calc__fields,
 .mb-transfer-fields {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: $space-3;
-  padding: $space-4;
-  background: $white;
-  border: 1px solid rgba($navy, 0.12);
+  gap: 20px;
+  padding: 34px;
+  background: rgba($button-color, 0.05);
 }
 
 .mb-calc-field,
@@ -126,9 +125,13 @@
 .mb-transfer-field__label {
   @include font-display-sm;
   margin: 0;
-  color: $navy;
-  font-size: 0.88rem;
+  color: $text-strong;
+  font-family: $font-display;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0;
   line-height: $line-height-heading;
+  text-transform: none;
 }
 
 .mb-calc-field__req,
@@ -136,7 +139,7 @@
 .mb-calc-field__prefix,
 .mb-calc-field__suffix,
 .mb-transfer-field__prefix {
-  color: $gold-dark;
+  color: $brand-secondary;
 }
 
 .mb-calc-field__input-wrap,
@@ -145,27 +148,27 @@
   align-items: center;
   min-height: 52px;
   overflow: hidden;
-  border: 1px solid rgba($navy, 0.16);
-  border-radius: $radius-md;
-  background: $soft-white;
+  border: 2px solid rgba($button-color, 0.2);
+  border-radius: 8px;
+  background: $white;
   transition: border-color $motion-fast, box-shadow $motion-fast;
 
   &:focus-within {
-    border-color: $blue;
+    border-color: $brand-secondary;
     box-shadow: $focus-ring;
   }
 }
 
 .mb-calc-field--readonly .mb-calc-field__input-wrap {
-  background: rgba($navy, 0.04);
+  background: $white;
 }
 
 .mb-calc-field__prefix,
 .mb-calc-field__suffix,
 .mb-transfer-field__prefix {
   flex-shrink: 0;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 900;
 }
 
 .mb-calc-field__prefix,
@@ -186,10 +189,10 @@
   border: 0;
   outline: 0;
   background: transparent;
-  color: $charcoal;
+  color: $text-strong;
   font-family: $font-body;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .mb-calc-field__input,
@@ -201,7 +204,7 @@
   }
 
   &::placeholder {
-    color: rgba($medium-grey, 0.75);
+    color: $text-muted;
   }
 
   &[type="number"] {
@@ -225,8 +228,8 @@
   cursor: pointer;
   padding: 0.78rem 2.5rem 0.78rem 1rem;
   background-image:
-    linear-gradient(45deg, transparent 50%, $gold-dark 50%),
-    linear-gradient(135deg, $gold-dark 50%, transparent 50%);
+    linear-gradient(45deg, transparent 50%, $brand-secondary 50%),
+    linear-gradient(135deg, $brand-secondary 50%, transparent 50%);
   background-position: calc(100% - 22px) 21px, calc(100% - 15px) 21px;
   background-repeat: no-repeat;
   background-size: 7px 7px, 7px 7px;
@@ -241,7 +244,7 @@
 
 .mb-calc-field__slider {
   width: 100%;
-  accent-color: $gold;
+  accent-color: $button-color;
 }
 
 .mb-calc-field__slider-ticks {
@@ -255,7 +258,7 @@
     font-weight: 600;
 
     &.active {
-      color: $gold-dark;
+      color: $button-color;
     }
   }
 }
@@ -271,8 +274,11 @@
   color: $white;
   padding: 0 $space-4;
   font-family: $font-display;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
   cursor: pointer;
-  box-shadow: 0 12px 20px rgba($navy, 0.18);
+  box-shadow: 0 12px 20px rgba($button-color, 0.22);
   transition: background-color $motion-fast, transform $motion-fast;
 
   &:hover,
@@ -291,9 +297,9 @@
 .mb-calc-result__inner,
 .mb-transfer-result__inner {
   overflow: hidden;
-  padding: $space-4;
-  background: $navy;
-  color: $white;
+  padding: 32px;
+  background: $brand-secondary;
+  color: $text-inverse;
 }
 
 .mb-calc-result__tag,
@@ -301,8 +307,8 @@
   display: inline-flex;
   margin-bottom: $space-3;
   border-radius: 999px;
-  background: rgba($gold, 0.16);
-  color: $gold-light;
+  background: rgba($text-inverse, 0.14);
+  color: $text-inverse;
   padding: 0.38rem 0.85rem;
   font-family: $font-display;
   font-size: 0.75rem;
@@ -340,8 +346,8 @@
 .mb-transfer-result__label,
 .mb-transfer-result-row span:first-child {
   color: rgba($white, 0.78);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .mb-calc-result-item__value,
@@ -349,23 +355,23 @@
   display: block;
   color: $white;
   font-family: $font-display;
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 600;
-  line-height: $line-height-tight;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.05;
 }
 
 .mb-calc-result-item__value--sm,
 .mb-transfer-result-row span:last-child,
 .mb-transfer-result-group__subtotal {
   color: $white;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 900;
   text-align: right;
   white-space: nowrap;
 }
 
 .mb-calc-result-item__value--accent {
-  color: $gold-light;
+  color: $text-inverse;
 }
 
 .mb-calc-result-divider,
@@ -424,6 +430,10 @@
 }
 
 @media (max-width: 768px) {
+  .three-calculators-section {
+    padding: 48px 16px 56px;
+  }
+
   .three-calculators-header {
     margin-bottom: $space-4;
   }
@@ -447,7 +457,7 @@
   .mb-calc__fields,
   .mb-transfer-fields {
     grid-template-columns: 1fr;
-    padding: $space-3;
+    padding: 22px;
   }
 
   .mb-calc-result,
@@ -457,6 +467,6 @@
 
   .mb-calc-result__inner,
   .mb-transfer-result__inner {
-    padding: $space-3;
+    padding: 24px;
   }
 }

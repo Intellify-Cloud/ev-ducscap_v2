@@ -3,15 +3,15 @@ layout: page
 title: Bond Repayment Calculator
 description: "Calculate your monthly bond repayments. Enter property price and interest rate to estimate your monthly home loan payments."
 background: white
+hero_under_nav: true
+hero_image: /assets/img/sections/duces-hero_3.jpg
+hero_image_alt: "Homebuyer calculating monthly bond repayments"
+hero_title: "Bond Repayment Calculator"
+hero_paragraph: "Estimate your monthly home-loan repayment, total repayable amount, and interest."
 ---
 
-<br>
-
-<div class="calculator-page">
-    <iframe class="bond-calc" frameborder="0" loading="lazy"
-        src="https://www.ooba.co.za/calculators/bond-repayment-calculator/?iframe=true&iftype=nobrand"
-        title="Bond Calculator"></iframe>
-</div>
+{% include transfer-calc-hero.html %}
+{% include bond-repayment-calculator.html %}
 
 <script type="application/ld+json">
 {

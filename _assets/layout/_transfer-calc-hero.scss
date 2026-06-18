@@ -4,12 +4,12 @@
   position: relative;
   display: flex;
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   min-height: 520px;
   align-items: flex-end;
   margin-left: calc(50% - 50vw);
   overflow: hidden;
-  background: $navy;
+  background: $brand-primary;
 }
 
 .transfer-calc-hero__image {
@@ -25,8 +25,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba($navy, 0.76) 0%, rgba($navy, 0.42) 48%, rgba($navy, 0.08) 78%),
-    linear-gradient(0deg, rgba($navy, 0.72) 0%, rgba($navy, 0.08) 64%);
+    linear-gradient(90deg, rgba($brand-primary, 0.76) 0%, rgba($brand-primary, 0.42) 48%, rgba($brand-primary, 0.08) 78%),
+    linear-gradient(0deg, rgba($brand-primary, 0.72) 0%, rgba($brand-primary, 0.08) 64%);
 }
 
 .transfer-calc-hero__content {
@@ -34,13 +34,13 @@
   z-index: 1;
   width: min(100% - 144px, 1440px);
   margin: 0 auto;
-  padding: 0 0 10%;
+  padding: 0 0 20px;
 }
 
 .transfer-calc-hero__title {
-  max-width: 760px;
+  max-width: 610px;
   margin: 0;
-  color: $white;
+  color: $text-inverse;
   font-family: $font-display;
   font-size: clamp(2.8rem, 6vw, 5.5rem);
   font-weight: 700;
@@ -52,7 +52,7 @@
 .transfer-calc-hero__paragraph {
   max-width: 650px;
   margin: 24px 0 0;
-  color: rgba($white, 0.9);
+  color: rgba($text-inverse, 0.9);
   font-family: $font-body;
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   line-height: 1.65;
@@ -65,13 +65,12 @@
 
   .transfer-calc-hero__content {
     width: calc(100% - 80px);
-    padding-bottom: 10%;
   }
 }
 
 @media (max-width: 767px) {
   .transfer-calc-hero {
-    height: 70vh;
+    height: 80vh;
     min-height: 440px;
   }
 
@@ -81,12 +80,11 @@
 
   .transfer-calc-hero__overlay {
     background:
-      linear-gradient(0deg, rgba($navy, 0.84) 0%, rgba($navy, 0.4) 70%, rgba($navy, 0.16) 100%);
+      linear-gradient(0deg, rgba($brand-primary, 0.84) 0%, rgba($brand-primary, 0.4) 70%, rgba($brand-primary, 0.16) 100%);
   }
 
   .transfer-calc-hero__content {
     width: calc(100% - 32px);
-    padding-bottom: 10%;
   }
 
   .transfer-calc-hero__paragraph {

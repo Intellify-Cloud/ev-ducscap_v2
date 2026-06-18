@@ -1,1 +1,144 @@
-{% include 3-calculators.html %}
+<section class="three-calculators-section page-section" id="bond-affordability-calculator">
+  <div class="three-calculators-page">
+    <header class="three-calculators-header">
+      <div class="three-calculators-header__eyebrow">Calculator</div>
+      <h2 class="three-calculators-header__title">Check your bond affordability</h2>
+      <p class="three-calculators-header__sub">
+        Enter your income and expenses to estimate the bond amount you may qualify for.
+      </p>
+    </header>
+
+    <div class="mb-calc">
+      <div class="mb-calc__fields">
+        <div class="mb-calc-field mb-calc-field--full">
+          <label class="mb-calc-field__label" for="mb-a-gross">Gross monthly income <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-gross" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-a-net">Net monthly income <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-net" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-a-expenses">Total monthly expenses <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-a-expenses" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field mb-calc-field--full mb-calc-field--readonly">
+          <label class="mb-calc-field__label" for="mb-a-surplus">Net surplus income</label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" id="mb-a-surplus" placeholder="Auto-calculated" readonly tabindex="-1">
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-a-years">Years to repay <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <select class="mb-calc-field__select" id="mb-a-years">
+              <option value="5">5 years</option>
+              <option value="10">10 years</option>
+              <option value="15">15 years</option>
+              <option value="20" selected>20 years</option>
+              <option value="25">25 years</option>
+              <option value="30">30 years</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-a-rate">Interest rate <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-a-rate" value="10.5" min="0" max="30" step="0.25">
+            <span class="mb-calc-field__suffix">%</span>
+          </div>
+        </div>
+
+        <button class="mb-calc-btn" type="button" id="mb-a-calc-btn">Check affordability</button>
+      </div>
+
+      <aside class="mb-calc-result" aria-live="polite">
+        <div class="mb-calc-result__inner">
+          <div class="mb-calc-result__tag">Estimate</div>
+          <div class="mb-calc-result-item mb-calc-result-item--hero">
+            <span class="mb-calc-result-item__label">You may qualify for</span>
+            <span class="mb-calc-result-item__value" id="mb-a-qualify">R 0</span>
+          </div>
+          <div class="mb-calc-result-divider"></div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">30% gross cap</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-gross-cap">R 0</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Net surplus income</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-surplus-result">R 0</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Max monthly instalment</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-a-monthly">R 0</span>
+          </div>
+          <p class="mb-calc-result__terms">This excludes transfer fees, bond registration costs, rates, levies, insurance, and bank stress testing.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const root = document.getElementById('bond-affordability-calculator');
+  if (!root) return;
+
+  const byId = id => root.querySelector('#' + id);
+  const value = id => parseFloat(String(byId(id).value).replace(/\s/g, '')) || 0;
+  const number = amount => Math.round(Math.max(amount, 0)).toLocaleString('en-ZA');
+  const rand = amount => 'R ' + number(amount);
+
+  function formatCurrencyField(field) {
+    const numericValue = field.value.replace(/[^\d]/g, '');
+    field.value = numericValue ? Number(numericValue).toLocaleString('en-ZA') : '';
+  }
+
+  function syncSurplus() {
+    const surplus = Math.max(value('mb-a-net') - value('mb-a-expenses'), 0);
+    byId('mb-a-surplus').value = surplus > 0 ? number(surplus) : '';
+    return surplus;
+  }
+
+  function calculateAffordability() {
+    const grossCap = value('mb-a-gross') * 0.3;
+    const surplus = syncSurplus();
+    const maxMonthly = Math.min(grossCap, surplus);
+    const years = parseInt(byId('mb-a-years').value, 10) || 20;
+    const monthlyRate = value('mb-a-rate') / 100 / 12;
+    const periods = years * 12;
+    const qualify = monthlyRate === 0
+      ? maxMonthly * periods
+      : (maxMonthly / monthlyRate) * (1 - 1 / Math.pow(1 + monthlyRate, periods));
+
+    byId('mb-a-qualify').textContent = rand(qualify);
+    byId('mb-a-gross-cap').textContent = rand(grossCap);
+    byId('mb-a-surplus-result').textContent = rand(surplus);
+    byId('mb-a-monthly').textContent = rand(maxMonthly);
+  }
+
+  root.querySelectorAll('[data-currency-input]').forEach(field => {
+    field.addEventListener('input', function () {
+      formatCurrencyField(field);
+      if (field.id === 'mb-a-net' || field.id === 'mb-a-expenses') syncSurplus();
+    });
+  });
+  byId('mb-a-calc-btn').addEventListener('click', calculateAffordability);
+  syncSurplus();
+})();
+</script>

@@ -3,7 +3,7 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding: 76px 24px 88px;
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .mb-transfer-page {
@@ -21,7 +21,7 @@
 .mb-transfer-fields,
 .mb-transfer-result__inner {
   border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(12, 80, 69, 0.12);
+  box-shadow: 0 18px 40px rgba(45, 26, 31, 0.12);
 }
 
 .mb-transfer-fields {
@@ -29,7 +29,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   padding: 34px;
-  background: #cbe4d7;
+  background: var(--color-primary-50);
 }
 
 .mb-transfer-field {
@@ -45,14 +45,14 @@
 
 .mb-transfer-field__label {
   margin: 0;
-  color: #0c5045;
+  color: var(--color-text);
   font-size: 16px;
   font-weight: 800;
   line-height: 1.25;
 }
 
 .mb-transfer-field__req {
-  color: #e8522a;
+  color: var(--color-secondary);
 }
 
 .mb-transfer-field__input-wrap {
@@ -60,15 +60,15 @@
   align-items: center;
   min-height: 52px;
   overflow: hidden;
-  border: 2px solid #d6e8e0;
+  border: 2px solid var(--color-primary-100);
   border-radius: 8px;
-  background: #fdf9eb;
+  background: var(--color-white);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .mb-transfer-field__input-wrap:focus-within {
-  border-color: #ff4500;
-  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.14);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(208, 77, 41, 0.14);
 }
 
 .mb-transfer-section input:focus,
@@ -82,13 +82,13 @@
 }
 
 .mb-transfer-section button:focus-visible {
-  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.28);
+  box-shadow: 0 0 0 3px rgba(208, 77, 41, 0.28);
 }
 
 .mb-transfer-field__prefix {
   flex-shrink: 0;
   padding: 0 9px 0 16px;
-  color: #e8522a;
+  color: var(--color-secondary);
   font-size: 17px;
   font-weight: 900;
 }
@@ -100,7 +100,7 @@
   border: 0;
   outline: 0;
   background-color: transparent;
-  color: #2c2c2c;
+  color: var(--color-text);
   font-size: 18px;
   font-weight: 700;
 }
@@ -110,7 +110,7 @@
 }
 
 .mb-transfer-field__input::placeholder {
-  color: #7f9f92;
+  color: var(--text-muted);
 }
 
 .mb-transfer-field__input[type=number] {
@@ -127,7 +127,7 @@
   appearance: none;
   cursor: pointer;
   padding: 13px 42px 13px 16px;
-  background-image: linear-gradient(45deg, transparent 50%, #e8522a 50%), linear-gradient(135deg, #e8522a 50%, transparent 50%);
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-secondary) 50%), linear-gradient(135deg, var(--color-secondary) 50%, transparent 50%);
   background-position: calc(100% - 22px) 21px, calc(100% - 15px) 21px;
   background-size: 7px 7px, 7px 7px;
   background-repeat: no-repeat;
@@ -138,8 +138,8 @@
   min-height: 54px;
   border: 0;
   border-radius: 999px;
-  background: #f70c47;
-  color: #ffffff;
+  background: var(--color-primary);
+  color: var(--text-inverse);
   padding: 0 30px;
   font-family: Outfit, sans-serif;
   font-size: 22px;
@@ -147,12 +147,12 @@
   font-weight: 600;
   line-height: 33px;
   cursor: pointer;
-  box-shadow: 0 12px 20px rgba(247, 12, 71, 0.22);
+  box-shadow: 0 12px 20px rgba(211, 7, 58, 0.22);
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .mb-transfer-btn:hover {
-  background: #cf0738;
+  background: var(--color-primary-600);
   transform: translateY(-1px);
 }
 
@@ -165,13 +165,13 @@
 
 .mb-transfer-notes p {
   margin: 0;
-  color: #36574f;
+  color: var(--text-muted);
   font-size: 13px;
   line-height: 1.45;
 }
 
 .mb-transfer-notes strong {
-  color: #0c5045;
+  color: var(--color-text);
 }
 
 .mb-transfer-result {
@@ -185,8 +185,8 @@
   min-height: 100%;
   overflow: hidden;
   padding: 32px;
-  background: #e8522a;
-  color: #ffffff;
+  background: var(--color-secondary);
+  color: var(--text-inverse);
 }
 
 .mb-transfer-result__tag {
@@ -215,7 +215,7 @@
 
 .mb-transfer-result__value {
   display: block;
-  color: #ffffff;
+  color: var(--text-inverse);
   font-size: 44px;
   font-weight: 900;
   line-height: 1.05;
@@ -239,7 +239,7 @@
 
 .mb-transfer-result-group__title,
 .mb-transfer-result-group__subtotal {
-  color: #ffffff;
+  color: var(--text-inverse);
   font-size: 17px;
   font-weight: 900;
 }
@@ -266,7 +266,7 @@
 }
 
 .mb-transfer-result-row span:last-child {
-  color: #ffffff;
+  color: var(--text-inverse);
   font-size: 16px;
   font-weight: 900;
   text-align: right;
