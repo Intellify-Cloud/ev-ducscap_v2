@@ -1,0 +1,95 @@
+// Transfer Cost Calculator page hero.
+
+.transfer-calc-hero {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 70vh;
+  min-height: 520px;
+  align-items: flex-end;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  background: $navy;
+}
+
+.transfer-calc-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.transfer-calc-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba($navy, 0.76) 0%, rgba($navy, 0.42) 48%, rgba($navy, 0.08) 78%),
+    linear-gradient(0deg, rgba($navy, 0.72) 0%, rgba($navy, 0.08) 64%);
+}
+
+.transfer-calc-hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 144px, 1440px);
+  margin: 0 auto;
+  padding: 0 0 10%;
+}
+
+.transfer-calc-hero__title {
+  max-width: 760px;
+  margin: 0;
+  color: $white;
+  font-family: $font-display;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.transfer-calc-hero__paragraph {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: rgba($white, 0.9);
+  font-family: $font-body;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 1023px) {
+  .transfer-calc-hero {
+    min-height: 480px;
+  }
+
+  .transfer-calc-hero__content {
+    width: calc(100% - 80px);
+    padding-bottom: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .transfer-calc-hero {
+    height: 70vh;
+    min-height: 440px;
+  }
+
+  .transfer-calc-hero__image {
+    object-position: 62% top;
+  }
+
+  .transfer-calc-hero__overlay {
+    background:
+      linear-gradient(0deg, rgba($navy, 0.84) 0%, rgba($navy, 0.4) 70%, rgba($navy, 0.16) 100%);
+  }
+
+  .transfer-calc-hero__content {
+    width: calc(100% - 32px);
+    padding-bottom: 10%;
+  }
+
+  .transfer-calc-hero__paragraph {
+    margin-top: 18px;
+  }
+}

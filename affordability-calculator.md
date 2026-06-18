@@ -5,11 +5,7 @@ description: "Calculate how much you can afford for your home loan. Determine yo
 background: white
 ---
 
-<div class="calculator-page">
-    <iframe class="bond-calc" frameborder="0"
-        src="https://www.ooba.co.za/calculators/affordability-calculator/?iframe=true&iftype=nobrand"
-        title="Affordability Calculator"></iframe>
-</div>
+{% include bond-affordability-calculator.html %}
 
 <script type="application/ld+json">
 {

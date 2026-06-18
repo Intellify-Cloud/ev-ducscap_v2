@@ -3,13 +3,15 @@ layout: page
 title: Transfer Cost Calculator
 description: "Calculate registration and transfer costs for South African property transactions. Estimate legal fees, transfer duties, and bond costs."
 background: white
+hero_under_nav: true
+hero_image: /assets/img/sections/duces-hero_3.jpg
+hero_image_alt: "Homebuyer planning property transfer costs"
+hero_title: "Transfer Cost Calculator"
+hero_paragraph: "Calculate your estimated bond registration and property transfer costs before you buy."
 ---
 
-<div class="calculator-page">
-    <iframe class="transfer-calc" frameborder="0" loading="lazy"
-        src="https://www.ooba.co.za/calculators/bond-and-transfer-costs-calculator?iframe=true&iftype=nobrand"
-        title="Transfer Cost Calculator"></iframe>
-</div>
+{% include transfer-calc-hero.html %}
+{% include transfer-cost-calculator.html %}
 
 <script type="application/ld+json">
 {
