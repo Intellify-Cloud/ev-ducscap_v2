@@ -1,0 +1,316 @@
+.mb-transfer-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 76px 24px 88px;
+  background: var(--color-white);
+}
+
+.mb-transfer-page {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.mb-transfer-calc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.mb-transfer-fields,
+.mb-transfer-result__inner {
+  border-radius: 16px;
+  box-shadow: 0 18px 40px var(--brand-primary-12);
+}
+
+.mb-transfer-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 34px;
+  background: var(--color-primary-50);
+}
+
+.mb-transfer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mb-transfer-field--full {
+  grid-column: 1 / -1;
+}
+
+.mb-transfer-field__label {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mb-transfer-field__req {
+  color: var(--color-secondary);
+}
+
+.mb-transfer-field__input-wrap {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  overflow: hidden;
+  border: 2px solid var(--color-primary-100);
+  border-radius: 8px;
+  background: var(--color-white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mb-transfer-field__input-wrap:focus-within {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px var(--brand-secondary-14);
+}
+
+.mb-transfer-section input:focus,
+.mb-transfer-section select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mb-transfer-section button:focus {
+  outline: none !important;
+}
+
+.mb-transfer-section button:focus-visible {
+  box-shadow: 0 0 0 3px var(--brand-secondary-28);
+}
+
+.mb-transfer-field__prefix {
+  flex-shrink: 0;
+  padding: 0 9px 0 16px;
+  color: var(--color-secondary);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.mb-transfer-field__input,
+.mb-transfer-field__select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mb-transfer-field__input {
+  padding: 13px 16px 13px 0;
+}
+
+.mb-transfer-field__input::placeholder {
+  color: var(--text-muted);
+}
+
+.mb-transfer-field__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mb-transfer-field__input[type=number]::-webkit-outer-spin-button,
+.mb-transfer-field__input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mb-transfer-field__select {
+  appearance: none;
+  cursor: pointer;
+  padding: 13px 42px 13px 16px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-secondary) 50%), linear-gradient(135deg, var(--color-secondary) 50%, transparent 50%);
+  background-position: calc(100% - 22px) 21px, calc(100% - 15px) 21px;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+}
+
+.mb-transfer-btn {
+  grid-column: 1 / -1;
+  min-height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  padding: 0 30px;
+  font-family: Outfit, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33px;
+  cursor: pointer;
+  box-shadow: 0 12px 20px var(--color-primary-22);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.mb-transfer-btn:hover {
+  background: var(--color-primary-600);
+  transform: translateY(-1px);
+}
+
+.mb-transfer-notes {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.mb-transfer-notes p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.mb-transfer-notes strong {
+  color: var(--color-text);
+}
+
+.mb-transfer-result {
+  position: sticky;
+  top: 24px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mb-transfer-result__inner {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 32px;
+  background: var(--color-secondary);
+  color: var(--text-inverse);
+}
+
+.mb-transfer-result__tag {
+  display: inline-flex;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: var(--white-14);
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mb-transfer-result__total {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.mb-transfer-result__label {
+  display: block;
+  color: var(--white-78);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mb-transfer-result__value {
+  display: block;
+  color: var(--text-inverse);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.mb-transfer-result-group {
+  margin-bottom: 18px;
+}
+
+.mb-transfer-result-group__header,
+.mb-transfer-result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.mb-transfer-result-group__header {
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.mb-transfer-result-group__title,
+.mb-transfer-result-group__subtotal {
+  color: var(--text-inverse);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.mb-transfer-result-group__subtotal {
+  white-space: nowrap;
+}
+
+.mb-transfer-result-row {
+  align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--white-14);
+}
+
+.mb-transfer-result-row:last-child {
+  border-bottom: 0;
+}
+
+.mb-transfer-result-row span:first-child {
+  color: var(--white-78);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mb-transfer-result-row span:last-child {
+  color: var(--text-inverse);
+  font-size: 16px;
+  font-weight: 900;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mb-transfer-result-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: var(--white-18);
+}
+
+.mb-transfer-result__terms {
+  margin: 20px 0 0;
+  color: var(--white-68);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .mb-transfer-section {
+    padding: 48px 16px 56px;
+  }
+
+  .mb-transfer-calc {
+    grid-template-columns: 1fr;
+  }
+
+  .mb-transfer-fields {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .mb-transfer-result {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .mb-transfer-result__inner {
+    padding: 24px;
+  }
+
+  .mb-transfer-result__value {
+    font-size: 36px;
+  }
+}

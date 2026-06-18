@@ -1,3 +1,16 @@
+// Transfer cost calculator section
+.mb-transfer-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 76px 24px 88px;
+  background: $white;
+}
+
+.mb-transfer-page {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
 // Three calculators section
 .three-calculators-section {
   width: 100vw;
@@ -427,6 +440,48 @@
   &:last-child {
     border-bottom: 0;
   }
+}
+
+.mb-transfer-section input:focus,
+.mb-transfer-section select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mb-transfer-section button:focus {
+  outline: none !important;
+}
+
+.mb-transfer-section button:focus-visible {
+  box-shadow: 0 0 0 3px var(--brand-secondary-28);
+}
+
+.mb-transfer-field__input::placeholder {
+  color: $text-muted;
+}
+
+.mb-transfer-field__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.mb-transfer-field__input[type="number"]::-webkit-outer-spin-button,
+.mb-transfer-field__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mb-transfer-field__input-wrap:focus-within {
+  border-color: $brand-secondary;
+  box-shadow: $focus-ring;
+}
+
+.mb-transfer-btn:hover {
+  background: $button-color-hover;
+  transform: translateY(-1px);
+}
+
+.mb-transfer-result-row:last-child {
+  border-bottom: 0;
 }
 
 @media (max-width: 768px) {

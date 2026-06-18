@@ -10,9 +10,11 @@ hero_title: "Transfer Cost Calculator"
 hero_paragraph: "Calculate your estimated bond registration and property transfer costs before you buy."
 ---
 
-{% include transfer-calc-hero.html %}
+{% include calc-hero.html %}
 {% include transfer-cost-calculator.html %}
 {% include transfer-cost-guide.html %}
+
+<script src="{{ '/assets/js/transfer-cost-calculator.js' | relative_url }}" defer></script>
 
 <script type="application/ld+json">
 {

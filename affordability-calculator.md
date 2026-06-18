@@ -10,7 +10,7 @@ hero_title: "Bond Affordability Calculator"
 hero_paragraph: "Estimate the home-loan amount you may qualify for based on your income and monthly expenses."
 ---
 
-{% include transfer-calc-hero.html %}
+{% include calc-hero.html %}
 {% include bond-affordability-calculator.html %}
 
 <script type="application/ld+json">
