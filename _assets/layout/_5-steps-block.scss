@@ -2,13 +2,25 @@
 // Colourful card design with a horizontal desktop stack.
 
 .five-steps-block {
+  --steps-background: #f3f5f9;
+  --steps-primary: #30475e;
+  --steps-primary-dark: #263b4f;
+  --steps-secondary: #4a6fa5;
+  --steps-secondary-dark: #3d5f8e;
+  --steps-accent: #e3a008;
+  --steps-accent-dark: #b98006;
+  --steps-card: #ffffff;
+  --steps-text: #1f2937;
+  --steps-muted: #64748b;
+  --steps-border: #d8dee8;
+
   position: relative;
   overflow: hidden;
   padding: 88px 72px;
   background:
-    radial-gradient(circle at 10% 10%, rgba($white, 0.72), transparent 28%),
-    radial-gradient(circle at 92% 86%, rgba($gold, 0.1), transparent 25%),
-    #dce7ea;
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.9), transparent 28%),
+    radial-gradient(circle at 92% 86%, rgba(74, 111, 165, 0.12), transparent 25%),
+    var(--steps-background);
 
   &::before,
   &::after {
@@ -17,7 +29,7 @@
     height: 90px;
     content: "";
     opacity: 0.16;
-    background-image: radial-gradient($navy 1.5px, transparent 1.5px);
+    background-image: radial-gradient(var(--steps-primary) 1.5px, transparent 1.5px);
     background-size: 10px 10px;
     pointer-events: none;
   }
@@ -50,126 +62,128 @@
   .next-steps__title {
     @include section-title-typography;
     margin: 0;
-    color: $navy;
+    color: var(--steps-primary);
   }
 
   .next-steps__intro {
     @include desktop-paragraph-typography;
     margin: 0;
     padding-left: 22px;
-    border-left: 3px solid $gold;
-    color: $medium-grey;
+    border-left: 3px solid var(--steps-accent);
+    color: var(--steps-muted);
   }
 
   .next-steps__steps {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 20px;
+    align-items: start;
+    gap: 10px;
     margin: 0;
-    padding: 0;
+    padding: 42px 0 58px;
     list-style: none;
   }
 
   .next-steps__step {
+    position: relative;
     display: flex;
     min-width: 0;
-    min-height: 350px;
+    min-height: 370px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 28px 24px;
-    border: 1px solid rgba($navy, 0.08);
-    border-radius: 32px;
-    background: rgba($white, 0.96);
-    box-shadow:
-      0 20px 38px rgba($navy, 0.12),
-      inset 0 1px 0 rgba($white, 0.9);
-    transition: box-shadow $motion-standard, transform $motion-standard;
+    padding: 54px 24px 28px;
+    border: 1px solid var(--steps-border);
+    border-radius: 18px 18px 6px 6px;
+    border-bottom-color: transparent;
+    background: linear-gradient(
+      180deg,
+      var(--steps-card) 0%,
+      var(--steps-card) 72%,
+      var(--steps-background) 100%
+    );
+    box-shadow: none;
+    transition: transform $motion-standard;
+
+    &::before {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      left: -1px;
+      height: 30px;
+      border-radius: 18px 18px 0 0;
+      background: linear-gradient(180deg, #5f7fb0, var(--steps-secondary));
+      content: "";
+    }
 
     &:hover {
-      box-shadow:
-        0 26px 46px rgba($navy, 0.16),
-        inset 0 1px 0 rgba($white, 0.9);
-      transform: translateY(-4px);
+      transform: translateY(-6px);
     }
   }
 
+  .next-steps__step:nth-child(even) {
+    margin-top: 0;
+    padding: 54px 24px;
+    border-top-color: transparent;
+    border-bottom-color: var(--steps-border);
+    border-radius: 6px 6px 18px 18px;
+    background: linear-gradient(
+      180deg,
+      var(--steps-background) 0%,
+      var(--steps-card) 28%,
+      var(--steps-card) 100%
+    );
+
+    &::before {
+      top: auto;
+      bottom: -1px;
+      height: 30px;
+      border-radius: 0 0 18px 18px;
+    }
+  }
+
+  .next-steps__step:nth-child(1)::before {
+    background: linear-gradient(180deg, #f2bd35, var(--steps-accent));
+  }
+
+  .next-steps__step:nth-child(2)::before {
+    background: linear-gradient(180deg, #6d8dbb, var(--steps-secondary));
+  }
+
+  .next-steps__step:nth-child(3)::before {
+    background: linear-gradient(180deg, #4f6d88, var(--steps-primary));
+  }
+
+  .next-steps__step:nth-child(4)::before {
+    background: linear-gradient(180deg, #63bfbd, #379b9a);
+  }
+
+  .next-steps__step:nth-child(5)::before {
+    background: linear-gradient(180deg, #6f96c4, #3979ac);
+  }
+
   .next-steps__step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    flex: 0 0 auto;
-    margin-bottom: 28px;
-    border-radius: 22px;
-    background: linear-gradient(145deg, lighten($button-color, 8%), darken($button-color, 8%));
-    box-shadow:
-      inset 2px 2px 5px rgba($white, 0.3),
-      0 10px 20px rgba($button-color, 0.22);
-    color: $white;
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    background: transparent;
+    box-shadow: none;
+    color: var(--steps-primary);
     font-family: $font-display;
-    font-size: 2.1rem;
-    font-weight: 600;
+    font-size: 2.35rem;
+    font-weight: 500;
     line-height: 1;
-  }
-
-  .next-steps__step:nth-child(2) .next-steps__step-number {
-    background: linear-gradient(145deg, lighten($gold, 9%), darken($gold, 12%));
-    box-shadow:
-      inset 2px 2px 5px rgba($white, 0.3),
-      0 10px 20px rgba($gold, 0.22);
-  }
-
-  .next-steps__step:nth-child(3) .next-steps__step-number {
-    background: linear-gradient(145deg, lighten($blue, 9%), darken($blue, 11%));
-    box-shadow:
-      inset 2px 2px 5px rgba($white, 0.3),
-      0 10px 20px rgba($blue, 0.22);
-  }
-
-  .next-steps__step:nth-child(4) .next-steps__step-number {
-    background: linear-gradient(145deg, lighten($navy, 18%), $navy);
-    box-shadow:
-      inset 2px 2px 5px rgba($white, 0.2),
-      0 10px 20px rgba($navy, 0.22);
-  }
-
-  .next-steps__step:nth-child(5) .next-steps__step-number {
-    background: linear-gradient(145deg, lighten($button-color, 8%), darken($button-color, 8%));
   }
 
   .next-steps__step-content {
     position: relative;
     min-width: 0;
-    padding-top: 22px;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 68px;
-      height: 7px;
-      border-radius: 999px;
-      background: $button-color;
-      content: "";
-    }
-  }
-
-  .next-steps__step:nth-child(2) .next-steps__step-content::before {
-    background: $gold;
-  }
-
-  .next-steps__step:nth-child(3) .next-steps__step-content::before {
-    background: $blue;
-  }
-
-  .next-steps__step:nth-child(4) .next-steps__step-content::before {
-    background: $navy;
   }
 
   .next-steps__step-title {
-    margin: 0 0 10px;
-    color: $navy;
+    margin: 0 0 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--steps-border);
+    color: var(--steps-text);
     font-family: $font-display;
     font-size: 1rem;
     font-weight: 700;
@@ -178,7 +192,7 @@
 
   .next-steps__step-body {
     margin: 0;
-    color: $medium-grey;
+    color: var(--steps-muted);
     font-family: $font-body;
     font-size: 0.86rem;
     line-height: 1.6;
@@ -200,10 +214,16 @@
 
     .next-steps__steps {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      padding: 10px 0 0;
     }
 
     .next-steps__step {
       min-height: 290px;
+    }
+
+    .next-steps__step:nth-child(even) {
+      margin-top: 0;
     }
   }
 }
@@ -220,13 +240,14 @@
 
     .next-steps__intro {
       padding: 16px 0 0;
-      border-top: 3px solid $gold;
+      border-top: 3px solid var(--steps-accent);
       border-left: 0;
     }
 
     .next-steps__steps {
       grid-template-columns: 1fr;
       gap: 18px;
+      padding-top: 0;
     }
 
     .next-steps__step {
@@ -234,25 +255,41 @@
       grid-template-columns: 58px minmax(0, 1fr);
       gap: 18px;
       min-height: 0;
-      padding: 24px 20px;
-      border-radius: 28px;
+      padding: 42px 20px 24px;
+      border-radius: 18px 18px 6px 6px;
+    }
+
+    .next-steps__step:nth-child(even) {
+      padding: 42px 20px 24px;
+      border-top-color: var(--steps-border);
+      border-bottom-color: transparent;
+      border-radius: 18px 18px 6px 6px;
+      background: linear-gradient(
+        180deg,
+        var(--steps-card) 0%,
+        var(--steps-card) 72%,
+        var(--steps-background) 100%
+      );
+
+      &::before {
+        top: -1px;
+        bottom: auto;
+        border-radius: 18px 18px 0 0;
+      }
     }
 
     .next-steps__step-number {
-      width: 54px;
-      height: 54px;
       margin: 0;
-      border-radius: 17px;
-      font-size: 1.65rem;
+      font-size: 2rem;
     }
 
     .next-steps__step-content {
-      padding: 18px 0 0;
+      padding: 0 0 0 18px;
+      border-left: 1px solid var(--steps-border);
+    }
 
-      &::before {
-        width: 56px;
-        height: 6px;
-      }
+    .next-steps__step-title {
+      padding-bottom: 10px;
     }
 
     .next-steps__step-title {
