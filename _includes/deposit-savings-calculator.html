@@ -1,0 +1,82 @@
+<section class="calculator-section deposit-savings-calculator page-section" id="deposit-savings-calculator">
+  <div class="calculator-page">
+    <header class="calculator-header">
+      <div class="calculator-header__eyebrow">Calculator</div>
+      <h2 class="calculator-header__title">Plan your property deposit</h2>
+      <p class="calculator-header__sub">Set your target deposit and see how long your current savings plan may take.</p>
+    </header>
+
+    <div class="mb-calc">
+      <div class="mb-calc__fields">
+        <div class="mb-calc-field mb-calc-field--full">
+          <label class="mb-calc-field__label" for="mb-d-property">Target property price <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-d-property" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-d-percent">Deposit target <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-d-percent" value="10" min="0" max="100" step="1">
+            <span class="mb-calc-field__suffix">%</span>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-d-current">Current savings</label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-d-current" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-d-monthly">Monthly contribution <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-d-monthly" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-d-rate">Savings interest rate</label>
+          <div class="mb-calc-field__input-wrap">
+            <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-d-rate" value="6" min="0" max="30" step="0.25">
+            <span class="mb-calc-field__suffix">%</span>
+          </div>
+        </div>
+
+        <button class="mb-calc-btn" type="button" id="mb-d-calc-btn">Calculate savings timeline</button>
+      </div>
+
+      <aside class="mb-calc-result" aria-live="polite">
+        <div class="mb-calc-result__inner">
+          <div class="mb-calc-result__tag">Savings plan</div>
+          <div class="mb-calc-result-item mb-calc-result-item--hero">
+            <span class="mb-calc-result-item__label">Target deposit</span>
+            <span class="mb-calc-result-item__value" id="mb-d-target">R 0</span>
+          </div>
+          <div class="mb-calc-result-divider"></div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Still to save</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-d-remaining">R 0</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Estimated timeline</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-d-timeline">0 months</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Estimated target date</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-d-date">—</span>
+          </div>
+          <div class="deposit-savings-calculator__progress" aria-hidden="true">
+            <span class="deposit-savings-calculator__progress-bar" id="mb-d-progress"></span>
+          </div>
+          <p class="mb-calc-result__terms">This estimate assumes a constant contribution and savings rate.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

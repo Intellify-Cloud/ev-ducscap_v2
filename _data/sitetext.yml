@@ -172,6 +172,12 @@ more-calculators:
       link:
         url: /amortisation-calculator
         text: "Calculate"
+    - title: "Extra Repayment Calculator"
+      desc: "Estimate how extra payments could shorten your bond term and reduce its total cost."
+      icon: fas fa-hand-holding-usd
+      link:
+        url: /extra-repayment-calculator
+        text: "Calculate"
 
 textblock:
   title: "Why Duces Capital"
@@ -343,6 +349,12 @@ footer:
           url: "/affordability-calculator"
         - title: "Transfer Cost Calculator"
           url: "/transfer-cost-calculator"
+        - title: "Amortisation Calculator"
+          url: "/amortisation-calculator"
+        - title: "Extra Repayment Calculator"
+          url: "/extra-repayment-calculator"
+        - title: "Deposit Savings Calculator"
+          url: "/deposit-savings-calculator"
   legal_links:
     - title: "Privacy Statement"
       url: "/privacy-statement"

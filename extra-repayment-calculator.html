@@ -11,102 +11,7 @@ hero_paragraph: "Calculate your savings on your total home loan cost by paying a
 ---
 
 {% include calc-hero.html %}
-
-<section class="mb-extra-repayment-section" id="extra-repayment-calculator">
-  <div class="mb-extra-repayment-page">
-    <div class="mb-extra-repayment-calc">
-      <div class="mb-extra-repayment-fields">
-        <div class="mb-extra-repayment-field mb-extra-repayment-field--full">
-          <label class="mb-extra-repayment-field__label" for="mb-e-debt">Current bond debt <span class="mb-extra-repayment-field__req">*</span></label>
-          <div class="mb-extra-repayment-field__input-wrap">
-            <span class="mb-extra-repayment-field__prefix">R</span>
-            <input class="mb-extra-repayment-field__input" type="text" inputmode="numeric" id="mb-e-debt" placeholder="0" data-currency-input>
-          </div>
-        </div>
-
-        <div class="mb-extra-repayment-field mb-extra-repayment-field--full">
-          <label class="mb-extra-repayment-field__label" for="mb-e-term">Remaining bond term <span class="mb-extra-repayment-field__req">*</span></label>
-          <div class="mb-extra-repayment-field__input-wrap">
-            <select class="mb-extra-repayment-field__select" id="mb-e-term">
-              <option value="5">5 years</option>
-              <option value="10">10 years</option>
-              <option value="15">15 years</option>
-              <option value="20" selected>20 years</option>
-              <option value="25">25 years</option>
-              <option value="30">30 years</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="mb-extra-repayment-field">
-          <label class="mb-extra-repayment-field__label" for="mb-e-rate">Interest rate <span class="mb-extra-repayment-field__req">*</span></label>
-          <div class="mb-extra-repayment-field__input-wrap">
-            <input class="mb-extra-repayment-field__input mb-extra-repayment-field__input--no-prefix" type="number" id="mb-e-rate" value="10.5" min="0" max="30" step="0.25">
-            <span class="mb-extra-repayment-field__suffix">%</span>
-          </div>
-        </div>
-
-        <div class="mb-extra-repayment-field">
-          <label class="mb-extra-repayment-field__label" for="mb-e-monthly">Monthly repayment <span class="mb-extra-repayment-field__req">*</span></label>
-          <div class="mb-extra-repayment-field__input-wrap">
-            <span class="mb-extra-repayment-field__prefix">R</span>
-            <input class="mb-extra-repayment-field__input" type="text" inputmode="numeric" id="mb-e-monthly" placeholder="0" data-currency-input>
-          </div>
-        </div>
-
-        <div class="mb-extra-repayment-field">
-          <label class="mb-extra-repayment-field__label" for="mb-e-overpayment-type">Overpayment type</label>
-          <div class="mb-extra-repayment-field__input-wrap">
-            <select class="mb-extra-repayment-field__select" id="mb-e-overpayment-type">
-              <option value="once">Once-off overpayment</option>
-              <option value="recurring">Recurring monthly payment</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="mb-extra-repayment-field">
-          <label class="mb-extra-repayment-field__label" for="mb-e-overpayment">Overpayment amount</label>
-          <div class="mb-extra-repayment-field__input-wrap">
-            <span class="mb-extra-repayment-field__prefix">R</span>
-            <input class="mb-extra-repayment-field__input" type="text" inputmode="numeric" id="mb-e-overpayment" placeholder="0" data-currency-input>
-          </div>
-        </div>
-
-        <button class="mb-extra-repayment-btn" type="button" id="mb-e-calc-btn">Calculate savings</button>
-      </div>
-
-      <aside class="mb-extra-repayment-result" aria-live="polite">
-        <div class="mb-extra-repayment-result__inner">
-          <div class="mb-extra-repayment-result__tag">Results</div>
-
-          <div class="mb-extra-repayment-result-item mb-extra-repayment-result-item--hero">
-            <span class="mb-extra-repayment-result-item__label">Total loan amount</span>
-            <span class="mb-extra-repayment-result-item__value" id="mb-e-total-loan">R 0</span>
-          </div>
-
-          <div class="mb-extra-repayment-result-divider"></div>
-
-          <div class="mb-extra-repayment-result-item">
-            <span class="mb-extra-repayment-result-item__label">Total monthly repayment</span>
-            <span class="mb-extra-repayment-result-item__value mb-extra-repayment-result-item__value--sm" id="mb-e-total-monthly">R 0</span>
-          </div>
-
-          <div class="mb-extra-repayment-result-item">
-            <span class="mb-extra-repayment-result-item__label">Loan term reduced to</span>
-            <span class="mb-extra-repayment-result-item__value mb-extra-repayment-result-item__value--sm" id="mb-e-term-reduced">0 years</span>
-          </div>
-
-          <div class="mb-extra-repayment-result-item">
-            <span class="mb-extra-repayment-result-item__label">Total amount saved</span>
-            <span class="mb-extra-repayment-result-item__value mb-extra-repayment-result-item__value--sm" id="mb-e-amount-reduced">R 0</span>
-          </div>
-
-          <p class="mb-extra-repayment-result__terms">* Terms and conditions apply</p>
-        </div>
-      </aside>
-    </div>
-  </div>
-</section>
+{% include extra-repayment-calculator.html %}
 
 <script src="{{ '/assets/js/extra-repayment-calculator.js' | relative_url }}" defer></script>
 
@@ -128,7 +33,7 @@ hero_paragraph: "Calculate your savings on your total home loan cost by paying a
       "name": "Can I pay extra into my home loan every month?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most South African home loans allow additional repayments, but rules can differ by bank and loan type. Use this calculator to estimate the benefit, then confirm payment options with your lender."
+        "text": "Most South African home loans allow additional repayments, but rules can differ by bank and loan type. Confirm the available payment options with your lender."
       }
     }
   ]

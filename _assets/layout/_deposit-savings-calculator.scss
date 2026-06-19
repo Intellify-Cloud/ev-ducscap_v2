@@ -1,0 +1,16 @@
+.deposit-savings-calculator__progress {
+  height: 10px;
+  margin-top: $space-3;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--white-16);
+}
+
+.deposit-savings-calculator__progress-bar {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: $white;
+  transition: width $motion-theatrical;
+}

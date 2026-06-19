@@ -1,0 +1,50 @@
+.amortisation-calculator__schedule {
+  margin-top: $space-5;
+}
+
+.amortisation-calculator__schedule-title {
+  margin: 0 0 $space-3;
+  color: $text-strong;
+  font-family: $font-display;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+.amortisation-calculator__table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--brand-primary-10);
+  border-radius: 16px;
+  background: $white;
+  box-shadow: 0 18px 40px var(--brand-primary-12);
+}
+
+.amortisation-calculator__table {
+  width: 100%;
+  min-width: 720px;
+  margin: 0;
+
+  th,
+  td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--brand-primary-10);
+    text-align: right;
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+
+  th {
+    background: var(--color-primary-05);
+    color: $text-strong;
+    font-family: $font-display;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+}

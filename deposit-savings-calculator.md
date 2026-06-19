@@ -1,15 +1,19 @@
 ---
 layout: page
 title: Deposit Savings Calculator
-description: "Calculate how much you need to save for your home loan deposit. Plan your savings strategy for purchasing property in South Africa."
+description: "Calculate how much you need to save for your home-loan deposit and estimate how long reaching your target may take."
 background: white
+hero_under_nav: true
+hero_image: /assets/img/sections/duces-hero_3.jpg
+hero_image_alt: "Homebuyer planning savings for a property deposit"
+hero_title: "Deposit Savings Calculator"
+hero_paragraph: "Set a property deposit goal and build a practical monthly savings timeline."
 ---
 
-<div class="calculator-page">
-    <iframe class="deposit-calc" frameborder="0" loading="lazy"
-        src="https://www.ooba.co.za/calculators/home-loan-deposit-saving-calculator?iframe=true&iftype=nobrand"
-        title="Deposit Savings Calculator"></iframe>
-</div>
+{% include calc-hero.html %}
+{% include deposit-savings-calculator.html %}
+
+<script src="{{ '/assets/js/deposit-savings-calculator.js' | relative_url }}" defer></script>
 
 <script type="application/ld+json">
 {
@@ -21,7 +25,7 @@ background: white
       "name": "How much deposit do I need for a home loan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Minimum deposit is typically 10% of property value, but 20% deposit improves your approval chances and reduces monthly payments. Use our calculator to plan your savings strategy."
+        "text": "The required deposit depends on the property, lender and applicant profile. A larger deposit can reduce the amount borrowed and improve the strength of an application."
       }
     },
     {
@@ -29,7 +33,7 @@ background: white
       "name": "How long will it take to save for a house deposit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This depends on your target property value, current savings, and monthly contribution amount. Our calculator helps you determine the timeline based on your savings rate."
+        "text": "The timeline depends on your target deposit, current savings, monthly contributions and the return earned on those savings."
       }
     }
   ]

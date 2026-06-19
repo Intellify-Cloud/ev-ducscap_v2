@@ -1,15 +1,19 @@
 ---
 layout: page
 title: Amortisation Calculator
-description: "Calculate how extra bond repayments affect your loan term. See how additional payments reduce interest and shorten your mortgage."
+description: "Calculate how your bond repayments are split between principal and interest over the life of your home loan."
 background: white
+hero_under_nav: true
+hero_image: /assets/img/sections/duces-hero_3.jpg
+hero_image_alt: "Homebuyer reviewing a bond repayment schedule"
+hero_title: "Amortisation Calculator"
+hero_paragraph: "See how your monthly repayment reduces your balance and pays interest over time."
 ---
 
-<div class="calculator-page">
-    <iframe class="amortisation-calc" frameborder="0" loading="lazy"
-        src="https://www.ooba.co.za/calculators/bond-amortization-calculator?iframe=true&iftype=nobrand"
-        title="Amortisation Calculator"></iframe>
-</div>
+{% include calc-hero.html %}
+{% include amortisation-calculator.html %}
+
+<script src="{{ '/assets/js/amortisation-calculator.js' | relative_url }}" defer></script>
 
 <script type="application/ld+json">
 {
@@ -26,10 +30,10 @@ background: white
     },
     {
       "@type": "Question",
-      "name": "How do extra repayments affect my bond?",
+      "name": "What does an amortisation schedule show?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Extra repayments reduce your interest burden and can shorten your bond term by months or years. Our amortisation calculator shows the impact of additional payments on your loan."
+        "text": "An amortisation schedule shows the opening loan balance, principal repaid, interest charged and closing balance for each period."
       }
     }
   ]

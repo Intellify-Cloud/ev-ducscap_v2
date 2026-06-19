@@ -1,0 +1,95 @@
+<section class="calculator-section extra-repayment-calculator page-section" id="extra-repayment-calculator">
+  <div class="calculator-page">
+    <header class="calculator-header">
+      <div class="calculator-header__eyebrow">Calculator</div>
+      <h2 class="calculator-header__title">See what paying extra can save</h2>
+      <p class="calculator-header__sub">Compare your current bond plan with a once-off or recurring extra repayment.</p>
+    </header>
+
+    <div class="mb-calc">
+      <div class="mb-calc__fields">
+        <div class="mb-calc-field mb-calc-field--full">
+          <label class="mb-calc-field__label" for="mb-e-debt">Current bond debt <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-e-debt" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-e-term">Remaining bond term <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <select class="mb-calc-field__select" id="mb-e-term">
+              <option value="5">5 years</option>
+              <option value="10">10 years</option>
+              <option value="15">15 years</option>
+              <option value="20" selected>20 years</option>
+              <option value="25">25 years</option>
+              <option value="30">30 years</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-e-rate">Interest rate <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-e-rate" value="10.5" min="0" max="30" step="0.25">
+            <span class="mb-calc-field__suffix">%</span>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-e-monthly">Monthly repayment <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-e-monthly" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-e-overpayment-type">Overpayment type</label>
+          <div class="mb-calc-field__input-wrap">
+            <select class="mb-calc-field__select" id="mb-e-overpayment-type">
+              <option value="once">Once-off overpayment</option>
+              <option value="recurring">Recurring monthly payment</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-calc-field mb-calc-field--full">
+          <label class="mb-calc-field__label" for="mb-e-overpayment">Overpayment amount</label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-e-overpayment" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <button class="mb-calc-btn" type="button" id="mb-e-calc-btn">Calculate savings</button>
+      </div>
+
+      <aside class="mb-calc-result" aria-live="polite">
+        <div class="mb-calc-result__inner">
+          <div class="mb-calc-result__tag">Results</div>
+          <div class="mb-calc-result-item mb-calc-result-item--hero">
+            <span class="mb-calc-result-item__label">Original total repayments</span>
+            <span class="mb-calc-result-item__value" id="mb-e-total-loan">R 0</span>
+          </div>
+          <div class="mb-calc-result-divider"></div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">New monthly repayment</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-e-total-monthly">R 0</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Term reduced by</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-e-term-reduced">0 years</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Estimated amount saved</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-e-amount-reduced">R 0</span>
+          </div>
+          <p class="mb-calc-result__terms">This estimate assumes the interest rate and repayment remain unchanged.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

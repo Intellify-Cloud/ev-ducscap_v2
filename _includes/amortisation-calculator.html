@@ -1,0 +1,77 @@
+<section class="calculator-section amortisation-calculator page-section" id="amortisation-calculator">
+  <div class="calculator-page">
+    <header class="calculator-header">
+      <div class="calculator-header__eyebrow">Calculator</div>
+      <h2 class="calculator-header__title">Build your bond amortisation schedule</h2>
+      <p class="calculator-header__sub">See how each year’s repayments are divided between interest and reducing your loan balance.</p>
+    </header>
+
+    <div class="mb-calc">
+      <div class="mb-calc__fields">
+        <div class="mb-calc-field mb-calc-field--full">
+          <label class="mb-calc-field__label" for="mb-am-loan">Loan amount <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <span class="mb-calc-field__prefix">R</span>
+            <input class="mb-calc-field__input" type="text" inputmode="numeric" id="mb-am-loan" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-am-rate">Interest rate <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <input class="mb-calc-field__input mb-calc-field__input--no-prefix" type="number" id="mb-am-rate" value="10.5" min="0" max="30" step="0.25">
+            <span class="mb-calc-field__suffix">%</span>
+          </div>
+        </div>
+
+        <div class="mb-calc-field">
+          <label class="mb-calc-field__label" for="mb-am-years">Loan term <span class="mb-calc-field__req">*</span></label>
+          <div class="mb-calc-field__input-wrap">
+            <select class="mb-calc-field__select" id="mb-am-years">
+              <option value="5">5 years</option>
+              <option value="10">10 years</option>
+              <option value="15">15 years</option>
+              <option value="20" selected>20 years</option>
+              <option value="25">25 years</option>
+              <option value="30">30 years</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="mb-calc-btn" type="button" id="mb-am-calc-btn">Create schedule</button>
+      </div>
+
+      <aside class="mb-calc-result" aria-live="polite">
+        <div class="mb-calc-result__inner">
+          <div class="mb-calc-result__tag">Summary</div>
+          <div class="mb-calc-result-item mb-calc-result-item--hero">
+            <span class="mb-calc-result-item__label">Monthly repayment</span>
+            <span class="mb-calc-result-item__value" id="mb-am-monthly">R 0</span>
+          </div>
+          <div class="mb-calc-result-divider"></div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Total interest</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-am-interest">R 0</span>
+          </div>
+          <div class="mb-calc-result-item">
+            <span class="mb-calc-result-item__label">Total repayable</span>
+            <span class="mb-calc-result-item__value mb-calc-result-item__value--sm" id="mb-am-total">R 0</span>
+          </div>
+          <p class="mb-calc-result__terms">Figures are estimates and assume a constant interest rate.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="amortisation-calculator__schedule" id="mb-am-schedule" hidden>
+      <h3 class="amortisation-calculator__schedule-title">Annual repayment schedule</h3>
+      <div class="amortisation-calculator__table-wrap">
+        <table class="amortisation-calculator__table">
+          <thead>
+            <tr><th>Year</th><th>Opening balance</th><th>Principal paid</th><th>Interest paid</th><th>Closing balance</th></tr>
+          </thead>
+          <tbody id="mb-am-schedule-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
