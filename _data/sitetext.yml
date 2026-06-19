@@ -76,7 +76,7 @@ multi_cards:
   heading: "Helpful tools and updates for your home loan journey."
   background_image: "/assets/img/sections/polka-dots.png"
   newsletter:
-    title: "Stay in the loop."
+    title: "Market <br>Insights <br>& Mortgage Updates."
     image: "/assets/img/sections/next-step.jpg"
     image_alt: "Home finance consultation"
     input_label: "Email address"
@@ -206,10 +206,10 @@ portfolio:
 about:
   title: "About Duces Capital"
   text2: "
-    <p>Duces Capital was founded on a simple principle: <strong>property finance doesn't have to be complicated.</strong></p>
-    <p>We are a team of dedicated property finance specialists committed to guiding homebuyers, investors, and property owners through every step of the finance journey. With access to a broad panel of South Africa's leading banks and lenders, we work on your behalf to secure the most competitive and suitable finance solution — at <strong>no cost to you</strong>.</p>
-    <p>Our approach is built on trust, transparency, and expertise. We take the time to understand your goals, then match you with the right financial partner to make them a reality.</p>"
-  text3: "Property Finance Done Right."
+    <p><strong>Our Founding Principle:</strong> property finance doesn't have to be complicated.</p>
+    <p>Duces Capital helps South Africans secure the right home loan with confidence. We work with leading banks and lenders to negotiate competitive rates, simplify the bond process, help clients find the most suitable finance solution, and save on interest.</p>
+    <p>From application and pre-qualification to approval, we provide expert guidance at no cost to you.</p>"
+  text3: "Duces Capital. Smarter Home Loans. Better Property Finance."
 
 clients:
   title: "Lender Partners"
@@ -323,16 +323,6 @@ footer:
   copyright_prefix: "Copyright"
   description: "Duces Capital helps homebuyers, investors, and property owners secure competitive property finance solutions through expert guidance and access to multiple lenders."
   sections:
-    - title: "Services"
-      links:
-        - title: "Home Loans"
-          url: "#services"
-        - title: "Bond Origination"
-          url: "#services"
-        - title: "Refinancing"
-          url: "#services"
-        - title: "Property Investment"
-          url: "#services"
     - title: "Company"
       links:
         - title: "About"
@@ -341,7 +331,11 @@ footer:
           url: "#bank-partners"
         - title: "Contact"
           url: "/contact/"
-    - title: "Resources"
+        - title: "Home Loans"
+          url: "#services"
+        - title: "Bond Origination"
+          url: "#services"
+    - title: "Calculators"
       links:
         - title: "Bond Repayment Calculator"
           url: "/bond-calculator"
@@ -349,6 +343,8 @@ footer:
           url: "/affordability-calculator"
         - title: "Transfer Cost Calculator"
           url: "/transfer-cost-calculator"
+    - title: "Other Tools"
+      links:
         - title: "Amortisation Calculator"
           url: "/amortisation-calculator"
         - title: "Extra Repayment Calculator"

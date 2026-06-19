@@ -118,16 +118,18 @@
   box-shadow: 0 14px 34px rgba($brand-primary, 0.09);
   color: $text-strong;
   text-decoration: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+a.info-card::after {
+  content: none;
 }
 
 a.info-card:hover,
 a.info-card:focus-visible {
-  border-color: rgba($brand-secondary, 0.45);
-  box-shadow: 0 18px 40px rgba($brand-primary, 0.14);
+  border-color: $brand-secondary;
   color: $text-strong;
   text-decoration: none;
-  transform: translateY(-4px);
 }
 
 .info-card__icon {
@@ -260,7 +262,7 @@ a.info-card:focus-visible {
   border: 1px solid var(--brand-primary-10);
   border-left: 0;
   border-radius: 0 18px 18px 0;
-  background: #fbf7f8;
+  background: #fcf7f8;
 }
 
 .contact-form__heading {

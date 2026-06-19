@@ -1,0 +1,51 @@
+<main class="apply-now">
+  <section class="apply-now__hero" aria-labelledby="apply-now-title">
+    <img
+      class="apply-now__hero-image"
+      src="{{ page.hero_image | relative_url }}"
+      alt="{{ page.hero_image_alt }}"
+    >
+    <div class="apply-now__hero-overlay" aria-hidden="true"></div>
+    <div class="apply-now__hero-content">
+      <h1 class="apply-now__hero-title" id="apply-now-title">The Duces Capital 3-Way Steps</h1>
+      <p class="apply-now__hero-paragraph">From Application to Approval, Let’s get your bond approved.</p>
+    </div>
+  </section>
+
+  <section class="apply-now__process" aria-labelledby="apply-now-process-title">
+    <div class="apply-now__container">
+      <header class="apply-now__process-header">
+        <p class="apply-now__eyebrow">Your path to approval</p>
+        <h2 class="apply-now__process-title" id="apply-now-process-title">House Hunting to Homeownership in 3 Steps</h2>
+      </header>
+
+      <ol class="apply-now__steps">
+        <li class="apply-step">
+          <span class="apply-step__number" aria-hidden="true">01</span>
+          <div class="apply-step__icon" aria-hidden="true"><i class="fas fa-file-signature"></i></div>
+          <h3 class="apply-step__title">Secure Your Preapproval</h3>
+          <p class="apply-step__description">Determine your home loan eligibility before searching for a property.</p>
+        </li>
+
+        <li class="apply-step">
+          <span class="apply-step__number" aria-hidden="true">02</span>
+          <div class="apply-step__icon" aria-hidden="true"><i class="fas fa-home"></i></div>
+          <h3 class="apply-step__title">Find a Property</h3>
+          <p class="apply-step__description">Search smarter with a clear understanding of your affordability.</p>
+        </li>
+
+        <li class="apply-step">
+          <span class="apply-step__number" aria-hidden="true">03</span>
+          <div class="apply-step__icon" aria-hidden="true"><i class="fas fa-university"></i></div>
+          <h3 class="apply-step__title">Choose the Right Home Loan</h3>
+          <p class="apply-step__description">Review multiple home loan offers and choose the best fit.</p>
+        </li>
+      </ol>
+
+      <div class="apply-now__action">
+        <a class="apply-now__cta" href="{{ '/contact/' | relative_url }}">Get pre-approved</a>
+        <p class="apply-now__note">Our service is <strong>FREE</strong>, with zero obligation.</p>
+      </div>
+    </div>
+  </section>
+</main>
