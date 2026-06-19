@@ -1,17 +1,4 @@
 <main class="apply-now">
-  <section class="apply-now__hero" aria-labelledby="apply-now-title">
-    <img
-      class="apply-now__hero-image"
-      src="{{ page.hero_image | relative_url }}"
-      alt="{{ page.hero_image_alt }}"
-    >
-    <div class="apply-now__hero-overlay" aria-hidden="true"></div>
-    <div class="apply-now__hero-content">
-      <h1 class="apply-now__hero-title" id="apply-now-title">The Duces Capital 3-Way Steps</h1>
-      <p class="apply-now__hero-paragraph">From Application to Approval, Let’s get your bond approved.</p>
-    </div>
-  </section>
-
   <section class="apply-now__process" aria-labelledby="apply-now-process-title">
     <div class="apply-now__container">
       <header class="apply-now__process-header">
@@ -42,10 +29,122 @@
         </li>
       </ol>
 
-      <div class="apply-now__action">
-        <a class="apply-now__cta" href="{{ '/contact/' | relative_url }}">Get pre-approved</a>
-        <p class="apply-now__note">Our service is <strong>FREE</strong>, with zero obligation.</p>
-      </div>
+      <form class="apply-now-form" id="applyNowForm">
+        <div class="apply-now-form__grid">
+          <div class="apply-now-form__field apply-now-form__field--full">
+            <label class="apply-now-form__label" for="apply-now-offer">
+              Made an offer on a home? <span aria-hidden="true">*</span>
+            </label>
+            <div class="apply-now-form__select-wrap">
+              <select class="apply-now-form__control apply-now-form__select" id="apply-now-offer" name="madeOffer" required>
+                <option value="No" selected>No</option>
+                <option value="Yes">Yes</option>
+              </select>
+              <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="apply-now-form__field">
+            <label class="apply-now-form__label" for="apply-now-first-name">
+              First name <span aria-hidden="true">*</span>
+            </label>
+            <input class="apply-now-form__control" id="apply-now-first-name" name="firstName" type="text" autocomplete="given-name" placeholder="First Name" required>
+          </div>
+
+          <div class="apply-now-form__field">
+            <label class="apply-now-form__label" for="apply-now-last-name">
+              Last name <span aria-hidden="true">*</span>
+            </label>
+            <input class="apply-now-form__control" id="apply-now-last-name" name="lastName" type="text" autocomplete="family-name" placeholder="Last Name" required>
+          </div>
+
+          <div class="apply-now-form__field">
+            <label class="apply-now-form__label" for="apply-now-email">
+              Email address <span aria-hidden="true">*</span>
+            </label>
+            <input class="apply-now-form__control" id="apply-now-email" name="email" type="email" autocomplete="email" placeholder="name.surname@gmail.com" required>
+          </div>
+
+          <div class="apply-now-form__field">
+            <label class="apply-now-form__label" for="apply-now-phone">
+              Contact number <span aria-hidden="true">*</span>
+            </label>
+            <input class="apply-now-form__control" id="apply-now-phone" name="phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" required>
+          </div>
+
+          <div class="apply-now-form__field apply-now-form__field--full">
+            <label class="apply-now-form__label" for="apply-now-message">Message</label>
+            <textarea class="apply-now-form__control apply-now-form__textarea" id="apply-now-message" name="message" rows="4" placeholder="Hi, I'd like to request a call to get pre-approved for a home loan. Please contact me at your earliest convenience."></textarea>
+          </div>
+        </div>
+
+        <div class="apply-now-form__honeypot" aria-hidden="true">
+          <label for="apply-now-company">Company</label>
+          <input id="apply-now-company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="apply-now__action">
+          <button class="apply-now__cta" type="submit">Get pre-approved</button>
+          <p class="apply-now__note">Our service is <strong>FREE</strong>, with zero obligation.</p>
+          <p class="apply-now-form__status apply-now-form__status--success" id="applyNowSuccess" role="status" hidden>Thank you. We’ll contact you shortly.</p>
+          <p class="apply-now-form__status apply-now-form__status--error" id="applyNowError" role="alert" hidden>We couldn’t send your application. Please try again or contact us directly.</p>
+        </div>
+      </form>
     </div>
   </section>
 </main>
+
+<script>
+(function () {
+  'use strict';
+
+  const form = document.getElementById('applyNowForm');
+  if (!form) return;
+
+  const button = form.querySelector('button[type="submit"]');
+  const success = document.getElementById('applyNowSuccess');
+  const error = document.getElementById('applyNowError');
+  const defaultButtonText = button.textContent;
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    success.hidden = true;
+    error.hidden = true;
+
+    if (!form.reportValidity()) return;
+    if (form.elements.company.value) return;
+
+    const data = new FormData(form);
+    const message = data.get('message') || "Hi, I'd like to request a call to get pre-approved for a home loan. Please contact me at your earliest convenience.";
+
+    button.disabled = true;
+    button.textContent = 'Sending…';
+
+    try {
+      const response = await fetch('{{ site.baseurl }}/secret-contact-send.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'contact',
+          firstName: data.get('firstName'),
+          lastName: data.get('lastName'),
+          email: data.get('email'),
+          phone: data.get('phone'),
+          subject: 'Preapproval application — offer made: ' + data.get('madeOffer'),
+          message: message
+        })
+      });
+
+      if (!response.ok) throw new Error('Preapproval request failed');
+
+      form.reset();
+      success.hidden = false;
+    } catch (applyNowError) {
+      error.hidden = false;
+    } finally {
+      button.disabled = false;
+      button.textContent = defaultButtonText;
+    }
+  });
+})();
+</script>
