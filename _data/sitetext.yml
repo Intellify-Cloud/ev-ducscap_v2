@@ -331,10 +331,6 @@ footer:
           url: "#bank-partners"
         - title: "Contact"
           url: "/contact/"
-        - title: "Home Loans"
-          url: "#services"
-        - title: "Bond Origination"
-          url: "#services"
     - title: "Calculators"
       links:
         - title: "Bond Repayment Calculator"
