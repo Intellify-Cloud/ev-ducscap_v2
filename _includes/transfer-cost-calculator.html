@@ -1,0 +1,91 @@
+<section class="mb-transfer-section transfer-cost-calculator" id="mzansi-transfer-cost-calculator">
+  <div class="mb-transfer-page">
+    <div class="mb-transfer-calc">
+      <div class="mb-transfer-fields">
+        <div class="mb-transfer-field mb-transfer-field--full">
+          <label class="mb-transfer-field__label" for="mb-t-purchase-price">Purchase price including VAT <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <span class="mb-transfer-field__prefix">R</span>
+            <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-purchase-price" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-transfer-field mb-transfer-field--full">
+          <label class="mb-transfer-field__label" for="mb-t-loan-amount">Loan amount <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <span class="mb-transfer-field__prefix">R</span>
+            <input class="mb-transfer-field__input" type="text" inputmode="numeric" id="mb-t-loan-amount" placeholder="0" data-currency-input>
+          </div>
+        </div>
+
+        <div class="mb-transfer-field">
+          <label class="mb-transfer-field__label" for="mb-t-seller-vat">Seller registered for VAT <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <select class="mb-transfer-field__select" id="mb-t-seller-vat">
+              <option value="">Please select</option>
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-transfer-field mb-transfer-field--full">
+          <label class="mb-transfer-field__label" for="mb-t-purchaser-status">Status of purchaser <span class="mb-transfer-field__req">*</span></label>
+          <div class="mb-transfer-field__input-wrap">
+            <select class="mb-transfer-field__select" id="mb-t-purchaser-status">
+              <option value="">Please select</option>
+              <option value="natural">Natural Person</option>
+              <option value="company">Company</option>
+              <option value="cc">Closed Corporation</option>
+              <option value="trust">Trust</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="mb-transfer-btn" type="button" id="mb-t-calc-btn">Calculate costs</button>
+
+        <div class="mb-transfer-notes">
+          <p><strong>*</strong> Bank initiation fee is estimated at R6,037.50 including VAT.</p>
+          <p><strong>**</strong> If the seller is a VAT vendor, VAT is payable on the purchase price instead of transfer duty.</p>
+          <p><strong>***</strong> Post, petties, FICA and other fees are approximations and may vary by attorney firm.</p>
+        </div>
+      </div>
+
+      <aside class="mb-transfer-result" id="mb-t-results-card" aria-live="polite">
+        <div class="mb-transfer-result__inner">
+          <div class="mb-transfer-result__tag">Results</div>
+          <div class="mb-transfer-result__total">
+            <span class="mb-transfer-result__label">Total costs including VAT</span>
+            <span class="mb-transfer-result__value" id="mb-t-total">R 0</span>
+          </div>
+
+          <div class="mb-transfer-result-group">
+            <div class="mb-transfer-result-group__header">
+              <span class="mb-transfer-result-group__title">Bond registration costs</span>
+              <span class="mb-transfer-result-group__subtotal" id="mb-t-bond-total">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row"><span>Bond registration cost</span><span id="mb-t-bond-atty">R 0</span></div>
+            <div class="mb-transfer-result-row"><span>Bank initiation fee *</span><span id="mb-t-bank-init">R 0</span></div>
+            <div class="mb-transfer-result-row"><span>Deeds office fees for bond</span><span id="mb-t-deeds-bond">R 0</span></div>
+            <div class="mb-transfer-result-row"><span>Post, petties, FICA and other fees ***</span><span id="mb-t-petties-bond">R 0</span></div>
+          </div>
+
+          <div class="mb-transfer-result-divider"></div>
+
+          <div class="mb-transfer-result-group">
+            <div class="mb-transfer-result-group__header">
+              <span class="mb-transfer-result-group__title">Transfer costs</span>
+              <span class="mb-transfer-result-group__subtotal" id="mb-t-transfer-total">R 0</span>
+            </div>
+            <div class="mb-transfer-result-row"><span>Property transfer costs</span><span id="mb-t-transfer-atty">R 0</span></div>
+            <div class="mb-transfer-result-row"><span id="mb-t-duty-label">Transfer duty **</span><span id="mb-t-transfer-duty">R 0</span></div>
+            <div class="mb-transfer-result-row"><span>Deeds office fees for transfer</span><span id="mb-t-deeds-transfer">R 0</span></div>
+            <div class="mb-transfer-result-row"><span>Post, petties, FICA and other fees ***</span><span id="mb-t-petties-transfer">R 0</span></div>
+          </div>
+
+          <p class="mb-transfer-result__terms">Terms and conditions apply. This calculator provides an estimate only.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

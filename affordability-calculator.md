@@ -13,6 +13,8 @@ hero_paragraph: "Estimate the home-loan amount you may qualify for based on your
 {% include calc-hero.html %}
 {% include bond-affordability-calculator.html %}
 
+<script src="{{ '/assets/js/bond-affordability-calculator.js' | relative_url }}" defer></script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

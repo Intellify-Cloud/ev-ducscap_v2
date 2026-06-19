@@ -1,0 +1,21 @@
+.transfer-cost-calculator {
+  // Page-specific extension point for the transfer-cost calculator.
+}
+
+.mb-transfer-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 76px 24px 88px;
+  background: $white;
+}
+
+.mb-transfer-page {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .mb-transfer-section {
+    padding: 48px 16px 56px;
+  }
+}

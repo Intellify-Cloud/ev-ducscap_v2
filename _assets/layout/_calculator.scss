@@ -1,18 +1,5 @@
-// Transfer cost calculator section
-.mb-transfer-section {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 76px 24px 88px;
-  background: $white;
-}
-
-.mb-transfer-page {
-  max-width: 1060px;
-  margin: 0 auto;
-}
-
-// Three calculators section
-.three-calculators-section {
+// Shared calculator form, field, action, and result primitives.
+.calculator-section {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding: 76px 24px 88px;
@@ -21,17 +8,17 @@
   overflow: hidden;
 }
 
-.three-calculators-page {
+.calculator-page {
   max-width: 1060px;
   margin: 0 auto;
 }
 
-.three-calculators-header {
+.calculator-header {
   max-width: 780px;
   margin: 0 0 $space-5;
 }
 
-.three-calculators-header__eyebrow {
+.calculator-header__eyebrow {
   @include font-display-sm;
   margin-bottom: $space-2;
   color: $gold-dark;
@@ -39,12 +26,12 @@
   line-height: $line-height-heading;
 }
 
-.three-calculators-header__title {
+.calculator-header__title {
   @include section-title-typography;
   margin: 0 0 $space-3;
 }
 
-.three-calculators-header__sub {
+.calculator-header__sub {
   @include font-body;
   max-width: 680px;
   margin: 0;
@@ -485,11 +472,11 @@
 }
 
 @media (max-width: 768px) {
-  .three-calculators-section {
+  .calculator-section {
     padding: 48px 16px 56px;
   }
 
-  .three-calculators-header {
+  .calculator-header {
     margin-bottom: $space-4;
   }
 
