@@ -1,7 +1,7 @@
 baseurl: ""
 
-title      : Duces Capital - Bond & Property Finance Done Right
-email      : kunle@ducescapital.co.za
+title      : Duces Capital
+email      : info@ducescapital.co.za
 description: "Duces Capital helps homebuyers, investors, and property owners secure competitive property finance solutions through expert guidance and access to multiple lenders. Based in South Africa, we provide independent, professional bond origination and property finance services — at no cost to you."
 author     : Duces Capital
 
@@ -23,6 +23,8 @@ logo:
   path: /assets/img/logo/logo.png
 
 exclude:
+  - archive
+  - _drafts
   - node_modules
   - webpack.config.js
   - package.json
@@ -40,6 +42,6 @@ url: https://ducescapital.co.za
 address: Glenwood, Durban, KZN
 
 contact:
-  email: kunle@ducescapital.co.za
-  whatsapp: "27745559374"
+  email: info@ducescapital.co.za
+  whatsapp: "27692164338"
   whatsapp_message: "Hello Duces Capital, I would like help with property finance."

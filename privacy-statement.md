@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Privacy Policy
+description: "Read the Duces Capital POPIA privacy statement, including how personal information is processed, shared, retained, and protected."
 background: grey
 ---
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Our Privacy Statement</h2>
+	<h1 class="section-heading text-uppercase">Our Privacy Statement</h1>
 </div>
 
 

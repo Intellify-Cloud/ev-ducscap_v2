@@ -24,7 +24,6 @@ $enable-gradients:false;
 $header-image: "./img/hero.jpg";
 
 @import "bootstrap/scss/bootstrap";
-@import "bootstrap";
 @import "base/mixins.scss";
 @import "base/page.scss";
 @import "base/typography.scss";
@@ -69,4 +68,4 @@ $header-image: "./img/hero.jpg";
 @import "layout/contact-card-section.scss";
 @import "layout/contact-page.scss";
 @import "layout/apply-now.scss";
-@import "layout/dist/_expert.scss";
+@import "layout/expert.scss";

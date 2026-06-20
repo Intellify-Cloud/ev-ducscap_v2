@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Data Sharing
+description: "Review the Duces Capital data-sharing agreement and the safeguards applied when business partners share personal information."
 background: grey
 ---
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Our Data Sharing Agreement</h2>
+	<h1 class="section-heading text-uppercase">Our Data Sharing Agreement</h1>
 </div>
 
 

@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Privacy Policy
+description: "Read the Duces Capital privacy policy and learn how website and enquiry information is collected, used, and protected."
 background: grey
 ---
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Privacy Policy</h2>
+	<h1 class="section-heading text-uppercase">Privacy Policy</h1>
 </div>
 
 This Privacy Policy describes how your personal information is collected, used, and shared when you visit {{ site.title }} (the “Site”).

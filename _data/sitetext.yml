@@ -58,7 +58,7 @@ lets_get_going:
   title: "Let’s get your bond approved."
   text: "From application to approval, we help you navigate the home loan process with confidence and peace of mind."
   primary_label: "Reach out for expert advice"
-  primary_url: "https://wa.me/+27745559374"
+  primary_url: "https://wa.me/+27692164338"
 
 banks:
   title: "More Lenders, More Options, Better Rates."
@@ -251,41 +251,29 @@ team:
       - "Sunday: Closed"
     note: "Appointments outside office hours can be arranged when needed."
   people:
-    - name: "John Doe"
-      role: "Director & Senior Property Finance Specialist"
-      bio: "Providing expert guidance from pre-qualification through to bank submission, negotiation, and final approval. John leads Duces Capital with a client-first philosophy and deep knowledge of the South African lending landscape."
-      image: assets/img/team/400x400_f1.jpg
-      social:
-        - url: tel:+27745559374
-          icon: fas fa-phone
-          title: Phone
-        - url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
-          icon: fas fa-envelope
-          title: Email
-        - url: https://api.whatsapp.com/send?phone=27745559374
-          icon: fab fa-whatsapp
-          title: WhatsApp
-        - url: "#contact"
-          icon: fas fa-address-card
-          title: Contact Form
+    - name: ""
+      role: ""
+      bio: ""
+      image: ""
+      social: []
 
 testimonials:
   title: "CLIENT SUCCESS STORIES"
   text: "What Our Clients Say"
   section: testimonials
   people:
-    - name: "Sarah K. ⭐⭐⭐⭐⭐"
-      role: "First-time buyer"
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop"
-      testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duces Capital made the entire process seamless and stress-free. Their expertise and dedication helped us secure our dream home faster than we ever expected."
-    - name: "Michael T. ⭐⭐⭐⭐⭐"
-      role: "Property investor"
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
-      testimony: "From first consultation to final approval, the team at Duces Capital went above and beyond. Their knowledge of the lending landscape is unmatched. I highly recommend their services to any property buyer or investor."
-    - name: "Priya R. ⭐⭐⭐⭐⭐"
-      role: "Home loan client"
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop"
-      testimony: "Professional, knowledgeable, and genuinely caring. Duces Capital didn't just find us a loan — they found us the right loan. The difference in rates was significant and well worth the journey."
+    - name: ""
+      role: ""
+      image: ""
+      testimony: ""
+    - name: ""
+      role: ""
+      image: ""
+      testimony: ""
+    - name: ""
+      role: ""
+      image: ""
+      testimony: ""
 
 contact:
   title: "Contact Us"
@@ -298,20 +286,20 @@ contact:
   section: contact
   methods:
     - title: "Phone"
-      text: "+27 74 555 9374"
-      url: tel:+27745559374
+      text: "+27 69 216 4338"
+      url: tel:+27692164338
       icon: fas fa-phone
     - title: "Email"
-      text: "kunle@ducescapital.co.za"
-      url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
+      text: "info@ducescapital.co.za"
+      url: mailto:info@ducescapital.co.za?subject=Duces Capital Enquiry
       icon: fas fa-envelope
     - title: "WhatsApp"
       text: "Chat on WhatsApp"
-      url: https://api.whatsapp.com/send?phone=27745559374
+      url: https://api.whatsapp.com/send?phone=27692164338
       icon: fab fa-whatsapp
   faq:
     - question: "How do I contact Duces Capital?"
-      answer: "You can reach us by phone at +27 74 555 9374, email at kunle@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
+      answer: "You can reach us by phone at +27 69 216 4338, email at info@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
     - question: "Do I pay for bond origination services?"
       answer: "No, our services are completely free to you as the client. We are paid by the banks once your finance is approved."
 
