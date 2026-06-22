@@ -5,7 +5,7 @@
       <header class="apply-now__header">
         <div class="apply-now__heading">
           <p class="apply-now__eyebrow">Home loan support</p>
-          <h1 class="apply-now__title" id="apply-now-title">Speak to a Home Loan Expert</h1>
+          <h1 class="apply-now__title" id="apply-now-title">Speak to a<br>Home Loan Expert</h1>
           <p class="apply-now__intro">Tell us a bit about your home buying journey and our experts will help you secure the best deal from South Africa's leading banks.</p>
         </div>
       </header>
@@ -86,7 +86,7 @@
                 </label>
                 <div class="apply-now-form__price-wrap">
                   <span class="apply-now-form__price-prefix" aria-hidden="true">R</span>
-                  <input class="apply-now-form__control apply-now-form__price" id="apply-now-price" name="purchasePrice" type="text" inputmode="numeric" placeholder="e.g. 1,500,000" required aria-describedby="apply-now-price-help apply-now-price-error">
+                  <input class="apply-now-form__control apply-now-form__price" id="apply-now-price" name="purchasePrice" type="text" inputmode="numeric" maxlength="11" placeholder="e.g. 1,500,000" required aria-describedby="apply-now-price-help apply-now-price-error">
                 </div>
                 <p class="apply-now-form__help" id="apply-now-price-help">This helps us determine the best options for you.</p>
                 <p class="apply-now-form__error" id="apply-now-price-error"></p>
@@ -227,8 +227,10 @@
       const digits = digitsOnly(value);
       if (!/^(0\d{9}|27\d{9})$/.test(digits)) return 'Please enter a valid South African mobile number.';
     }
-    if (control.name === 'purchasePrice' && Number(digitsOnly(value)) <= 0) {
-      return 'Please enter a purchase price greater than zero.';
+    if (control.name === 'purchasePrice') {
+      const price = Number(digitsOnly(value));
+      if (price <= 0) return 'Please enter a purchase price greater than zero.';
+      if (price > 100000000) return 'Please enter a price of R100,000,000 or less.';
     }
 
     return '';
@@ -263,6 +265,14 @@
       if (control.value) validateControl(control);
     });
   });
+
+  const purchasePrice = document.getElementById('apply-now-price');
+  if (purchasePrice) {
+    purchasePrice.addEventListener('input', function () {
+      const digits = digitsOnly(purchasePrice.value).slice(0, 9);
+      purchasePrice.value = digits ? Number(digits).toLocaleString('en-ZA') : '';
+    });
+  }
 
   form.querySelectorAll('.apply-now-form__choice-input').forEach(function (input) {
     input.addEventListener('change', function () {

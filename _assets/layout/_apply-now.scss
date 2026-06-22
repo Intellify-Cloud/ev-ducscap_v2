@@ -195,7 +195,7 @@
 .apply-now-form__field--price {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) minmax(300px, 1.1fr);
+  grid-template-columns: minmax(220px, 1fr) 280px;
   align-items: center;
   gap: 8px 24px;
   max-width: 680px;
@@ -265,6 +265,10 @@
   justify-content: flex-start;
   gap: 8px;
   white-space: nowrap;
+}
+
+.apply-now-form__choice:last-child {
+  margin-left: auto;
 }
 
 .apply-now-form__choice {
@@ -387,6 +391,8 @@
 
 .apply-now-form__price-wrap {
   display: flex;
+  width: 180px;
+  max-width: 100%;
 }
 
 .apply-now-form__price-prefix {
@@ -400,11 +406,14 @@
   border-radius: 8px 0 0 8px;
   background: rgba($brand-primary, 0.05);
   color: $text-strong;
+  font-size: 0.92rem;
   font-weight: 800;
 }
 
 .apply-now-form__price {
   border-radius: 0 8px 8px 0;
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .apply-now-form__textarea {
@@ -627,6 +636,10 @@
     max-width: none;
   }
 
+  .apply-now-form__price-wrap {
+    width: 180px;
+  }
+
   .apply-now-form__field--price .apply-now-form__help,
   .apply-now-form__field--price .apply-now-form__error {
     grid-column: 1;
@@ -707,6 +720,10 @@
     display: block;
     grid-column: auto;
     max-width: none;
+  }
+
+  .apply-now-form__price-wrap {
+    width: 100%;
   }
 
   .apply-now-form__choice-field {
