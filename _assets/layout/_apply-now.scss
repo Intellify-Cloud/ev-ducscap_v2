@@ -25,16 +25,6 @@
   padding-right: 52px;
 }
 
-.apply-now__header::after {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  width: 2px;
-  height: calc(100% - 8px);
-  background: $text-strong;
-  content: "";
-}
-
 .apply-now__eyebrow {
   margin: 0 0 10px;
   color: $brand-secondary;
@@ -70,11 +60,11 @@
   justify-content: center;
   margin: 0;
   padding: 28px;
-  border: 1px solid rgba($brand-primary, 0.28);
-  border-radius: 54px;
+  border: 1px solid rgba(45, 26, 31, 0.1);
+  border-radius: 20px;
   background:
-    linear-gradient(145deg, rgba($white, 0.36), transparent),
-    rgba($brand-accent, 0.12);
+    linear-gradient(145deg, hsla(0, 0%, 100%, 0.36), transparent),
+    rgba(15, 203, 156, 0.12);
   list-style: none;
   text-align: center;
 }
@@ -195,10 +185,10 @@
 .apply-now-form__field--price {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) 280px;
+  grid-template-columns: minmax(0, 1fr) 184px;
   align-items: center;
-  gap: 8px 24px;
-  max-width: 680px;
+  gap: 8px 20px;
+  max-width: none;
   padding: 22px 14px 4px;
   background: transparent;
 }
@@ -212,6 +202,8 @@
 .apply-now-form__field--price .apply-now-form__help,
 .apply-now-form__field--price .apply-now-form__error {
   grid-column: 2;
+  justify-self: end;
+  width: 190px;
 }
 
 .apply-now-form__field--full {
@@ -391,8 +383,9 @@
 
 .apply-now-form__price-wrap {
   display: flex;
-  width: 180px;
+  width: 190px;
   max-width: 100%;
+  justify-self: end;
 }
 
 .apply-now-form__price-prefix {
@@ -661,10 +654,6 @@
 
   .apply-now__header {
     padding-right: 0;
-  }
-
-  .apply-now__header::after {
-    display: none;
   }
 
   .apply-now__title {

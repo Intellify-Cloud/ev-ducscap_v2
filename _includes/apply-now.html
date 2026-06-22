@@ -158,8 +158,7 @@
 
           <div class="apply-now__action">
             <button class="apply-now__cta" type="submit">
-              <span class="apply-now__cta-text">Submit &amp; expect a callback</span>
-              <i class="fas fa-circle-notch fa-spin apply-now__cta-spinner" aria-hidden="true"></i>
+              <span class="apply-now__cta-text">Submit<i class="fas fa-circle-notch fa-spin apply-now__cta-spinner" aria-hidden="true"></i>
             </button>
             <p class="apply-now__security"><i class="fas fa-lock" aria-hidden="true"></i> Your information is secure and will never be shared.</p>
             <p class="apply-now-form__status apply-now-form__status--error" id="applyNowError" role="alert" hidden>We couldn't send your application. Please try again or contact us directly.</p>
@@ -230,7 +229,7 @@
     if (control.name === 'purchasePrice') {
       const price = Number(digitsOnly(value));
       if (price <= 0) return 'Please enter a purchase price greater than zero.';
-      if (price > 100000000) return 'Please enter a price of R100,000,000 or less.';
+      if (price > 999999999) return 'Please enter a price of R999,999,999 or less.';
     }
 
     return '';
