@@ -8,21 +8,6 @@
           <h1 class="apply-now__title" id="apply-now-title">Speak to a Home Loan Expert</h1>
           <p class="apply-now__intro">Tell us a bit about your home buying journey and our experts will help you secure the best deal from South Africa's leading banks.</p>
         </div>
-
-        <ul class="apply-now__features" aria-label="Why speak to Duces Capital">
-          <li class="apply-now__feature">
-            <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></span>
-            <span>Compare offers from leading banks</span>
-          </li>
-          <li class="apply-now__feature">
-            <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-user-friends"></i></span>
-            <span>Expert guidance every step of the way</span>
-          </li>
-          <li class="apply-now__feature">
-            <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-home"></i></span>
-            <span>Helping you get home sooner</span>
-          </li>
-        </ul>
       </header>
 
       <div class="apply-now__card">
@@ -36,53 +21,66 @@
               </span>
             </legend>
 
-            <div class="apply-now-form__grid">
-              <div class="apply-now-form__field">
-                <label class="apply-now-form__label" for="apply-now-property">
+            <div class="apply-now-form__journey-layout">
+              <div class="apply-now-form__grid apply-now-form__grid--journey">
+                <div class="apply-now-form__field apply-now-form__choice-field" data-choice-group role="group" aria-labelledby="apply-now-property-label" aria-describedby="apply-now-property-error">
+                <p class="apply-now-form__label" id="apply-now-property-label">
                   Have you found a property you'd like to buy? <span aria-hidden="true">*</span>
-                </label>
-                <div class="apply-now-form__select-wrap">
-                  <select class="apply-now-form__control apply-now-form__select" id="apply-now-property" name="foundProperty" required aria-describedby="apply-now-property-error">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-                  <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+                </p>
+                <div class="apply-now-form__choices">
+                  <label class="apply-now-form__choice">
+                    <input class="apply-now-form__choice-input" id="apply-now-property-yes" name="foundProperty" type="radio" value="Yes" required>
+                    <span class="apply-now-form__choice-box" aria-hidden="true"><i class="fas fa-check"></i></span>
+                    <span>Yes</span>
+                  </label>
+                  <label class="apply-now-form__choice">
+                    <input class="apply-now-form__choice-input" id="apply-now-property-no" name="foundProperty" type="radio" value="No">
+                    <span class="apply-now-form__choice-box" aria-hidden="true"><i class="fas fa-check"></i></span>
+                    <span>No</span>
+                  </label>
                 </div>
                 <p class="apply-now-form__error" id="apply-now-property-error"></p>
-              </div>
+                </div>
 
-              <div class="apply-now-form__field">
-                <label class="apply-now-form__label" for="apply-now-offer">
+                <div class="apply-now-form__field apply-now-form__choice-field" data-choice-group role="group" aria-labelledby="apply-now-offer-label" aria-describedby="apply-now-offer-error">
+                <p class="apply-now-form__label" id="apply-now-offer-label">
                   Have you made an offer on a home? <span aria-hidden="true">*</span>
-                </label>
-                <div class="apply-now-form__select-wrap">
-                  <select class="apply-now-form__control apply-now-form__select" id="apply-now-offer" name="madeOffer" required aria-describedby="apply-now-offer-error">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-                  <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+                </p>
+                <div class="apply-now-form__choices">
+                  <label class="apply-now-form__choice">
+                    <input class="apply-now-form__choice-input" id="apply-now-offer-yes" name="madeOffer" type="radio" value="Yes" required>
+                    <span class="apply-now-form__choice-box" aria-hidden="true"><i class="fas fa-check"></i></span>
+                    <span>Yes</span>
+                  </label>
+                  <label class="apply-now-form__choice">
+                    <input class="apply-now-form__choice-input" id="apply-now-offer-no" name="madeOffer" type="radio" value="No">
+                    <span class="apply-now-form__choice-box" aria-hidden="true"><i class="fas fa-check"></i></span>
+                    <span>No</span>
+                  </label>
                 </div>
                 <p class="apply-now-form__error" id="apply-now-offer-error"></p>
-              </div>
+                </div>
 
-              <div class="apply-now-form__field">
-                <label class="apply-now-form__label" for="apply-now-first-home">
+                <div class="apply-now-form__field apply-now-form__choice-field" data-choice-group role="group" aria-labelledby="apply-now-first-home-label" aria-describedby="apply-now-first-home-error">
+                <p class="apply-now-form__label" id="apply-now-first-home-label">
                   Are you purchasing your first home? <span aria-hidden="true">*</span>
-                </label>
-                <div class="apply-now-form__select-wrap">
-                  <select class="apply-now-form__control apply-now-form__select" id="apply-now-first-home" name="firstHome" required aria-describedby="apply-now-first-home-error">
-                    <option value="" selected disabled>Select an option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-                  <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+                </p>
+                <div class="apply-now-form__choices">
+                  <label class="apply-now-form__choice">
+                    <input class="apply-now-form__choice-input" id="apply-now-first-home-yes" name="firstHome" type="radio" value="Yes" required>
+                    <span class="apply-now-form__choice-box" aria-hidden="true"><i class="fas fa-check"></i></span>
+                    <span>Yes</span>
+                  </label>
+                  <label class="apply-now-form__choice">
+                    <input class="apply-now-form__choice-input" id="apply-now-first-home-no" name="firstHome" type="radio" value="No">
+                    <span class="apply-now-form__choice-box" aria-hidden="true"><i class="fas fa-check"></i></span>
+                    <span>No</span>
+                  </label>
                 </div>
                 <p class="apply-now-form__error" id="apply-now-first-home-error"></p>
-              </div>
+                </div>
 
-              <div class="apply-now-form__field">
+                <div class="apply-now-form__field apply-now-form__field--price">
                 <label class="apply-now-form__label" for="apply-now-price">
                   Estimated purchase price <span aria-hidden="true">*</span>
                 </label>
@@ -92,7 +90,23 @@
                 </div>
                 <p class="apply-now-form__help" id="apply-now-price-help">This helps us determine the best options for you.</p>
                 <p class="apply-now-form__error" id="apply-now-price-error"></p>
+                </div>
               </div>
+
+              <ul class="apply-now__features" aria-label="Why speak to Duces Capital">
+                <li class="apply-now__feature">
+                  <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></span>
+                  <span>Compare offers from leading banks</span>
+                </li>
+                <li class="apply-now__feature">
+                  <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-user-friends"></i></span>
+                  <span>Expert guidance every step of the way</span>
+                </li>
+                <li class="apply-now__feature">
+                  <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+                  <span>Helping you get home sooner</span>
+                </li>
+              </ul>
             </div>
           </fieldset>
 
@@ -192,13 +206,17 @@
   const button = form.querySelector('button[type="submit"]');
   const success = document.getElementById('applyNowSuccess');
   const submitError = document.getElementById('applyNowError');
-  const controls = Array.from(form.querySelectorAll('.apply-now-form__control[required]'));
+  const controls = Array.from(form.querySelectorAll('.apply-now-form__control[required], .apply-now-form__choice-input[required]'));
 
   function digitsOnly(value) {
     return value.replace(/\D/g, '');
   }
 
   function getError(control) {
+    if (control.type === 'radio') {
+      return form.querySelector('input[name="' + control.name + '"]:checked') ? '' : 'Please select Yes or No.';
+    }
+
     const value = control.value.trim();
 
     if (!value) return 'Please complete this field.';
@@ -217,8 +235,17 @@
   }
 
   function setError(control, message) {
-    const error = document.getElementById(control.id + '-error');
-    control.setAttribute('aria-invalid', message ? 'true' : 'false');
+    const choiceGroup = control.closest('[data-choice-group]');
+    const errorId = choiceGroup ? choiceGroup.getAttribute('aria-describedby') : control.id + '-error';
+    const error = document.getElementById(errorId);
+    if (choiceGroup) {
+      choiceGroup.setAttribute('data-invalid', message ? 'true' : 'false');
+      choiceGroup.querySelectorAll('.apply-now-form__choice-input').forEach(function (input) {
+        input.setAttribute('aria-invalid', message ? 'true' : 'false');
+      });
+    } else {
+      control.setAttribute('aria-invalid', message ? 'true' : 'false');
+    }
     if (error) error.textContent = message;
   }
 
@@ -229,11 +256,18 @@
   }
 
   controls.forEach(function (control) {
-    control.addEventListener(control.tagName === 'SELECT' ? 'change' : 'input', function () {
+    if (control.type !== 'radio') control.addEventListener('input', function () {
       if (control.getAttribute('aria-invalid') === 'true') validateControl(control);
     });
     control.addEventListener('blur', function () {
       if (control.value) validateControl(control);
+    });
+  });
+
+  form.querySelectorAll('.apply-now-form__choice-input').forEach(function (input) {
+    input.addEventListener('change', function () {
+      const requiredControl = form.querySelector('input[name="' + input.name + '"][required]');
+      if (requiredControl) validateControl(requiredControl);
     });
   });
 

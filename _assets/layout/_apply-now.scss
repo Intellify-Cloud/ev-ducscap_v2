@@ -6,7 +6,7 @@
 
 .apply-now__section {
   min-height: 100vh;
-  padding: 80px 24px 72px;
+  padding: 72px 24px 96px;
   background:
     radial-gradient(circle at 8% 10%, rgba($brand-accent, 0.12), transparent 28%),
     radial-gradient(circle at 92% 18%, rgba($brand-secondary, 0.1), transparent 25%),
@@ -14,16 +14,25 @@
 }
 
 .apply-now__shell {
-  width: min(100%, 1100px);
-  margin: 150px auto;
+  width: min(100%, 1200px);
+  margin: 110px auto 0;
 }
 
 .apply-now__header {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(310px, 0.85fr);
-  align-items: end;
-  gap: 38px;
-  margin-bottom: 32px;
+  position: relative;
+  max-width: 760px;
+  margin-bottom: 42px;
+  padding-right: 52px;
+}
+
+.apply-now__header::after {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 2px;
+  height: calc(100% - 8px);
+  background: $text-strong;
+  content: "";
 }
 
 .apply-now__eyebrow {
@@ -40,7 +49,7 @@
   margin: 0;
   color: $text-strong;
   font-family: $font-display;
-  font-size: clamp(2.35rem, 5vw, 4.25rem);
+  font-size: clamp(2.65rem, 5.4vw, 5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
@@ -55,25 +64,38 @@
 }
 
 .apply-now__features {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 28px;
+  border: 2px solid rgba($brand-primary, 0.5);
+  border-radius: 54px;
+  background:
+    linear-gradient(145deg, rgba($white, 0.36), transparent),
+    rgba($brand-accent, 0.12);
   list-style: none;
   text-align: center;
 }
 
 .apply-now__feature {
   display: flex;
-  min-width: 0;
+  width: 100%;
+  min-height: 112px;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 12px;
   color: $text-strong;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.35;
+}
+
+.apply-now__feature + .apply-now__feature {
+  border-top: 1px solid rgba($brand-primary, 0.1);
 }
 
 .apply-now__icon {
@@ -90,17 +112,17 @@
 }
 
 .apply-now__card {
-  max-width: 660px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba($brand-primary, 0.12);
-  border-radius: 20px;
+  border-radius: 24px;
   background: $white;
   box-shadow: 0 24px 60px rgba($brand-primary, 0.14);
 }
 
 .apply-now-form {
-  padding: 24px;
+  padding: 48px;
 }
 
 .apply-now-form__section {
@@ -150,8 +172,46 @@
   gap: 20px;
 }
 
+.apply-now-form__grid--journey {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.apply-now-form__journey-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: stretch;
+  gap: 48px;
+}
+
+.apply-now-form__grid--journey {
+  min-width: 0;
+}
+
 .apply-now-form__field {
   min-width: 0;
+}
+
+.apply-now-form__field--price {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(300px, 1.1fr);
+  align-items: center;
+  gap: 8px 24px;
+  max-width: 680px;
+  padding: 22px 14px 4px;
+  background: transparent;
+}
+
+.apply-now-form__field--price .apply-now-form__label {
+  min-height: 0;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.apply-now-form__field--price .apply-now-form__help,
+.apply-now-form__field--price .apply-now-form__error {
+  grid-column: 2;
 }
 
 .apply-now-form__field--full {
@@ -166,6 +226,116 @@
   font-size: 0.82rem;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.apply-now-form__choice-field {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) 184px;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 22px 14px 28px;
+  border: 0;
+  border-radius: 0;
+  background: $white;
+  transition: border-color $motion-fast, background-color $motion-fast;
+}
+
+.apply-now-form__choice-field + .apply-now-form__choice-field {
+  border-top: 1px solid rgba($brand-primary, 0.08);
+}
+
+.apply-now-form__choice-field[data-invalid="true"] {
+  background: rgba($button-color, 0.035);
+}
+
+.apply-now-form__choice-field .apply-now-form__label {
+  width: auto;
+  min-height: 0;
+  margin: 0;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.apply-now-form__choices {
+  display: flex;
+  width: 184px;
+  justify-content: flex-start;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.apply-now-form__choice {
+  position: relative;
+  display: flex;
+  width: 88px;
+  height: 50px;
+  min-width: 88px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 0 14px;
+  border: 1px solid rgba($brand-primary, 0.2);
+  border-radius: 5px;
+  background: $white;
+  color: $text-strong;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color $motion-fast, background-color $motion-fast, transform $motion-fast;
+}
+
+.apply-now-form__choice:hover {
+  border-color: $brand-secondary;
+  transform: translateY(-1px);
+}
+
+.apply-now-form__choice-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.apply-now-form__choice-box {
+  display: inline-flex;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 21px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba($brand-primary, 0.28);
+  border-radius: 4px;
+  color: transparent;
+  font-size: 0.65rem;
+}
+
+.apply-now-form__choice-field .apply-now-form__error {
+  position: absolute;
+  right: 14px;
+  bottom: 5px;
+  width: 40%;
+  margin: 0;
+}
+
+.apply-now-form__choice:has(.apply-now-form__choice-input:checked) {
+  border-color: $brand-secondary;
+  background: rgba($brand-secondary, 0.07);
+  color: $text-strong;
+  box-shadow: 0 7px 16px rgba($brand-secondary, 0.2);
+}
+
+.apply-now-form__choice-input:checked + .apply-now-form__choice-box {
+  border-color: $brand-secondary;
+  background: $brand-secondary;
+  color: $white;
+}
+
+.apply-now-form__choice:has(.apply-now-form__choice-input:focus-visible) {
+  outline: 3px solid rgba($brand-secondary, 0.22);
+  outline-offset: 2px;
 }
 
 .apply-now-form__label span {
@@ -448,14 +618,55 @@
   text-align: center;
 }
 
+@media (max-width: 1023px) and (min-width: 768px) {
+  .apply-now-form {
+    padding: 32px;
+  }
+
+  .apply-now-form__grid--journey {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-now-form__field--price {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .apply-now-form__journey-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .apply-now-form__field--price {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .apply-now-form__field--price .apply-now-form__help,
+  .apply-now-form__field--price .apply-now-form__error {
+    grid-column: 1;
+  }
+
+  .apply-now-form__choice-field .apply-now-form__label {
+    white-space: normal;
+  }
+}
+
 @media (max-width: 767px) {
-  .apply-now__section {
-    padding: 56px 16px 48px;
+.apply-now__section {
+    padding: 40px 16px 56px;
+  }
+
+  .apply-now__shell {
+    margin-top: 96px;
   }
 
   .apply-now__header {
-    grid-template-columns: 1fr;
-    gap: 26px;
+    padding-right: 0;
+  }
+
+  .apply-now__header::after {
+    display: none;
   }
 
   .apply-now__title {
@@ -463,11 +674,24 @@
   }
 
   .apply-now__features {
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    padding: 12px;
+    border-width: 1px;
+    border-radius: 20px;
   }
 
   .apply-now__feature {
-    font-size: 0.68rem;
+    width: auto;
+    min-height: 104px;
+    margin: 0 !important;
+    font-size: 0.66rem;
+  }
+
+  .apply-now__feature + .apply-now__feature {
+    border-top: 0;
+    border-left: 1px solid rgba($brand-primary, 0.1);
   }
 
   .apply-now__icon {
@@ -483,6 +707,58 @@
   .apply-now-form__grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .apply-now-form__grid--journey {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-now-form__journey-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .apply-now-form__field--price {
+    display: block;
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .apply-now-form__choice-field {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 10px;
+    padding: 18px 16px;
+  }
+
+  .apply-now-form__choice-field .apply-now-form__label {
+    width: auto;
+    white-space: normal;
+  }
+
+  .apply-now-form__choices {
+    width: 180px;
+  }
+
+  .apply-now-form__choice {
+    width: 82px;
+    height: 46px;
+    min-width: 82px;
+    flex: none;
+  }
+
+  .apply-now-form__choice-field .apply-now-form__error {
+    position: static;
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .apply-now-form__field--price .apply-now-form__help,
+  .apply-now-form__field--price .apply-now-form__error {
+    grid-column: auto;
+  }
+
+  .apply-now-form__field--price {
+    padding: 18px 16px;
   }
 
   .apply-now-form__field--full {
