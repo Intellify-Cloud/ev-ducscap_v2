@@ -1,95 +1,183 @@
 <main class="apply-now">
-  <section class="apply-now__process" aria-labelledby="apply-now-process-title">
-    <div class="apply-now__container">
-      <header class="apply-now__process-header">
-        <p class="apply-now__eyebrow">Your path to approval</p>
-        <h1 class="apply-now__process-title" id="apply-now-process-title">House Hunting to Homeownership in 3 Steps</h1>
+
+  <section class="apply-now__section" aria-labelledby="apply-now-title">
+    <div class="apply-now__shell">
+      <header class="apply-now__header">
+        <div class="apply-now__heading">
+          <p class="apply-now__eyebrow">Home loan support</p>
+          <h1 class="apply-now__title" id="apply-now-title">Speak to a Home Loan Expert</h1>
+          <p class="apply-now__intro">Tell us a bit about your home buying journey and our experts will help you secure the best deal from South Africa's leading banks.</p>
+        </div>
+
+        <ul class="apply-now__features" aria-label="Why speak to Duces Capital">
+          <li class="apply-now__feature">
+            <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></span>
+            <span>Compare offers from leading banks</span>
+          </li>
+          <li class="apply-now__feature">
+            <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-user-friends"></i></span>
+            <span>Expert guidance every step of the way</span>
+          </li>
+          <li class="apply-now__feature">
+            <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+            <span>Helping you get home sooner</span>
+          </li>
+        </ul>
       </header>
 
-      <ol class="apply-now__steps">
-        <li class="apply-step">
-          <span class="apply-step__number" aria-hidden="true">01</span>
-          <div class="apply-step__icon" aria-hidden="true"><i class="fas fa-file-signature"></i></div>
-          <h3 class="apply-step__title">Secure Your Preapproval</h3>
-          <p class="apply-step__description">Determine your home loan eligibility before searching for a property.</p>
-        </li>
+      <div class="apply-now__card">
+        <form class="apply-now-form" id="applyNowForm" novalidate>
+          <fieldset class="apply-now-form__section">
+            <legend class="apply-now-form__section-header">
+              <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+              <span>
+                <span class="apply-now-form__section-title">Where are you in your home buying journey?</span>
+                <span class="apply-now-form__section-copy">This helps us match you with the right solutions.</span>
+              </span>
+            </legend>
 
-        <li class="apply-step">
-          <span class="apply-step__number" aria-hidden="true">02</span>
-          <div class="apply-step__icon" aria-hidden="true"><i class="fas fa-home"></i></div>
-          <h3 class="apply-step__title">Find a Property</h3>
-          <p class="apply-step__description">Search smarter with a clear understanding of your affordability.</p>
-        </li>
+            <div class="apply-now-form__grid">
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-property">
+                  Have you found a property you'd like to buy? <span aria-hidden="true">*</span>
+                </label>
+                <div class="apply-now-form__select-wrap">
+                  <select class="apply-now-form__control apply-now-form__select" id="apply-now-property" name="foundProperty" required aria-describedby="apply-now-property-error">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                  <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+                </div>
+                <p class="apply-now-form__error" id="apply-now-property-error"></p>
+              </div>
 
-        <li class="apply-step">
-          <span class="apply-step__number" aria-hidden="true">03</span>
-          <div class="apply-step__icon" aria-hidden="true"><i class="fas fa-university"></i></div>
-          <h3 class="apply-step__title">Choose the Right Home Loan</h3>
-          <p class="apply-step__description">Review multiple home loan offers and choose the best fit.</p>
-        </li>
-      </ol>
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-offer">
+                  Have you made an offer on a home? <span aria-hidden="true">*</span>
+                </label>
+                <div class="apply-now-form__select-wrap">
+                  <select class="apply-now-form__control apply-now-form__select" id="apply-now-offer" name="madeOffer" required aria-describedby="apply-now-offer-error">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                  <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+                </div>
+                <p class="apply-now-form__error" id="apply-now-offer-error"></p>
+              </div>
 
-      <form class="apply-now-form" id="applyNowForm">
-        <div class="apply-now-form__grid">
-          <div class="apply-now-form__field apply-now-form__field--full">
-            <label class="apply-now-form__label" for="apply-now-offer">
-              Made an offer on a home? <span aria-hidden="true">*</span>
-            </label>
-            <div class="apply-now-form__select-wrap">
-              <select class="apply-now-form__control apply-now-form__select" id="apply-now-offer" name="madeOffer" required>
-                <option value="No" selected>No</option>
-                <option value="Yes">Yes</option>
-              </select>
-              <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-first-home">
+                  Are you purchasing your first home? <span aria-hidden="true">*</span>
+                </label>
+                <div class="apply-now-form__select-wrap">
+                  <select class="apply-now-form__control apply-now-form__select" id="apply-now-first-home" name="firstHome" required aria-describedby="apply-now-first-home-error">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                  <i class="fas fa-chevron-down apply-now-form__chevron" aria-hidden="true"></i>
+                </div>
+                <p class="apply-now-form__error" id="apply-now-first-home-error"></p>
+              </div>
+
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-price">
+                  Estimated purchase price <span aria-hidden="true">*</span>
+                </label>
+                <div class="apply-now-form__price-wrap">
+                  <span class="apply-now-form__price-prefix" aria-hidden="true">R</span>
+                  <input class="apply-now-form__control apply-now-form__price" id="apply-now-price" name="purchasePrice" type="text" inputmode="numeric" placeholder="e.g. 1,500,000" required aria-describedby="apply-now-price-help apply-now-price-error">
+                </div>
+                <p class="apply-now-form__help" id="apply-now-price-help">This helps us determine the best options for you.</p>
+                <p class="apply-now-form__error" id="apply-now-price-error"></p>
+              </div>
             </div>
+          </fieldset>
+
+          <fieldset class="apply-now-form__section">
+            <legend class="apply-now-form__section-header">
+              <span class="apply-now__icon" aria-hidden="true"><i class="fas fa-user"></i></span>
+              <span>
+                <span class="apply-now-form__section-title">Your contact details</span>
+                <span class="apply-now-form__section-copy">We'll be in touch to discuss your options.</span>
+              </span>
+            </legend>
+
+            <div class="apply-now-form__grid">
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-first-name">First name <span aria-hidden="true">*</span></label>
+                <input class="apply-now-form__control" id="apply-now-first-name" name="firstName" type="text" autocomplete="given-name" placeholder="First name" required aria-describedby="apply-now-first-name-error">
+                <p class="apply-now-form__error" id="apply-now-first-name-error"></p>
+              </div>
+
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-last-name">Last name <span aria-hidden="true">*</span></label>
+                <input class="apply-now-form__control" id="apply-now-last-name" name="lastName" type="text" autocomplete="family-name" placeholder="Last name" required aria-describedby="apply-now-last-name-error">
+                <p class="apply-now-form__error" id="apply-now-last-name-error"></p>
+              </div>
+
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-email">Email address <span aria-hidden="true">*</span></label>
+                <input class="apply-now-form__control" id="apply-now-email" name="email" type="email" autocomplete="email" placeholder="name.surname@gmail.com" required aria-describedby="apply-now-email-error">
+                <p class="apply-now-form__error" id="apply-now-email-error"></p>
+              </div>
+
+              <div class="apply-now-form__field">
+                <label class="apply-now-form__label" for="apply-now-phone">Mobile number <span aria-hidden="true">*</span></label>
+                <input class="apply-now-form__control" id="apply-now-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(000) 000-0000" required aria-describedby="apply-now-phone-error">
+                <p class="apply-now-form__error" id="apply-now-phone-error"></p>
+              </div>
+
+              <div class="apply-now-form__field apply-now-form__field--full">
+                <label class="apply-now-form__label" for="apply-now-message">Message</label>
+                <textarea class="apply-now-form__control apply-now-form__textarea" id="apply-now-message" name="message" rows="4" placeholder="Tell us about your home loan needs — are you buying, building, or refinancing? What is your approximate property value and deposit?"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="apply-now-form__honeypot" aria-hidden="true">
+            <label for="apply-now-company">Company</label>
+            <input id="apply-now-company" name="company" type="text" tabindex="-1" autocomplete="off">
           </div>
 
-          <div class="apply-now-form__field">
-            <label class="apply-now-form__label" for="apply-now-first-name">
-              First name <span aria-hidden="true">*</span>
-            </label>
-            <input class="apply-now-form__control" id="apply-now-first-name" name="firstName" type="text" autocomplete="given-name" placeholder="First Name" required>
+          <div class="apply-now__action">
+            <button class="apply-now__cta" type="submit">
+              <span class="apply-now__cta-text">Submit &amp; expect a callback</span>
+              <i class="fas fa-circle-notch fa-spin apply-now__cta-spinner" aria-hidden="true"></i>
+            </button>
+            <p class="apply-now__security"><i class="fas fa-lock" aria-hidden="true"></i> Your information is secure and will never be shared.</p>
+            <p class="apply-now-form__status apply-now-form__status--error" id="applyNowError" role="alert" hidden>We couldn't send your application. Please try again or contact us directly.</p>
           </div>
+        </form>
 
-          <div class="apply-now-form__field">
-            <label class="apply-now-form__label" for="apply-now-last-name">
-              Last name <span aria-hidden="true">*</span>
-            </label>
-            <input class="apply-now-form__control" id="apply-now-last-name" name="lastName" type="text" autocomplete="family-name" placeholder="Last Name" required>
-          </div>
-
-          <div class="apply-now-form__field">
-            <label class="apply-now-form__label" for="apply-now-email">
-              Email address <span aria-hidden="true">*</span>
-            </label>
-            <input class="apply-now-form__control" id="apply-now-email" name="email" type="email" autocomplete="email" placeholder="name.surname@gmail.com" required>
-          </div>
-
-          <div class="apply-now-form__field">
-            <label class="apply-now-form__label" for="apply-now-phone">
-              Contact number <span aria-hidden="true">*</span>
-            </label>
-            <input class="apply-now-form__control" id="apply-now-phone" name="phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" required>
-          </div>
-
-          <div class="apply-now-form__field apply-now-form__field--full">
-            <label class="apply-now-form__label" for="apply-now-message">Message</label>
-            <textarea class="apply-now-form__control apply-now-form__textarea" id="apply-now-message" name="message" rows="4" placeholder="Hi, I'd like to request a call to get pre-approved for a home loan. Please contact me at your earliest convenience."></textarea>
-          </div>
+        <div class="apply-now__confirmation" id="applyNowSuccess" role="status" tabindex="-1" hidden>
+          <span class="apply-now__confirmation-icon" aria-hidden="true"><i class="fas fa-check"></i></span>
+          <h2>Thank you!</h2>
+          <p>A specialist will be in touch within one business day.</p>
         </div>
 
-        <div class="apply-now-form__honeypot" aria-hidden="true">
-          <label for="apply-now-company">Company</label>
-          <input id="apply-now-company" name="company" type="text" tabindex="-1" autocomplete="off">
+        <div class="apply-now__trust">
+          <div class="apply-now__trust-item">
+            <i class="fas fa-headset" aria-hidden="true"></i>
+            <h2>We're here to help</h2>
+            <p>Our home loan specialists are ready to assist you.</p>
+          </div>
+          <div class="apply-now__trust-item">
+            <i class="far fa-clock" aria-hidden="true"></i>
+            <h2>Quick response</h2>
+            <p>We'll contact you within one business day.</p>
+          </div>
+          <div class="apply-now__trust-item">
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            <h2>No obligation</h2>
+            <p>It's free, with no obligation.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="apply-now__action">
-          <button class="apply-now__cta" type="submit">Get pre-approved</button>
-          <p class="apply-now__note">Our service is <strong>FREE</strong>, with zero obligation.</p>
-          <p class="apply-now-form__status apply-now-form__status--success" id="applyNowSuccess" role="status" hidden>Thank you. We’ll contact you shortly.</p>
-          <p class="apply-now-form__status apply-now-form__status--error" id="applyNowError" role="alert" hidden>We couldn’t send your application. Please try again or contact us directly.</p>
-        </div>
-      </form>
+      <p class="apply-now__availability">Our experts are available from 8am to 5pm, Monday to Friday excluding public holidays.</p>
     </div>
   </section>
 </main>
@@ -103,22 +191,78 @@
 
   const button = form.querySelector('button[type="submit"]');
   const success = document.getElementById('applyNowSuccess');
-  const error = document.getElementById('applyNowError');
-  const defaultButtonText = button.textContent;
+  const submitError = document.getElementById('applyNowError');
+  const controls = Array.from(form.querySelectorAll('.apply-now-form__control[required]'));
+
+  function digitsOnly(value) {
+    return value.replace(/\D/g, '');
+  }
+
+  function getError(control) {
+    const value = control.value.trim();
+
+    if (!value) return 'Please complete this field.';
+    if (control.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      return 'Please enter a valid email address.';
+    }
+    if (control.name === 'phone') {
+      const digits = digitsOnly(value);
+      if (!/^(0\d{9}|27\d{9})$/.test(digits)) return 'Please enter a valid South African mobile number.';
+    }
+    if (control.name === 'purchasePrice' && Number(digitsOnly(value)) <= 0) {
+      return 'Please enter a purchase price greater than zero.';
+    }
+
+    return '';
+  }
+
+  function setError(control, message) {
+    const error = document.getElementById(control.id + '-error');
+    control.setAttribute('aria-invalid', message ? 'true' : 'false');
+    if (error) error.textContent = message;
+  }
+
+  function validateControl(control) {
+    const message = getError(control);
+    setError(control, message);
+    return !message;
+  }
+
+  controls.forEach(function (control) {
+    control.addEventListener(control.tagName === 'SELECT' ? 'change' : 'input', function () {
+      if (control.getAttribute('aria-invalid') === 'true') validateControl(control);
+    });
+    control.addEventListener('blur', function () {
+      if (control.value) validateControl(control);
+    });
+  });
 
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
-    success.hidden = true;
-    error.hidden = true;
+    submitError.hidden = true;
 
-    if (!form.reportValidity()) return;
+    const invalidControls = controls.filter(function (control) {
+      return !validateControl(control);
+    });
+
+    if (invalidControls.length) {
+      invalidControls[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      invalidControls[0].focus({ preventScroll: true });
+      return;
+    }
     if (form.elements.company.value) return;
 
     const data = new FormData(form);
-    const message = data.get('message') || "Hi, I'd like to request a call to get pre-approved for a home loan. Please contact me at your earliest convenience.";
+    const journeySummary = [
+      'Found a property: ' + data.get('foundProperty'),
+      'Made an offer: ' + data.get('madeOffer'),
+      'First home: ' + data.get('firstHome'),
+      'Estimated purchase price: R' + Number(digitsOnly(data.get('purchasePrice'))).toLocaleString('en-ZA')
+    ].join('\n');
+    const customerMessage = data.get('message') || 'No additional message supplied.';
 
     button.disabled = true;
-    button.textContent = 'Sending…';
+    button.classList.add('is-loading');
 
     try {
       const response = await fetch('{{ site.baseurl }}/secret-contact-send.php', {
@@ -130,20 +274,21 @@
           lastName: data.get('lastName'),
           email: data.get('email'),
           phone: data.get('phone'),
-          subject: 'Preapproval application — offer made: ' + data.get('madeOffer'),
-          message: message
+          subject: 'Home loan expert callback — property found: ' + data.get('foundProperty'),
+          message: journeySummary + '\n\nMessage:\n' + customerMessage
         })
       });
 
-      if (!response.ok) throw new Error('Preapproval request failed');
+      if (!response.ok) throw new Error('Home loan callback request failed');
 
-      form.reset();
+      form.hidden = true;
       success.hidden = false;
+      success.focus();
     } catch (applyNowError) {
-      error.hidden = false;
+      submitError.hidden = false;
     } finally {
       button.disabled = false;
-      button.textContent = defaultButtonText;
+      button.classList.remove('is-loading');
     }
   });
 })();

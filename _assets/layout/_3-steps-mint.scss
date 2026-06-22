@@ -1,0 +1,136 @@
+.three-steps-mint {
+  width: 100%;
+  padding: 190px 24px 96px;
+  background:
+    radial-gradient(circle at 88% 14%, rgba($brand-accent, 0.14), transparent 30%),
+    #cbe4d7;
+  color: $text-strong;
+}
+
+.three-steps-mint__inner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+.three-steps-mint__header {
+  max-width: 760px;
+  margin-bottom: $space-5;
+}
+
+.three-steps-mint__eyebrow {
+  margin: 0 0 $space-2;
+  color: $brand-secondary;
+  font-family: $font-display;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.three-steps-mint__title {
+  margin: 0;
+  color: $text-strong;
+  font-family: $font-display;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.three-steps-mint__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-3;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.three-steps-mint__step {
+  position: relative;
+  min-height: 330px;
+  padding: 34px 30px;
+  overflow: hidden;
+  border: 1px solid rgba($brand-primary, 0.1);
+  border-radius: 16px;
+  background: $white;
+  box-shadow: 0 18px 40px rgba($brand-primary, 0.12);
+}
+
+.three-steps-mint__number {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  color: rgba($brand-primary, 0.07);
+  font-family: $font-display;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.three-steps-mint__icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $space-5;
+  border-radius: 50%;
+  background: rgba($brand-secondary, 0.12);
+  color: $brand-secondary;
+  font-size: 1.35rem;
+}
+
+.three-steps-mint__step-title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 $space-2;
+  color: $brand-secondary;
+  font-family: $font-display;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.three-steps-mint__copy {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: $text-muted;
+  font-size: 1rem;
+  line-height: $line-height-body;
+}
+
+@media (max-width: 900px) {
+  .three-steps-mint__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .three-steps-mint__step {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .three-steps-mint {
+    padding: 130px 16px 64px;
+  }
+
+  .three-steps-mint__header {
+    margin-bottom: $space-4;
+  }
+
+  .three-steps-mint__step {
+    padding: 28px 24px;
+  }
+
+  .three-steps-mint__icon {
+    margin-bottom: $space-4;
+  }
+
+  .three-steps-mint__copy {
+    font-size: 0.92rem;
+  }
+}
