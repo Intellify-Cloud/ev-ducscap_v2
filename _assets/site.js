@@ -26,6 +26,52 @@ $(function () {
         hasScrolledSixtyPercent ? $(".back-to-top-pill").addClass("is-visible") : $(".back-to-top-pill").removeClass("is-visible");
     });
 
+    var navbarMenuToggle = document.querySelector(".navbar-menu-toggle");
+    var navbarMenu = document.getElementById("navbar-menu");
+
+    if (navbarMenuToggle && navbarMenu) {
+        var closeNavbarMenu = function (returnFocus) {
+            navbarMenuToggle.setAttribute("aria-expanded", "false");
+            navbarMenuToggle.setAttribute("aria-label", "Open navigation menu");
+            navbarMenu.hidden = true;
+            if (returnFocus) navbarMenuToggle.focus();
+        };
+
+        var openNavbarMenu = function () {
+            navbarMenuToggle.setAttribute("aria-expanded", "true");
+            navbarMenuToggle.setAttribute("aria-label", "Close navigation menu");
+            navbarMenu.hidden = false;
+        };
+
+        navbarMenuToggle.addEventListener("click", function () {
+            if (navbarMenuToggle.getAttribute("aria-expanded") === "true") {
+                closeNavbarMenu(false);
+            } else {
+                openNavbarMenu();
+            }
+        });
+
+        navbarMenu.addEventListener("click", function (event) {
+            if (event.target.closest(".navbar-menu__link")) closeNavbarMenu(false);
+        });
+
+        document.addEventListener("click", function (event) {
+            if (
+                navbarMenuToggle.getAttribute("aria-expanded") === "true" &&
+                !navbarMenu.contains(event.target) &&
+                !navbarMenuToggle.contains(event.target)
+            ) {
+                closeNavbarMenu(false);
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && navbarMenuToggle.getAttribute("aria-expanded") === "true") {
+                closeNavbarMenu(true);
+            }
+        });
+    }
+
     var testimonialsTrack = document.getElementById("testimonialsHelloTrack");
     var testimonialsPrev = document.getElementById("testimonialsHelloPrev");
     var testimonialsNext = document.getElementById("testimonialsHelloNext");
