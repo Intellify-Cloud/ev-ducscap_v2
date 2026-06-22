@@ -70,7 +70,7 @@
   justify-content: center;
   margin: 0;
   padding: 28px;
-  border: 2px solid rgba($brand-primary, 0.5);
+  border: 1px solid rgba($brand-primary, 0.28);
   border-radius: 54px;
   background:
     linear-gradient(145deg, rgba($white, 0.36), transparent),
@@ -270,14 +270,14 @@
 .apply-now-form__choice {
   position: relative;
   display: flex;
-  width: 88px;
+  width: 72px;
   height: 50px;
-  min-width: 88px;
+  min-width: 72px;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
+  justify-content: center;
+  gap: 0;
   margin: 0;
-  padding: 0 14px;
+  padding: 0;
   border: 1px solid rgba($brand-primary, 0.2);
   border-radius: 5px;
   background: $white;
@@ -300,16 +300,7 @@
 }
 
 .apply-now-form__choice-box {
-  display: inline-flex;
-  width: 21px;
-  height: 21px;
-  flex: 0 0 21px;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba($brand-primary, 0.28);
-  border-radius: 4px;
-  color: transparent;
-  font-size: 0.65rem;
+  display: none;
 }
 
 .apply-now-form__choice-field .apply-now-form__error {
@@ -322,15 +313,9 @@
 
 .apply-now-form__choice:has(.apply-now-form__choice-input:checked) {
   border-color: $brand-secondary;
-  background: rgba($brand-secondary, 0.07);
-  color: $text-strong;
-  box-shadow: 0 7px 16px rgba($brand-secondary, 0.2);
-}
-
-.apply-now-form__choice-input:checked + .apply-now-form__choice-box {
-  border-color: $brand-secondary;
   background: $brand-secondary;
   color: $white;
+  box-shadow: 0 7px 16px rgba($brand-secondary, 0.2);
 }
 
 .apply-now-form__choice:has(.apply-now-form__choice-input:focus-visible) {
@@ -740,9 +725,9 @@
   }
 
   .apply-now-form__choice {
-    width: 82px;
+    width: 72px;
     height: 46px;
-    min-width: 82px;
+    min-width: 72px;
     flex: none;
   }
 
