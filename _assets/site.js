@@ -96,15 +96,16 @@ $(function () {
 
         var getTestimonialPositions = function () {
             var trackStyles = window.getComputedStyle(testimonialsTrack);
-            var peekWidth = parseFloat(trackStyles.getPropertyValue("--testimonials-card-peek")) || 0;
             var gap = parseFloat(trackStyles.getPropertyValue("--testimonials-track-gap")) || 24;
             var cardWidth = testimonialCards[0] ? testimonialCards[0].offsetWidth : 0;
+            var stageWidth = (cardWidth * 2) + gap;
+            var stageLeft = Math.max(0, (testimonialsTrack.clientWidth - stageWidth) / 2);
 
             return {
-                peekLeft: -(cardWidth - peekWidth),
-                leftSlot: peekWidth + gap,
-                rightSlot: peekWidth + gap + cardWidth + gap,
-                peekRight: peekWidth + gap + cardWidth + gap + cardWidth + gap
+                peekLeft: stageLeft - cardWidth - gap,
+                leftSlot: stageLeft,
+                rightSlot: stageLeft + cardWidth + gap,
+                peekRight: stageLeft + stageWidth + gap
             };
         };
 

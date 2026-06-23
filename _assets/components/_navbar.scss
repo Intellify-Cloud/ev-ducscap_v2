@@ -85,6 +85,11 @@
     pointer-events: auto;
     transition: transform $motion-fast, box-shadow $motion-fast, opacity $motion-fast;
 
+    &::after {
+      content: none;
+      display: none;
+    }
+
     &:hover,
     &:focus {
       color: $white;

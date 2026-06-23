@@ -14,8 +14,8 @@
   --testimonials-nav-hover: rgba(54, 21, 51, 0.85);
   --testimonials-section-px: 72px;
   --testimonials-track-gap: 24px;
-  --testimonials-card-peek: 64px;
-  --testimonials-card-width: calc((100% - (var(--testimonials-card-peek) * 2) - (var(--testimonials-track-gap) * 3)) / 2);
+  --testimonials-stage-width: min(1200px, 80vw);
+  --testimonials-card-width: calc((var(--testimonials-stage-width) - var(--testimonials-track-gap)) / 2);
   --testimonials-track-height: 365px;
   --testimonials-track-inset: 0px;
 
@@ -198,7 +198,6 @@
 @media (max-width: 1199px) {
   .testimonials-hello-section {
     --testimonials-section-px: 48px;
-    --testimonials-card-peek: 48px;
   }
 
   .testimonials-hello-heading,
@@ -217,7 +216,6 @@
 @media (max-width: 1023px) {
   .testimonials-hello-section {
     --testimonials-section-px: 5%;
-    --testimonials-card-peek: 0px;
     --testimonials-card-width: auto;
     --testimonials-track-height: auto;
   }
