@@ -12,6 +12,7 @@ hero_paragraph: "Estimate your monthly home-loan repayment, total repayable amou
 
 {% include calc-hero.html %}
 {% include bond-repayment-calculator.html %}
+{% include bond-repayment-guide.html %}
 
 <script src="{{ '/assets/js/bond-repayment-calculator.js' | relative_url }}" defer></script>
 
@@ -30,10 +31,18 @@ hero_paragraph: "Estimate your monthly home-loan repayment, total repayable amou
     },
     {
       "@type": "Question",
-      "name": "What is the current prime interest rate in South Africa?",
+      "name": "Does a deposit reduce my monthly repayment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The prime rate changes based on the South African Reserve Bank repo rate. Banks offer home-loan rates according to the applicant's credit and financial profile."
+        "text": "Usually, yes. A deposit reduces the amount you need to borrow, which can lower your monthly repayment and the total interest charged over the loan term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I pay extra into my bond?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extra payments reduce the outstanding balance sooner and may shorten the repayment period and reduce the total interest, depending on the loan agreement."
       }
     }
   ]
