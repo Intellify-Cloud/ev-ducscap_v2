@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // ANIMATIONS & INTERACTIVE EFFECTS
 // Art Deco Motion System — Phase 4 Interactive Polish
 // ============================================
@@ -80,13 +80,13 @@
 // Glow pulse effect
 @keyframes glowPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba($gold, 0.4);
+    box-shadow: 0 0 0 0 rgba($teal, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba($gold, 0);
+    box-shadow: 0 0 0 10px rgba($teal, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba($gold, 0);
+    box-shadow: 0 0 0 0 rgba($teal, 0);
   }
 }
 
@@ -153,16 +153,16 @@
 // Gold border glow
 @keyframes borderGlow {
   0% {
-    border-color: rgba($gold, 0.2);
-    box-shadow: 0 0 5px rgba($gold, 0);
+    border-color: rgba($teal, 0.2);
+    box-shadow: 0 0 5px rgba($teal, 0);
   }
   50% {
-    border-color: rgba($gold, 0.6);
-    box-shadow: 0 0 15px rgba($gold, 0.3);
+    border-color: rgba($teal, 0.6);
+    box-shadow: 0 0 15px rgba($teal, 0.3);
   }
   100% {
-    border-color: rgba($gold, 0.2);
-    box-shadow: 0 0 5px rgba($gold, 0);
+    border-color: rgba($teal, 0.2);
+    box-shadow: 0 0 5px rgba($teal, 0);
   }
 }
 
@@ -206,9 +206,9 @@
 .animate-shimmer {
   background: linear-gradient(
     90deg,
-    rgba($gold, 0.1),
-    rgba($gold, 0.3),
-    rgba($gold, 0.1)
+    rgba($teal, 0.1),
+    rgba($teal, 0.3),
+    rgba($teal, 0.1)
   );
   background-size: 1000px 100%;
   animation: shimmer 2s infinite;
@@ -405,7 +405,7 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: $elevation-2, 0 0 20px rgba($gold, 0.2);
+    box-shadow: $elevation-2, 0 0 20px rgba($teal, 0.2);
   }
 
   &:active {
@@ -422,9 +422,9 @@
 .skeleton {
   background: linear-gradient(
     90deg,
-    rgba($gold, 0.05) 0%,
-    rgba($gold, 0.1) 50%,
-    rgba($gold, 0.05) 100%
+    rgba($teal, 0.05) 0%,
+    rgba($teal, 0.1) 50%,
+    rgba($teal, 0.05) 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
@@ -465,8 +465,8 @@
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid rgba($gold, 0.2);
-  border-top-color: $gold;
+  border: 3px solid rgba($teal, 0.2);
+  border-top-color: $teal;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 
@@ -483,12 +483,12 @@
   }
 
   &.loader-gold {
-    border-color: rgba($gold, 0.1);
-    border-top-color: $gold;
+    border-color: rgba($teal, 0.1);
+    border-top-color: $teal;
   }
 
   &.loader-double {
-    border-right-color: rgba($gold, 0.4);
+    border-right-color: rgba($teal, 0.4);
   }
 }
 
@@ -612,3 +612,4 @@ html {
     transform: none !important;
   }
 }
+

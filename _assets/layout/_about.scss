@@ -1,4 +1,4 @@
-// About section
+﻿// About section
 .about-section {
   background: $white;
 
@@ -20,7 +20,7 @@
 .about-section__body {
   max-width: 860px;
   padding-left: $space-3;
-  border-left: 2px solid $gold;
+  border-left: 2px solid $teal;
 }
 
 .about-section__copy {
@@ -48,7 +48,8 @@
   @include font-display-sm;
   display: inline-block;
   margin: $space-4 0 0;
-  color: $gold;
+  color: $teal;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   line-height: $line-height-heading;
 }
+

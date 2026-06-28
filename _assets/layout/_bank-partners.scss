@@ -46,7 +46,7 @@
 
 .bank-partners__title-highlight {
   display: inline-block;
-  color: $gold;
+  color: $teal;
   white-space: nowrap;
 }
 
@@ -96,7 +96,7 @@
   }
 
   &:focus-visible {
-    outline: 3px solid $gold;
+    outline: 3px solid $teal;
     outline-offset: 3px;
   }
 }

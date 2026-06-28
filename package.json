@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Jekyll site for Duces Capital.",
   "scripts": {
-    "bundle": "webpack",
+    "bundle": "npm run bundle:dev",
+    "bundle:dev": "webpack --mode development",
+    "bundle:prod": "webpack --mode production",
     "build:jekyll": "bundle exec jekyll build",
-    "build": "npm run bundle && npm run build:jekyll",
+    "build": "npm run bundle:prod && npm run build:jekyll",
     "serve:jekyll": "bundle exec jekyll serve --baseurl ''",
-    "serve": "npm run bundle && npm run serve:jekyll",
-    "trace": "npm run bundle && bundle exec jekyll serve --trace --baseurl ''"
+    "serve": "npm run bundle:dev && npm run serve:jekyll",
+    "trace": "npm run bundle:dev && bundle exec jekyll serve --trace --baseurl ''"
   },
   "browserslist": [
     "defaults"

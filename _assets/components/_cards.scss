@@ -1,4 +1,4 @@
-// Card Components — Duces Capital Professional Theme
+﻿// Card Components — Duces Capital Professional Theme
 // Clean, minimal cards with gold accent details
 
 // Base Card Container
@@ -11,14 +11,14 @@
   position: relative;
   overflow: hidden;
 
-  @include corner-brackets($gold, 8px, 2px);
+  @include corner-brackets($teal, 8px, 2px);
 
   &::before {
-    border-color: rgba($gold, 0.4);
+    border-color: rgba($teal, 0.4);
   }
 
   &::after {
-    border-color: rgba($gold, 0.4);
+    border-color: rgba($teal, 0.4);
   }
 
   &:hover,
@@ -29,7 +29,7 @@
 
     &::before,
     &::after {
-      border-color: rgba($gold, 0.7);
+      border-color: rgba($teal, 0.7);
       opacity: 1;
     }
   }
@@ -38,12 +38,12 @@
 // Card Header with Gold Bottom Border
 .card-header-art-deco {
   background: transparent;
-  border-bottom: 2px solid rgba($gold, 0.3);
+  border-bottom: 2px solid rgba($teal, 0.3);
   padding: $space-4;
   transition: border-color $motion-fast;
 
   .card:hover & {
-    border-bottom-color: rgba($gold, 0.5);
+    border-bottom-color: rgba($teal, 0.5);
   }
 }
 
@@ -54,7 +54,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: $gold;
+  color: $teal;
   line-height: $line-height-heading;
   margin: 0;
 }
@@ -101,21 +101,21 @@
   text-align: center;
 
   .card-icon-wrapper {
-    @include rotated-diamond(80px, $gold);
+    @include rotated-diamond(80px, $teal);
     margin: $space-4 auto;
-    background-color: rgba($gold, 0.05);
+    background-color: rgba($teal, 0.05);
     transition: all $motion-standard;
 
     i,
     svg {
       font-size: 2rem;
-      color: $gold;
+      color: $teal;
     }
   }
 
   &:hover .card-icon-wrapper {
-    background-color: rgba($gold, 0.12);
-    @include glow-effect($gold, 0.25);
+    background-color: rgba($teal, 0.12);
+    @include glow-effect($teal, 0.25);
   }
 }
 
@@ -125,9 +125,9 @@
   text-align: center;
 
   .feature-icon {
-    @include rotated-diamond(64px, $gold);
+    @include rotated-diamond(64px, $teal);
     margin: $space-4 auto $space-3;
-    background-color: rgba($gold, 0.04);
+    background-color: rgba($teal, 0.04);
   }
 
   .feature-title {
@@ -150,7 +150,7 @@
 
   .testimonial-quote {
     font-size: 2rem;
-    color: rgba($gold, 0.3);
+    color: rgba($teal, 0.3);
     font-family: $font-display;
     margin-bottom: $space-2;
     line-height: 1;
@@ -177,7 +177,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    color: $gold;
+    color: $teal;
     margin-bottom: $space-1;
   }
 
@@ -198,7 +198,7 @@
     font-family: $font-display;
     font-size: 2.5rem;
     font-weight: 700;
-    color: $gold;
+    color: $teal;
     line-height: 1;
     margin-bottom: $space-2;
 
@@ -207,7 +207,7 @@
       display: block;
       width: 40px;
       height: 2px;
-      background: $gold;
+      background: $teal;
       margin: $space-2 auto 0;
     }
   }

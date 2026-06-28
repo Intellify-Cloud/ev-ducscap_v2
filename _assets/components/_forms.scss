@@ -1,4 +1,4 @@
-// Form & Input Styling — Duces Capital Professional Theme
+﻿// Form & Input Styling — Duces Capital Professional Theme
 // Clean underline-style inputs with gold accents
 
 .form-group-elegant {
@@ -19,13 +19,13 @@
 
   &.required::after {
     content: " *";
-    color: $gold;
+    color: $teal;
   }
 }
 
 .form-group-elegant.focused .form-label,
 .form-group-elegant.has-value .form-label {
-  color: $gold;
+  color: $teal;
 }
 
 .form-control,
@@ -59,10 +59,10 @@ select.form-control {
   &:focus,
   &:focus-visible {
     outline: none;
-    border-color: $blue;
-    border-bottom: 2px solid $blue;
+    border-color: $coral;
+    border-bottom: 2px solid $coral;
     background-color: $white;
-    box-shadow: 0 0 0 3px rgba($blue, 0.1);
+    box-shadow: 0 0 0 3px rgba($coral, 0.1);
   }
 
   &:disabled {
@@ -155,7 +155,7 @@ select.form-control {
 
   &:hover {
     background-color: rgba($navy, 0.05);
-    border-color: $blue;
+    border-color: $coral;
   }
 
   &:checked {
@@ -169,7 +169,7 @@ select.form-control {
 
   &:focus-visible {
     outline: 0;
-    box-shadow: 0 0 0 3px rgba($blue, 0.3);
+    box-shadow: 0 0 0 3px rgba($coral, 0.3);
   }
 
   &:disabled {

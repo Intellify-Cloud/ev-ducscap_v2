@@ -1,4 +1,4 @@
-// Testimonials section
+﻿// Testimonials section
 .testimonials-section {
   background: #ffffff;
   color: $charcoal;
@@ -44,7 +44,7 @@
     inset: 0 auto 0 0;
     width: 4px;
     border-radius: 999px;
-    background: $gold;
+    background: $teal;
   }
 }
 
@@ -146,3 +146,4 @@
   @include desktop-paragraph-typography;
   margin: 0;
 }
+

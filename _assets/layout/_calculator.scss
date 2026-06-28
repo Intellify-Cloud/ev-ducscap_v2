@@ -1,4 +1,4 @@
-// Shared calculator form, field, action, and result primitives.
+﻿// Shared calculator form, field, action, and result primitives.
 .calculator-section {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -21,7 +21,7 @@
 .calculator-header__eyebrow {
   @include font-display-sm;
   margin-bottom: $space-2;
-  color: $gold-dark;
+  color: $teal-dark;
   font-size: 0.82rem;
   line-height: $line-height-heading;
 }
@@ -395,7 +395,7 @@
   }
 
   strong {
-    color: $gold-dark;
+    color: $teal-dark;
   }
 }
 
@@ -512,3 +512,4 @@
     padding: 24px;
   }
 }
+

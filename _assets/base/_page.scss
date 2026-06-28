@@ -14,12 +14,12 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $coral;
   transition: color $motion-fast;
   text-decoration: none;
 
   &:hover {
-    color: $blue-light;
+    color: $coral-light;
     text-decoration: underline;
   }
 
@@ -99,7 +99,7 @@ h6 {
       content: "";
       display: block;
       height: 2px;
-      background: $gold;
+      background: $teal;
       margin: $space-2 auto 0;
       width: 60px;
     }
@@ -139,11 +139,11 @@ body > section + section {
     90deg,
     transparent 0%,
     transparent 10%,
-    rgba($gold, 0.35) 22%,
-    rgba($gold, 0.9) 38%,
-    $gold 50%,
-    rgba($gold, 0.9) 62%,
-    rgba($gold, 0.35) 78%,
+     rgba($teal, 0.35) 22%,
+     rgba($teal, 0.9) 38%,
+     $teal 50%,
+     rgba($teal, 0.9) 62%,
+     rgba($teal, 0.35) 78%,
     transparent 90%,
     transparent 100%
   );
@@ -177,13 +177,13 @@ body > section + section {
 
 // Selection highlight
 ::-moz-selection {
-  background: rgba($gold, 0.3);
-  text-shadow: none;
-  color: $navy;
-}
+   background: rgba($teal, 0.3);
+   text-shadow: none;
+   color: $navy;
+ }
 
-::selection {
-  background: rgba($gold, 0.3);
+ ::selection {
+   background: rgba($teal, 0.3);
   text-shadow: none;
   color: $navy;
 }
@@ -200,8 +200,8 @@ img::-moz-selection {
 .gold-divider {
   display: block;
   height: 2px;
-  background: $gold;
-  margin: $space-3 auto;
+   background: $teal;
+   margin: $space-3 auto;
   width: 60px;
   border: none;
 }

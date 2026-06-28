@@ -45,96 +45,96 @@
 
   &:hover,
   &:focus {
-    color: $gold-light;
-    text-decoration: none;
-  }
-}
+     color: $teal-light;
+     text-decoration: none;
+   }
+ }
 
-.site-footer__logo {
-  max-height: 42px;
-  width: auto;
-  filter: drop-shadow(0 2px 8px var(--deep-shadow-24));
-}
+ .site-footer__logo {
+   max-height: 42px;
+   width: auto;
+   filter: drop-shadow(0 2px 8px var(--deep-shadow-24));
+ }
 
-.site-footer__brand-name {
-  @include font-display;
-  font-size: 1.1rem;
-  line-height: $line-height-heading;
-}
+ .site-footer__brand-name {
+   @include font-display;
+   font-size: 1.1rem;
+   line-height: $line-height-heading;
+ }
 
-.site-footer__description {
-  @include font-body;
-  max-width: 34rem;
-  margin: 0;
-  color: var(--white-68);
-  font-size: 0.95rem;
-  line-height: $line-height-body;
-}
+ .site-footer__description {
+   @include font-body;
+   max-width: 34rem;
+   margin: 0;
+   color: var(--white-68);
+   font-size: 0.95rem;
+   line-height: $line-height-body;
+ }
 
-.site-footer__social,
-.site-footer__links,
-.site-footer__legal {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+ .site-footer__social,
+ .site-footer__links,
+ .site-footer__legal {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
 
-.site-footer__social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $space-2;
-}
+ .site-footer__social {
+   display: flex;
+   flex-wrap: wrap;
+   gap: $space-2;
+ }
 
-.site-footer__social-link {
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--brand-accent-40);
-  border-radius: $radius-md;
-  color: $gold;
-  font-size: 1.05rem;
-  text-decoration: none;
-  transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
+ .site-footer__social-link {
+   width: 44px;
+   height: 44px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--brand-accent-40);
+   border-radius: $radius-md;
+   color: $teal;
+   font-size: 1.05rem;
+   text-decoration: none;
+   transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
 
-  &:hover,
-  &:focus {
-    background-color: var(--brand-accent-12);
-    border-color: $gold;
-    color: $gold-light;
-    text-decoration: none;
-    transform: translateY(-1px);
-  }
-}
+   &:hover,
+   &:focus {
+     background-color: var(--brand-accent-12);
+     border-color: $teal;
+     color: $teal-light;
+     text-decoration: none;
+     transform: translateY(-1px);
+   }
+ }
 
-.site-footer__apply-now {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 $space-4;
-  border: 1px solid $gold;
-  border-radius: $radius-md;
-  background-color: $gold;
-  color: $brand-primary;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
+ .site-footer__apply-now {
+   min-height: 44px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 $space-4;
+   border: 1px solid $teal;
+   border-radius: $radius-md;
+   background-color: $teal;
+   color: $brand-primary;
+   font-size: 0.8rem;
+   font-weight: 700;
+   letter-spacing: 0.08em;
+   line-height: 1;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: background-color $motion-fast, border-color $motion-fast, color $motion-fast, transform $motion-fast;
 
-  &:hover,
-  &:focus {
-    border-color: $gold-light;
-    background-color: $gold-light;
-    color: $brand-primary;
-    text-decoration: none;
-    transform: translateY(-1px);
-  }
-}
+   &:hover,
+   &:focus {
+     border-color: $teal-light;
+     background-color: $teal-light;
+     color: $brand-primary;
+     text-decoration: none;
+     transform: translateY(-1px);
+   }
+ }
 
 .site-footer__sections {
   display: grid;
@@ -187,12 +187,12 @@
 
   &:hover,
   &:focus {
-    color: $gold;
-    text-decoration: none;
-  }
-}
+     color: $teal;
+     text-decoration: none;
+   }
+ }
 
-.site-footer__bottom {
+ .site-footer__bottom {
   display: flex;
   flex-direction: column;
   gap: $space-3;

@@ -138,20 +138,20 @@
 // ============================================
 
 .bg-navy { background-color: $navy; }
-.bg-blue { background-color: $blue; }
-.bg-gold { background-color: $gold; }
-.bg-gold-light { background-color: $gold-light; }
+.bg-coral { background-color: $coral; }
+.bg-teal { background-color: $teal; }
+.bg-teal-light { background-color: $teal-light; }
 .bg-soft-white { background-color: $soft-white; }
 .bg-light-grey { background-color: $light-grey; }
 .bg-white { background-color: $white; }
 .bg-charcoal { background-color: $charcoal; }
 
 .bg-transparent { background-color: transparent; }
-.bg-gold-10 { background-color: rgba($gold, 0.1); }
-.bg-gold-05 { background-color: rgba($gold, 0.05); }
+.bg-teal-10 { background-color: rgba($teal, 0.1); }
+.bg-teal-05 { background-color: rgba($teal, 0.05); }
 
-.bg-gradient-gold {
-  background: linear-gradient(135deg, $gold, $gold-dark);
+.bg-gradient-teal {
+  background: linear-gradient(135deg, $teal, $teal-dark);
 }
 
 .bg-gradient-navy {
@@ -164,16 +164,16 @@
 
 .border-0 { border: none; }
 .border { border: 1px solid rgba($navy, 0.15); }
-.border-gold { border: 1px solid $gold; }
-.border-thick { border: 2px solid $gold; }
+.border-teal { border: 1px solid $teal; }
+.border-thick { border: 2px solid $teal; }
 
 .border-t { border-top: 1px solid rgba($navy, 0.15); }
 .border-b { border-bottom: 1px solid rgba($navy, 0.15); }
 .border-l { border-left: 1px solid rgba($navy, 0.15); }
 .border-r { border-right: 1px solid rgba($navy, 0.15); }
 
-.border-t-gold { border-top: 1px solid $gold; }
-.border-b-gold { border-bottom: 1px solid $gold; }
+.border-t-teal { border-top: 1px solid $teal; }
+.border-b-teal { border-bottom: 1px solid $teal; }
 
 // ============================================
 // SHADOW & GLOW

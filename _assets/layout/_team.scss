@@ -1,4 +1,4 @@
-// Styling for the team section — Duces Capital Professional Theme
+﻿// Styling for the team section — Duces Capital Professional Theme
 .team-inner {
   align-items: stretch;
   display: flex;
@@ -46,7 +46,7 @@
 }
 
 .team-hours-icon {
-  color: $gold;
+  color: $teal;
   font-size: 1.75rem;
 }
 
@@ -84,7 +84,7 @@
   padding-top: $space-3;
 
   i {
-    color: $gold;
+    color: $teal;
     flex-shrink: 0;
     font-size: 0.95rem;
     margin-top: 0.25rem;
@@ -133,7 +133,7 @@
 
 .team-featured-role,
 .team-card-role {
-  color: $blue;
+  color: $coral;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.05em;

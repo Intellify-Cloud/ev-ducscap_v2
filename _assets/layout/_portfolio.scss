@@ -1,4 +1,4 @@
-// Styling for the portfolio section — Duces Capital Professional Theme
+﻿// Styling for the portfolio section — Duces Capital Professional Theme
 #portfolio {
   background-color: $white;
 
@@ -33,7 +33,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba($gold, 0.15);
+        background: rgba($teal, 0.15);
         transition: all $motion-theatrical;
         opacity: 0;
         display: flex;
@@ -43,7 +43,7 @@
         .portfolio-hover-content {
           font-size: 20px;
           text-align: center;
-          color: $gold;
+          color: $teal;
           opacity: 0;
           transform: scale(0.8);
           transition: all $motion-theatrical;
@@ -52,7 +52,7 @@
             display: block;
             font-size: 3rem;
             margin-bottom: $space-2;
-            color: $gold;
+            color: $teal;
           }
 
           h3, h4 {
@@ -167,7 +167,7 @@
       font-style: italic;
       margin: $space-3 0;
       font-family: $font-body;
-      color: $gold;
+      color: $teal;
     }
 
     ul.list-inline {
@@ -180,7 +180,7 @@
 
         &::before {
           content: "•";
-          color: $gold;
+          color: $teal;
           margin-right: $space-1;
         }
 

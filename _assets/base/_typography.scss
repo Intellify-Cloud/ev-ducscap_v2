@@ -21,102 +21,102 @@ h1,
   small,
   .small {
     font-size: 0.6em;
-    color: $gold;
-    display: block;
-    margin-top: $space-2;
-  }
-}
+     color: $teal;
+     display: block;
+     margin-top: $space-2;
+   }
+ }
 
-// H2 — Major Section Title
-h2,
-.h2 {
-  @include heading-font;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: $navy;
-  line-height: $line-height-tight;
-  margin: $space-5 0 $space-2;
-}
+ // H2 — Major Section Title
+ h2,
+ .h2 {
+   @include heading-font;
+   font-size: clamp(1.5rem, 4vw, 2.5rem);
+   color: $navy;
+   line-height: $line-height-tight;
+   margin: $space-5 0 $space-2;
+ }
 
-// H3 — Subsection Title
-h3,
-.h3 {
-  @include heading-font;
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  color: $navy;
-  line-height: $line-height-tight;
-  margin: $space-4 0 $space-2;
-}
+ // H3 — Subsection Title
+ h3,
+ .h3 {
+   @include heading-font;
+   font-size: clamp(1.25rem, 3vw, 2rem);
+   color: $navy;
+   line-height: $line-height-tight;
+   margin: $space-4 0 $space-2;
+ }
 
-// H4 — Card & Box Title
-h4,
-.h4 {
-  @include heading-font;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  letter-spacing: 0.02em;
-  color: $gold;
-  line-height: $line-height-heading;
-  margin: $space-3 0 $space-1;
-}
+ // H4 — Card & Box Title
+ h4,
+ .h4 {
+   @include heading-font;
+   font-size: clamp(1.1rem, 2vw, 1.5rem);
+   letter-spacing: 0.02em;
+   color: $teal;
+   line-height: $line-height-heading;
+   margin: $space-3 0 $space-1;
+ }
 
-// H5 — Label & Accent
-h5,
-.h5 {
-  @include heading-font;
-  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
-  letter-spacing: 0.05em;
-  color: $navy;
-  line-height: $line-height-heading;
-  margin: $space-2 0;
-}
+ // H5 — Label & Accent
+ h5,
+ .h5 {
+   @include heading-font;
+   font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+   letter-spacing: 0.05em;
+   color: $navy;
+   line-height: $line-height-heading;
+   margin: $space-2 0;
+ }
 
-// H6 — Small Title & Widget Header
-h6,
-.h6 {
-  @include heading-font;
-  font-size: clamp(0.85rem, 1.2vw, 1rem);
-  letter-spacing: 0.05em;
-  color: $medium-grey;
-  line-height: $line-height-heading;
-  margin: $space-1 0;
-}
+ // H6 — Small Title & Widget Header
+ h6,
+ .h6 {
+   @include heading-font;
+   font-size: clamp(0.85rem, 1.2vw, 1rem);
+   letter-spacing: 0.05em;
+   color: $medium-grey;
+   line-height: $line-height-heading;
+   margin: $space-1 0;
+ }
 
-// ============================================
-// DISPLAY TYPOGRAPHY — Maximum Impact
-// ============================================
+ // ============================================
+ // DISPLAY TYPOGRAPHY — Maximum Impact
+ // ============================================
 
-.display-xl {
-  @include heading-font;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  color: $navy;
-  line-height: $line-height-tight;
-}
+ .display-xl {
+   @include heading-font;
+   font-size: clamp(2.5rem, 8vw, 5rem);
+   color: $navy;
+   line-height: $line-height-tight;
+ }
 
-.display-xl-gold {
-  @extend .display-xl;
-  color: $gold;
-}
+ .display-xl-teal {
+   @extend .display-xl;
+   color: $teal;
+ }
 
-.display-lg {
-  @include heading-font;
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  color: $navy;
-  line-height: $line-height-tight;
-}
+ .display-lg {
+   @include heading-font;
+   font-size: clamp(2rem, 6vw, 3.5rem);
+   color: $navy;
+   line-height: $line-height-tight;
+ }
 
-.display-md {
-  @include heading-font;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: $navy;
-  line-height: $line-height-tight;
-}
+ .display-md {
+   @include heading-font;
+   font-size: clamp(1.5rem, 4vw, 2.5rem);
+   color: $navy;
+   line-height: $line-height-tight;
+ }
 
-.display-sm {
-  @include heading-font;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  letter-spacing: 0.05em;
-  line-height: $line-height-heading;
-  color: $gold;
-}
+ .display-sm {
+   @include heading-font;
+   font-size: clamp(1.1rem, 2vw, 1.5rem);
+   letter-spacing: 0.05em;
+   line-height: $line-height-heading;
+   color: $teal;
+ }
 
 // ============================================
 // BODY TYPOGRAPHY
@@ -142,15 +142,15 @@ p {
     color: $medium-grey;
   }
 
-  &.text-gold {
-    color: $gold;
-  }
+  &.text-teal {
+     color: $teal;
+   }
 
-  &.text-highlight {
-    color: $gold;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
+   &.text-highlight {
+     color: $teal;
+     font-weight: 500;
+     letter-spacing: 0.02em;
+   }
 }
 
 small,
@@ -163,23 +163,23 @@ small,
 
 mark,
 .mark {
-  background-color: rgba($gold, 0.1);
-  color: $navy;
-  padding: 2px 6px;
-  border-left: 2px solid $gold;
-  font-weight: 500;
-}
+  background-color: rgba($teal, 0.1);
+   color: $navy;
+   padding: 2px 6px;
+   border-left: 2px solid $teal;
+   font-weight: 500;
+ }
 
-code,
-kbd,
-pre {
-  font-family: 'Courier New', monospace;
-  font-size: 0.85rem;
-  background-color: rgba($navy, 0.05);
-  border: 1px solid rgba($gold, 0.2);
-  border-radius: $radius-sm;
-  padding: 2px 6px;
-  color: $navy;
+ code,
+ kbd,
+ pre {
+   font-family: 'Courier New', monospace;
+   font-size: 0.85rem;
+   background-color: rgba($navy, 0.05);
+   border: 1px solid rgba($teal, 0.2);
+   border-radius: $radius-sm;
+   padding: 2px 6px;
+   color: $navy;
 }
 
 pre {
@@ -198,22 +198,22 @@ blockquote {
   position: relative;
   padding: $space-3 $space-4 $space-3 $space-5;
   margin: $space-4 0;
-  border-left: 3px solid $gold;
-  background: rgba($navy, 0.02);
-  @include font-body-italic;
-  font-size: 1.05rem;
-  color: $text-strong;
-  line-height: $line-height-body;
+  border-left: 3px solid $teal;
+   background: rgba($navy, 0.02);
+   @include font-body-italic;
+   font-size: 1.05rem;
+   color: $text-strong;
+   line-height: $line-height-body;
 
-  &::before {
-    content: "\201C";
-    position: absolute;
-    left: $space-2;
-    top: $space-1;
-    @include heading-font;
-    font-size: 2rem;
-    color: rgba($gold, 0.3);
-  }
+   &::before {
+     content: "\201C";
+     position: absolute;
+     left: $space-2;
+     top: $space-1;
+     @include heading-font;
+     font-size: 2rem;
+     color: rgba($teal, 0.3);
+   }
 
   p {
     margin-bottom: 0;
@@ -235,52 +235,52 @@ blockquote {
 
     &::before {
       content: "\2014 ";
-      color: $gold;
-    }
-  }
-}
+       color: $teal;
+     }
+   }
+ }
 
-// ============================================
-// TEXT DECORATIONS & EFFECTS
-// ============================================
+ // ============================================
+ // TEXT DECORATIONS & EFFECTS
+ // ============================================
 
-a {
-  text-decoration: none;
-  position: relative;
-  transition: color $motion-fast;
+ a {
+   text-decoration: none;
+   position: relative;
+   transition: color $motion-fast;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform $motion-fast;
-  }
+   &::after {
+     content: "";
+     position: absolute;
+     bottom: -2px;
+     left: 0;
+     right: 0;
+     height: 1px;
+     background: currentColor;
+     transform: scaleX(0);
+     transform-origin: right;
+     transition: transform $motion-fast;
+   }
 
-  &:hover {
-    color: $blue-light;
+   &:hover {
+     color: $coral-light;
 
-    &::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  }
-}
+     &::after {
+       transform: scaleX(1);
+       transform-origin: left;
+     }
+   }
+ }
 
-// Text colour utilities (Duces Capital palette)
-.text-navy { color: $navy; }
-.text-blue { color: $blue; }
-.text-gold { color: $gold; }
-.text-gold-light { color: $gold-light; }
-.text-medium-grey { color: $medium-grey; }
-.text-charcoal { color: $charcoal; }
-.text-muted { color: $medium-grey; }
-.text-white { color: $white; }
+ // Text colour utilities (Duces Capital palette)
+ .text-navy { color: $navy; }
+ .text-coral { color: $coral; }
+ .text-teal { color: $teal; }
+ .text-teal-light { color: $teal-light; }
+ .text-medium-grey { color: $medium-grey; }
+ .text-charcoal { color: $charcoal; }
+ .text-muted { color: $medium-grey; }
+ .text-white { color: $white; }
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
@@ -312,7 +312,7 @@ a {
 .text-feature {
   @include heading-font;
   font-size: 1.25rem;
-  color: $gold;
+  color: $teal;
 }
 
 .text-subtitle {
@@ -323,7 +323,7 @@ a {
 
 .text-caption {
   @include heading-font;
-  color: $gold;
+  color: $teal;
   font-size: 0.75rem;
 }
 

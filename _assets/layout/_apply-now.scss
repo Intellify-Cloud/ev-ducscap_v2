@@ -442,6 +442,19 @@
   overflow: hidden;
 }
 
+.apply-now-form__status {
+  margin: $space-2 0 0;
+  font-size: 0.92rem;
+}
+
+.apply-now-form__status--success {
+  color: darken($brand-accent, 18%);
+}
+
+.apply-now-form__status--error {
+  color: $error;
+}
+
 .apply-now__action {
   display: flex;
   flex-direction: column;

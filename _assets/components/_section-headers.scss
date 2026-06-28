@@ -1,4 +1,4 @@
-// Section Headers & Dividers — Duces Capital Professional Theme
+﻿// Section Headers & Dividers — Duces Capital Professional Theme
 
 @mixin section-title-typography {
   color: $navy;
@@ -41,7 +41,7 @@
     top: 50%;
     height: 1px;
     width: 60px;
-    background: linear-gradient(90deg, transparent, $gold, transparent);
+    background: linear-gradient(90deg, transparent, $teal, transparent);
     transform: translateY(-50%);
   }
 
@@ -68,7 +68,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, $gold, rgba($gold, 0.1), transparent);
+    background: linear-gradient(180deg, $teal, rgba($teal, 0.1), transparent);
   }
 
   .section-subheading {
@@ -91,7 +91,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, $gold, rgba($gold, 0.1), transparent);
+    background: linear-gradient(180deg, $teal, rgba($teal, 0.1), transparent);
   }
 
   .section-subheading {
@@ -113,7 +113,7 @@
   margin: 0;
 
   &.hero-title-gold {
-    color: $gold;
+    color: $teal;
   }
 
   &.hero-title-large {
@@ -158,6 +158,7 @@
     left: 0;
     width: 60%;
     height: 2px;
-    background: linear-gradient(90deg, $gold, transparent);
+    background: linear-gradient(90deg, $teal, transparent);
   }
 }
+

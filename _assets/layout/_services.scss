@@ -1,4 +1,4 @@
-// Services section
+﻿// Services section
 .services-section {
   background-color: $soft-white;
   position: relative;
@@ -9,7 +9,7 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 12% 18%, rgba($gold, 0.08), transparent 28%),
+       radial-gradient(circle at 12% 18%, rgba($teal, 0.08), transparent 28%),
       linear-gradient(180deg, rgba($white, 0.75), rgba($navy, 0.035));
     pointer-events: none;
   }
@@ -36,7 +36,7 @@
   max-width: 680px;
   margin: 0;
   padding: $space-1 0 $space-1 $space-3;
-  border-left: 2px solid $gold;
+   border-left: 2px solid $teal;
 }
 
 .services-grid {
@@ -73,7 +73,7 @@
 
     .service-card-icon {
       background: $navy;
-      color: $gold-light;
+      color: $teal-light;
     }
 
     .service-card-line {
@@ -81,7 +81,7 @@
     }
 
     .service-card-cta {
-      color: $blue;
+      color: $coral;
     }
   }
 }
@@ -95,7 +95,7 @@
   margin-bottom: $space-3;
   border-radius: $radius-lg;
   background: rgba($navy, 0.08);
-  color: $gold;
+  color: $teal;
   font-size: 1.55rem;
   transition: background-color $motion-theatrical, color $motion-theatrical;
 }
@@ -122,7 +122,7 @@
   width: 36px;
   height: 2px;
   margin-bottom: $space-3;
-  background: $gold;
+  background: $teal;
   transition: width $motion-theatrical;
 }
 
@@ -139,8 +139,9 @@
 
   &:hover,
   &:focus {
-    color: $blue;
+    color: $coral;
     gap: 0.75rem;
     text-decoration: none;
   }
 }
+

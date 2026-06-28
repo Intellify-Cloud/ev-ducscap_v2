@@ -3,12 +3,17 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-module.exports = {
-    mode: 'production',
+module.exports = (env, argv = {}) => {
+    const isProduction = argv.mode === 'production' || process.env.NODE_ENV === 'production';
+
+    return {
+    mode: isProduction ? 'production' : 'development',
+    devtool: isProduction ? false : 'eval-source-map',
     performance: {
         hints: false
     },
     optimization: {
+        minimize: isProduction,
         minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
     },
     plugins: [
@@ -68,4 +73,5 @@ module.exports = {
             }
         ]
     }
+    };
 };

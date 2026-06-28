@@ -4,4 +4,3 @@ import 'jquery.easing';
 import 'bootstrap';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './site.scss';
-import './site';
