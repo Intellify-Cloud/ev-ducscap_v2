@@ -199,6 +199,28 @@
   --steps-background: #{$white};
 }
 
+.why-duces-page__title {
+  @include section-title-typography;
+  max-width: 980px;
+  margin: 0;
+  padding: 72px 72px 0;
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  line-height: 1.02;
+}
+
+@media (max-width: 1199px) {
+  .why-duces-page__title {
+    padding: 64px 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-duces-page__title {
+    padding: 48px 16px 0;
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+  }
+}
+
 @media (max-width: 1199px) {
   .five-steps-block {
     padding: 72px 40px;

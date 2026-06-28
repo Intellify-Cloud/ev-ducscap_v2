@@ -7,5 +7,7 @@ permalink: /why-duces/
 ---
 
 <div class="why-duces-page">
+  <h1 class="why-duces-page__title">Duces Capital is more likely to secure you a bond than your bank</h1>
+
   {% include 5-steps-block.html %}
 </div>
