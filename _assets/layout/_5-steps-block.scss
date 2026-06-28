@@ -195,6 +195,10 @@
   }
 }
 
+.why-duces-page .five-steps-block {
+  --steps-background: #{$white};
+}
+
 @media (max-width: 1199px) {
   .five-steps-block {
     padding: 72px 40px;

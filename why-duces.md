@@ -6,4 +6,6 @@ background: white
 permalink: /why-duces/
 ---
 
-{% include 5-steps-block.html %}
+<div class="why-duces-page">
+  {% include 5-steps-block.html %}
+</div>
