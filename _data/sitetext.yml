@@ -89,6 +89,8 @@ multi_cards:
   brand:
     title: "Guidance that keeps things simple."
     icon: "/assets/img/logo/duces-logo-mono.png"
+    button_text: "Visit Our Blog"
+    button_link: "/blog/"
   calculator:
     title: "Run the numbers before you apply."
     image: "/assets/img/sections/4-steps.png"

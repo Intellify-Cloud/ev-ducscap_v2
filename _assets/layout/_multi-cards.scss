@@ -228,6 +228,30 @@
   line-height: 0.9;
 }
 
+.multi-cards__brand-button {
+  @include button-typography;
+  display: inline-flex;
+  width: fit-content;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #f59e0b;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color $motion-fast, transform $motion-fast;
+
+  &:hover,
+  &:focus {
+    background: #d97706;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
 .multi-cards__calculator-panel {
   position: absolute;
   left: 0;
@@ -438,6 +462,14 @@
     color: #ffffff;
     font-size: clamp(18px, 5vw, 25px);
     line-height: 0.88;
+  }
+
+  .multi-cards__brand-button {
+    grid-column: 2;
+    min-height: 34px;
+    margin-top: 12px;
+    padding: 0 16px;
+    font-size: 0.75rem;
   }
 
   .multi-cards__card--calculator .multi-cards__image {

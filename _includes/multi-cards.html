@@ -47,6 +47,9 @@
           alt=""
           aria-hidden="true">
         <h3 class="multi-cards__brand-title">{{ section.brand.title }}</h3>
+        <a class="multi-cards__brand-button" href="{{ section.brand.button_link | relative_url }}">
+          {{ section.brand.button_text }}
+        </a>
       </article>
 
       <article class="multi-cards__card multi-cards__card--calculator">
