@@ -288,6 +288,16 @@ body.bg-white #mainNav {
   background: $brand-primary;
 }
 
+body.bg-white #mainNav.navbar--transparent-light {
+  background: transparent;
+
+  .navbar-brand > img,
+  .navbar-brand:hover > img,
+  .navbar-brand:focus > img {
+    filter: none;
+  }
+}
+
 .back-to-top-pill {
   @include font-body;
   @include button-typography;

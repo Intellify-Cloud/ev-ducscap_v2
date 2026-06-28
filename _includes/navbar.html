@@ -1,8 +1,12 @@
-<nav class="navbar" id="mainNav" aria-label="Main navigation">
+{% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-red2.png' %}
+{% if page.url == '/about/' %}
+  {% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-dark.png' %}
+{% endif %}
+<nav class="navbar{% if page.url == '/about/' %} navbar--transparent-light{% endif %}" id="mainNav" aria-label="Main navigation">
   <div class="container">
     <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="Duces Capital home">
       <img
-        src="{{ '/assets/img/logo/duces-logo-stacked-red2.png' | relative_url }}"
+        src="{{ navbar_logo | relative_url }}"
         alt="Duces Capital"
       />
     </a>
