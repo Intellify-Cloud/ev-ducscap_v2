@@ -283,6 +283,11 @@
   }
 }
 
+// White page backgrounds need contrast for the white brand mark.
+body.bg-white #mainNav {
+  background: $brand-primary;
+}
+
 .back-to-top-pill {
   @include font-body;
   @include button-typography;
