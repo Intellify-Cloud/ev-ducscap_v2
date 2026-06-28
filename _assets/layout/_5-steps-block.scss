@@ -197,6 +197,12 @@
 
 .why-duces-page .five-steps-block {
   --steps-background: #{$white};
+  background: $white;
+
+  &::before,
+  &::after {
+    display: none;
+  }
 }
 
 .why-duces-page__title {
