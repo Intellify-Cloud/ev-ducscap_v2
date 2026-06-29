@@ -1,0 +1,140 @@
+.calculators-hub {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 88px 24px 104px;
+  background: $white;
+}
+
+.calculators-hub__inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.calculators-hub__header {
+  max-width: 780px;
+  margin-bottom: 48px;
+}
+
+.calculators-hub__eyebrow {
+  margin: 0 0 12px;
+  color: $teal;
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.calculators-hub__title {
+  @include section-title-typography;
+  margin: 0;
+}
+
+.calculators-hub__intro {
+  max-width: 680px;
+  margin: 20px 0 0;
+  color: $medium-grey;
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.calculators-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.calculator-summary-card {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid rgba($brand-primary, 0.16);
+  border-top: 5px solid $teal;
+  border-radius: 14px;
+  background: $white;
+  box-shadow: 0 14px 34px rgba($brand-primary, 0.08);
+  transition: transform $motion-standard, box-shadow $motion-standard;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 44px rgba($brand-primary, 0.13);
+  }
+}
+
+.calculator-summary-card__number {
+  margin-bottom: 24px;
+  color: rgba($brand-primary, 0.34);
+  font-family: $font-display;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.calculator-summary-card__title {
+  margin: 0 0 10px;
+  color: $brand-primary;
+  font-family: $font-display;
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+
+.calculator-summary-card__question {
+  margin: 0 0 18px;
+  color: $charcoal;
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.calculator-summary-card__text {
+  margin: 0 0 28px;
+  color: $medium-grey;
+  font-family: $font-body;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.calculator-summary-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  color: $button-color;
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $button-color-hover;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 991px) {
+  .calculators-hub__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .calculators-hub {
+    padding: 64px 16px 72px;
+  }
+
+  .calculators-hub__header {
+    margin-bottom: 34px;
+  }
+
+  .calculators-hub__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-summary-card {
+    min-height: 0;
+    padding: 26px 24px;
+  }
+}
