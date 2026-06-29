@@ -318,7 +318,7 @@ footer:
         - title: "About"
           url: "/about"
         - title: "Bank Partners"
-          url: "#bank-partners"
+          url: "/bank-partners/"
         - title: "Contact"
           url: "/contact/"
     - title: "Calculators"

@@ -12,7 +12,7 @@
       <article class="multi-cards__card multi-cards__card--newsletter">
         <img
           class="multi-cards__image"
-          src="{{ site.baseurl }}{{ section.newsletter.image }}"
+          src="{{ site.baseurl }}/assets/img/sections/multi-card-one.jpg"
           alt="{{ section.newsletter.image_alt }}"
           loading="lazy">
         <div class="multi-cards__newsletter-content">
@@ -40,16 +40,18 @@
         </div>
       </article>
 
-      <article class="multi-cards__card multi-cards__card--brand">
+      <article class="multi-cards__card multi-cards__card--calculator multi-cards__card--brand">
         <img
           class="multi-cards__mark"
           src="{{ site.baseurl }}{{ section.brand.icon }}"
           alt=""
           aria-hidden="true">
-        <h3 class="multi-cards__brand-title">{{ section.brand.title }}</h3>
-        <a class="multi-cards__brand-button" href="{{ section.brand.button_link | relative_url }}">
-          {{ section.brand.button_text }}
-        </a>
+        <div class="multi-cards__calculator-panel">
+          <h3 class="multi-cards__calculator-title multi-cards__brand-title">{{ section.brand.title }}</h3>
+          <a class="multi-cards__calculator-button multi-cards__brand-button" href="{{ section.brand.button_link | relative_url }}">
+            {{ section.brand.button_text }}
+          </a>
+        </div>
       </article>
 
       <article class="multi-cards__card multi-cards__card--calculator">
@@ -127,3 +129,4 @@
     });
   })();
 </script>
+

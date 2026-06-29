@@ -1,69 +1,138 @@
-// Glass lender-partner grid.
+// Bank partners page, tuned to match the cleaner about-page rhythm.
 
-.bank-partners-section {
-  position: relative;
-  overflow: hidden;
-  padding: 96px 72px;
-  isolation: isolate;
-  background-color: $navy;
-  background-image:
-    linear-gradient(var(--brand-primary-68), var(--brand-primary-78)),
-    var(--bank-partners-background);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &::after {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background:
-      radial-gradient(circle at 15% 20%, var(--brand-accent-16), transparent 28%),
-      radial-gradient(circle at 88% 78%, var(--brand-secondary-16), transparent 30%);
-    content: "";
-    pointer-events: none;
-  }
+.bank-partners-page {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  color: $text-strong;
+  background: $white;
 }
 
-.bank-partners {
+.bank-partners-page__hero {
+  position: relative;
+  display: flex;
+  min-height: 68vh;
+  align-items: flex-end;
+  overflow: hidden;
+  background: $brand-primary;
+}
+
+.bank-partners-page__hero-image,
+.bank-partners-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bank-partners-page__hero-image {
+  object-fit: cover;
+  object-position: center 46%;
+}
+
+.bank-partners-page__hero-overlay {
+  background:
+    linear-gradient(90deg, var(--brand-primary-84), var(--brand-primary-46) 54%, var(--brand-primary-14)),
+    linear-gradient(0deg, var(--brand-primary-70), transparent 62%);
+}
+
+.bank-partners-page__hero-content {
   position: relative;
   z-index: 1;
-  max-width: 1440px;
+  width: min(100% - 48px, 1200px);
   margin: 0 auto;
+  padding: 170px 0 72px;
 }
 
-.bank-partners__header {
-  max-width: 780px;
-  margin-bottom: 42px;
+.bank-partners-page__hero-card {
+  max-width: 760px;
+  padding: 40px 42px 36px;
+  border-left: 4px solid $teal;
+  border-radius: 18px;
+  background: rgba($white, 0.94);
+  box-shadow: 0 20px 50px rgba($black, 0.16);
 }
 
-.bank-partners__title {
-  @include section-title-typography;
+.bank-partners-page__eyebrow {
   margin: 0 0 14px;
-  color: $white;
+  color: $teal;
+  font-family: $font-display;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.bank-partners-page__title {
+  @include section-title-typography;
+  margin: 0;
+  color: $text-strong;
   text-transform: none;
 }
 
-.bank-partners__title-highlight {
-  display: inline-block;
-  color: $teal;
-  white-space: nowrap;
+.bank-partners-page__intro {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: $text-muted;
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
 
-.bank-partners__intro {
-  @include desktop-paragraph-typography;
+.bank-partners-page__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba($teal, 0.08);
+  color: $brand-secondary;
+  font-family: $font-display;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bank-partners-page__status-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--status-success);
+  box-shadow: 0 0 0 3px var(--status-success-13);
+}
+
+.bank-partners-page__section {
+  padding: 86px 0 100px;
+  background: $white;
+}
+
+.bank-partners-page__container {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.bank-partners-page__section-header {
   max-width: 760px;
-  margin: 0;
-  color: var(--white-80);
+  margin-bottom: 34px;
+  padding-left: 24px;
+  border-left: 2px solid $teal;
 }
 
-.bank-partners__grid {
+.bank-partners-page__section-title {
+  @include section-title-typography;
+  margin: 0;
+  color: $text-strong;
+  text-transform: none;
+}
+
+.bank-partners-page__grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 18px;
 }
 
-.bank-partners__card {
+.bank-partners-page__card {
   display: flex;
   min-width: 0;
   min-height: 190px;
@@ -71,26 +140,22 @@
   align-items: center;
   gap: 14px;
   padding: 22px 12px 18px;
-  border: 1px solid var(--white-20);
+  border: 1px solid rgba($brand-primary, 0.08);
   border-radius: 16px;
-  background: var(--white-09);
-  box-shadow: inset 0 1px 0 var(--white-08);
-  color: $white;
+  background: $white;
+  box-shadow: 0 14px 34px rgba($brand-primary, 0.08);
+  color: $text-strong;
   text-decoration: none;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   transition:
-    background-color $motion-fast,
     border-color $motion-fast,
     box-shadow $motion-fast,
     transform $motion-fast;
 
   &:hover,
   &:focus {
-    border-color: var(--white-38);
-    background: var(--white-15);
-    box-shadow: 0 14px 30px var(--deep-shadow-22);
-    color: $white;
+    border-color: rgba($teal, 0.55);
+    box-shadow: 0 18px 40px rgba($brand-primary, 0.12);
+    color: $text-strong;
     text-decoration: none;
     transform: translateY(-4px);
   }
@@ -101,9 +166,9 @@
   }
 }
 
-.bank-partners__card-icon {
+.bank-partners-page__card-icon {
   display: flex;
-  width: 76px;
+  width: 78px;
   height: 64px;
   align-items: center;
   justify-content: center;
@@ -111,8 +176,8 @@
   overflow: hidden;
   padding: 8px;
   border-radius: 15px;
-  background: $white;
-  box-shadow: 0 8px 20px var(--deep-shadow-18);
+  background: #f8f9fb;
+  box-shadow: 0 8px 20px rgba($black, 0.06);
 
   img {
     display: block;
@@ -122,31 +187,31 @@
   }
 }
 
-.bank-partners__card-title {
-  color: $white;
+.bank-partners-page__card-title {
+  color: $text-strong;
   font-family: $font-display;
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.84rem;
+  font-weight: 700;
   line-height: 1.35;
   text-align: center;
 }
 
-.bank-partners__card-eyebrow {
+.bank-partners-page__card-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   margin-top: auto;
   padding: 5px 11px;
-  border: 1px solid var(--white-16);
+  border: 1px solid rgba($teal, 0.18);
   border-radius: 999px;
-  background: var(--white-10);
-  color: var(--white-76);
+  background: rgba($teal, 0.08);
+  color: $brand-secondary;
   font-family: $font-body;
   font-size: 0.7rem;
   line-height: 1;
 }
 
-.bank-partners__card-dot {
+.bank-partners-page__card-dot {
   width: 7px;
   height: 7px;
   flex: 0 0 auto;
@@ -156,43 +221,69 @@
 }
 
 @media (max-width: 1199px) {
-  .bank-partners-section {
-    padding: 80px 40px;
+  .bank-partners-page__hero-content,
+  .bank-partners-page__container {
+    width: min(100% - 40px, 1200px);
   }
 
-  .bank-partners__grid {
+  .bank-partners-page__hero-content {
+    padding: 150px 0 64px;
+  }
+
+  .bank-partners-page__section {
+    padding: 72px 0 88px;
+  }
+
+  .bank-partners-page__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 767px) {
-  .bank-partners-section {
-    padding: 64px 16px;
+  .bank-partners-page__hero {
+    min-height: 560px;
   }
 
-  .bank-partners__header {
-    margin-bottom: 32px;
-    text-align: center;
+  .bank-partners-page__hero-content,
+  .bank-partners-page__container {
+    width: calc(100% - 32px);
   }
 
-  .bank-partners__grid {
+  .bank-partners-page__hero-content {
+    padding: 136px 0 48px;
+  }
+
+  .bank-partners-page__hero-card {
+    padding: 30px 24px 28px;
+  }
+
+  .bank-partners-page__section {
+    padding: 56px 0 68px;
+  }
+
+  .bank-partners-page__section-header {
+    margin-bottom: 26px;
+    padding-left: 18px;
+  }
+
+  .bank-partners-page__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
 
-  .bank-partners__card {
+  .bank-partners-page__card {
     min-height: 174px;
     padding: 18px 10px 15px;
   }
 
-  .bank-partners__card-icon {
+  .bank-partners-page__card-icon {
     width: 68px;
     height: 58px;
   }
 }
 
 @media (max-width: 380px) {
-  .bank-partners__grid {
+  .bank-partners-page__grid {
     grid-template-columns: 1fr;
   }
 }

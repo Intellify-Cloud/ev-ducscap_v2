@@ -1,46 +1,70 @@
-<section
-  class="bank-partners-section"
-  id="bank-partners"
-  aria-labelledby="bank-partners-title"
-  style="--bank-partners-background: url('{{ site.data.sitetext.bank_partners.background_image | relative_url }}');"
->
-  <div class="bank-partners">
-    <header class="bank-partners__header">
-      <h2 class="bank-partners__title" id="bank-partners-title">
-        Multiple Banks.<br>
-        One Simple Application.
-      </h2>
-      <p class="bank-partners__intro">
-        {{ site.data.sitetext.bank_partners.intro }}
-      </p>
-    </header>
+{% assign bank_partners = site.data.sitetext.bank_partners %}
+{% assign lenders = site.data.sitetext.clients.list %}
 
-    <div class="bank-partners__grid" aria-label="Duces Capital lender partners">
-      {% for lender in site.data.sitetext.clients.list %}
-        <a
-          class="bank-partners__card"
-          href="{{ lender.url }}"
-          aria-label="{{ lender.title }}"
-          {% unless lender.url == "#" %}target="_blank" rel="noopener noreferrer"{% endunless %}
-        >
-          <span class="bank-partners__card-icon">
-            <img
-              src="{{ lender.logo | relative_url }}"
-              alt="{{ lender.title }} logo"
-              loading="lazy"
-              width="72"
-              height="56"
-            />
-          </span>
+<main class="bank-partners-page" id="bank-partners">
+  <section class="bank-partners-page__hero" aria-labelledby="bank-partners-hero-title">
+    <img
+      class="bank-partners-page__hero-image"
+      src="{{ bank_partners.background_image | relative_url }}"
+      alt=""
+      aria-hidden="true"
+      loading="eager"
+    >
+    <div class="bank-partners-page__hero-overlay" aria-hidden="true"></div>
 
-          <span class="bank-partners__card-title">{{ lender.title }}</span>
-
-          <span class="bank-partners__card-eyebrow">
-            <span class="bank-partners__card-dot" aria-hidden="true"></span>
-            {{ site.data.sitetext.bank_partners.status }}
-          </span>
-        </a>
-      {% endfor %}
+    <div class="bank-partners-page__hero-content">
+      <div class="bank-partners-page__hero-card">
+        <p class="bank-partners-page__eyebrow">{{ site.data.sitetext.clients.title }}</p>
+        <h1 class="bank-partners-page__title" id="bank-partners-hero-title">
+          {{ bank_partners.title }}
+        </h1>
+        <p class="bank-partners-page__intro">
+          {{ bank_partners.intro }}
+        </p>
+        <span class="bank-partners-page__status">
+          <span class="bank-partners-page__status-dot" aria-hidden="true"></span>
+          {{ bank_partners.status }}
+        </span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="bank-partners-page__section" aria-labelledby="bank-partners-grid-title">
+    <div class="bank-partners-page__container">
+      <div class="bank-partners-page__section-header">
+        <p class="bank-partners-page__eyebrow">{{ site.data.sitetext.clients.title }}</p>
+        <h2 class="bank-partners-page__section-title" id="bank-partners-grid-title">
+          {{ site.data.sitetext.clients.title }}
+        </h2>
+      </div>
+
+      <div class="bank-partners-page__grid" aria-label="Duces Capital lender partners">
+        {% for lender in lenders %}
+          <a
+            class="bank-partners-page__card"
+            href="{{ lender.url }}"
+            aria-label="{{ lender.title }}"
+            {% unless lender.url == "#" %}target="_blank" rel="noopener noreferrer"{% endunless %}
+          >
+            <span class="bank-partners-page__card-icon">
+              <img
+                src="{{ lender.logo | relative_url }}"
+                alt="{{ lender.title }} logo"
+                loading="lazy"
+                width="72"
+                height="56"
+              >
+            </span>
+
+            <span class="bank-partners-page__card-title">{{ lender.title }}</span>
+
+            <span class="bank-partners-page__card-eyebrow">
+              <span class="bank-partners-page__card-dot" aria-hidden="true"></span>
+              {{ bank_partners.status }}
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>

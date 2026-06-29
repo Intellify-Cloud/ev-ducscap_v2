@@ -3,7 +3,7 @@
 {% if page.url == '/about/' or page.url == '/why-duces/' or page.url == '/apply-now/' %}
   {% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-dark.png' %}
   {% assign transparent_navbar = true %}
-{% elsif page.url == '/contact/' or page.url contains 'calculator' %}
+{% elsif page.url == '/bank-partners/' or page.url == '/contact/' or page.url contains 'calculator' %}
   {% assign transparent_navbar = true %}
 {% endif %}
 <nav class="navbar{% if transparent_navbar %} navbar--transparent-light{% endif %}" id="mainNav" aria-label="Main navigation">
@@ -34,7 +34,7 @@
           <ul class="navbar-menu__list">
             <li><a class="navbar-menu__link" href="{{ '/' | relative_url }}">Home</a></li>
             <li><a class="navbar-menu__link" href="{{ '/about/' | relative_url }}">About</a></li>
-            <li><a class="navbar-menu__link" href="{{ '/#bank-partners' | relative_url }}">Banks</a></li>
+            <li><a class="navbar-menu__link" href="{{ '/bank-partners/' | relative_url }}">Banks</a></li>
             <li><a class="navbar-menu__link" href="{{ '/why-duces/' | relative_url }}">Why Duces Capital</a></li>
             <li><a class="navbar-menu__link" href="{{ '/apply-now/' | relative_url }}">Apply Now</a></li>
             <li><a class="navbar-menu__link" href="{{ '/bond-calculator' | relative_url }}">The Calculators</a></li>
