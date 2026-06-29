@@ -1,0 +1,76 @@
+.coming-soon {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  background: #2d1a1f;
+}
+
+.coming-soon__image,
+.coming-soon__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.coming-soon__image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.coming-soon__overlay {
+  background: linear-gradient(180deg, rgba(45, 26, 31, 0.48), rgba(45, 26, 31, 0.62));
+}
+
+.coming-soon__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 24px 32px;
+}
+
+.coming-soon__logo img {
+  width: auto;
+  height: 72px;
+}
+
+.coming-soon__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+}
+
+.coming-soon__title {
+  margin: 0;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .coming-soon__logo {
+    padding: 20px 20px 0;
+  }
+
+  .coming-soon__logo img {
+    height: 56px;
+  }
+
+  .coming-soon__content {
+    padding: 24px;
+  }
+}

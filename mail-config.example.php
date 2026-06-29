@@ -8,4 +8,5 @@ return [
     'DUCES_FROM_EMAIL' => 'noreply@ducescapital.co.za',
     'DUCES_FROM_NAME' => 'Duces Capital (No-Reply)',
     'DUCES_CONTACT_TO' => 'info@ducescapital.co.za',
+    'DUCES_CONTACT_BCC' => 'oosthuizenp@gmail.com',
 ];

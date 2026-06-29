@@ -51,7 +51,8 @@ $smtpUser = config_value('DUCES_SMTP_USER', 'noreply@ducescapital.co.za');
 $smtpPass = config_value('DUCES_SMTP_PASS');
 $fromEmail = config_value('DUCES_FROM_EMAIL', 'noreply@ducescapital.co.za');
 $fromName = config_value('DUCES_FROM_NAME', 'Duces Capital (No-Reply)');
-$toEmail = config_value('DUCES_CONTACT_TO', 'oosthuizenp@gmail.com');
+$toEmail = config_value('DUCES_CONTACT_TO', 'info@ducescapital.co.za');
+$bccEmail = config_value('DUCES_CONTACT_BCC');
 $debugMode = isset($_GET['debug']) || getenv('DUCES_MAIL_DEBUG') === '1';
 $logFile = __DIR__ . '/mail-debug.log';
 
@@ -274,6 +275,9 @@ try {
 
     $mail->setFrom($fromEmail, $fromName);
     $mail->addAddress($toEmail);
+    if ($bccEmail !== '') {
+        $mail->addBCC($bccEmail);
+    }
     $mail->addReplyTo($email, $replyToName);
 
     $mail->Subject = $mailSubject;
