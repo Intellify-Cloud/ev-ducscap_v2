@@ -4,6 +4,7 @@ title: Amortisation Calculator
 description: "Calculate how your bond repayments are split between principal and interest over the life of your home loan."
 background: white
 hero_under_nav: true
+permalink: /amortisation-calculator/
 hero_image: /assets/img/sections/duces-calculators-hero.jpg
 hero_image_alt: "Homebuyer reviewing a bond repayment schedule"
 hero_title: "Amortisation Calculator"

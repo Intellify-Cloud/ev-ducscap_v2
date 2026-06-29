@@ -122,6 +122,12 @@
           <p class="contact-form__status contact-form__status--success" id="contactPageSuccess" role="status" hidden>Thank you. We’ll be in touch shortly.</p>
           <p class="contact-form__status contact-form__status--error" id="contactPageError" role="alert" hidden>We couldn’t send your enquiry. Please try again or email {{ site.contact.email }}.</p>
         </form>
+
+        <div class="contact__confirmation" id="contactPageThanks" role="status" tabindex="-1" hidden>
+          <span class="contact__confirmation-icon" aria-hidden="true"><i class="fas fa-check"></i></span>
+          <h2>Thank you!</h2>
+          <p>A specialist will be in touch within one business day.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -135,7 +141,7 @@
   if (!form) return;
 
   const button = form.querySelector('button[type="submit"]');
-  const success = document.getElementById('contactPageSuccess');
+  const success = document.getElementById('contactPageThanks');
   const error = document.getElementById('contactPageError');
   const defaultButtonText = button.textContent;
 
@@ -170,7 +176,9 @@
       if (!response.ok) throw new Error('Contact request failed');
 
       form.reset();
+      form.hidden = true;
       success.hidden = false;
+      success.focus();
     } catch (contactError) {
       error.hidden = false;
     } finally {

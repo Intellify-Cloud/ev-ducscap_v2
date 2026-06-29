@@ -4,6 +4,7 @@ title: Deposit Savings Calculator
 description: "Calculate how much you need to save for your home-loan deposit and estimate how long reaching your target may take."
 background: white
 hero_under_nav: true
+permalink: /deposit-savings-calculator/
 hero_image: /assets/img/sections/duces-calculators-hero.jpg
 hero_image_alt: "Homebuyer planning savings for a property deposit"
 hero_title: "Deposit Savings Calculator"

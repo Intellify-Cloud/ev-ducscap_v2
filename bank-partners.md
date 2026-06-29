@@ -8,3 +8,5 @@ permalink: /bank-partners/
 ---
 
 {% include bank-partners.html %}
+
+{% include calculators-grid.html %}  

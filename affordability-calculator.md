@@ -4,6 +4,7 @@ title: Bond Affordability Calculator
 description: "Calculate how much you can afford for your home loan. Determine your bond qualification amount based on income and expenses."
 background: white
 hero_under_nav: true
+permalink: /affordability-calculator/
 hero_image: /assets/img/sections/duces-calculators-hero.jpg
 hero_image_alt: "Homebuyer checking home-loan affordability"
 hero_title: "Bond Affordability Calculator"
