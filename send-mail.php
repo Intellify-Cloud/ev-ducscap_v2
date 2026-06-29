@@ -10,16 +10,48 @@ require __DIR__ . '/PHPMailer/SMTP.php';
 require __DIR__ . '/PHPMailer/Exception.php';
 
 /*
- * Prefer environment variables on the live server. The fallback values keep
- * the file easy to test in a shared-hosting setup if env vars are unavailable.
+ * Load private config from a non-public file when available.
+ * On the live server, prefer placing mail-config.php one level above public_html.
  */
-$smtpHost = getenv('DUCES_SMTP_HOST') ?: 'mail.ducescapital.co.za';
-$smtpPort = (int) (getenv('DUCES_SMTP_PORT') ?: 587);
-$smtpUser = getenv('DUCES_SMTP_USER') ?: 'noreply@ducescapital.co.za';
-$smtpPass = getenv('DUCES_SMTP_PASS') ?: 'H0628Ez7F6b993*';
-$fromEmail = getenv('DUCES_FROM_EMAIL') ?: 'noreply@ducescapital.co.za';
-$fromName = getenv('DUCES_FROM_NAME') ?: 'Duces Capital (No-Reply)';
-$toEmail = getenv('DUCES_CONTACT_TO') ?: 'oosthuizenp@gmail.com';
+$privateConfigPaths = [
+    dirname(__DIR__) . '/mail-config.php',
+    __DIR__ . '/mail-config.php',
+];
+$privateConfig = [];
+
+foreach ($privateConfigPaths as $configPath) {
+    if (is_file($configPath)) {
+        $loadedConfig = require $configPath;
+        if (is_array($loadedConfig)) {
+            $privateConfig = $loadedConfig;
+            break;
+        }
+    }
+}
+
+function config_value(string $key, $default = '')
+{
+    global $privateConfig;
+
+    $envValue = getenv($key);
+    if ($envValue !== false && $envValue !== '') {
+        return $envValue;
+    }
+
+    if (array_key_exists($key, $privateConfig) && $privateConfig[$key] !== '') {
+        return $privateConfig[$key];
+    }
+
+    return $default;
+}
+
+$smtpHost = config_value('DUCES_SMTP_HOST', 'mail.ducescapital.co.za');
+$smtpPort = (int) config_value('DUCES_SMTP_PORT', 587);
+$smtpUser = config_value('DUCES_SMTP_USER', 'noreply@ducescapital.co.za');
+$smtpPass = config_value('DUCES_SMTP_PASS');
+$fromEmail = config_value('DUCES_FROM_EMAIL', 'noreply@ducescapital.co.za');
+$fromName = config_value('DUCES_FROM_NAME', 'Duces Capital (No-Reply)');
+$toEmail = config_value('DUCES_CONTACT_TO', 'oosthuizenp@gmail.com');
 $debugMode = isset($_GET['debug']) || getenv('DUCES_MAIL_DEBUG') === '1';
 $logFile = __DIR__ . '/mail-debug.log';
 
@@ -120,6 +152,10 @@ function fail_response(int $statusCode, string $message): void
         'message' => $message,
     ]);
     exit;
+}
+
+if ($smtpPass === '') {
+    fail_response(500, 'Mail server password is not configured.');
 }
 
 $type = clean_text($payload['type'] ?? 'contact');

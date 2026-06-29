@@ -7,3 +7,5 @@ node_modules
 _site
 unused
 bootstrap-reference.html
+mail-config.php
+mail-debug.log

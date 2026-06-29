@@ -26,6 +26,10 @@
               type="email"
               placeholder="{{ section.newsletter.input_placeholder }}"
               required>
+            <div class="contact-form__honeypot" aria-hidden="true">
+              <label class="sr-only" for="newsletter-company">Company</label>
+              <input id="newsletter-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <p class="multi-cards__newsletter-status multi-cards__newsletter-status--success" id="newsletterSuccess" aria-live="polite">
               {{ section.newsletter.success_message }}
             </p>
@@ -103,6 +107,8 @@
       success.style.display = 'none';
       error.style.display = 'none';
 
+      if (form.elements.company && form.elements.company.value) return;
+
       button.disabled = true;
       setButtonText('{{ section.newsletter.sending_text }}');
 
@@ -112,7 +118,8 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             type: 'newsletter',
-            email: email.value.trim()
+            email: email.value.trim(),
+            company: form.elements.company ? form.elements.company.value : ''
           })
         });
 
