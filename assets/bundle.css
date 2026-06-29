@@ -23280,30 +23280,28 @@ a.info-card:focus-visible {
   background: linear-gradient(180deg, rgba(45, 26, 31, 0.48), rgba(45, 26, 31, 0.62));
 }
 
-.coming-soon__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  padding: 24px 32px;
-}
-
-.coming-soon__logo img {
-  width: auto;
-  height: 72px;
-}
-
 .coming-soon__content {
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   padding: 32px;
   text-align: center;
+}
+
+.coming-soon__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.coming-soon__logo img {
+  width: auto;
+  height: 120px;
 }
 
 .coming-soon__title {
@@ -23318,11 +23316,8 @@ a.info-card:focus-visible {
 }
 
 @media (max-width: 767px) {
-  .coming-soon__logo {
-    padding: 20px 20px 0;
-  }
   .coming-soon__logo img {
-    height: 56px;
+    height: 96px;
   }
   .coming-soon__content {
     padding: 24px;
