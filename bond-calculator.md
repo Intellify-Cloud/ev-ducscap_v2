@@ -4,7 +4,7 @@ title: Bond Repayment Calculator
 description: "Calculate your monthly bond repayments. Enter property price and interest rate to estimate your monthly home loan payments."
 background: white
 hero_under_nav: true
-hero_image: /assets/img/sections/duces-hero_3.jpg
+hero_image: /assets/img/sections/duces-calculators-hero.jpg
 hero_image_alt: "Homebuyer calculating monthly bond repayments"
 hero_title: "Bond Repayment Calculator"
 hero_paragraph: "Estimate your monthly home-loan repayment, total repayable amount, and interest."
