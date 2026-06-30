@@ -20,7 +20,7 @@
   --testimonials-track-inset: 0px;
 
   background: var(--testimonials-bg);
-  padding: 56px var(--testimonials-section-px) 80px;
+  padding: $section-padding-y-desktop-dense var(--testimonials-section-px);
   overflow: hidden;
 }
 

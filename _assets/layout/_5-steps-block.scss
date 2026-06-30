@@ -235,6 +235,11 @@
   line-height: 1.02;
 }
 
+.why-duces-testimonials {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
 @media (max-width: 1199px) {
   .why-duces-page__title {
     padding: 64px 40px 0;

@@ -69,6 +69,7 @@ banks:
 bank_partners:
   title: "Multiple Banks. One Simple Application."
   intro: "We work with the leading banks and lenders to secure you a home loan."
+  grid_title: "More Lenders. More Ways Forward."
   status: "Approved"
   background_image: "/assets/img/sections/banks-hero.jpg"
 

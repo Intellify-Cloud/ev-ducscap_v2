@@ -93,8 +93,14 @@ $space-4: 2rem;
 $space-5: 3rem;
 $space-6: 5rem;
 
-$section-padding-y-mobile: $space-5;
-$section-padding-y-desktop: $space-6;
+// Section rhythm: use the spacious value by default and the dense value for
+// text-heavy grids, forms, and other information-dense sections.
+$section-padding-y-desktop: 120px;
+$section-padding-y-desktop-dense: 80px;
+$section-padding-y-tablet: 96px;
+$section-padding-y-tablet-dense: 72px;
+$section-padding-y-mobile: 64px;
+$section-padding-y-mobile-dense: 48px;
 $content-measure: 72ch;
 
 // ============================================

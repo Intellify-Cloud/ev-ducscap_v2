@@ -19,12 +19,12 @@
   max-width: 1478px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 180px 24px 140px;
+  padding: 0 24px;
 }
 
 .multi-cards__heading {
   max-width: 920px;
-  margin: 0 auto 126px;
+  margin: 0 auto 56px;
   @include section-title-typography;
   text-align: center;
 }
@@ -304,11 +304,11 @@
 
 @media (max-width: 1024px) {
   .multi-cards__container {
-    padding: 120px 24px 96px;
+    padding: 0 24px;
   }
 
   .multi-cards__heading {
-    margin-bottom: 70px;
+    margin-bottom: 48px;
     font-size: 44px;
   }
 
@@ -330,7 +330,7 @@
   }
 
   .multi-cards__container {
-    padding: 64px 20px 42px;
+    padding: 0 20px;
   }
 
   .multi-cards__heading {

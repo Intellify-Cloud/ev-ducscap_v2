@@ -2,16 +2,16 @@
 {% assign lenders = site.data.sitetext.clients.list %}
 
 <main class="bank-partners-page" id="bank-partners">
-  <section class="bank-partners-page__hero" aria-labelledby="bank-partners-hero-title">
-    <img
-      class="bank-partners-page__hero-image"
-      src="{{ bank_partners.background_image | relative_url }}"
-      alt=""
-      aria-hidden="true"
-      loading="eager"
-    >
-    <div class="bank-partners-page__hero-overlay" aria-hidden="true"></div>
+  <img
+    class="bank-partners-page__backdrop"
+    src="{{ bank_partners.background_image | relative_url }}"
+    alt=""
+    aria-hidden="true"
+    loading="eager"
+  >
+  <div class="bank-partners-page__backdrop-overlay" aria-hidden="true"></div>
 
+  <section class="bank-partners-page__hero" aria-labelledby="bank-partners-hero-title">
     <div class="bank-partners-page__hero-content">
       <div class="bank-partners-page__hero-card">
         <p class="bank-partners-page__eyebrow">{{ site.data.sitetext.clients.title }}</p>
@@ -31,12 +31,9 @@
 
   <section class="bank-partners-page__section" aria-labelledby="bank-partners-grid-title">
     <div class="bank-partners-page__container">
-      <div class="bank-partners-page__section-header">
-        <p class="bank-partners-page__eyebrow">{{ site.data.sitetext.clients.title }}</p>
-        <h2 class="bank-partners-page__section-title" id="bank-partners-grid-title">
-          {{ site.data.sitetext.clients.title }}
-        </h2>
-      </div>
+      <h2 class="bank-partners-page__section-title" id="bank-partners-grid-title">
+        {{ bank_partners.grid_title }}
+      </h2>
 
       <div class="bank-partners-page__grid" aria-label="Duces Capital lender partners">
         {% for lender in lenders %}

@@ -1,10 +1,31 @@
 // Bank partners page, tuned to match the cleaner about-page rhythm.
 
 .bank-partners-page {
+  position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  overflow: hidden;
   color: $text-strong;
-  background: $white;
+  background: $brand-primary;
+}
+
+.bank-partners-page__backdrop,
+.bank-partners-page__backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bank-partners-page__backdrop {
+  object-fit: cover;
+  object-position: center 46%;
+}
+
+.bank-partners-page__backdrop-overlay {
+  background:
+    linear-gradient(90deg, var(--brand-primary-84), var(--brand-primary-46) 54%, var(--brand-primary-14)),
+    linear-gradient(0deg, var(--brand-primary-78), var(--brand-primary-40) 62%);
 }
 
 .bank-partners-page__hero {
@@ -12,27 +33,7 @@
   display: flex;
   min-height: 68vh;
   align-items: flex-end;
-  overflow: hidden;
-  background: $brand-primary;
-}
-
-.bank-partners-page__hero-image,
-.bank-partners-page__hero-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.bank-partners-page__hero-image {
-  object-fit: cover;
-  object-position: center 46%;
-}
-
-.bank-partners-page__hero-overlay {
-  background:
-    linear-gradient(90deg, var(--brand-primary-84), var(--brand-primary-46) 54%, var(--brand-primary-14)),
-    linear-gradient(0deg, var(--brand-primary-70), transparent 62%);
+  background: transparent;
 }
 
 .bank-partners-page__hero-content {
@@ -40,7 +41,7 @@
   z-index: 1;
   width: min(100% - 48px, 1200px);
   margin: 0 auto;
-  padding: 170px 0 72px;
+  padding: 170px 0 40px;
 }
 
 .bank-partners-page__hero-card {
@@ -103,8 +104,16 @@
 }
 
 .bank-partners-page__section {
-  padding: 86px 0 100px;
-  background: $white;
+  position: relative;
+  z-index: 1;
+  padding: 32px 0 100px;
+  background: linear-gradient(
+    180deg,
+    rgba($brand-primary, 0) 0%,
+    rgba($brand-primary, 0.34) 18%,
+    rgba($brand-primary, 0.58) 52%,
+    rgba($brand-primary, 0.76) 100%
+  );
 }
 
 .bank-partners-page__container {
@@ -112,17 +121,11 @@
   margin: 0 auto;
 }
 
-.bank-partners-page__section-header {
-  max-width: 760px;
-  margin-bottom: 34px;
-  padding-left: 24px;
-  border-left: 2px solid $teal;
-}
-
 .bank-partners-page__section-title {
   @include section-title-typography;
-  margin: 0;
-  color: $text-strong;
+  max-width: 760px;
+  margin: 0 0 34px;
+  color: $white;
   text-transform: none;
 }
 
@@ -227,11 +230,11 @@
   }
 
   .bank-partners-page__hero-content {
-    padding: 150px 0 64px;
+    padding: 150px 0 48px;
   }
 
   .bank-partners-page__section {
-    padding: 72px 0 88px;
+    padding: 32px 0 88px;
   }
 
   .bank-partners-page__grid {
@@ -250,7 +253,7 @@
   }
 
   .bank-partners-page__hero-content {
-    padding: 136px 0 48px;
+    padding: 136px 0 32px;
   }
 
   .bank-partners-page__hero-card {
@@ -258,12 +261,7 @@
   }
 
   .bank-partners-page__section {
-    padding: 56px 0 68px;
-  }
-
-  .bank-partners-page__section-header {
-    margin-bottom: 26px;
-    padding-left: 18px;
+    padding: 24px 0 68px;
   }
 
   .bank-partners-page__grid {

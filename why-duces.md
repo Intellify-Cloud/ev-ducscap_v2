@@ -11,3 +11,7 @@ permalink: /why-duces/
 
   {% include 5-steps-block.html %}
 </div>
+
+<div class="why-duces-testimonials">
+  {% include testimonials-hello.html %}
+</div>
