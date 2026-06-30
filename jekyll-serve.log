@@ -288,3 +288,51 @@ Configuration file: C:/VS Code/ev-ducscap_v2/_config.yml
                     _includes/bank-partners.html
                     ...done in 0.3847662 seconds.
                     
+      Regenerating: 45 file(s) changed at 2026-06-30 08:44:43
+                    .gitignore
+                    _assets/layout/_contact-page.scss
+                    _assets/site.scss
+                    _includes/contact-page.html
+                    _includes/multi-cards.html
+                    _includes/navbar.html
+                    _layouts/default.html
+                    _layouts/home.html
+                    affordability-calculator.md
+                    amortisation-calculator.md
+                    assets/bundle.css
+                    assets/bundle.js
+                    assets/bundle.js.LICENSE.txt
+                    assets/fonts/fa-brands-400.eot
+                    assets/fonts/fa-brands-400.svg
+                    assets/fonts/fa-brands-400.ttf
+                    assets/fonts/fa-brands-400.woff
+                    assets/fonts/fa-brands-400.woff2
+                    assets/fonts/fa-regular-400.eot
+                    assets/fonts/fa-regular-400.svg
+                    assets/fonts/fa-regular-400.ttf
+                    assets/fonts/fa-regular-400.woff
+                    assets/fonts/fa-regular-400.woff2
+                    assets/fonts/fa-solid-900.eot
+                    assets/fonts/fa-solid-900.svg
+                    assets/fonts/fa-solid-900.ttf
+                    assets/fonts/fa-solid-900.woff
+                    assets/fonts/fa-solid-900.woff2
+                    bank-partners.md
+                    bond-calculator.md
+                    deposit-savings-calculator.md
+                    extra-repayment-calculator.html
+                    index.md
+                    transfer-cost-calculator.html
+                    PHPMailer/Exception.php
+                    PHPMailer/PHPMailer.php
+                    PHPMailer/SMTP.php
+                    _assets/layout/_calculators-hub.scss
+                    _assets/layout/_coming-soon.scss
+                    _includes/calculators-grid.html
+                    _includes/coming-soon.html
+                    calculators.md
+                    mail-config.example.php
+                    secret-contact-send.php
+                    send-mail.php
+                    ...done in 1.3446636 seconds.
+                    
