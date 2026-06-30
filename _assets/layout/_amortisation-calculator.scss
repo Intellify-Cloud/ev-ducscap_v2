@@ -12,10 +12,10 @@
 
 .amortisation-calculator__table-wrap {
   overflow-x: auto;
-  border: 1px solid var(--brand-primary-10);
+  border: 1px solid rgba($brand-primary, 0.12);
   border-radius: 16px;
   background: $white;
-  box-shadow: 0 18px 40px var(--brand-primary-12);
+  box-shadow: 0 6px 18px rgba($brand-primary, 0.07);
 }
 
 .amortisation-calculator__table {

@@ -13,6 +13,7 @@ hero_paragraph: "Set a property deposit goal and build a practical monthly savin
 
 {% include calc-hero.html %}
 {% include deposit-savings-calculator.html %}
+{% include calculator-switcher.html %}
 
 <script src="{{ '/assets/js/deposit-savings-calculator.js' | relative_url }}" defer></script>
 

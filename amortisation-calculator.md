@@ -13,6 +13,7 @@ hero_paragraph: "See how your monthly repayment reduces your balance and pays in
 
 {% include calc-hero.html %}
 {% include amortisation-calculator.html %}
+{% include calculator-switcher.html %}
 
 <script src="{{ '/assets/js/amortisation-calculator.js' | relative_url }}" defer></script>
 

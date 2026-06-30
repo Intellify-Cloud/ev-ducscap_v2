@@ -15,6 +15,7 @@
 .about-section__heading {
   @include section-title-typography;
   margin: 0;
+  font-size: 50px;
 }
 
 .about-section__body {

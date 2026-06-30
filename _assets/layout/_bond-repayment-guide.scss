@@ -7,7 +7,7 @@
 }
 
 .bond-guide__inner {
-  max-width: 1060px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -50,10 +50,10 @@
 
 .bond-guide__card {
   padding: $space-4;
-  border: 1px solid var(--color-primary-20);
+  border: 1px solid rgba($brand-primary, 0.12);
   border-radius: 16px;
   background: var(--color-primary-50);
-  box-shadow: 0 18px 40px var(--brand-primary-12);
+  box-shadow: 0 6px 18px rgba($brand-primary, 0.07);
 
   h3 {
     margin: 0 0 $space-2;

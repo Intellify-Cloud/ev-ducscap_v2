@@ -1,0 +1,40 @@
+// Homepage content grid. Section backgrounds remain full bleed while their
+// inner content aligns to one shared width.
+.page-home {
+  #mainNav > .container,
+  .next-steps-section-title,
+  .next-steps-card,
+  .three-steps-mint__inner,
+  .lets-get-going-card,
+  .multi-cards__container,
+  .site-footer > .container {
+    max-width: 1200px;
+  }
+
+  #mainNav > .container {
+    width: calc(100% - 32px);
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-home {
+    .hero-content {
+      width: calc(100% - 96px);
+      max-width: 1200px;
+      flex: 1 1 auto;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 0;
+    }
+
+    .hero-body {
+      max-width: min(680px, 50%);
+    }
+  }
+}

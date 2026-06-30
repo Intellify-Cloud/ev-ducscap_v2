@@ -1,5 +1,7 @@
 <section class="next-steps-section" id="next-steps">
+  {% if site.data.sitetext.next_steps.section_title and site.data.sitetext.next_steps.section_title != "" %}
   <h2 class="next-steps-section-title">{{ site.data.sitetext.next_steps.section_title }}</h2>
+  {% endif %}
 
   <div class="next-steps-card">
     <div class="next-steps-media">

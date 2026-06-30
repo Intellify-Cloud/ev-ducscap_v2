@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body id="page-top" class="{% if page.background == 'white' %}bg-white{% elsif page.background == 'muted' %}bg-surface-muted{% endif %}">
+  <body id="page-top" class="{% if page.layout == 'home' %}page-home {% endif %}{% if page.body_class %}{{ page.body_class }} {% endif %}{% if page.background == 'white' %}bg-white{% elsif page.background == 'muted' %}bg-surface-muted{% endif %}">
 
       {{ content }}
 

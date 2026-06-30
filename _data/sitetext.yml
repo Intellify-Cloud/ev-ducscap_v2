@@ -27,14 +27,24 @@ five_steps_block:
   intro: "A strong prequalification usually increases the likelihood of obtaining preapproval."
   steps:
     - title: "Know your buying power before you search"
+      icon: "fas fa-lightbulb"
+      tone: "coral"
       text: "Receive a prequalification certificate showing your estimated home loan eligibility and budget, helping you shop confidently and prove you're a serious buyer."
     - title: "One application, multiple lenders"
+      icon: "fas fa-university"
+      tone: "orange"
       text: "Complete a single application and your dedicated bond consultant will submit it to several leading banks, including your current bank, saving you time and effort."
     - title: "Review and compare home loan options"
+      icon: "fas fa-balance-scale"
+      tone: "lime"
       text: "We gather home loan offers from South Africa's major lenders, making it easy for you to compare rates, terms, and benefits side by side."
     - title: "We secure the most competitive rate for you"
+      icon: "fas fa-percentage"
+      tone: "teal"
       text: "Your bond specialist works directly with the banks to negotiate on your behalf, helping you obtain the most favourable home loan deal available."
     - title: "No cost to you"
+      icon: "fas fa-gift"
+      tone: "blue"
       text: "Our service comes at no charge to homebuyers. We are compensated by the banks, allowing you to receive expert assistance without paying any fees."
 
 three_step_section:
@@ -309,6 +319,23 @@ contact:
 contact_card_section:
   title: "Let's get you started"
   text: "Fill out the form below and we'll get in touch to assist you in securing the best deal from the banks."
+
+calculator_switcher:
+  aria_label: "Explore other property calculators"
+  eyebrow: "Other calculators"
+  calculators:
+    - title: "Bond Repayment"
+      url: "/bond-calculator/"
+    - title: "Bond Affordability"
+      url: "/affordability-calculator/"
+    - title: "Transfer Costs"
+      url: "/transfer-cost-calculator/"
+    - title: "Extra Repayments"
+      url: "/extra-repayment-calculator/"
+    - title: "Amortisation"
+      url: "/amortisation-calculator/"
+    - title: "Deposit Savings"
+      url: "/deposit-savings-calculator/"
 
 footer:
   copyright_prefix: "Copyright"

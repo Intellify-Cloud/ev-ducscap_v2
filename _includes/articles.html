@@ -8,7 +8,7 @@
 
           {% if site.data.sitetext.articles.text %}
           
-		  <h3 class="section-subheading text-muted">{{ site.data.sitetext.articles.text }}</h3>
+		  <p class="section-subheading text-muted">{{ site.data.sitetext.articles.text }}</p>
 		  {% endif %}
         </div>
       </div>
@@ -21,7 +21,7 @@
             {% if post.image %}
             <img class="card-img-top" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
             {% endif %}
-            <h4 class="card-title service-heading">{{ post.title | markdownify }}</h4>
+            <h3 class="card-title service-heading">{{ post.title | markdownify }}</h3>
             <div class="text-muted">{{ post.excerpt | markdownify }}</div>
             {{ post.category}}
           </div>

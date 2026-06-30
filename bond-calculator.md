@@ -13,6 +13,7 @@ hero_paragraph: "Estimate your monthly home-loan repayment, total repayable amou
 
 {% include calc-hero.html %}
 {% include bond-repayment-calculator.html %}
+{% include calculator-switcher.html %}
 {% include bond-repayment-guide.html %}
 
 <script src="{{ '/assets/js/bond-repayment-calculator.js' | relative_url }}" defer></script>

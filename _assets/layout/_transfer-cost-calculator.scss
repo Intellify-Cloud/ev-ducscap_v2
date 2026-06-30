@@ -5,17 +5,17 @@
 .mb-transfer-section {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding: 76px 24px 88px;
+  padding: 76px 24px 48px;
   background: $white;
 }
 
 .mb-transfer-page {
-  max-width: 1060px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .mb-transfer-section {
-    padding: 48px 16px 56px;
+    padding: 48px 16px 32px;
   }
 }

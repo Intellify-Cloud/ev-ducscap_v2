@@ -1,0 +1,29 @@
+{% assign advantage = site.data.sitetext.five_steps_block %}
+
+<section class="why-capital" aria-labelledby="why-capital-title">
+  <div class="why-capital__inner">
+    <header class="why-capital__header">
+      <p class="why-capital__eyebrow">Why Duces Capital</p>
+      <h1 class="why-capital__title" id="why-capital-title">
+        More than a bond application. A better way forward.
+      </h1>
+      <p class="why-capital__intro">{{ advantage.intro }}</p>
+    </header>
+
+    <ol class="why-capital__grid">
+      {% for step in advantage.steps %}
+        <li class="why-capital__card why-capital__card--{{ step.tone }}">
+          <span class="why-capital__number" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>
+          <span class="why-capital__icon" aria-hidden="true">
+            <i class="{{ step.icon }}"></i>
+          </span>
+
+          <div class="why-capital__card-body">
+            <h2 class="why-capital__card-title">{{ step.title }}</h2>
+            <p class="why-capital__card-copy">{{ step.text }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

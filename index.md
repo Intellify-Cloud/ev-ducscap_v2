@@ -1,6 +1,6 @@
 ---
 layout: home
-hide_footer: true
+hide_footer: false
 title: Home Loans & Bond Origination South Africa
 description: "Compare home-loan offers from leading South African banks with expert bond origination support from Duces Capital, at no cost to you."
 ---

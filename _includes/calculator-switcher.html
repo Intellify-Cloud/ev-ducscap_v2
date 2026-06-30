@@ -1,0 +1,16 @@
+{% assign switcher = site.data.sitetext.calculator_switcher %}
+
+<nav class="calculator-switcher" aria-label="{{ switcher.aria_label }}">
+  <div class="calculator-switcher__inner">
+    <p class="calculator-switcher__eyebrow">{{ switcher.eyebrow }}</p>
+    <div class="calculator-switcher__links">
+      {% for calculator in switcher.calculators %}
+        {% unless page.url == calculator.url %}
+          <a class="calculator-switcher__link" href="{{ calculator.url | relative_url }}">
+            {{ calculator.title }}
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</nav>
