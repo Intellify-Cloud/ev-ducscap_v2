@@ -1,6 +1,0 @@
-[31m  Liquid Exception: Liquid syntax error (C:/VS Code/ev-ducscap_v2/_includes/bank-partners.html line 30): 'end' is not a valid delimiter for unless tags. use endunless included in bank-partners.md[0m
-[33m             Error: Liquid syntax error (C:/VS Code/ev-ducscap_v2/_includes/bank-partners.html line 30): 'end' is not a valid delimiter for unless tags. use endunless included [0m
-[33m             Error: Run jekyll build --trace for more information.[0m
-[31m  Liquid Exception: Could not locate the included file 'bank-partners.html' in any of ["C:/VS Code/ev-ducscap_v2/_includes"]. Ensure it exists in one of those directories and, if it is a symlink, does not point outside your site source. in bank-partners.md[0m
-[33m             Error: Could not locate the included file 'bank-partners.html' in any of ["C:/VS Code/ev-ducscap_v2/_includes"]. Ensure it exists in one of those directories and, if it is a symlink, does not point outside your site source.[0m
-[33m             Error: Run jekyll build --trace for more information.[0m

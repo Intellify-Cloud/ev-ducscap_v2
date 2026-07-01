@@ -1,7 +1,8 @@
 .why-capital {
   width: 100vw;
+  margin-top: -150px;
   margin-left: calc(50% - 50vw);
-  padding: 136px 40px $section-padding-y-desktop;
+  padding: 174px 40px $section-padding-y-desktop;
   overflow: hidden;
   background:
     radial-gradient(circle at 8% 12%, rgba($teal, 0.12), transparent 28%),
@@ -134,7 +135,7 @@
 
 @media (max-width: 1199px) {
   .why-capital {
-    padding: 124px 32px $section-padding-y-tablet;
+    padding: 186px 32px $section-padding-y-tablet;
   }
 
   .why-capital__grid {
@@ -144,7 +145,8 @@
 
 @media (max-width: 767px) {
   .why-capital {
-    padding: 108px 16px $section-padding-y-mobile;
+    margin-top: -117px;
+    padding: 137px 16px $section-padding-y-mobile;
   }
 
   .why-capital__header {
@@ -174,7 +176,8 @@
   #mainNav.navbar--transparent-light {
     top: 0;
     padding: 8px 0;
-    background: transparent;
+    background: transparent !important;
+    box-shadow: none;
 
     > .container {
       max-width: min(1200px, calc(100vw - 32px));
