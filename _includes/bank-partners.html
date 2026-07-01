@@ -39,9 +39,8 @@
         {% for lender in lenders %}
           <a
             class="bank-partners-page__card"
-            href="{{ lender.url }}"
+            href="{{ '/apply-now/' | relative_url }}"
             aria-label="{{ lender.title }}"
-            {% unless lender.url == "#" %}target="_blank" rel="noopener noreferrer"{% endunless %}
           >
             <span class="bank-partners-page__card-icon">
               <img
