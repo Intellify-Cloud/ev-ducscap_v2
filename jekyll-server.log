@@ -1,0 +1,42 @@
+Configuration file: C:/Anti-Gravity Skills/ev-ducscap_v2/_config.yml
+            Source: C:/Anti-Gravity Skills/ev-ducscap_v2
+       Destination: C:/Anti-Gravity Skills/ev-ducscap_v2/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.535 seconds.
+ Auto-regeneration: enabled for 'C:/Anti-Gravity Skills/ev-ducscap_v2'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+[2026-07-01 22:01:32] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:12 
+	C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+      Regenerating: 1 file(s) changed at 2026-07-01 22:02:58
+                    _assets/layout/_bank-partners.scss
+                    ...done in 0.6888161 seconds.
+                    
+      Regenerating: 18 file(s) changed at 2026-07-01 22:03:09
+                    assets/img/hero.jpg
+                    assets/fonts/fa-brands-400.woff2
+                    assets/fonts/fa-brands-400.woff
+                    assets/fonts/fa-regular-400.woff2
+                    assets/fonts/fa-regular-400.woff
+                    assets/fonts/fa-solid-900.woff2
+                    assets/fonts/fa-brands-400.eot
+                    assets/fonts/fa-solid-900.woff
+                    assets/fonts/fa-brands-400.ttf
+                    assets/fonts/fa-regular-400.ttf
+                    assets/fonts/fa-regular-400.eot
+                    assets/fonts/fa-solid-900.eot
+                    assets/fonts/fa-regular-400.svg
+                    assets/fonts/fa-brands-400.svg
+                    assets/fonts/fa-solid-900.ttf
+                    assets/bundle.css
+                    assets/bundle.js
+                    assets/fonts/fa-solid-900.svg
+                    ...done in 0.7377297 seconds.
+                    
+[2026-07-01 22:03:19] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:6 
+	C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
