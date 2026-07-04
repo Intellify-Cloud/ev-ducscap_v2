@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include navbar.html %}
+
+<main class="article-page">
+  <header class="article-page__hero">
+    <div class="article-page__container">
+      <a class="article-page__back" href="{{ '/blog/' | relative_url }}">&larr; Back to insights</a>
+      <p class="article-page__eyebrow">Duces Capital Insights</p>
+      <h1 class="article-page__title">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="article-page__intro">{{ page.subtitle }}</p>{% endif %}
+    </div>
+  </header>
+
+  <article class="article-page__content">
+    {{ content }}
+  </article>
+
+  <nav class="article-page__footer-nav" aria-label="Article navigation">
+    <a href="{{ '/blog/' | relative_url }}">View all insights</a>
+  </nav>
+</main>

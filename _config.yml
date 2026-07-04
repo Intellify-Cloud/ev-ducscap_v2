@@ -10,6 +10,16 @@ plugins:
 
 collections:
   portfolio:
+    output: true
+    permalink: /blog/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: article
+      background: white
 
 markdown: kramdown
 
