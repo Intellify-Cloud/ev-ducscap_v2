@@ -165,6 +165,11 @@
     box-shadow $motion-fast,
     transform $motion-fast;
 
+  &::after {
+    content: none;
+    display: none;
+  }
+
   &:hover,
   &:focus {
     border-color: rgba($white, 0.72);

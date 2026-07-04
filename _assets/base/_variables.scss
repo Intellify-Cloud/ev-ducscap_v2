@@ -20,9 +20,10 @@ $teal: #0FCB9C;
 $teal-light: lighten($teal, 15%);
 $teal-dark: darken($teal, 10%);
 
-// Button CTA colour
+// Central button system — retain the established CTA red with a darker hover.
 $button-color: #D3073A;
-$button-color-hover: darken($button-color, 8%);
+$button-color-hover: darken($button-color, 15%);
+$button-text-color: $white;
 
 // Neutral / Background Colours
 $white: #FFFFFF;
@@ -145,11 +146,14 @@ $motion-theatrical: 500ms ease-in-out;
   --color-primary-200: #EB95AB;
   --color-primary-300: #EA5F82;
   --color-primary-400: #ED2456;
-  --color-primary-500: #D3073A;
-  --color-primary-600: #AB062F;
-  --color-primary-700: #820424;
-  --color-primary-800: #5A0319;
-  --color-primary-900: #31020E;
+  --color-primary-500: #{$button-color};
+  --color-primary-600: #{$button-color-hover};
+  --color-primary-700: #{darken($button-color, 16%)};
+  --color-primary-800: #{darken($button-color, 22%)};
+  --color-primary-900: #{darken($button-color, 28%)};
+  --button-background: #{$button-color};
+  --button-background-hover: #{$button-color-hover};
+  --button-text: #{$button-text-color};
   --surface: #{$charcoal};
   --surface-muted: #{$surface-muted};
   --text-strong: #{$text-strong};

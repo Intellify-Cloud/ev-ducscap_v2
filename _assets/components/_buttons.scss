@@ -16,6 +16,11 @@
     box-shadow $motion-standard, color $motion-standard, transform $motion-fast;
   position: relative;
 
+  &::after {
+    content: none;
+    display: none;
+  }
+
   &:focus-visible {
     outline: 0;
     box-shadow: $focus-ring;
@@ -34,7 +39,7 @@
 // Primary CTA
 .btn-primary {
   background-color: $button-color;
-  color: $white;
+  color: $button-text-color;
   border: 2px solid $button-color;
   box-shadow: $elevation-1;
 
@@ -42,7 +47,7 @@
   &:focus {
     background-color: $button-color-hover;
     border-color: $button-color-hover;
-    color: $white;
+    color: $button-text-color;
     box-shadow: $elevation-2;
     transform: translateY(-1px);
   }
@@ -50,7 +55,7 @@
   &:active {
     transform: translateY(0) scale(0.98);
     background-color: $button-color-hover;
-    color: $white;
+    color: $button-text-color;
   }
 }
 
@@ -64,7 +69,7 @@
   &:hover {
     background-color: $button-color;
     border-color: $button-color;
-    color: $white;
+    color: $button-text-color;
     box-shadow: $elevation-1;
     transform: translateY(-1px);
   }
@@ -77,7 +82,7 @@
 // Premium CTA — Gold background, navy text (used selectively)
 .btn-premium {
   background-color: $button-color;
-  color: $white;
+  color: $button-text-color;
   border: 2px solid $button-color;
   box-shadow: $elevation-1;
 
@@ -85,7 +90,7 @@
   &:focus {
     background-color: $button-color-hover;
     border-color: $button-color-hover;
-    color: $white;
+    color: $button-text-color;
     box-shadow: $elevation-2;
     transform: translateY(-1px);
   }
@@ -93,7 +98,7 @@
   &:active {
     transform: translateY(0) scale(0.98);
     background-color: $button-color-hover;
-    color: $white;
+    color: $button-text-color;
   }
 }
 

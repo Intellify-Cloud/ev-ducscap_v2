@@ -167,6 +167,11 @@
   line-height: 30px;
   text-align: center;
   text-decoration: none;
+
+  &::after {
+    content: none;
+    display: none;
+  }
 }
 
 .multi-cards__newsletter-button {
@@ -252,14 +257,14 @@
   padding: 0 28px;
   border-radius: 999px;
   background: #f59e0b;
-  color: #ffffff;
+  color: $button-text-color;
   text-decoration: none;
   transition: background-color $motion-fast, transform $motion-fast;
 
   &:hover,
   &:focus {
-    background: #d97706;
-    color: #ffffff;
+    background: darken(#f59e0b, 15%);
+    color: $button-text-color;
     text-decoration: none;
     transform: translateY(-1px);
   }
@@ -297,7 +302,8 @@
   font-family: $font-display;
 }
 
-.multi-cards__calculator-button:hover {
+.multi-cards__calculator-button:hover,
+.multi-cards__calculator-button:focus {
   color: #ffffff;
   text-decoration: none;
 }

@@ -4636,10 +4636,13 @@ readers do not read off random characters that represent icons */
   --color-primary-300: #EA5F82;
   --color-primary-400: #ED2456;
   --color-primary-500: #D3073A;
-  --color-primary-600: #AB062F;
-  --color-primary-700: #820424;
-  --color-primary-800: #5A0319;
-  --color-primary-900: #31020E;
+  --color-primary-600: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  --color-primary-700: rgb(132.0201834862, 4.3798165138, 36.2899082569);
+  --color-primary-800: rgb(102.4027522936, 3.3972477064, 28.1486238532);
+  --color-primary-900: rgb(72.7853211009, 2.4146788991, 20.0073394495);
+  --button-background: #D3073A;
+  --button-background-hover: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  --button-text: #fff;
   --surface: #2D1A1F;
   --surface-muted: rgb(25.6056338028, 14.7943661972, 17.6394366197);
   --text-strong: #2D1A1F;
@@ -15178,6 +15181,10 @@ li {
   transition: background-color 300ms ease-out, border-color 300ms ease-out, box-shadow 300ms ease-out, color 300ms ease-out, transform 200ms ease-out;
   position: relative;
 }
+.btn::after {
+  content: none;
+  display: none;
+}
 .btn:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 3px rgba(208, 77, 41, 0.3);
@@ -15193,21 +15200,21 @@ li {
 
 .btn-primary {
   background-color: #D3073A;
-  color: rgb(255, 255, 255);
+  color: #fff;
   border: 2px solid #D3073A;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .btn-primary:hover, .btn-primary:focus {
-  background-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  border-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  color: rgb(255, 255, 255);
+  background-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  border-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
 }
 .btn-primary:active {
   transform: translateY(0) scale(0.98);
-  background-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  color: rgb(255, 255, 255);
+  background-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  color: #fff;
 }
 
 .btn-secondary {
@@ -15219,7 +15226,7 @@ li {
 .btn-secondary:hover {
   background-color: #D3073A;
   border-color: #D3073A;
-  color: rgb(255, 255, 255);
+  color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   transform: translateY(-1px);
 }
@@ -15229,21 +15236,21 @@ li {
 
 .btn-premium {
   background-color: #D3073A;
-  color: rgb(255, 255, 255);
+  color: #fff;
   border: 2px solid #D3073A;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .btn-premium:hover, .btn-premium:focus {
-  background-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  border-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  color: rgb(255, 255, 255);
+  background-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  border-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
 }
 .btn-premium:active {
   transform: translateY(0) scale(0.98);
-  background-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  color: rgb(255, 255, 255);
+  background-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  color: #fff;
 }
 
 .btn-ghost {
@@ -15545,7 +15552,7 @@ body.bg-white #mainNav.navbar--transparent-light .navbar-brand:focus > img {
   transition: opacity 200ms ease-out, transform 200ms ease-out, background-color 200ms ease-out;
 }
 .back-to-top-pill:hover, .back-to-top-pill:focus {
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
@@ -17307,8 +17314,8 @@ header.masthead .hero-actions {
   color: rgb(255, 255, 255);
 }
 .next-steps-btn--primary:hover, .next-steps-btn--primary:focus {
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  border-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  border-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   color: rgb(255, 255, 255);
 }
 
@@ -17979,8 +17986,8 @@ header.masthead .hero-actions {
   color: rgb(255, 255, 255);
 }
 .three-step-section__btn--primary:hover, .three-step-section__btn--primary:focus {
-  border-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  border-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   color: rgb(255, 255, 255);
 }
 
@@ -18386,8 +18393,8 @@ header.masthead .hero-actions {
   transition: background-color 200ms ease-out, color 200ms ease-out, border-color 200ms ease-out, transform 200ms ease-out;
 }
 .lets-get-going-btn:hover, .lets-get-going-btn:focus {
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
-  border-color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
+  border-color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   color: rgb(255, 255, 255);
   text-decoration: none;
   transform: translateY(-1px);
@@ -18629,6 +18636,10 @@ header.masthead .hero-actions {
   color: rgb(255, 255, 255);
   text-decoration: none;
   transition: border-color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out;
+}
+.bank-partners-page__card::after {
+  content: none;
+  display: none;
 }
 .bank-partners-page__card:hover, .bank-partners-page__card:focus {
   border-color: rgba(255, 255, 255, 0.72);
@@ -19932,6 +19943,11 @@ header.masthead .hero-actions {
   text-align: center;
   text-decoration: none;
 }
+.multi-cards__newsletter-button::after,
+.multi-cards__calculator-button::after {
+  content: none;
+  display: none;
+}
 
 .multi-cards__newsletter-button {
   align-self: center;
@@ -20016,13 +20032,13 @@ header.masthead .hero-actions {
   padding: 0 28px;
   border-radius: 999px;
   background: #f59e0b;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   transition: background-color 200ms ease-out, transform 200ms ease-out;
 }
 .multi-cards__brand-button:hover, .multi-cards__brand-button:focus {
-  background: #d97706;
-  color: #ffffff;
+  background: rgb(172.4330708661, 110.9507874016, 7.0669291339);
+  color: #fff;
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -20059,7 +20075,8 @@ header.masthead .hero-actions {
   font-family: "Montserrat", sans-serif;
 }
 
-.multi-cards__calculator-button:hover {
+.multi-cards__calculator-button:hover,
+.multi-cards__calculator-button:focus {
   color: #ffffff;
   text-decoration: none;
 }
@@ -21180,7 +21197,7 @@ header.masthead .hero-actions {
   text-decoration: none;
 }
 .calculator-summary-card__link:hover, .calculator-summary-card__link:focus {
-  color: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  color: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   text-decoration: underline;
 }
 
@@ -21557,7 +21574,7 @@ header.masthead .hero-actions {
 .mb-calc-btn:hover, .mb-calc-btn:focus,
 .mb-transfer-btn:hover,
 .mb-transfer-btn:focus {
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   transform: translateY(-1px);
 }
 
@@ -21733,7 +21750,7 @@ header.masthead .hero-actions {
 }
 
 .mb-transfer-btn:hover {
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   transform: translateY(-1px);
 }
 
@@ -23314,7 +23331,7 @@ a.info-card:focus-visible {
 
 .apply-now__cta:hover,
 .apply-now__cta:focus-visible {
-  background: rgb(171.5100917431, 5.6899082569, 47.1449541284);
+  background: rgb(136.9564220183, 4.5435779817, 37.6467889908);
   color: rgb(255, 255, 255);
   transform: translateY(-2px);
 }
