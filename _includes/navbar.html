@@ -1,9 +1,12 @@
-{% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-red2.png' %}
+{% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-light.png' %}
 {% assign transparent_navbar = false %}
 {% if page.url == '/about/' or page.url == '/why-duces-capital/' or page.url == '/apply-now/' %}
   {% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-dark.png' %}
   {% assign transparent_navbar = true %}
-{% elsif page.url == '/bank-partners/' or page.url == '/contact/' or page.url contains 'calculator' %}
+{% elsif page.url == '/bank-partners/' or page.url contains 'calculator' %}
+  {% assign transparent_navbar = true %}
+{% elsif page.url == '/contact/' %}
+  {% assign navbar_logo = '/assets/img/logo/duces-logo-stacked-dark.png' %}
   {% assign transparent_navbar = true %}
 {% endif %}
 <nav class="navbar{% if transparent_navbar %} navbar--transparent-light{% endif %}" id="mainNav" aria-label="Main navigation">

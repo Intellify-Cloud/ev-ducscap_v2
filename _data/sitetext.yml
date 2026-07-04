@@ -68,7 +68,7 @@ lets_get_going:
   title: "Let’s get your bond approved."
   text: "From application to approval, we help you navigate the home loan process with confidence and peace of mind."
   primary_label: "Reach out for expert advice"
-  primary_url: "https://wa.me/+27692164338"
+  primary_url: "https://wa.me/+27786680551"
 
 banks:
   title: "More Lenders, More Options, Better Rates."
@@ -77,9 +77,11 @@ banks:
   primary_url: "/contact/"
 
 bank_partners:
-  title: "Multiple Banks. One Simple Application."
+  title: "We are more likely to secure you a home loan than your bank."
   intro: "We work with the leading banks and lenders to secure you a home loan."
-  grid_title: "More Lenders. More Ways Forward."
+  grid_title: |-
+    Multiple Banks.
+    One Simple Application.
   status: "Approved"
   background_image: "/assets/img/sections/banks-hero.jpg"
 
@@ -99,7 +101,7 @@ multi_cards:
     error_message: "Something went wrong. Please try again."
   brand:
     title: "Guidance that keeps things simple."
-    icon: "/assets/img/logo/duces-logo-mono.png"
+    icon: "/assets/img/logo/duces-logo-stacked-light.png"
     button_text: "Visit Our Blog"
     button_link: "/blog/"
   calculator:
@@ -299,8 +301,8 @@ contact:
   section: contact
   methods:
     - title: "Phone"
-      text: "+27 69 216 4338"
-      url: tel:+27692164338
+      text: "+27 78 668 0551"
+      url: tel:+27786680551
       icon: fas fa-phone
     - title: "Email"
       text: "info@ducescapital.co.za"
@@ -308,11 +310,11 @@ contact:
       icon: fas fa-envelope
     - title: "WhatsApp"
       text: "Chat on WhatsApp"
-      url: https://api.whatsapp.com/send?phone=27692164338
+      url: https://api.whatsapp.com/send?phone=27786680551
       icon: fab fa-whatsapp
   faq:
     - question: "How do I contact Duces Capital?"
-      answer: "You can reach us by phone at +27 69 216 4338, email at info@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
+      answer: "You can reach us by phone at +27 78 668 0551, email at info@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
     - question: "Do I pay for bond origination services?"
       answer: "No, our services are completely free to you as the client. We are paid by the banks once your finance is approved."
 

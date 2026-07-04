@@ -20,7 +20,7 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/img/logo/logo.png
+  path: /assets/img/logo/duces-logo-stacked-dark.png
 
 exclude:
   - archive
@@ -43,5 +43,5 @@ address: Glenwood, Durban, KZN
 
 contact:
   email: info@ducescapital.co.za
-  whatsapp: "27692164338"
+  whatsapp: "27786680551"
   whatsapp_message: "Hello Duces Capital, I would like help with property finance."

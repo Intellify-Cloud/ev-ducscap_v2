@@ -18513,7 +18513,7 @@ header.masthead .hero-actions {
 }
 
 .bank-partners-page__hero-card {
-  max-width: 760px;
+  max-width: 945px;
   padding: 40px 42px 36px;
   border-left: 4px solid #0FCB9C;
   border-radius: 18px;
@@ -18545,7 +18545,7 @@ header.masthead .hero-actions {
 }
 
 .bank-partners-page__intro {
-  max-width: 620px;
+  max-width: 670px;
   margin: 20px 0 0;
   color: #6B585D;
   font-size: 1.02rem;
@@ -18602,6 +18602,7 @@ header.masthead .hero-actions {
   max-width: 760px;
   margin: 0 0 34px;
   color: rgb(255, 255, 255);
+  white-space: pre-line;
   text-transform: none;
 }
 
