@@ -147,6 +147,15 @@ articles:
   section: articles
   read_more: "Read more"
 
+blog:
+  eyebrow: "Duces Capital Insights"
+  title: "Property Finance, Home Loan, Investments. Insights and News."
+  intro: "Explore straightforward guidance designed to help you make confident property and finance decisions."
+  library_eyebrow: "Article library"
+  library_title: "Latest insights"
+  card_category: "Property insight"
+  read_more: "Read article"
+
 calculators:
   title: "Property Finance Calculators"
   text: "Estimate your bond eligibility and monthly repayments with our easy-to-use calculators."
