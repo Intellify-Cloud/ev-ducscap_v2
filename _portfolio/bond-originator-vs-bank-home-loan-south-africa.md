@@ -185,16 +185,17 @@ Even in these situations, it is often worthwhile comparing your bank's offer wit
 
 ## Bond Originator vs Bank: A Side by Side Comparison
 
-| Feature | Bond Originator | Your Bank |
-| --- | --- | --- |
-| Number of lenders | Multiple participating banks | One bank only |
-| Interest rate comparison | Yes | No |
-| Interest rate negotiation | Yes | Limited to its own products |
-| Multiple loan offers | Yes | No |
-| One application process | Yes | No |
-| Guidance throughout the process | Yes | Limited to that bank's products |
-| Home loan comparisons | Yes | No |
-| Opportunity to reduce borrowing costs | Higher | Limited to one lender |
+| Feature || Bond Originator | Your Bank |
+| --- || --- | --- |
+| Number of lenders || **Multiple participating banks** | One bank only |
+| Interest rate comparison || **Yes** | No |
+| Interest rate negotiation || **Yes** | Limited to its own products |
+| Multiple loan offers || **Yes** | No |
+| One application process | | **Yes** | No |
+| Guidance throughout the process | | **Yes** | Limited to that bank's products |
+| Home loan comparisons | | **Yes** | No |
+| Opportunity to reduce borrowing costs | | **Higher** | Limited to one lender |
+| --- || --- | --- |
 
 For most buyers, the greatest advantage is choice. Instead of accepting one offer, you can compare several and select the one that provides the best combination of affordability, interest rate and loan terms.
 
