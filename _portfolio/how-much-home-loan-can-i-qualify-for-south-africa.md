@@ -204,11 +204,23 @@ A complete and well prepared application gives lenders the information they need
 
 ### Compare Multiple Home Loan Offers
 
-Rather than relying on a single lender, we submit your application to multiple participating banks. This gives you access to a range of home loan offers that can be compared based on: Interest rate. Monthly repayments. Loan amount. Lending conditions. Overall affordability.
+Rather than relying on a single lender, we submit your application to multiple participating banks. This gives you access to a range of home loan offers that can be compared based on:
+
+- Interest rate
+- Monthly repayments
+- Loan amount
+- Lending conditions
+- Overall affordability
 
 ### Help You Reduce the Total Cost of Buying a Property
 
-Many buyers focus only on securing approval. We focus on helping you secure competitive finance. A more competitive interest rate can reduce: Monthly repayments. Total interest paid over the life of the loan. The overall cost of financing your property. That is why comparing lenders can make a meaningful financial difference over the next 20 to 30 years.
+Many buyers focus only on securing approval. We focus on helping you secure competitive finance. A more competitive interest rate can reduce:
+
+- Monthly repayments
+- Total interest paid over the life of the loan
+- The overall cost of financing your property
+
+That is why comparing lenders can make a meaningful financial difference over the next 20 to 30 years.
 
 ## Final Thoughts
 
