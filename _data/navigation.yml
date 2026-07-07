@@ -1,21 +1,28 @@
+cta:
+  title: "Apply Now"
+  url: /apply-now/
+
 nav:
-  - title: "Why Us"
-    section: textblock
+  - title: "Home"
+    url: /
 
-  - title: "Services"
-    section: services
+  - title: "About"
+    url: /about/
 
-  - title: "Lenders"
-    section: clients
+  - title: "Banks"
+    url: /bank-partners/
 
-  - title: "Success Stories"
-    section: testimonials
+  - title: "Why Duces Capital"
+    url: /why-duces-capital/
 
-  - title: "Team"
-    section: team
+  - title: "Apply Now"
+    url: /apply-now/
 
-  - title: "Calculators"
-    section: calculators
+  - title: "The Calculators"
+    url: /calculators/
 
   - title: "Contact"
-    url: /contact
+    url: /contact/
+
+  - title: "Advice"
+    url: /blog/
