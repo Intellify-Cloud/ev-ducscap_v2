@@ -1,5 +1,33 @@
 # Duces Capital Design System
 
+## Architecture Notes
+
+### Navigation
+
+The primary navbar is data-driven. Edit `_data/navigation.yml` to change the
+visible menu:
+
+- `cta` controls the persistent "Apply Now" button in the navbar.
+- `nav` controls the hamburger menu links and their order.
+- `_includes/navbar.html` should only render the data; avoid hard-coding menu
+  links in the include.
+
+Use full site paths with trailing slashes for page URLs, for example
+`/about/`, `/calculators/`, and `/blog/`.
+
+### Blog index
+
+The blog landing page is `blog.html` with `permalink: /blog/`. Keep it as an
+HTML page because it contains raw HTML and Liquid includes. Converting it back
+to Markdown can cause Kramdown to wrap include output, which may affect the
+navbar/back-to-top markup and make CSS appear to load incorrectly.
+
+### Assets
+
+Page-level Sass is imported through `_assets/site.scss` and compiled into
+`assets/bundle.css` by webpack. Run `npm run build` before deployment so the
+compiled CSS/JS and generated Jekyll output are in sync.
+
 ## Section spacing
 
 Vertical section padding creates the site's page rhythm. Apply it to the outer

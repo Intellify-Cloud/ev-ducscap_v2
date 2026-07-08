@@ -5,7 +5,16 @@ node_modules
 .sass-cache
 .jekyll-cache
 _site
+_drafts/
 unused
 bootstrap-reference.html
 mail-config.php
 mail-debug.log
+jekyll-*.log
+.kilo/
+_private/
+*.local
+*.local.*
+*.env
+*.env.*
+!.env.example
