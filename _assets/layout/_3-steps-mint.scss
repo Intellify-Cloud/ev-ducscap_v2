@@ -1,6 +1,7 @@
 .three-steps-mint {
   width: 100%;
-  padding: $section-padding-y-desktop-dense 24px;
+  padding-right: 24px;
+  padding-left: 24px;
   background:
     radial-gradient(circle at 88% 14%, rgba($brand-accent, 0.14), transparent 30%),
     #cbe4d7;
@@ -104,10 +105,6 @@
 }
 
 @media (max-width: 900px) {
-  .three-steps-mint {
-    padding: $section-padding-y-tablet-dense 24px;
-  }
-
   .three-steps-mint__grid {
     grid-template-columns: 1fr;
   }
@@ -119,7 +116,8 @@
 
 @media (max-width: 767px) {
   .three-steps-mint {
-    padding: $section-padding-y-mobile-dense 16px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   .three-steps-mint__header {

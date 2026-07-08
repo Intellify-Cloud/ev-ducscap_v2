@@ -35,12 +35,16 @@ section wrapper, not to cards or other components inside the section.
 
 ### Standard
 
-- Spacious sections: `120px` top and bottom on desktop.
-- Dense sections: `80px` top and bottom on desktop.
-- Use the dense spacing for text-heavy grids, forms, tables, FAQs, and compact
-  groups of cards.
-- Use spacious spacing for editorial, promotional, and image-led sections that
-  benefit from more breathing room.
+- Standard sections use `80px` top and bottom from tablet up.
+- Mobile sections use smaller values to preserve comfortable phone layouts.
+- Use `.site-section` on standard outer section wrappers.
+- Add `.site-section--dense` only when a section should keep the compact mobile
+  rhythm.
+- Use `.site-section--flush` only for sections that intentionally have no
+  vertical rhythm.
+- Do not apply global spacing to raw `section` elements. Every standard section
+  must opt in with a spacing class.
+- Use the same `80px` desktop/tablet rhythm for standard page sections.
 - Hero, navigation, footer, and full-screen compositions may use purpose-built
   spacing rather than the section rhythm.
 
@@ -48,8 +52,8 @@ section wrapper, not to cards or other components inside the section.
 
 | Context | Desktop | Tablet | Mobile |
 | --- | ---: | ---: | ---: |
-| Spacious | `120px` | `96px` | `64px` |
-| Dense | `80px` | `72px` | `48px` |
+| Spacious | `80px` | `80px` | `64px` |
+| Dense | `80px` | `80px` | `48px` |
 
 The Sass tokens live in `_assets/base/_variables.scss`:
 
@@ -62,24 +66,19 @@ $section-padding-y-mobile
 $section-padding-y-mobile-dense
 ```
 
-Example:
+The central mixin lives in `_assets/base/_mixins.scss`:
 
 ```scss
-.feature-section {
-  padding: $section-padding-y-desktop 24px;
-}
+@include section-spacing(spacious);
+@include section-spacing(dense);
+```
 
-@media (max-width: 1024px) {
-  .feature-section {
-    padding-block: $section-padding-y-tablet;
-  }
-}
+The public utility classes live in `_assets/base/_page.scss`:
 
-@media (max-width: 768px) {
-  .feature-section {
-    padding-block: $section-padding-y-mobile;
-  }
-}
+```scss
+.site-section
+.site-section--dense
+.site-section--flush
 ```
 
 Keep top and bottom padding equal by default. An asymmetric value should reflect

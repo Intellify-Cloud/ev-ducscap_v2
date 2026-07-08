@@ -65,15 +65,16 @@
 </script>
 
   <title>{{ seo_title }}</title>
+  {% assign asset_version = site.time | date: '%s' %}
 
   <link rel="icon" href="{{ site.baseurl }}/favicon.png" type="image/png">
-  <link rel="stylesheet" href="{{ site.baseurl | append: "/assets/bundle.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl | append: "/assets/bundle.css" | relative_url }}?v={{ asset_version }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400&family=Merriweather:wght@900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
 
-  <script src="{{ site.baseurl | append: "/assets/bundle.js" | relative_url }}" defer></script>
+  <script src="{{ site.baseurl | append: "/assets/bundle.js" | relative_url }}?v={{ asset_version }}" defer></script>
   <script>var baseurl = "{{ "" | relative_url }}";</script>
 
   <!-- Page container change top padding when nav shrinks -->

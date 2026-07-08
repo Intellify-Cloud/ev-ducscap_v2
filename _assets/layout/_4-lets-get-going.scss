@@ -2,7 +2,8 @@
 
 .lets-get-going-section {
   background: $light-grey;
-  padding: 80px 72px;
+  padding-right: 72px;
+  padding-left: 72px;
 }
 
 .lets-get-going-card {
@@ -98,7 +99,8 @@
 
 @media (max-width: 1199px) {
   .lets-get-going-section {
-    padding: 64px 40px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .lets-get-going-content {
@@ -123,7 +125,8 @@
 
 @media (max-width: 767px) {
   .lets-get-going-section {
-    padding: 40px 16px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   .lets-get-going-card {

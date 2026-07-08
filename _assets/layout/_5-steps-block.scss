@@ -16,7 +16,8 @@
 
   position: relative;
   overflow: hidden;
-  padding: 88px 72px;
+  padding-right: 72px;
+  padding-left: 72px;
   background:
     radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.9), transparent 28%),
     radial-gradient(circle at 92% 86%, rgba(74, 111, 165, 0.12), transparent 25%),
@@ -255,7 +256,8 @@
 
 @media (max-width: 1199px) {
   .five-steps-block {
-    padding: 72px 40px;
+    padding-right: 40px;
+    padding-left: 40px;
 
     .next-steps__header {
       grid-template-columns: 1fr;
@@ -284,7 +286,8 @@
 
 @media (max-width: 767px) {
   .five-steps-block {
-    padding: 52px 16px;
+    padding-right: 16px;
+    padding-left: 16px;
 
     .next-steps__header {
       gap: 18px;

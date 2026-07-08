@@ -68,6 +68,37 @@
   @include font-display;
 }
 
+// Central section rhythm. Use on outer section wrappers only.
+@mixin section-spacing($density: spacious) {
+  @if $density == dense {
+    padding-top: $section-padding-y-mobile-dense;
+    padding-bottom: $section-padding-y-mobile-dense;
+
+    @media (min-width: 768px) {
+      padding-top: $section-padding-y-tablet-dense;
+      padding-bottom: $section-padding-y-tablet-dense;
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: $section-padding-y-desktop-dense;
+      padding-bottom: $section-padding-y-desktop-dense;
+    }
+  } @else {
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
+
+    @media (min-width: 768px) {
+      padding-top: $section-padding-y-tablet;
+      padding-bottom: $section-padding-y-tablet;
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: $section-padding-y-desktop;
+      padding-bottom: $section-padding-y-desktop;
+    }
+  }
+}
+
 // Stepped corners using clip-path (ziggurat style)
 @mixin stepped-corners($size: 12px) {
   clip-path: polygon(

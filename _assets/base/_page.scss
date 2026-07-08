@@ -79,7 +79,7 @@ h6 {
 }
 
 .page-section {
-  padding: $section-padding-y-mobile 0;
+  @include section-spacing(spacious);
   position: relative;
   z-index: 1;
 
@@ -133,6 +133,19 @@ h6 {
   }
 }
 
+.site-section {
+  @include section-spacing(spacious);
+}
+
+.site-section--dense {
+  @include section-spacing(dense);
+}
+
+.site-section--flush {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 body > section + section {
   border-top: 3px solid transparent;
   border-image-source: linear-gradient(
@@ -148,16 +161,6 @@ body > section + section {
     transparent 100%
   );
   border-image-slice: 1;
-}
-
-@media(min-width:768px) {
-  section {
-    padding: $section-padding-y-desktop 0;
-  }
-
-  .page-section {
-    padding: $section-padding-y-desktop 0;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

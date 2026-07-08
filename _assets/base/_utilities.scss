@@ -199,13 +199,7 @@
 }
 
 .section-container {
-  padding-top: $section-padding-y-mobile;
-  padding-bottom: $section-padding-y-mobile;
-
-  @media (min-width: 1024px) {
-    padding-top: $section-padding-y-desktop;
-    padding-bottom: $section-padding-y-desktop;
-  }
+  @include section-spacing(spacious);
 }
 
 // ============================================
