@@ -42,6 +42,11 @@ exclude:
   - README.md
   - PHASE_3_COMPLETION.md
   - PHASE_4_COMPLETION.md
+  - DESIGN_SYSTEM.md
+  - seo-audit.md
+  - articles-outlines.md
+  - mail-config.example.php
+  - "*.log"
 
 group: evo Home Loans
 

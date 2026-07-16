@@ -75,6 +75,10 @@
   <title>{{ seo_title }}</title>
   {% assign asset_version = site.time | date: '%s' %}
 
+  {% if page.layout == "home" %}
+  <link rel="preload" as="image" href="{{ '/assets/img/hero/duces-home-hero.jpg' | relative_url }}" fetchpriority="high">
+  {% endif %}
+
   <link rel="icon" href="{{ site.baseurl }}/favicon.png" type="image/png">
   <link rel="stylesheet" href="{{ site.baseurl | append: "/assets/bundle.css" | relative_url }}?v={{ asset_version }}">
 
