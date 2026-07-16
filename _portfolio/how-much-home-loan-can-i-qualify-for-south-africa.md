@@ -6,6 +6,51 @@ caption:
   subtitle: "The complete affordability guide for South African home buyers."
   thumbnail: "/assets/img/portfolio/how-much-do-i-qualify-for.jpg"
 alt: "How much home loan a buyer can qualify for in South Africa"
+date: 2026-07-06
+last_modified: 2026-07-06
+description: "A practical guide to how much home loan you can qualify for in South Africa — affordability, income, debt, credit history, deposits, and what banks assess."
+faqs:
+  - question: "How Much Home Loan Can I Qualify For?"
+    answer: >-
+      There is no standard home loan amount that every buyer qualifies for. Banks calculate
+      affordability by assessing your income, monthly expenses, existing debt, credit profile,
+      employment history, deposit and the property's value. Every lender has its own affordability
+      model and lending criteria, which means you may qualify for different loan amounts from
+      different banks. Working with a property finance specialist like Duces Capital allows you to
+      compare multiple lenders to determine which bank is most likely to provide the most suitable
+      home loan for your financial circumstances.
+  - question: "How Much Must I Earn to Qualify for a Home Loan?"
+    answer: >-
+      There is no minimum salary that guarantees home loan approval. Instead, banks assess whether
+      your monthly income can comfortably cover your existing financial commitments together with
+      the expected bond repayment. Your affordability matters more than your income alone.
+  - question: "How Do Banks Calculate Home Loan Affordability?"
+    answer: >-
+      Banks use several financial indicators when assessing your application, typically including
+      gross and net monthly income, existing monthly debt, household living expenses, credit
+      history, employment stability, available deposit, current interest rates and the expected
+      monthly bond repayment. The purpose is to determine whether you can comfortably repay your
+      home loan while meeting your other financial obligations.
+  - question: "Does My Credit Score Affect My Home Loan?"
+    answer: >-
+      Yes. Your credit score is one of the most important factors lenders consider. A strong credit
+      history demonstrates responsible borrowing and may improve your chances of approval while
+      helping you secure a more competitive interest rate. A weaker credit profile doesn't
+      automatically mean your application will be declined, but it may affect the amount you
+      qualify for or the interest rate offered.
+  - question: "Can I Buy a House Without a Deposit?"
+    answer: >-
+      Yes. Some South African banks offer 100% home loans to qualifying applicants. However,
+      providing a deposit can strengthen your application because it reduces the lender's risk. A
+      deposit may also improve your chances of approval, reduce the amount you need to borrow,
+      lower your monthly repayments, help you qualify for a more competitive interest rate and
+      reduce the total interest paid over the life of your bond.
+  - question: "Can I Qualify for a Home Loan if I'm Self Employed?"
+    answer: >-
+      Yes. Self employed buyers qualify for home loans every day. However, lenders usually require
+      additional documentation to verify your income, such as business financial statements, recent
+      bank statements, tax returns, management accounts and proof of regular income. Preparing
+      these documents correctly before applying can significantly improve the assessment process.
 ---
 
 Buying a home starts with one important question: "How much home loan can I actually qualify for?" It's one of the most searched questions by South African home buyers, whether they're purchasing their first property, upgrading to a larger home or investing in real estate. The answer isn't based on your salary alone. Banks consider your affordability, monthly expenses, existing debt, credit history, employment stability, deposit and several other factors before deciding how much they are prepared to lend. Understanding these factors before you apply can save time, improve your chances of approval and help you choose a property that fits comfortably within your budget. This guide answers the most common questions South Africans ask about qualifying for a home loan before explaining how affordability works in more detail.

@@ -6,6 +6,9 @@ caption:
   subtitle: "What rate changes mean for South African homeowners and buyers."
   thumbnail: "/assets/img/portfolio/how-interest-rate-changes-impact-bond-repayments.jpg"
 alt: "How interest rates affect home loan repayments"
+date: 2026-07-06
+last_modified: 2026-07-06
+description: "How repo and prime rate changes affect your monthly bond repayments and the total cost of your home loan in South Africa — and why a competitive rate matters."
 ---
 
 If you've ever watched the news after a South African Reserve Bank announcement, you've probably heard that the repo rate has increased or decreased. Within minutes, headlines begin discussing what it means for homeowners, property buyers and the economy. But beyond the headlines lies an even more important question: How much will it cost you? The interest rate attached to your home loan doesn't just determine your monthly bond repayment. It also influences the total cost of buying your property over the next 20 or 30 years. Whether you're buying your first home, investing in property or already paying off a bond, understanding how interest rates work can help you make smarter financial decisions and potentially save thousands of rand. At Duces Capital, we believe getting a home loan isn't simply about securing finance. It's about securing the right finance at the best possible interest rate, because even a small improvement in your interest rate can significantly reduce the overall cost of owning your home. Bond originators achieve this by comparing offers from multiple lenders and negotiating on behalf of their clients rather than relying on a single bank's offer.

@@ -4,6 +4,55 @@ layout: default
 
 {% include navbar.html %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.subtitle | jsonify }},
+  {% if page.caption.thumbnail %}"image": {{ page.caption.thumbnail | absolute_url | jsonify }},{% endif %}
+  {% if page.date %}"datePublished": {{ page.date | date_to_xmlschema | jsonify }},{% endif %}
+  {% if page.last_modified or page.date %}"dateModified": {{ page.last_modified | default: page.date | date_to_xmlschema | jsonify }},{% endif %}
+  "author": {
+    "@type": "Organization",
+    "name": {{ site.company | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.company | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.logo.path | absolute_url | jsonify }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.url | absolute_url | jsonify }}
+  }
+}
+</script>
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.answer | strip | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
 <main class="article-page">
   <header class="article-page__hero">
     <div class="article-page__container">

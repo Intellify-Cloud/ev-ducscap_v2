@@ -6,6 +6,50 @@ caption:
   subtitle: "Which route offers the better choice for your home loan?"
   thumbnail: "/assets/img/portfolio/bond-originator-vs-your-bank.jpg"
 alt: "Bond originator versus bank home loan"
+date: 2026-07-06
+last_modified: 2026-07-06
+description: "Compare applying for a home loan through your own bank with using a bond originator in South Africa, and learn how multiple offers can improve your outcome."
+faqs:
+  - question: "Should I Use a Bond Originator or Apply Directly to My Bank?"
+    answer: >-
+      If you only apply through your own bank, you'll receive one home loan offer based on that
+      bank's lending policies. A bond originator submits your application to multiple participating
+      lenders, giving you access to several offers that you can compare. If your goal is to secure
+      the most competitive interest rate and loan terms, comparing multiple lenders usually
+      provides a better opportunity than relying on a single bank.
+  - question: "Can a Bond Originator Get Me a Better Interest Rate?"
+    answer: >-
+      Yes, in many cases. Every bank has its own pricing model, lending strategy and risk
+      assessment process. Because Duces Capital compares offers from multiple lenders and
+      negotiates on your behalf, clients often receive more competitive interest rates than they
+      may have obtained by approaching only one bank. A lower interest rate doesn't just reduce
+      your monthly repayment — it can also reduce the total cost of financing your property over
+      the life of your home loan.
+  - question: "Does It Cost Anything to Use a Bond Originator?"
+    answer: >-
+      In most residential property transactions, buyers do not pay a separate fee for using a bond
+      originator. Instead, the successful lender pays the bond originator once the home loan has
+      been registered. This means buyers receive professional guidance, access to multiple lenders
+      and assistance throughout the application process without paying additional fees for the
+      service.
+  - question: "Can I Still Choose My Own Bank?"
+    answer: >-
+      Absolutely. Using Duces Capital does not prevent you from accepting an offer from your
+      existing bank. If your bank provides the most competitive home loan, you are free to accept
+      that offer. The difference is that you'll be making an informed decision after comparing
+      several lenders instead of accepting the first offer available.
+  - question: "Will Using a Bond Originator Improve My Chances of Approval?"
+    answer: >-
+      Although no one can guarantee home loan approval, submitting your application to multiple
+      lenders generally provides more opportunities for approval than relying on a single bank.
+      Different banks have different lending criteria — if one lender declines your application,
+      another may approve it based on its own affordability and risk assessment policies.
+  - question: "Can First Time Buyers Benefit from Using a Bond Originator?"
+    answer: >-
+      Yes. First time buyers often have questions about affordability, deposits, transfer costs,
+      bond registration and the home buying process. Working with an experienced property finance
+      company helps simplify these decisions and gives buyers access to professional guidance from
+      the beginning of their property journey.
 ---
 
 Buying a home is one of the biggest financial decisions most South Africans will ever make. Yet while buyers spend weeks searching for the right property, many don't spend nearly as much time deciding how to finance it. 
